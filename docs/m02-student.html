@@ -1,0 +1,1753 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 2 · Introduction to Macroeconomics · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+</style>
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro · Module 2</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 16</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">Student guide</p>
+  <h1>Introduction to Macroeconomics</h1>
+  <p class="standfirst">Every term you need from Module 2 of <em>Krugman's Economics for AP</em>, in
+  the order that makes them easiest to learn. Each one builds on the ones before it, so work straight
+  through rather than jumping around.</p>
+  <p class="source-line">
+    <span>Textbook pp. 10–15</span>
+    <span>16 entries</span>
+    <span>32 check-yourself questions</span>
+    <span>5 multiple-choice + 2 free-response</span>
+  </p>
+<section class="section">
+  <h2>How to use this guide</h2>
+  <p>Read the module in your textbook first, then work through these entries. For each one:</p>
+  <ol>
+    <li>Read the definition and cover it up. Can you say it back in your own words?</li>
+    <li>Read the <b>Watch out</b> box. That is the mistake most students make on this term.</li>
+    <li>Read all three examples. If you can only remember one, remember the numeric one.</li>
+    <li>Answer both <b>Check yourself</b> questions before you press <i>Show answer</i>. Writing the
+    answer down beats recognising it.</li>
+    <li>Tick <b>Got it</b> at the bottom. The bar at the top tracks how far you are.</li>
+  </ol>
+
+  <p>Two markers tell you how hard to study each term:</p>
+  <div class="tablewrap">
+    <table class="tight">
+      <thead><tr><th>Marker</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td><span class="mark exam">★ Exam</span></td><td><b>Exam term.</b> You must be able to define it, explain it, and often calculate with it.</td></tr>
+        <tr><td><span class="mark bg">○ Background</span></td><td><b>Background.</b> Useful for understanding the subject, but not assessed on its own. Read it once and move on.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="notinbook">
+    <p><b>⚑ A dashed box like this</b> means the AP framework requires the idea but your textbook does
+    not teach it in Module 2 — either it appears much later in the book, or it never appears at all.
+    Learn those from here. There are four of them, and they are the ones students lose marks on.</p>
+  </div>
+
+  <p class="kicker">The 16 terms</p>
+  <ul class="toc">
+    <li><span class="n">1</span><a href="#e1">Business cycle</a><span class="m">★</span></li>
+    <li><span class="n">2</span><a href="#e2">Recession</a><span class="m">★</span></li>
+    <li><span class="n">3</span><a href="#e3">Expansion</a><span class="m">★</span></li>
+    <li><span class="n">4</span><a href="#e4">Depression</a><span class="m">○</span></li>
+    <li><span class="n">5</span><a href="#e5">Peak and trough</a><span class="m">★ ⚑</span></li>
+    <li><span class="n">6</span><a href="#e6">Employment, unemployment, labor force</a><span class="m">★</span></li>
+    <li><span class="n">7</span><a href="#e7">Unemployment rate</a><span class="m">★</span></li>
+    <li><span class="n">8</span><a href="#e8">Labor force participation rate</a><span class="m">★ ⚑</span></li>
+    <li><span class="n">9</span><a href="#e9">Aggregate output</a><span class="m">★</span></li>
+    <li><span class="n">10</span><a href="#e10">Potential output and the output gap</a><span class="m">★ ⚑</span></li>
+    <li><span class="n">11</span><a href="#e11">Inflation and deflation</a><span class="m">★</span></li>
+    <li><span class="n">12</span><a href="#e12">Price stability</a><span class="m">★</span></li>
+    <li><span class="n">13</span><a href="#e13">Economic growth</a><span class="m">★</span></li>
+    <li><span class="n">14</span><a href="#e14">Real GDP per capita</a><span class="m">★</span></li>
+    <li><span class="n">15</span><a href="#e15">Model</a><span class="m">○</span></li>
+    <li><span class="n">16</span><a href="#e16">Other things equal</a><span class="m">★</span></li>
+  </ul>
+</section>
+
+<!-- ================= FIGURE: BUSINESS CYCLE ================= -->
+<section class="section">
+  <h2>The one diagram this module is built on</h2>
+  <p>Almost every term below is a label on this picture. Press a button to find it. Come back to this
+  diagram after each entry — by entry 14 you should be able to redraw it from memory.</p>
+
+  <div class="widget">
+    <p class="widget-title">Figure 1 · The business cycle</p>
+    <div class="chips" role="group" aria-label="Highlight part of the diagram">
+      <button type="button" class="chip" data-part="peak" aria-pressed="false">Peak</button>
+      <button type="button" class="chip" data-part="trough" aria-pressed="false">Trough</button>
+      <button type="button" class="chip" data-part="recession" aria-pressed="false">Recession</button>
+      <button type="button" class="chip" data-part="expansion" aria-pressed="false">Expansion</button>
+      <button type="button" class="chip" data-part="trend" aria-pressed="false">Potential output</button>
+      <button type="button" class="chip" data-part="gap" aria-pressed="false">Output gap</button>
+    </div>
+
+    <svg class="cyclefig" viewBox="0 0 780 330" role="img"
+         aria-label="Real output over time: a wavy actual-output line rising and falling around a straight upward-sloping potential output trend, with peaks, troughs, two shaded recessions and an output gap marked.">
+      <!-- recession bands -->
+      <g id="p-recession">
+        <rect x="200" y="40" width="130" height="230" fill="var(--down)" opacity="0.13"></rect>
+        <rect x="525" y="40" width="105" height="230" fill="var(--down)" opacity="0.13"></rect>
+        <text x="265" y="58" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--down)">RECESSION</text>
+        <text x="577" y="58" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--down)">RECESSION</text>
+      </g>
+      <!-- expansion labels -->
+      <g id="p-expansion">
+        <text x="428" y="58" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--up)">EXPANSION</text>
+        <text x="135" y="58" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--up)">EXPANSION</text>
+        <text x="678" y="58" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--up)">EXPANSION</text>
+      </g>
+      <!-- axes -->
+      <line x1="70" y1="40" x2="70" y2="288" stroke="var(--ink-2)" stroke-width="1.4"></line>
+      <line x1="70" y1="288" x2="745" y2="288" stroke="var(--ink-2)" stroke-width="1.4"></line>
+      <text x="70" y="26" text-anchor="start" font-family="IBM Plex Sans, sans-serif" font-size="13.5" fill="var(--ink)">Real output</text>
+      <text x="745" y="308" text-anchor="end" font-family="IBM Plex Sans, sans-serif" font-size="13.5" fill="var(--ink)">Time</text>
+      <!-- trend -->
+      <g id="p-trend">
+        <line x1="70" y1="240" x2="732" y2="92" stroke="var(--accent)" stroke-width="2.2" stroke-dasharray="7 5"></line>
+        <text x="732" y="84" text-anchor="end" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--accent)">POTENTIAL OUTPUT</text>
+      </g>
+      <!-- actual output -->
+      <path d="M 70 265 C 110 262, 160 195, 200 181 C 245 186, 290 210, 330 212 C 380 214, 470 130, 525 109 C 560 116, 600 140, 630 143 C 660 146, 700 108, 732 88"
+            fill="none" stroke="var(--ink)" stroke-width="2.6" stroke-linecap="round"></path>
+      <!-- peaks -->
+      <g id="p-peak">
+        <circle cx="200" cy="181" r="5" fill="var(--down)"></circle>
+        <circle cx="525" cy="109" r="5" fill="var(--down)"></circle>
+        <text x="200" y="168" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="var(--down)">PEAK</text>
+        <text x="525" y="96" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="var(--down)">PEAK</text>
+      </g>
+      <!-- troughs -->
+      <g id="p-trough">
+        <circle cx="330" cy="212" r="5" fill="var(--up)"></circle>
+        <circle cx="630" cy="143" r="5" fill="var(--up)"></circle>
+        <text x="330" y="234" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="var(--up)">TROUGH</text>
+        <text x="647" y="164" text-anchor="start" font-family="IBM Plex Mono, monospace" font-size="12.5" fill="var(--up)">TROUGH</text>
+      </g>
+      <!-- output gap -->
+      <g id="p-gap">
+        <line x1="330" y1="182" x2="330" y2="212" stroke="var(--flag)" stroke-width="3"></line>
+        <circle cx="330" cy="182" r="3" fill="var(--flag)"></circle>
+        <text x="330" y="173" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--flag)">OUTPUT GAP</text>
+      </g>
+      <!-- legend -->
+      <g font-family="IBM Plex Sans, sans-serif" font-size="12.5" fill="var(--ink-2)">
+        <line x1="70" y1="322" x2="100" y2="322" stroke="var(--ink)" stroke-width="2.6"></line>
+        <text x="106" y="326">Actual real output</text>
+        <line x1="240" y1="322" x2="270" y2="322" stroke="var(--accent)" stroke-width="2.2" stroke-dasharray="7 5"></line>
+        <text x="276" y="326">Potential output</text>
+        <rect x="405" y="315" width="26" height="12" fill="var(--down)" opacity="0.13"></rect>
+        <text x="437" y="326">Recession</text>
+      </g>
+    </svg>
+
+    <p class="figcap" id="figcap">The economy's actual output wanders above and below the trend it
+    could sustain. Press a button to light up one part of the picture.</p>
+  </div>
+</section>
+
+<!-- ================= ENTRIES ================= -->
+
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Business cycle</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The business cycle is the <b>short-run
+  alternation</b> between economic downturns, known as recessions, and economic upturns, known as
+  expansions.</p></div>
+  <p class="reading">Textbook page 10.</p>
+
+  <p>Two words do the work. <b>Short-run</b> — this is about the next few months and years, not
+  decades. <b>Alternation</b> — it goes back and forth. It is not a cycle in the sense of a clock;
+  the phases are nothing like equal in length, and nobody can tell you when the next turn comes.</p>
+
+  <p>Since World War II the United States has had 11 recessions. The average recession lasted
+  10 months, the average expansion 57 months, and a full cycle averaged 5 years 7 months — but the
+  shortest was 18 months and the longest 10 years 8 months. Learn the shape, not the numbers.</p>
+
+  <div class="watch"><p><b>Watch out.</b> "Cycle" does not mean regular. If a question implies you can
+  predict the next recession's date because the last three were four years apart, that is the trap.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The 1930s.</span> The Great
+    Depression was the downturn that created macroeconomics. Shantytowns called "Hoovervilles" grew in
+    Central Park, and economists began studying the whole economy because no one understood what had
+    happened.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Why averages mislead.</span>
+    10 + 57 = 67 months, which is 5 years 7 months — the average cycle. But a cycle has actually run as
+    short as 18 months. An average built from wildly different numbers does not predict the next one.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Your local economy.</span>
+    When a big employer in town lays people off, shops, restaurants and builders all slow at once. That
+    "all at once" is what makes it macroeconomic rather than one industry having a bad year.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> The cycle is made of <a href="#e2">recessions</a> (entry
+  2) — a very severe one being a <a href="#e4">depression</a> (entry 4) — and
+  <a href="#e3">expansions</a> (entry 3), separated by <a href="#e5">peaks and troughs</a> (entry 5). It is the short-run story; <a href="#e13">economic growth</a> (entry 13) is the long-run
+  one, and the two are constantly confused.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> Why do economists talk about a business cycle for the
+    whole economy rather than just the ups and downs of particular industries?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because the ups and downs
+      happen in most industries <i>at the same time</i>. One industry can shrink while others grow — that
+      is just a change in what people buy. A business cycle is when output and employment move together
+      across the economy, which means something is affecting all markets at once.</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> A politician says "we are due a recession — we have
+    not had one for seven years." What is wrong with the reasoning?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Cycles are not regular.
+      One U.S. expansion ran nearly ten years. Time elapsed is not itself a cause; recessions come from
+      falling output and employment, not from a calendar.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Recession</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Recessions are periods of economic downturn
+  when <b>output and employment are falling</b>.</p></div>
+  <p class="reading">Textbook page 10.</p>
+
+  <p>Note what the definition contains: two things, both falling. Not "growing slowly". Not "prices
+  falling". Output down <i>and</i> employment down. That pairing is why a recession hurts — fewer goods
+  produced, fewer people paid to produce them, so incomes and living standards fall together.</p>
+
+  <p>Many countries use a rule of thumb: two consecutive quarters (six months) of falling aggregate
+  output. The United States does not. A panel at the National Bureau of Economic Research looks at a
+  range of indicators, mainly employment and production, and makes a judgement call. Your textbook is
+  blunt about it: "there is no exact definition."</p>
+
+  <div class="watch"><p><b>Watch out.</b> A recession is not "a time when the economy is doing badly."
+  Output must be <i>falling</i>, not merely low. An economy can have high unemployment and still be
+  expanding, because it is recovering from somewhere worse.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">December 2007.</span> The
+    most recent downturn in your textbook began then and pushed unemployment into double digits —
+    the deepest since the 1930s.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The two-quarter rule fails.</span>
+    Three months of sharply falling output, then three months of slightly positive growth, then three
+    months of rapid decline. No two consecutive quarters of decline — so the rule says no recession,
+    while common sense says nine bad months. This is exactly why the U.S. uses a panel.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The 2001 argument.</span>
+    The NBER dated it March to November 2001. Critics said it started earlier, when industrial production
+    fell; others said it never really ended, because the job market stayed weak for another 18 months.
+    Reasonable people disagree, because the definition is a judgement.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> A recession is one phase of the <a href="#e1">business
+  cycle</a> (entry 1) and the opposite of an <a href="#e3">expansion</a> (entry 3). A very deep, very
+  long one is a <a href="#e4">depression</a> (entry 4), and every recession runs from a
+  <a href="#e5">peak to a trough</a> (entry 5). It pushes the <a href="#e7">unemployment rate</a>
+  (entry 7) up, and <a href="#e6">employment</a> (entry 6) and <a href="#e9">aggregate output</a>
+  (entry 9) down.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> Describe who gets hurt in a recession, and how.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Workers who lose their
+      jobs lose their income; workers who keep their jobs may get fewer hours or smaller raises. Firms
+      sell less and earn less, so some close. Owners lose profits and asset values. Governments collect
+      less tax while needing to spend more. Everyone consumes less, so living standards fall.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> Output fell for one quarter, rose slightly for one, then
+    fell for two. Is this a U.S. recession?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Possibly — and the
+      two-consecutive-quarters rule is not how the U.S. decides. The NBER panel would look at employment
+      and production across the whole period and judge. Three falling quarters out of four would very
+      likely be called a recession.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Expansion (recovery)</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Expansions, or recoveries, are periods of
+  economic upturn when <b>output and employment are rising</b>.</p></div>
+  <p class="reading">Textbook page 10.</p>
+
+  <p>Same two variables as a recession, both moving the other way. An expansion runs from a trough to
+  the next peak, which means it covers the whole climb — including the early part when the economy
+  still feels terrible because unemployment is high and only just starting to come down.</p>
+
+  <p>This is the single most useful thing to hold on to: an expansion is defined by the
+  <i>direction</i> of output and employment, not their level.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not equate "expansion" with "good times." Recovery starts
+  at the bottom. In 2009 the recession had technically ended while unemployment was still near its
+  worst.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1933.</span> The U.S. economy
+    began a partial recovery in 1933, yet joblessness stayed high for the rest of the 1930s. Rising is
+    not the same as recovered.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The asymmetry.</span> The
+    average postwar recession lasted 10 months; the average expansion 57 months — about 5.7 times as
+    long. Economies spend far more time climbing than falling.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The late 1990s.</span> A
+    long boom pushed unemployment down to 4% or lower. That was an expansion in its late, comfortable
+    stage — the part everyone notices.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> The other phase of the <a href="#e1">business cycle</a>
+  (entry 1) and the opposite of a <a href="#e2">recession</a> (entry 2). It begins at a
+  <a href="#e5">trough</a> and ends at a peak (entry 5), with <a href="#e6">employment</a> (entry 6)
+  and <a href="#e9">aggregate output</a> (entry 9) rising throughout and the
+  <a href="#e7">unemployment rate</a> (entry 7) falling. It is <i>not</i> <a href="#e13">economic
+  growth</a> (entry 13) — see the comparison table there.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> Unemployment is 9% and falling. Recession or expansion?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Expansion. Falling
+      unemployment means employment is rising, which is the definition — even though 9% is a bad level.
+      Direction, not level.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> Why does your textbook give "recovery" as a second name
+    for the same thing, and when is that name misleading?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because the phase begins
+      with the economy climbing back from a downturn. It misleads late in an expansion, when the economy
+      has long since passed its old level and "recovery" no longer describes anything.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>Depression</h2><span class="mark bg">○ Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A depression is a <b>very deep and prolonged
+  downturn</b>.</p></div>
+  <p class="reading">Textbook page 10.</p>
+
+  <p>A depression is not a separate phase of the cycle — it is a recession that is much worse and much
+  longer. There is no numerical threshold, which is why the word is used so rarely. The United States
+  has not had one since the 1930s.</p>
+
+  <p>It matters historically rather than technically: the Great Depression is why macroeconomics
+  exists as a field. Before it, economists had no serious body of theory about the economy as a whole,
+  and no policy toolkit for a slump.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not call a bad recession a depression on an exam answer
+  unless the question gives you a reason. Use "recession" — it is the term the framework uses for the
+  contraction phase.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Hoovervilles.</span>
+    Shantytowns named after President Hoover sprang up across America after the 1929 slump — one of
+    them in New York's Central Park.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">How rare.</span> 11 recessions
+    since World War II; zero depressions. Roughly 80 years with none.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Why the word matters.</span>
+    In 2008 people asked whether the downturn was "a depression." The question was really about depth and
+    duration, not a different kind of event.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> An extreme form of a <a href="#e2">recession</a> (entry 2),
+  and therefore part of the <a href="#e1">business cycle</a> (entry 1).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> What exactly distinguishes a depression from a recession?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Only depth and duration —
+      a depression is much deeper and lasts much longer. There is no agreed cut-off, so it is a matter of
+      degree, not of kind.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> Why does the study of macroeconomics date from the 1930s?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The Great Depression was
+      a catastrophe that existing economics could not explain and policy makers could not fix. Economists
+      started studying the economy as a whole, and looking for policies to prevent a repeat — which is
+      still the core of the subject.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>Peak and trough</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>peak</b> is the turning point where an
+  expansion ends and a recession begins — the highest point of output before the downturn. The
+  <b>trough</b> is the turning point where a recession ends and an expansion begins — the lowest point
+  of output before the recovery.</p></div>
+  <p class="reading">Not in your textbook.</p>
+
+  <div class="notinbook"><p><b>⚑ Learn this from here.</b> The word <i>trough</i> appears nowhere in
+  your textbook, and <i>peak</i> is never used in this sense. The AP framework still requires both: the
+  phases of the cycle are recession and expansion, and its <i>turning points</i> are peak and trough.
+  Expect a diagram question that asks you to label all four.</p></div>
+
+  <p>Keep the grammar straight. Recessions and expansions are <b>periods</b> — stretches of time with
+  length. Peaks and troughs are <b>moments</b> — single points where the direction reverses. On a graph
+  the phases are segments of the curve and the turning points are dots.</p>
+
+  <p>The names feel backwards to students, because the peak is the start of bad news and the trough is
+  the start of good news. That is exactly the point: the peak is where the economy is at its highest
+  and about to fall.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The peak is <b>not</b> where the economy is doing best in any
+  useful sense, and the trough is <b>not</b> where it is worst for people. Unemployment usually keeps
+  rising for a while after the trough. The turning point is about output turning, not about how life
+  feels.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Figure 1</span><p><span class="who">On the diagram above.</span>
+    Press <i>Peak</i> and <i>Trough</i>. Peaks sit at the tops of the wave, troughs at the bottoms, and
+    the shaded recessions run from each peak to the next trough.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Dating a cycle.</span> If a peak
+    is December 2007 and the next trough is June 2009, the recession lasted 18 months. If the following
+    peak is February 2020, the expansion lasted 128 months. A full cycle is peak to peak, or trough to
+    trough.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A hill walk.</span> The
+    summit is a moment, not a stretch. You are at the top for an instant; the climb and the descent are
+    the periods.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Peaks and troughs are the turning points of the
+  <a href="#e1">business cycle</a> (entry 1). A peak ends an <a href="#e3">expansion</a> and starts a
+  <a href="#e2">recession</a>; a trough does the reverse (entries 2 and 3). The
+  <a href="#e10">output gap</a> (entry 10) is at its largest at both.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> Put these in order round one full cycle: trough,
+    recession, peak, expansion.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Peak → recession → trough
+      → expansion → back to peak. Starting anywhere is fine as long as each period is bounded by the
+      right turning points.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> A country's output falls for a year, then rises for three
+    years. Where is the trough?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>At the end of the falling
+      year — the moment output stops falling and starts rising. It is the lowest point, and it separates
+      the recession from the expansion.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>Employment, unemployment and the labor force</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definitions</span>
+    <p><b>Employment</b> is the number of people currently employed in the economy.</p>
+    <p><b>Unemployment</b> is the number of people who are <b>actively looking for work</b> but are not
+    currently employed.</p>
+    <p><b>The labor force</b> is equal to the sum of employment and unemployment.</p>
+  </div>
+  <p class="reading">Textbook page 12.</p>
+
+  <p>Three definitions, one idea. Everybody in the country falls into exactly one of three boxes:
+  working, looking for work, or neither. The first two boxes together are the <b>labor force</b>. The
+  third box — retired people, full-time students, people caring for family, anyone who has stopped
+  looking — is <b>not in the labor force at all</b>, and this is where nearly every mistake comes from.</p>
+
+  <p>"Actively looking" is doing real work in that definition. Wanting a job is not enough. A person
+  who would take a job but has given up searching is counted as out of the labor force, not as
+  unemployed.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The labor force is <b>not</b> everyone old enough to work, and
+  <b>not</b> everyone capable of working. It is the employed plus the actively-searching unemployed.
+  This is the most commonly missed multiple-choice question in the whole module.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Reading the job market.</span>
+    Your textbook treats the labor force as the base for judging the job market: employment and
+    unemployment only mean something relative to it.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Sorting a town.</span> 150 million
+    employed, 10 million looking, 90 million retired or studying. Labor force = 150 + 10 = 160 million.
+    Adult population = 250 million. The 90 million are in neither of the first two boxes.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Four people.</span> A
+    full-time barista — employed. A graduate sending out applications — unemployed. A retired teacher —
+    not in the labor force. A 15-year-old — not in the labor force, being below working age.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> These three numbers are what you need before you can
+  calculate the <a href="#e7">unemployment rate</a> (entry 7) or the <a href="#e8">labor force
+  participation rate</a> (entry 8). Employment is also the variable that rises in an
+  <a href="#e3">expansion</a> and falls in a <a href="#e2">recession</a> (entries 2 and 3).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> Which of these is in the labor force? (a) a full-time
+    student with no job and no search, (b) a part-time waiter, (c) someone laid off and applying for
+    jobs, (d) a retired 70-year-old.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>(b) and (c). The waiter is
+      employed — part-time still counts as working. The laid-off applicant is unemployed, because they are
+      actively looking. The student and the retiree are not in the labor force.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> Your friend wants a job but stopped applying three months
+    ago. Are they unemployed?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Not in the official sense.
+      They are not actively looking, so they are counted as out of the labor force — not as unemployed.
+      Wanting a job is not the test; searching is.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>Unemployment rate</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The unemployment rate is the <b>percentage of
+  the labor force</b> that is unemployed.</p></div>
+  <p class="reading">Textbook page 12.</p>
+
+  <p>In symbols: unemployment rate = unemployed ÷ labor force × 100. The denominator is the labor
+  force, <b>not</b> the population. Getting that denominator wrong is the single most expensive error in
+  Unit 2, because it wrecks every calculation built on it.</p>
+
+  <p>The rate is a good, fast read on the job market: high means jobs are hard to find, low means they
+  are easy. It rises during recessions and falls during expansions. But it is never zero — even in a
+  boom, people are between jobs. The late-1990s boom pushed it to 4% or lower; the recession that began
+  in 2007 pushed it into double digits.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A falling unemployment rate is not automatically good news.
+  If unemployed people give up searching, they leave the labor force — the numerator falls <i>and</i>
+  the denominator falls, and the rate drops with no one having found a job. Play with the calculator
+  below until you have seen this happen.</p></div>
+
+  <div class="widget">
+    <p class="widget-title">Labor market calculator</p>
+    <h3>Move the numbers and watch the rates</h3>
+    <div class="chips" role="group" aria-label="Load a scenario">
+      <button type="button" class="chip" data-scen="base" aria-pressed="true">Normal year</button>
+      <button type="button" class="chip" data-scen="rec" aria-pressed="false">Recession hits</button>
+      <button type="button" class="chip" data-scen="disc" aria-pressed="false">5 million give up looking</button>
+    </div>
+    <div class="calc-grid">
+      <div class="field"><label for="inpE">Employed (millions)</label>
+        <input type="number" id="inpE" value="150" min="0" step="1"></div>
+      <div class="field"><label for="inpU">Unemployed (millions)</label>
+        <input type="number" id="inpU" value="10" min="0" step="1"></div>
+      <div class="field"><label for="inpP">Adult population (millions)</label>
+        <input type="number" id="inpP" value="250" min="1" step="1"></div>
+    </div>
+    <div class="readouts">
+      <div class="ro"><span class="k">Labor force</span><span class="v" id="outLF">160.0</span></div>
+      <div class="ro"><span class="k">Unemployment rate</span><span class="v hl" id="outU">6.3%</span></div>
+      <div class="ro"><span class="k">Participation rate</span><span class="v" id="outP">64.0%</span></div>
+      <div class="ro"><span class="k">Not in labor force</span><span class="v" id="outN">90.0</span></div>
+    </div>
+    <p class="widget-note" id="calcNote">Labor force = employed + unemployed. The unemployment rate
+    divides by the labor force; the participation rate divides by the adult population.</p>
+  </div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The 1989–2009 record.</span>
+    Figure 2.1 in your book shows the rate rising sharply in every shaded recession and falling through
+    the expansions between them.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Do it by hand.</span> 10 million
+    unemployed, 150 million employed. Labor force = 160 million. Rate = 10 ÷ 160 = 0.0625 = <b>6.25%</b>.
+    Dividing by the 250 million population instead gives 4% — wrong, and a whole question lost.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The discouraged-worker
+    trap.</span> In the recession scenario above the rate is 12.5%. Five million then stop searching:
+    15 ÷ 155 = <b>9.7%</b>. The rate falls by nearly three points and not one person got a job.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Built directly on <a href="#e6">employment, unemployment
+  and the labor force</a> (entry 6), and easily confused with the <a href="#e8">participation rate</a>
+  (entry 8), which uses a different denominator. It rises in a <a href="#e2">recession</a> and falls in
+  an <a href="#e3">expansion</a> (entries 2 and 3), moving opposite to <a href="#e9">aggregate output</a>
+  (entry 9) — and it never falls to zero, because some unemployment remains even at
+  <a href="#e10">potential output</a> (entry 10).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> Employed 96 million, unemployed 4 million, adult
+    population 160 million. What is the unemployment rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Labor force = 96 + 4 =
+      100 million. Rate = 4 ÷ 100 = <b>4%</b>. The 160 million is a distractor — it belongs to the
+      participation rate, not this one.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> The unemployment rate fell from 8% to 7% and the number
+    of employed people did not change. What must have happened?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Unemployed people left the
+      labor force — they stopped searching. With employment flat, the only way the rate falls is for the
+      unemployed count to fall without those people becoming employed. The labor force shrank, and nothing
+      actually improved.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>Labor force participation rate</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The labor force participation rate is the
+  <b>percentage of the adult population that is in the labor force</b>.</p></div>
+  <p class="reading">Not in Module 2 — it appears later in your textbook.</p>
+
+  <div class="notinbook"><p><b>⚑ Learn this from here.</b> Module 2 never mentions the participation
+  rate, but the AP framework requires you to define <i>and calculate</i> it alongside the unemployment
+  rate. Learn the two together now, while the labor force is fresh, rather than meeting this for the
+  first time in a later chapter.</p></div>
+
+  <p>In symbols: participation rate = labor force ÷ adult population × 100. Compare that with the
+  unemployment rate: unemployed ÷ labor force × 100. Same world, different question. The unemployment
+  rate asks <i>of the people in the job market, how many cannot find work?</i> The participation rate
+  asks <i>of the adults who could be in the job market, how many are?</i></p>
+
+  <p>The pair is what makes discouraged workers visible. When people give up searching, the
+  unemployment rate falls — and so does the participation rate. Seeing both numbers move down together
+  is the signal that the "improvement" is not one.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not mix the denominators. Labor force on the bottom means
+  unemployment rate; adult population on the bottom means participation rate. Write the formula down
+  before you put any numbers in it.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Calculator</span><p><span class="who">Above, in entry 7.</span>
+    Press <i>5 million give up looking</i> and watch both rates fall at once. That is the whole reason
+    this measure exists.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Do it by hand.</span> Labor force
+    160 million, adult population 250 million. 160 ÷ 250 = 0.64 = <b>64%</b>. The other 36% are retired,
+    studying, caring for family, or not searching.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A long-run shift.</span>
+    When many more women entered paid work over the twentieth century, the participation rate rose
+    sharply. The unemployment rate says nothing about that change; only participation shows it.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Built on <a href="#e6">the labor force</a> (entry 6), and
+  deliberately contrasted with the <a href="#e7">unemployment rate</a> (entry 7) — same inputs,
+  different denominator.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> Adult population 200 million, employed 110 million,
+    unemployed 10 million. Find both rates.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Labor force = 120 million.
+      Unemployment rate = 10 ÷ 120 = <b>8.3%</b>. Participation rate = 120 ÷ 200 = <b>60%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> A newspaper reports unemployment down for a fourth month.
+    What second number would you ask for, and why?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The participation rate. If
+      it is steady or rising while unemployment falls, people really are finding jobs. If it is falling
+      too, people are leaving the labor force and the drop is hollow.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>Aggregate output</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definitions</span>
+    <p><b>Output</b> is the quantity of goods and services produced.</p>
+    <p><b>Aggregate output</b> is the economy's <b>total</b> production of goods and services for a given
+    time period, usually a year.</p>
+  </div>
+  <p class="reading">Textbook page 12.</p>
+
+  <p>"Aggregate" is the macroeconomist's favourite word and it always means the same thing: added up
+  across the whole economy. One bakery's bread is output. Everything every firm in the country produces
+  in a year is aggregate output.</p>
+
+  <p>Output and unemployment move in <b>opposite directions</b> over the cycle, and the reason is
+  mechanical: producing more requires more workers, so when output rises the unemployment rate falls.
+  Aggregate output falls in recessions and rises in expansions — which is the other half of the
+  definition of each phase.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Aggregate output is a quantity of <i>goods and services</i>,
+  not a pile of money. If prices rise but the same number of cars roll off the line, aggregate output
+  has not changed. Entry 14 is about exactly this distinction.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The link to jobs.</span> Your
+    textbook puts it plainly: at lower levels of output fewer workers are needed, so unemployment is
+    relatively high; growth in output requires more workers, which lowers unemployment.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Adding up.</span> A tiny economy
+    makes 400 loaves, 20 haircuts and 3 bicycles this year. Aggregate output is all of it, for the year.
+    Next year the same three industries produce less: aggregate output has fallen, and some of those
+    bakers, barbers and mechanics will lose work.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Why "for a given time
+    period" matters.</span> Output is a flow, like the water leaving a tap, not a stock, like the water
+    in the bath. "The economy produced $20 trillion" is meaningless without "in 2024".</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Falling aggregate output is half of what defines a
+  <a href="#e2">recession</a> and rising output half of an <a href="#e3">expansion</a> (entries 2 and 3).
+  It moves opposite to the <a href="#e7">unemployment rate</a> (entry 7). Compared against
+  <a href="#e10">potential output</a> it gives the output gap (entry 10), and divided by population it
+  becomes <a href="#e14">real GDP per capita</a> (entry 14).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> Aggregate output rises for two years. What happens to
+    unemployment, and why?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It falls. Producing more
+      goods and services takes more workers, so firms hire. Output and unemployment move in opposite
+      directions over the cycle.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> A firm's output doubles while the rest of the economy
+    shrinks. Has aggregate output risen?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Not necessarily — probably
+      not. Aggregate means the total across every producer. One firm's gain can easily be outweighed by
+      everyone else's losses.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>Potential output and the output gap</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definitions</span>
+    <p><b>Potential output</b> (also called full-employment output) is the level of output the economy
+    produces when unemployment is at its natural rate — the level it can sustain.</p>
+    <p>The <b>output gap</b> is the difference between actual output and potential output.</p>
+  </div>
+  <p class="reading">Not in Module 2 — developed much later in your textbook.</p>
+
+  <div class="notinbook"><p><b>⚑ Learn this from here.</b> Module 2 gives you the wave but never the
+  line it waves around. The AP framework needs both: the output gap is a required part of describing
+  the business cycle, and you will meet it again in every AD–AS diagram you ever draw. Meet it now as a
+  picture; the arithmetic comes in Unit 3.</p></div>
+
+  <p>Go back to Figure 1 and press <i>Potential output</i>. The dashed line is what the economy could
+  produce with its people and machinery fully — but not over — employed. The solid line is what it
+  actually produced. The vertical distance between them is the gap.</p>
+
+  <p>Below the line, at a trough, the economy is wasting capacity: workers idle, factories quiet. Above
+  the line, near a peak, it is running hotter than it can sustain, which is where inflation pressure
+  comes from. This is why a peak is not simply "good".</p>
+
+  <div class="watch"><p><b>Watch out.</b> Potential output is not a maximum or a speed limit the economy
+  can never exceed. Actual output can and does run above it for a while — that is what an unsustainable
+  boom is.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Figure 1</span><p><span class="who">The amber marker.</span> Press
+    <i>Output gap</i> on the diagram. The amber bar at the trough is the distance from actual output up
+    to the potential-output line.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Sign and size.</span> Potential
+    output $20.0 trillion, actual output $19.2 trillion. The gap is −$0.8 trillion, or −4% of potential:
+    a recessionary gap. If actual were $20.4 trillion the gap would be +2%.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A factory.</span> A plant
+    built to make 1,000 cars a week makes 700 in a slump and 1,050 in a rush, running overtime it cannot
+    keep up. 1,000 is potential; the other two are the gaps.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Measured against <a href="#e9">aggregate output</a>
+  (entry 9). It is largest at <a href="#e5">peaks and troughs</a> (entry 5), and it is the reason the
+  <a href="#e7">unemployment rate</a> (entry 7) never reaches zero. It is also the bridge to
+  <a href="#e13">economic growth</a> (entry 13), which is growth of the dashed line itself.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> Potential output is $18 trillion and actual output is
+    $17.1 trillion. State the gap in dollars and as a percentage of potential.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>17.1 − 18 = −$0.9 trillion.
+      As a percentage: 0.9 ÷ 18 = 0.05 = <b>−5%</b>. Actual output is below potential, so resources are
+      going unused.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> On Figure 1, where is the gap biggest, and where is it
+    roughly zero?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Biggest at the peaks and
+      troughs, where the wave is furthest from the dashed line. Roughly zero where the wave crosses it,
+      partway through each recession and each expansion.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>Inflation and deflation</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definitions</span>
+    <p>A rising <b>overall price level</b> is inflation.</p>
+    <p>A falling <b>overall price level</b> is deflation.</p>
+  </div>
+  <p class="reading">Textbook pages 12–13.</p>
+
+  <p>Both definitions turn on the word <b>overall</b>. A change in the price of a few goods changes
+  what those goods cost you relative to everything else — it changes their opportunity cost. It is not
+  inflation. These terms are reserved for general movements in prices throughout the economy.</p>
+
+  <p>Each one causes trouble, in opposite ways. Inflation makes holding cash unattractive, because a
+  dollar buys less each month; in extreme cases people stop using money and barter instead. Deflation
+  makes holding cash <i>too</i> attractive — why build a factory when simply sitting on your money makes
+  it worth more? — and that can deepen a recession.</p>
+
+  <div class="watch"><p><b>Watch out.</b> "Prices went up" is not inflation. Donuts getting more
+  expensive is one price. Inflation means the general price level rose. Expect this to be tested
+  directly — it is one of the free-response questions at the end of the module.</p></div>
+
+  <div class="widget">
+    <p class="widget-title">Purchasing power</p>
+    <h3>What inflation does to $100</h3>
+    <div class="calc-grid">
+      <div class="field"><label for="inpRate">Inflation rate: <span id="rateOut" class="mono">3</span>% a year</label>
+        <input type="range" id="inpRate" min="0" max="20" step="0.5" value="3"></div>
+      <div class="field"><label for="inpYrs">Years: <span id="yrsOut" class="mono">10</span></label>
+        <input type="range" id="inpYrs" min="1" max="40" step="1" value="10"></div>
+    </div>
+    <div class="readouts">
+      <div class="ro"><span class="k">$100 will buy what costs</span><span class="v hl" id="outPP">$74</span></div>
+      <div class="ro"><span class="k">Prices multiply by</span><span class="v" id="outMult">1.34×</span></div>
+      <div class="ro"><span class="k">Years for prices to double</span><span class="v" id="outDbl">23</span></div>
+    </div>
+    <p class="widget-note" id="ppNote">Set the rate to 0 and nothing changes — that is price stability.
+    Set it to 12 and see why rapid inflation stops people from holding cash.</p>
+  </div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1970 to 2009.</span> Average
+    hourly pay rose from $3.40 to $18.74. But a dozen eggs went from $0.58 to $1.60, bread from $0.20 to
+    $1.39, and gasoline from $0.33 to $2.61. The typical paycheck went about as far in 2009 as in 1970.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Check it.</span> Pay multiplied by
+    18.74 ÷ 3.40 ≈ 5.5. Gasoline multiplied by 2.61 ÷ 0.33 ≈ 7.9, bread by 1.39 ÷ 0.20 ≈ 7.0, eggs by
+    1.60 ÷ 0.58 ≈ 2.8. Prices rose roughly as much as wages — so the raise was mostly an illusion.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">One price is not the price
+    level.</span> If streaming subscriptions get cheaper while everything else holds steady, that is not
+    deflation. It is streaming becoming cheap relative to everything else.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Both are departures from <a href="#e12">price stability</a>
+  (entry 12), and they are the reason a wage figure has to be adjusted before it means anything — the
+  same adjustment that turns output into <a href="#e14">real GDP per capita</a> (entry 14).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> A drought triples the price of coffee while other prices
+    are steady. Has inflation occurred?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. One price rose. The
+      overall price level has barely moved. What changed is the opportunity cost of buying coffee — you now
+      give up more of other things to get it.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> Why might a firm postpone building a factory when prices
+    are falling?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because cash is gaining
+      value by doing nothing. Holding money beats investing in productive assets, so investment dries up —
+      which reduces output and employment and can deepen a recession.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>Price stability</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The economy has price stability when the
+  aggregate price level is changing <b>only slowly</b> — or not at all.</p></div>
+  <p class="reading">Textbook page 13.</p>
+
+  <p>Read the definition carefully: stability is <i>slow change</i>, not <i>no change</i>. Economists do
+  not aim for zero inflation, because deflation is dangerous and a small positive rate keeps a safe
+  distance from it. Slow and predictable is the goal.</p>
+
+  <p>The reason is planning. When prices move slowly, a wage agreed for next year, a loan repaid over
+  thirty years and a price list printed today all still mean roughly what they meant when they were
+  written. That is what "helps keep the economy stable" amounts to.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Price stability does not mean prices are fixed, and it does not
+  mean the economy is doing well overall. An economy can have perfectly stable prices and high
+  unemployment at the same time.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Why economists want it.</span>
+    Your textbook gives the reason directly: price stability is desirable because it helps keep the
+    economy stable.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Slow versus fast.</span> At 2% a
+    year prices double in about 35 years — a working lifetime. At 20% they double in under four. The first
+    is a background condition; the second reorganises everyone's behaviour.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A thirty-year loan.</span>
+    You agree a fixed monthly repayment for thirty years. That contract only makes sense for both sides if
+    neither expects the price level to do anything dramatic.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Defined against <a href="#e11">inflation and deflation</a>
+  (entry 11) — it is the state in which neither is a problem.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> Why do economists not aim for zero inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because aiming at zero
+      risks overshooting into deflation, which discourages investment and can deepen a downturn. A small,
+      steady, predictable rise is safer than trying to hit exactly nothing.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> Prices rose 1.5% this year and 1.7% last year. Is this
+    price stability?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Yes. The price level is
+      changing only slowly, and predictably. Households and firms can plan around it, which is the point of
+      the goal.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>Economic growth</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Economic growth is an increase in the
+  <b>maximum amount of goods and services an economy can produce</b>.</p></div>
+  <p class="reading">Textbook page 13.</p>
+
+  <p>Every word of that definition is chosen to keep growth apart from an expansion. Growth is an
+  increase in <i>capacity</i> — in what the economy <i>could</i> produce. An expansion is an increase in
+  what it <i>is</i> producing, from a low starting point, and it lasts only until the next downturn.
+  Growth raises the dashed line in Figure 1; an expansion is the wave climbing back towards it.</p>
+
+  <p>Growth is why living standards rise. In 1955 Americans felt prosperous, and only 33% of homes had a
+  washing machine; hardly anyone had air conditioning. Nothing about 1955 was a recession — the economy
+  was simply able to produce less. A sustained rise in output per person is what pays for higher wages
+  and a better standard of living, and it is the central concern of policy in poorer countries.</p>
+
+  <div class="watch"><p><b>Watch out.</b> This is the trap of the module, and the free-response question
+  at the end tests it. <b>Expansion ≠ economic growth.</b> Learn the table below and you have banked a
+  mark.</p></div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th></th><th>Expansion</th><th>Economic growth</th></tr></thead>
+      <tbody>
+        <tr><td><b>What increases</b></td><td>Actual output and employment</td><td>Maximum possible output — capacity</td></tr>
+        <tr><td><b>Time frame</b></td><td>Short run: months to a few years</td><td>Long run: decades</td></tr>
+        <tr><td><b>How it ends</b></td><td>At the next peak, then a recession</td><td>It does not — it is a sustained rise</td></tr>
+        <tr><td><b>On Figure 1</b></td><td>The wave climbing</td><td>The dashed line sloping upward</td></tr>
+        <tr><td><b>Measured by</b></td><td>Change in output and employment</td><td>Growth in real GDP per capita over time</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>One more thing your textbook flags, and it surprises people: the goal of growth can <b>conflict</b>
+  with the goal of a quick recovery. What is good for long-run capacity is not always good for
+  short-run stabilisation, and the other way round.</p>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1955 and 1905.</span> Americans
+    in 1955 were rightly proud of their prosperity and would count as poor by today's standards. Go back to
+    1905 and life was "startlingly primitive". Neither year was a slump.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The long view.</span> U.S.
+    aggregate output per person in 2009 was almost <b>nine times</b> its 1900 level. Against that, your
+    textbook notes, recessions are almost invisible on the graph.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Two ways to make more
+    bread.</span> A bakery with idle ovens hires back its staff — that is an expansion. A bakery that buys a
+    second oven can now bake more than it ever could before — that is growth.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Deliberately contrasted with an <a href="#e3">expansion</a>
+  (entry 3) and with the whole short-run <a href="#e1">business cycle</a> (entry 1). It is a rise in
+  <a href="#e10">potential output</a> (entry 10), and it is measured by <a href="#e14">real GDP per
+  capita</a> (entry 14).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> Output rises 4% this year after falling 4% last year.
+    Growth or expansion?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Expansion. The economy has
+      returned to roughly where it already was, so its capacity has not increased. Recovering lost ground is
+      not growth.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> Why is growth described as "urgent" in poorer countries?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because a lack of basic
+      necessities is a shortage of productive capacity, not a temporary downturn. Only a sustained rise in
+      output per person can fix it, which makes growth the central concern of policy there.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e14">
+  <div class="entry-head"><span class="entry-num">14</span><h2>Real GDP per capita</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Real GDP per capita is the value of
+  <b>final goods and services produced</b> in a country, <b>per person</b>, with the effect of price
+  changes removed.</p></div>
+  <p class="reading">Textbook page 13.</p>
+
+  <p>Take the phrase apart, because each piece is doing a job. <b>GDP</b> — total output. <b>Real</b> —
+  measured at constant prices, so a rise means more <i>stuff</i>, not just higher prices. <b>Per
+  capita</b> — divided by population, so a country does not look richer merely for being bigger.</p>
+
+  <p>That combination is what makes it the standard measure of a country's standard of living, and the
+  standard way to measure economic growth over time. Your textbook's Figure 2.2 plots it from 1900 to
+  2009 and the point of the picture is the slope: over the long run, growth dwarfs the business cycle.
+  Apart from the Great Depression, the recessions are almost invisible.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Per capita is an average, so it says nothing about how output
+  is shared out. Two countries with the same real GDP per capita can have very different living
+  standards for most of their people.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 2.2.</span> U.S. real GDP
+    per capita, 1900–2009, measured in constant 2005 dollars so that the whole century can be compared on
+    one axis.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Why each word matters.</span>
+    Output $20 trillion across 250 million people is $80,000 each. If output rises 5% to $21 trillion but
+    prices also rose 5%, real output is unchanged — and if population rose too, real GDP per capita has
+    actually <i>fallen</i>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Washing machines.</span> In
+    1955 only a third of American homes had one. That gap is what nine-fold growth in output per person
+    bought — and no unemployment statistic would have shown it.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> This is how <a href="#e13">economic growth</a> (entry 13)
+  is measured. It is <a href="#e9">aggregate output</a> (entry 9) adjusted for population and for
+  <a href="#e11">inflation</a> (entry 11).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">14.1</span> A country's total output rises 3% while its population
+    rises 4%. Is the typical person better off?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. Output per person has
+      fallen by roughly 1%. There is more produced in total, but less to go round each person — which is
+      exactly why growth is measured per capita.</p></div></details></div>
+    <div class="q"><p><span class="qn">14.2</span> Why does your textbook's growth chart use "2005 dollars"?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>To hold prices constant, so
+      the line shows changes in real production rather than inflation. Without it, a century of rising
+      prices would look like a century of rising output.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got14"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e15">
+  <div class="entry-head"><span class="entry-num">15</span><h2>Model</h2><span class="mark bg">○ Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A model is a <b>simplified representation</b>
+  used to better understand a real-life situation.</p></div>
+  <p class="reading">Textbook pages 14–15. Not assessed on its own — but you will use models in every
+  single question.</p>
+
+  <p>The Wright brothers built a wind tunnel a year after their first glider flight. Testing a wing in
+  a box of moving air is cheaper and safer than building a full aircraft and hoping. A model is
+  economics' wind tunnel: deliberately not the real thing, and useful for that reason.</p>
+
+  <p>Economists model in three ways: finding a real but simplified economy (the classic case is a World
+  War II prison camp where cigarettes became money, even among prisoners who did not smoke), simulating
+  one on a computer, or — most often — running a thought experiment on a graph. Nearly every diagram in
+  your course is a model.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not reject a model because an assumption is unrealistic.
+  Every assumption is unrealistic; that is what makes it an assumption. Ask whether the simplification
+  changes the answer to the question you are asking.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Tax models.</span> When a change
+    in tax law is proposed, officials run large computer programs to see how it would affect different
+    groups — a model standing in for an experiment nobody can run.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Garbage in, garbage out.</span> A
+    simulation is only as good as its data. Feed a tax model the wrong income distribution and every number
+    it produces is wrong, however sophisticated the program.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The next module.</span>
+    Module 3 asks you to imagine an economy producing exactly two goods. No economy does. That assumption is
+    precisely what makes the trade-off visible as a curve you can measure.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Models work by holding everything else constant, which is
+  the <a href="#e16">other things equal assumption</a> (entry 16). Figure 1 at the top of this guide is
+  a model, and so is the production possibilities curve in Module 3.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">15.1</span> Why is a wind tunnel a good description of what an
+    economic model does?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It reproduces the one force
+      you care about — air over a wing — while leaving out everything else about flying. It is cheap, safe,
+      and lets you change one thing at a time. An economic model does the same with an economy.</p></div></details></div>
+    <div class="q"><p><span class="qn">15.2</span> Two economists study the same question and reach opposite
+    conclusions. Must one have made a mistake?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. They may have simplified
+      differently — kept different things in the model — and both simplifications can be defensible. The
+      disagreement is then about which simplification fits the facts, which is settled by evidence.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got15"> Got it</label>
+  </div>
+</article>
+
+<article class="entry" id="e16">
+  <div class="entry-head"><span class="entry-num">16</span><h2>Other things equal (ceteris paribus)</h2><span class="mark exam">★ Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The other things equal assumption means that
+  <b>all other relevant factors remain unchanged</b>. The Latin phrase <i>ceteris paribus</i> means the
+  same thing.</p></div>
+  <p class="reading">Textbook page 14.</p>
+
+  <p>This is the assumption that lets a model answer anything at all. In the real world a dozen things
+  change at once and you can never tell which caused what. Holding everything else fixed lets you trace
+  the effect of <b>one</b> change, which is the only way to reason about cause.</p>
+
+  <p>You will use it in every diagram for the rest of the course. When an exam question says a curve
+  shifts, it is telling you that one thing changed and the rest did not. Say so in your answer — it
+  costs one clause and shows you know why the diagram works.</p>
+
+  <div class="watch"><p><b>Watch out.</b> "Other things equal" does not mean you assume nothing changes.
+  It means you change one thing and hold the rest still <i>on purpose</i>, so you can see what that one
+  thing does.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Why models simplify.</span> Your
+    textbook's reason for the assumption is exactly this: simplicity "allows economists to focus on the
+    effects of only one change at a time."</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Untangling two causes.</span>
+    Output rose 3% in a year when both taxes fell and oil got cheaper. Without holding one fixed there is
+    no way to say how much of the 3% each caused.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A fair test.</span> The same
+    idea as a school science experiment: change one variable, keep the rest constant, or the result tells
+    you nothing.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> The working assumption inside every <a href="#e15">model</a>
+  (entry 15), including Figure 1 and every graph in the rest of this course.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">16.1</span> A question says "other things equal, a fall in income
+    reduces spending." What is being held constant?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Everything else that could
+      affect spending — prices, interest rates, expectations, wealth, taxes. Only income is allowed to move,
+      so any change in spending must be down to income.</p></div></details></div>
+    <div class="q"><p><span class="qn">16.2</span> Is "other things equal" a realistic description of the
+    world?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No, and it is not meant to
+      be. It is a deliberate device for isolating one effect. Once you know each effect separately you can
+      reason about several at once.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got16"> Got it</label>
+  </div>
+</article>
+
+<!-- ================= QUIZ ================= -->
+<section class="section" id="quiz">
+  <h2>Tackle the test — multiple choice</h2>
+  <p>The five questions from your textbook's Module 2 AP Review. Click an option to see why it is right
+  or wrong. Every option is explained, because on the exam you gain as much from knowing why the other
+  four fail.</p>
+
+  <div class="widget">
+    <div class="mcq" data-key="A">
+      <p class="stem"><span class="qn">1</span> During the recession phase of a business cycle, which of
+      the following is likely to increase?</p>
+      <div class="opts">
+        <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>the unemployment rate<span class="why" hidden>✓ Correct. A recession is defined by falling output and employment. Fewer people employed out of the same labor force means a higher unemployment rate.</span></span></button>
+        <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>the price level<span class="why" hidden>✗ Prices are not what defines a recession, and downturns usually ease price pressure rather than add to it. Inflation and the business cycle are separate measurements.</span></span></button>
+        <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>economic growth rates<span class="why" hidden>✗ This confuses the two time frames. Growth is the long-run rise in capacity; a recession is a short-run fall in actual output. Output falling does not raise growth.</span></span></button>
+        <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>the labor force<span class="why" hidden>✗ The labor force is employed plus unemployed. In a recession people move between those two boxes, and discouraged workers may leave the labor force altogether — so it shrinks if anything.</span></span></button>
+        <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>wages<span class="why" hidden>✗ With output and employment falling, employers have no reason to bid wages up. Wage growth typically slows in a downturn.</span></span></button>
+      </div>
+    </div>
+
+    <div class="mcq" data-key="D">
+      <p class="stem"><span class="qn">2</span> The labor force is made up of everyone who is</p>
+      <div class="opts">
+        <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>employed.<span class="why" hidden>✗ Half the definition. It leaves out the unemployed, who are in the labor force because they are actively searching.</span></span></button>
+        <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>old enough to work.<span class="why" hidden>✗ This is the adult population, the denominator of the participation rate. Being old enough to work says nothing about whether you are working or looking.</span></span></button>
+        <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>actively seeking work.<span class="why" hidden>✗ The other half. Job seekers are the unemployed; the labor force also contains everyone already employed.</span></span></button>
+        <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>employed or unemployed.<span class="why" hidden>✓ Correct, and it is the textbook definition exactly: the labor force is the sum of employment and unemployment.</span></span></button>
+        <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>employed or capable of working.<span class="why" hidden>✗ "Capable of working" is far wider than "actively looking". It would sweep in retirees and full-time students, who are out of the labor force.</span></span></button>
+      </div>
+    </div>
+
+    <div class="mcq" data-key="E">
+      <p class="stem"><span class="qn">3</span> A sustained increase in aggregate output over several
+      decades represents</p>
+      <div class="opts">
+        <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>an expansion.<span class="why" hidden>✗ The trap of the module. An expansion is short-run and ends at the next peak. "Several decades" and "sustained" both point past the business cycle.</span></span></button>
+        <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>a recovery.<span class="why" hidden>✗ Another name for an expansion, so it fails for the same reason — and "recovery" implies returning to a level already reached, not exceeding it for decades.</span></span></button>
+        <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>a recession.<span class="why" hidden>✗ A recession is output falling. The stem says increasing.</span></span></button>
+        <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>a depression.<span class="why" hidden>✗ A depression is a very deep and prolonged downturn. "Prolonged" matches the decades in the stem, but the direction is wrong — this is the distractor that catches students reading only for length.</span></span></button>
+        <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>economic growth.<span class="why" hidden>✓ Correct. Sustained, over decades, rising capacity — that is growth, not a phase of the cycle.</span></span></button>
+      </div>
+    </div>
+
+    <div class="mcq" data-key="C">
+      <p class="stem"><span class="qn">4</span> Which of the following is the most likely result of
+      inflation?</p>
+      <div class="opts">
+        <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>falling employment<span class="why" hidden>✗ Inflation is about the price level; employment is about the business cycle. Module 2 does not link them, and inflation often accompanies a strong job market.</span></span></button>
+        <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>a dollar will buy more than it did before<span class="why" hidden>✗ Backwards — that is deflation. When the overall price level rises, a dollar buys less.</span></span></button>
+        <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>people are discouraged from holding cash<span class="why" hidden>✓ Correct, and it is the mechanism your textbook gives: if the price level is rising, cash loses value, so people hold less of it — in extreme cases abandoning money for barter.</span></span></button>
+        <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>price stability<span class="why" hidden>✗ The opposite. Price stability means the price level is changing only slowly; inflation is a departure from it.</span></span></button>
+        <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>low aggregate output per capita<span class="why" hidden>✗ Output per capita is a real measure, and inflation is a change in prices. A country can have rapid inflation and high output per person at the same time.</span></span></button>
+      </div>
+    </div>
+
+    <div class="mcq" data-key="B">
+      <p class="stem"><span class="qn">5</span> The other things equal assumption allows economists to</p>
+      <div class="opts">
+        <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>avoid making assumptions about reality.<span class="why" hidden>✗ It <i>is</i> an assumption about reality — a deliberate one. Models do not escape assumptions; they make them explicit.</span></span></button>
+        <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>focus on the effects of only one change at a time.<span class="why" hidden>✓ Correct, and almost word for word your textbook's reason for the assumption.</span></span></button>
+        <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>oversimplify.<span class="why" hidden>✗ Reaches a half-truth by faulty reasoning. Models do simplify, but "over"-simplify means simplifying so much the answer breaks — which is the failure of a model, not its purpose.</span></span></button>
+        <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>allow nothing to change in their model.<span class="why" hidden>✗ Then the model could not answer anything. Exactly one thing changes; everything else is held still.</span></span></button>
+        <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>reflect all aspects of the real world in their model.<span class="why" hidden>✗ The opposite of what a model is. A representation that included everything would be the world itself, and no more use than it.</span></span></button>
+      </div>
+    </div>
+
+    <div class="score">
+      <span>First-click score across all 5 questions</span>
+      <b id="scoreOut">0 / 5</b>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Tackle the test — free response</h2>
+  <p>Write a full answer before you reveal the rubric. Points are awarded for specific statements, so
+  practise producing those statements rather than a general discussion.</p>
+
+  <div class="frq">
+    <p class="stem"><b>1.</b> Define an expansion and economic growth, and explain the difference
+    between the two concepts.</p>
+    <p class="pts">3 points</p>
+    <details class="reveal"><summary>Show the rubric</summary><div class="ans">
+      <ul class="rubric">
+        <li><span class="pt">1 pt</span><span>An expansion is the period of recovery after an economic downturn.</span></li>
+        <li><span class="pt">1 pt</span><span>Economic growth is an increase in the productive capacity of the economy.</span></li>
+        <li><span class="pt">1 pt</span><span>An expansion can occur regardless of any increase in the economy's long-term potential for production, and it only lasts until the next downturn, while economic growth increases the economy's ability to produce more goods and services over the long term.</span></li>
+      </ul>
+      <p style="margin-top:10px">Rubric as printed in your textbook. Notice that the third point is
+      where the marks actually are: two definitions alone score 2 of 3.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p class="stem"><b>2.</b> Define inflation, and explain why an increase in the price of donuts does
+    not indicate that inflation has occurred.</p>
+    <p class="pts">2 points</p>
+    <details class="reveal"><summary>Show the rubric</summary><div class="ans">
+      <ul class="rubric">
+        <li><span class="pt">1 pt</span><span>Inflation is a rise in the overall (aggregate) price level.</span></li>
+        <li><span class="pt">1 pt</span><span>A change in the price of a single good — or of a few goods — changes the opportunity cost of buying that good relative to others. It is not a general change in prices throughout the economy, so it is not inflation.</span></li>
+      </ul>
+      <p style="margin-top:10px">Written for this guide; your textbook prints its own answer to this
+      one at the back of the book. The word to get on the page is <b>overall</b>. An answer that says
+      only "inflation is when prices go up" does not earn the first point, because it does not
+      distinguish one price from the price level.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ================= SUMMARY ================= -->
+<section class="section">
+  <h2>One-page summary</h2>
+  <p>For last-minute revision, not for learning the terms in the first place.</p>
+  <div class="tablewrap">
+    <table class="tight">
+      <thead><tr><th class="num">#</th><th>Term</th><th></th><th>In one line</th></tr></thead>
+      <tbody>
+        <tr><td class="num">1</td><td>Business cycle</td><td>★</td><td>Short-run alternation between recessions and expansions</td></tr>
+        <tr><td class="num">2</td><td>Recession</td><td>★</td><td>Output and employment falling</td></tr>
+        <tr><td class="num">3</td><td>Expansion</td><td>★</td><td>Output and employment rising</td></tr>
+        <tr><td class="num">4</td><td>Depression</td><td>○</td><td>A very deep and prolonged downturn</td></tr>
+        <tr><td class="num">5</td><td>Peak and trough</td><td>★ ⚑</td><td>The turning points: expansion ends, recession ends</td></tr>
+        <tr><td class="num">6</td><td>Employment / unemployment / labor force</td><td>★</td><td>Working / actively looking / the two added together</td></tr>
+        <tr><td class="num">7</td><td>Unemployment rate</td><td>★</td><td>Unemployed ÷ labor force × 100</td></tr>
+        <tr><td class="num">8</td><td>Participation rate</td><td>★ ⚑</td><td>Labor force ÷ adult population × 100</td></tr>
+        <tr><td class="num">9</td><td>Aggregate output</td><td>★</td><td>Total goods and services produced in a period</td></tr>
+        <tr><td class="num">10</td><td>Potential output / output gap</td><td>★ ⚑</td><td>What the economy can sustain / how far actual output is from it</td></tr>
+        <tr><td class="num">11</td><td>Inflation and deflation</td><td>★</td><td>Overall price level rising / falling</td></tr>
+        <tr><td class="num">12</td><td>Price stability</td><td>★</td><td>Price level changing only slowly</td></tr>
+        <tr><td class="num">13</td><td>Economic growth</td><td>★</td><td>Increase in maximum possible output — capacity</td></tr>
+        <tr><td class="num">14</td><td>Real GDP per capita</td><td>★</td><td>Output per person, with price changes removed</td></tr>
+        <tr><td class="num">15</td><td>Model</td><td>○</td><td>A simplified representation of a real situation</td></tr>
+        <tr><td class="num">16</td><td>Other things equal</td><td>★</td><td>Hold everything else constant, change one thing</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p style="font-family:var(--mono);font-size:12.5px;color:var(--ink-3)">★ exam term · ○ background ·
+  ⚑ required by the AP framework but not taught in this module</p>
+
+  <div class="closing">
+    <h2>The five things to get right from Module 2</h2>
+    <ol>
+      <li><b>Recession and expansion are about direction, not level.</b> Output and employment falling,
+      or rising. An economy with 9% unemployment can be expanding.</li>
+      <li><b>The labor force is employed plus actively looking</b> — not everyone old enough to work.
+      Every unemployment calculation stands or falls on this.</li>
+      <li><b>Divide by the right thing.</b> Unemployment rate over the labor force; participation rate
+      over the adult population. Write the formula before the numbers.</li>
+      <li><b>Expansion is not economic growth.</b> One is the wave, the other is the trend line. This is
+      the module's free-response question.</li>
+      <li><b>Learn peak, trough and output gap from this guide.</b> The framework requires them and your
+      textbook does not give them to you here.</li>
+    </ol>
+  </div>
+</section>
+
+<p class="footer">
+  Student guide · Module 2, <i>Krugman's Economics for AP</i>, pages 10–15 · definitions quoted from the
+  textbook · peak, trough, potential output, the output gap and the labor force participation rate added
+  from the AP Macroeconomics course framework · figures and rates recomputed for this guide.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod2-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+
+  function load(){
+    try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; }
+    catch(e){ return {}; }
+  }
+  function save(state){
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
+  }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){
+      var s = load(); s[b.id] = b.checked; save(s); paint();
+    });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- figure highlighting ---------- */
+  var partIds = ["peak","trough","recession","expansion","trend","gap"];
+  var captions = {
+    peak: "<b>Peak.</b> The moment an expansion ends and a recession begins — the highest point of output before the downturn. A moment, not a period.",
+    trough: "<b>Trough.</b> The moment a recession ends and an expansion begins — the lowest point of output before the recovery.",
+    recession: "<b>Recession.</b> The shaded stretches, running from each peak down to the next trough. Output and employment are falling.",
+    expansion: "<b>Expansion.</b> Everything between a trough and the next peak. Output and employment are rising — including the early part, when things still feel bad.",
+    trend: "<b>Potential output.</b> What the economy could produce with its resources fully employed. Economic growth is this dashed line getting steeper or shifting up. The business cycle is the wave around it.",
+    gap: "<b>Output gap.</b> The vertical distance between actual output and potential output. Below the line the economy is wasting capacity; above it, it is running hotter than it can sustain."
+  };
+  var rest = "The economy's actual output wanders above and below the trend it could sustain. Press a button to light up one part of the picture.";
+  var chips = Array.prototype.slice.call(document.querySelectorAll("[data-part]"));
+  var cap = document.getElementById("figcap");
+
+  function highlight(part){
+    partIds.forEach(function(id){
+      var g = document.getElementById("p-" + id);
+      if (!g) return;
+      g.classList.remove("svg-dim","svg-lit");
+      if (part) g.classList.add(id === part ? "svg-lit" : "svg-dim");
+    });
+    cap.innerHTML = part ? captions[part] : rest;
+  }
+  chips.forEach(function(c){
+    c.addEventListener("click", function(){
+      var on = c.getAttribute("aria-pressed") === "true";
+      chips.forEach(function(o){ o.setAttribute("aria-pressed","false"); });
+      if (on) { highlight(null); }
+      else { c.setAttribute("aria-pressed","true"); highlight(c.dataset.part); }
+    });
+  });
+
+  /* ---------- labor market calculator ---------- */
+  var E = document.getElementById("inpE"),
+      U = document.getElementById("inpU"),
+      P = document.getElementById("inpP");
+  var oLF = document.getElementById("outLF"), oU = document.getElementById("outU"),
+      oP  = document.getElementById("outP"),  oN = document.getElementById("outN"),
+      cNote = document.getElementById("calcNote");
+
+  var scenarios = {
+    base: { e:150, u:10,  p:250, note:"A normal year. 160 million people are in the labor market, 10 million of them looking for work." },
+    rec:  { e:140, u:20,  p:250, note:"A recession moves 10 million people from employed to unemployed. The labor force is unchanged, so the unemployment rate doubles while participation stays at 64%." },
+    disc: { e:140, u:15,  p:250, note:"Now 5 million of those job-seekers give up looking. They leave the labor force entirely. The unemployment rate falls by almost three points — and not one person found a job. The participation rate falling alongside it is the giveaway." }
+  };
+
+  function fmt(n, d){ return n.toFixed(d === undefined ? 1 : d); }
+  function calc(){
+    var e = Math.max(0, Number(E.value) || 0),
+        u = Math.max(0, Number(U.value) || 0),
+        p = Math.max(1, Number(P.value) || 1);
+    var lf = e + u;
+    oLF.textContent = fmt(lf);
+    oU.textContent  = lf > 0 ? fmt(u / lf * 100) + "%" : "—";
+    oP.textContent  = fmt(lf / p * 100) + "%";
+    oN.textContent  = fmt(Math.max(0, p - lf));
+  }
+  [E,U,P].forEach(function(el){
+    el.addEventListener("input", function(){
+      calc();
+      document.querySelectorAll("[data-scen]").forEach(function(b){ b.setAttribute("aria-pressed","false"); });
+      cNote.textContent = "Labor force = employed + unemployed. The unemployment rate divides by the labor force; the participation rate divides by the adult population.";
+    });
+  });
+  document.querySelectorAll("[data-scen]").forEach(function(b){
+    b.addEventListener("click", function(){
+      var s = scenarios[b.dataset.scen];
+      E.value = s.e; U.value = s.u; P.value = s.p;
+      calc();
+      cNote.textContent = s.note;
+      document.querySelectorAll("[data-scen]").forEach(function(o){ o.setAttribute("aria-pressed","false"); });
+      b.setAttribute("aria-pressed","true");
+    });
+  });
+  calc();
+
+  /* ---------- purchasing power ---------- */
+  var R = document.getElementById("inpRate"), Y = document.getElementById("inpYrs");
+  var rOut = document.getElementById("rateOut"), yOut = document.getElementById("yrsOut");
+  var ppOut = document.getElementById("outPP"), mOut = document.getElementById("outMult"),
+      dOut = document.getElementById("outDbl");
+
+  function power(){
+    var r = Number(R.value) / 100, y = Number(Y.value);
+    var mult = Math.pow(1 + r, y);
+    rOut.textContent = R.value;
+    yOut.textContent = Y.value;
+    ppOut.textContent = "$" + (100 / mult).toFixed(2);
+    mOut.textContent  = mult.toFixed(2) + "×";
+    dOut.textContent  = r > 0 ? Math.round(Math.log(2) / Math.log(1 + r)) : "never";
+  }
+  R.addEventListener("input", power);
+  Y.addEventListener("input", power);
+  power();
+
+  /* ---------- multiple choice ---------- */
+  var answered = 0, correct = 0;
+  var scoreOut = document.getElementById("scoreOut");
+  document.querySelectorAll(".mcq").forEach(function(q){
+    var key = q.dataset.key, scored = false;
+    q.querySelectorAll(".opt").forEach(function(opt){
+      opt.addEventListener("click", function(){
+        var right = opt.dataset.l === key;
+        opt.dataset.state = right ? "right" : "wrong";
+        var why = opt.querySelector(".why");
+        if (why) why.hidden = false;
+        if (!scored){
+          scored = true; answered++;
+          if (right) correct++;
+          scoreOut.textContent = correct + " / 5";
+        }
+        if (right){
+          q.querySelectorAll(".opt").forEach(function(o){
+            var w = o.querySelector(".why");
+            if (w) w.hidden = false;
+            if (!o.dataset.state) o.dataset.state = "wrong";
+            o.disabled = true;
+          });
+        }
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "2.3 · 2.7 · 5.6 previewed", "title": "Module 2 · Introduction to Macroeconomics", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"label": "Module 1 · The Study of Economics", "planned": true}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": true}, {"label": "Module 2 · Teaching notes", "planned": true}, {"label": "Module 2 · Terms reference", "planned": true}, {"label": "Module 2 · Test", "planned": true}, {"label": "Module 3 · The Production Possibilities Curve Model", "planned": true}, {"label": "Module 4 · Comparative Advantage and Trade", "planned": true}, {"label": "Modules 5–9 · Supply and Demand", "planned": true}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"label": "Module 10 · The Circular Flow and GDP", "planned": true}, {"label": "Module 11 · Interpreting Real GDP", "planned": true}, {"label": "Module 12 · Measuring Unemployment", "planned": true}, {"label": "Module 13 · Categories of Unemployment", "planned": true}, {"label": "Module 14 · Inflation: An Overview", "planned": true}, {"label": "Module 15 · Measuring Inflation", "planned": true}, {"label": "Unit 2 · Gap analysis", "planned": true}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"label": "Module 16 · Income and Expenditure", "planned": true}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"label": "Module 34 · The Phillips Curve", "planned": true}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "spec.html", "label": "Course specification"}};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
