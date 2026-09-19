@@ -5,15 +5,20 @@
 Course materials for AP Macroeconomics, built on *Krugman's Economics for AP* and
 aligned to the College Board Course and Exam Description (Course Framework V.1, © 2020).
 
-Teaching notes and a terms reference for the teacher, a study guide and a test for the
-student, and one gap analysis per unit — across all six units of the course. The site
-shows the whole course map from the start, so what is written and what is still to come
-are both visible.
+Teaching notes for the teacher, a study guide and a test for the student, and one gap
+analysis per unit — across all six units of the course. The site shows the whole course
+map from the start, so what is written and what is still to come are both visible.
 
 **Start with the [course specification](https://sevketgunduz.github.io/ap-macroeconomics/spec.html)**
 for the units, the 42 topics and how the documents are structured, or go straight to
 [Module 2 — Introduction to Macroeconomics](https://sevketgunduz.github.io/ap-macroeconomics/m02-student.html),
 the first student guide.
+
+The companion site is
+**[AP Microeconomics](https://sevketgunduz.github.io/ap-microeconomics/)**. Krugman's
+Modules 1 and 3 appear in both courses, but their reading differs enough — twelve of
+Module 1's seventeen terms are examinable in Micro against five here — that the two sets
+are maintained separately.
 
 ---
 
