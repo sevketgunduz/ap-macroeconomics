@@ -1,0 +1,1408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 12 · Measuring Unemployment · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+
+
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+
+/* ---------- Module 3 supplement ---------- */
+.mark.flag{background:var(--flag-soft);color:var(--flag)}
+.ppc-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.ppc-wrap{grid-template-columns:1fr 210px}}
+.ppc-svg{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px;cursor:crosshair;touch-action:none}
+.ppc-side{display:flex;flex-direction:column;gap:10px}
+.status{font-family:var(--mono);font-size:12.5px;padding:9px 11px;border-radius:5px;
+  border:1px solid var(--rule-strong);background:var(--surface-2);line-height:1.45}
+.status[data-s="on"]{border-color:color-mix(in srgb,var(--up) 45%,transparent);background:var(--up-soft);color:var(--up)}
+.status[data-s="in"]{border-color:var(--rule-strong);color:var(--ink-2)}
+.status[data-s="out"]{border-color:color-mix(in srgb,var(--down) 45%,transparent);background:var(--down-soft);color:var(--down)}
+.ppc-legend{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.ppc-legend b{color:var(--ink-2);font-weight:600}
+.chips.tight{gap:6px}
+.tbl{overflow-x:auto;max-width:100%}
+.sumtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.sumtable th,.sumtable td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+.sumtable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.sumtable td.mk{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--accent)}
+.sumtable td.mk.bgm{color:var(--ink-3)}
+.sumtable td.mk.flagm{color:var(--flag)}
+.final{background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:18px 20px;margin:22px 0;box-shadow:var(--shadow)}
+.final ol{margin:0;padding-left:20px}
+.final li{margin:0 0 9px}
+.final li:last-child{margin-bottom:0}
+
+/* ---------- PPC explorer svg ---------- */
+.ppc-svg .ax{stroke:var(--ink);stroke-width:1.6}
+.ppc-svg .tick{stroke:var(--ink-3);stroke-width:1.1}
+.ppc-svg .tl{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.ppc-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.ppc-svg .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ppc-svg .ghost{fill:none;stroke:var(--rule-strong);stroke-width:1.8;stroke-dasharray:6 5}
+.ppc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.ppc-svg .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.ppc-svg .pt{stroke:var(--surface);stroke-width:2}
+.ppc-svg .pt-on{fill:var(--up)}
+.ppc-svg .pt-in{fill:var(--ink-3)}
+.ppc-svg .pt-out{fill:var(--down)}
+
+
+/* ---------- Module 4 supplement ---------- */
+.two-panel{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px}
+.ca-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 14px}
+@media (min-width:640px){.ca-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ca-grid .field{display:flex;flex-direction:column;gap:5px}
+.ca-grid .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.ca-grid .field b{color:var(--ink-2);font-weight:600;text-transform:none;letter-spacing:0}
+.ca-grid input{font-family:var(--mono);font-size:15px;padding:7px 9px;width:100%;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.ca-grid input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.catab{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 14px}
+.catab th,.catab td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left}
+.catab th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.catab td.v{font-family:var(--mono);color:var(--ink)}
+.catab td.win{font-family:var(--mono);color:var(--up);font-weight:600}
+.dealrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 12px}
+.dealrow .field{display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1}
+.dealrow .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.dealrow input{font-family:var(--mono);font-size:16px;padding:8px 10px;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.line-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.line-svg g[hidden]{display:none}
+.line-svg .band{fill:var(--up-soft);stroke:none}
+.line-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.line-svg .tk{stroke:var(--ink-3);stroke-width:1.1}
+.line-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.line-svg .edge{stroke:var(--up);stroke-width:2}
+.line-svg .edgel{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--up)}
+.line-svg .prop{stroke:var(--accent);stroke-width:2.4}
+.line-svg .propbad{stroke:var(--down);stroke-width:2.4}
+.line-svg .propl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.line-svg .propl.bad{fill:var(--down)}
+.two-panel .ax{stroke:var(--ink);stroke-width:1.6}
+.two-panel .tick{stroke:var(--ink-3);stroke-width:1.1}
+.two-panel .tl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.two-panel .al{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.two-panel .ph{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.two-panel .curve{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+.two-panel .slope{font-family:var(--mono);font-size:11px;fill:var(--accent)}
+.two-panel .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.two-panel .pt{stroke:var(--surface);stroke-width:2}
+.two-panel .pt-on{fill:var(--ink-2)}
+.two-panel .pt-out{fill:var(--up)}
+.two-panel .ptl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.two-panel .ptl.good{fill:var(--up);font-weight:600}
+
+</style>
+<style>
+/* Module 5 additions: the movement-or-shift sorter */
+.sortrow{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:0 0 10px;
+  background:var(--surface)}
+.sortrow .stem{margin:0 0 10px}
+.sortrow .opts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sortrow .opt{flex:1 1 220px;justify-content:center;text-align:center}
+.sortrow .why{display:block;margin:10px 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.sortrow[data-done] .opt{cursor:default}
+#sorter-reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer}
+#sorter-reset:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<style>
+/* Module 12 additions: the population bar, the drill's three answers */
+.pop-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.pop-svg g[hidden]{display:none}
+.pop-svg .se{fill:var(--accent)}
+.pop-svg .su{fill:var(--down)}
+.pop-svg .sn{fill:var(--ink-3);opacity:.45}
+.pop-svg .sl{font-family:var(--mono);font-size:12px;font-weight:600;fill:#fff}
+.pop-svg .slk{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink)}
+.pop-svg .br{stroke:var(--ink-2);stroke-width:1.4;fill:none}
+.pop-svg .bl{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.pop-svg .ax{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.sortrow .opts .opt{flex:1 1 180px}
+</style>
+
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro &middot; Module 12</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 15</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">AP Macroeconomics &middot; Unit 2 &middot; Student guide</p>
+  <h1>Measuring Unemployment</h1>
+  <p class="standfirst">Fifteen terms from Module 12 of <i>Krugman&rsquo;s Economics for AP</i>: who
+  counts as unemployed, the two rates built from that, and what the unemployment rate misses. Two
+  formulas, three categories of people, and one idea your textbook leaves out &mdash; what happens to
+  the rates when people move between the categories.</p>
+  <div class="source-line">
+    <span>Textbook pages 118&ndash;125</span><span>&middot;</span><span>15 terms</span><span>&middot;</span>
+    <span>Topic 2.3</span><span>&middot;</span><span>2 formulas, 3 categories</span>
+  </div>
+<section class="section" id="howto">
+  <h2>How to use this guide</h2>
+  <p>Read Module 12 in your textbook first. Entries 1 to 8 are the three categories and the two rates;
+  entries 9 to 13 are what the unemployment rate leaves out; entries 14 and 15 are how it behaves over
+  time and across groups.</p>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <tbody>
+        <tr><td><span class="mark exam">&#9733; Exam</span></td><td><b>Exam term.</b> Define it, classify people with it, and calculate with it. Twelve of these.</td></tr>
+        <tr><td><span class="mark bg">&#9675; Background</span></td><td><b>Background.</b> Worth knowing, not tested. Three of these.</td></tr>
+        <tr><td><span class="mark flag">&#9873; Not in the textbook</span></td><td><b>Learn it from here.</b> Your exam needs it and Module 12 does not have it. Two entries carry this flag.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Every entry ends with two <b>Check yourself</b> questions. Answer them before opening the
+      answer, then tick <b>Got it</b>.</li>
+    <li>Use the diagram below with entries 3 to 10. Press every button.</li>
+    <li>Do the drill after entry 4, and again at the end.</li>
+  </ul>
+  <div class="flag">
+    <p><b>Two denominators carry this module.</b> Unemployment rate = unemployed &divide; <b>labor
+    force</b>. Participation rate = labor force &divide; <b>adult population</b>. Nearly every wrong
+    answer in a calculation question uses the wrong one.</p>
+  </div>
+</section>
+
+<!-- ============ THE POPULATION DIAGRAM ============ -->
+<section class="section" id="diagram">
+  <h2>Move twenty people</h2>
+  <p>A town of 1,000 adults. Every button moves twenty of them from one group to another &mdash; or, for
+  the last button, changes their hours without changing their group. Watch <b>both</b> rates every
+  time. Four of the six results surprise most people.</p>
+
+  <div class="widget">
+    <div class="widget-title">Choose what happens to twenty people</div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-show="start">Start</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="find">Find jobs</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="lose">Lose jobs</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="quit">Give up looking</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="look">Start looking</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="retire">Retire</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="part">Cut to part time</button>
+    </div>
+<svg id="pfig" class="pop-svg" viewBox="0 0 700 220" role="img" aria-label="An adult population of 1,000 divided into employed, unemployed and not in the labor force">
+<rect class="se" x="60" y="200" width="12" height="12"></rect><text class="ax" x="78" y="210">Employed</text>
+<rect class="su" x="180" y="200" width="12" height="12"></rect><text class="ax" x="198" y="210">Unemployed</text>
+<rect class="sn" x="310" y="200" width="12" height="12"></rect><text class="ax" x="328" y="210">Not in the labor force</text>
+<g id="p-start" hidden>
+<rect class="se" x="60.0" y="70" width="313.2" height="64"></rect>
+<text class="sl" x="216.6" y="108" text-anchor="middle">540</text>
+<rect class="su" x="373.2" y="70" width="34.8" height="64"></rect>
+<text class="slk" x="390.6" y="152" text-anchor="middle">60</text>
+<rect class="sn" x="408.0" y="70" width="232.0" height="64"></rect>
+<text class="slk" x="524.0" y="108" text-anchor="middle">400</text>
+<path class="br" d="M60 62 V54 H408.0 V62"></path>
+<text class="bl" x="234.0" y="48" text-anchor="middle">Labor force: 600</text>
+<path class="br" d="M60 164 V172 H640 V164"></path>
+<text class="bl" x="350" y="190" text-anchor="middle">Adult population: 1,000</text>
+</g>
+<g id="p-find" hidden>
+<rect class="se" x="60.0" y="70" width="324.8" height="64"></rect>
+<text class="sl" x="222.4" y="108" text-anchor="middle">560</text>
+<rect class="su" x="384.8" y="70" width="23.2" height="64"></rect>
+<text class="slk" x="396.4" y="152" text-anchor="middle">40</text>
+<rect class="sn" x="408.0" y="70" width="232.0" height="64"></rect>
+<text class="slk" x="524.0" y="108" text-anchor="middle">400</text>
+<path class="br" d="M60 62 V54 H408.0 V62"></path>
+<text class="bl" x="234.0" y="48" text-anchor="middle">Labor force: 600</text>
+<path class="br" d="M60 164 V172 H640 V164"></path>
+<text class="bl" x="350" y="190" text-anchor="middle">Adult population: 1,000</text>
+</g>
+<g id="p-lose" hidden>
+<rect class="se" x="60.0" y="70" width="301.6" height="64"></rect>
+<text class="sl" x="210.8" y="108" text-anchor="middle">520</text>
+<rect class="su" x="361.6" y="70" width="46.4" height="64"></rect>
+<text class="sl" x="384.8" y="108" text-anchor="middle">80</text>
+<rect class="sn" x="408.0" y="70" width="232.0" height="64"></rect>
+<text class="slk" x="524.0" y="108" text-anchor="middle">400</text>
+<path class="br" d="M60 62 V54 H408.0 V62"></path>
+<text class="bl" x="234.0" y="48" text-anchor="middle">Labor force: 600</text>
+<path class="br" d="M60 164 V172 H640 V164"></path>
+<text class="bl" x="350" y="190" text-anchor="middle">Adult population: 1,000</text>
+</g>
+<g id="p-quit" hidden>
+<rect class="se" x="60.0" y="70" width="313.2" height="64"></rect>
+<text class="sl" x="216.6" y="108" text-anchor="middle">540</text>
+<rect class="su" x="373.2" y="70" width="23.2" height="64"></rect>
+<text class="slk" x="384.8" y="152" text-anchor="middle">40</text>
+<rect class="sn" x="396.4" y="70" width="243.6" height="64"></rect>
+<text class="slk" x="518.2" y="108" text-anchor="middle">420</text>
+<path class="br" d="M60 62 V54 H396.4 V62"></path>
+<text class="bl" x="228.2" y="48" text-anchor="middle">Labor force: 580</text>
+<path class="br" d="M60 164 V172 H640 V164"></path>
+<text class="bl" x="350" y="190" text-anchor="middle">Adult population: 1,000</text>
+</g>
+<g id="p-look" hidden>
+<rect class="se" x="60.0" y="70" width="313.2" height="64"></rect>
+<text class="sl" x="216.6" y="108" text-anchor="middle">540</text>
+<rect class="su" x="373.2" y="70" width="46.4" height="64"></rect>
+<text class="sl" x="396.4" y="108" text-anchor="middle">80</text>
+<rect class="sn" x="419.6" y="70" width="220.4" height="64"></rect>
+<text class="slk" x="529.8" y="108" text-anchor="middle">380</text>
+<path class="br" d="M60 62 V54 H419.6 V62"></path>
+<text class="bl" x="239.8" y="48" text-anchor="middle">Labor force: 620</text>
+<path class="br" d="M60 164 V172 H640 V164"></path>
+<text class="bl" x="350" y="190" text-anchor="middle">Adult population: 1,000</text>
+</g>
+<g id="p-retire" hidden>
+<rect class="se" x="60.0" y="70" width="301.6" height="64"></rect>
+<text class="sl" x="210.8" y="108" text-anchor="middle">520</text>
+<rect class="su" x="361.6" y="70" width="34.8" height="64"></rect>
+<text class="slk" x="379.0" y="152" text-anchor="middle">60</text>
+<rect class="sn" x="396.4" y="70" width="243.6" height="64"></rect>
+<text class="slk" x="518.2" y="108" text-anchor="middle">420</text>
+<path class="br" d="M60 62 V54 H396.4 V62"></path>
+<text class="bl" x="228.2" y="48" text-anchor="middle">Labor force: 580</text>
+<path class="br" d="M60 164 V172 H640 V164"></path>
+<text class="bl" x="350" y="190" text-anchor="middle">Adult population: 1,000</text>
+</g>
+<g id="p-part" hidden>
+<rect class="se" x="60.0" y="70" width="313.2" height="64"></rect>
+<text class="sl" x="216.6" y="108" text-anchor="middle">540</text>
+<rect class="su" x="373.2" y="70" width="34.8" height="64"></rect>
+<text class="slk" x="390.6" y="152" text-anchor="middle">60</text>
+<rect class="sn" x="408.0" y="70" width="232.0" height="64"></rect>
+<text class="slk" x="524.0" y="108" text-anchor="middle">400</text>
+<path class="br" d="M60 62 V54 H408.0 V62"></path>
+<text class="bl" x="234.0" y="48" text-anchor="middle">Labor force: 600</text>
+<path class="br" d="M60 164 V172 H640 V164"></path>
+<text class="bl" x="350" y="190" text-anchor="middle">Adult population: 1,000</text>
+</g>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Employed</span><span class="v" id="ro0">&ndash;</span></div>
+      <div class="ro"><span class="k">Unemployed</span><span class="v" id="ro1">&ndash;</span></div>
+      <div class="ro"><span class="k">Not in labor force</span><span class="v" id="ro2">&ndash;</span></div>
+      <div class="ro"><span class="k">Labor force</span><span class="v" id="ro3">&ndash;</span></div>
+      <div class="ro"><span class="k">Participation rate</span><span class="v hl" id="ro4">&ndash;</span></div>
+      <div class="ro"><span class="k">Unemployment rate</span><span class="v hl" id="ro5">&ndash;</span></div>
+    </div>
+    <p class="figcap" id="pcap"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The 15 terms</h2>
+</section>
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Employed</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Currently <b>holding a job</b>, either full time or part time.</p></div>
+  <p class="reading">Textbook page 119, margin.</p>
+
+  <p>This is the easy one: you are employed if and only if you have a job. Hours do not matter &mdash; ten a week counts exactly as much as fifty &mdash; and nor does being away from it for a while, as long as the job is still yours.</p>
+
+  <p>Everything else in this module is about the people who are <i>not</i> employed, and the question of which of them count.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Part-time workers are employed. Many wrong answers to calculation questions come from leaving them out of the labor force.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Anthony, a schoolteacher.</span> He is not working during his three-month summer break, but he has a job to go back to. Employed.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review&rsquo;s table.</span> 20,000 people work part time and 70,000 full time: <b>90,000 employed</b>, all counted the same way.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A nurse on unpaid leave.</span> Two weeks off to care for a relative, with the job held open. Still employed.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Employed plus <a href="#e2">unemployed</a> (entry 2) is the <a href="#e3">labor force</a> (entry 3). Some employed people want more hours &mdash; <a href="#e10">entry 10</a>. Moving into or out of a job is <a href="#e8">entry 8</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> A student works eight hours a week in a shop. Employed or not?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Employed. Any job, full or part time, counts.</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> Why does it matter that part-time workers count as employed?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because the unemployment rate cannot see people who have a part-time job but want a full-time one. They look exactly like everyone else with a job.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Unemployed</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>No job</b>, <b>actively looking</b> for work in the <b>past four weeks</b>, and <b>available</b> to work.</p></div>
+  <p class="reading">Textbook page 119, margin and text.</p>
+
+  <p>Not working is not enough. Your textbook&rsquo;s example: millions of retired people and millions of disabled people do not work, and none of them is unemployed. Retirees are not looking; the disabled are not available.</p>
+
+  <p>So the test has three parts, and all three must hold: <b>jobless</b>, <b>looking</b>, <b>available</b>. &ldquo;Looking&rdquo; means having searched during the past four weeks. That four-week line is what separates an unemployed person from a discouraged one (entry 9). Your exam shortens all this to &ldquo;out of work&rdquo;; use the three-part test when you classify a person.</p>
+
+  <div class="watch"><p><b>Watch out.</b> &ldquo;Has no job&rdquo; and &ldquo;unemployed&rdquo; are not the same thing. Always check for the search.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Grace, an investment banker.</span> Laid off and currently searching for another position. Jobless, looking, available: unemployed.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The survey behind the number.</span> Each month the Current Population Survey asks about 60,000 families whether they work and, if not, whether they have looked for work in the past four weeks.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A graduate sending applications.</span> She finished her course in June and has applied for six jobs this month. Unemployed &mdash; even though she has never had a job.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Unemployed plus <a href="#e1">employed</a> (entry 1) is the <a href="#e3">labor force</a> (entry 3). Someone who stops looking becomes a <a href="#e9">discouraged worker</a> (entry 9); what that does to the rates is <a href="#e8">entry 8</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> A laid-off worker stopped searching two months ago because nobody is hiring. Unemployed?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. They have not looked in the past four weeks, so they are not counted as unemployed &mdash; they are a discouraged worker, outside the labor force.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> Name the three conditions.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No job; actively looked for work in the past four weeks; available to work.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Labor force</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>employed plus the unemployed</b> &mdash; everyone who is working or looking for work.</p></div>
+  <p class="reading">Textbook page 119, margin.</p>
+
+  <p>The labor force is the people who are taking part in the job market: those with a job and those trying to get one. It is <b>not</b> the whole adult population, and it is <b>not</b> just the people with jobs.</p>
+
+  <p>Get this number right and both rates follow. It is the top of one fraction and the bottom of the other.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The unemployed are <i>in</i> the labor force. A common slip is to use the number employed as the labor force.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 1.</span> 5 million employed and 1 million unemployed: a labor force of <b>6 million</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> 540 employed + 60 unemployed = a labor force of <b>600</b>, out of 1,000 adults.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A household of five.</span> A parent working full time, a parent laid off and searching, a retired grandparent, a student not looking, a teenager working ten hours a week. Three are in the labor force.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is <a href="#e1">entry 1</a> plus <a href="#e2">entry 2</a>. Everyone else is <a href="#e4">not in the labor force</a> (entry 4). It is the denominator of the <a href="#e6">unemployment rate</a> (entry 6) and the numerator of the <a href="#e5">participation rate</a> (entry 5).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> An economy has 150 million employed and 10 million unemployed. What is the labor force?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>150 + 10 = <b>160 million</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> Is a full-time student who is not looking for work in the labor force?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. They are neither working nor looking.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>Not in the labor force</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; The name is not in your textbook &mdash; learn it from here.</b> Your textbook describes these people (retirees, students, the disabled) but never names the group. Every classification question has three possible answers, and this is the third.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Adults who are <b>neither working nor looking</b> for work: retirees, full-time students who are not job-hunting, people caring for family, the disabled, and discouraged workers.</p></div>
+  <p class="reading">Not named in the textbook. The people are described on page 119.</p>
+
+  <p>Every adult is in exactly one of three groups: employed, unemployed, or not in the labor force. The third group is usually the biggest after the employed, and it is left out of the unemployment rate entirely &mdash; it is in neither the top nor the bottom of the fraction.</p>
+
+  <p>People move in and out of it all the time: students graduate and start looking; workers retire; job-seekers give up. Those movements are what entry 8 is about.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Being outside the labor force says nothing about whether someone wants a job. Discouraged workers want one; they are here because they stopped looking.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Retirees and the disabled.</span> In December 2008 the U.S. had 32 million retired workers and 7 million disabled workers receiving benefits. None was counted as unemployed.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> <b>400</b> of the 1,000 adults are not in the labor force: 1,000 &minus; 600.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A parent at home.</span> A father who left his job to look after his children and is not looking for work. Not in the labor force.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the adults outside the <a href="#e3">labor force</a> (entry 3), and it is why the <a href="#e5">participation rate</a> (entry 5) is below 100%. <a href="#e9">Discouraged workers</a> (entry 9) are here; people moving in and out is <a href="#e8">entry 8</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> Name the three groups every adult belongs to exactly one of.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Employed, unemployed, and not in the labor force.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> A retiree has no job. Why is she not unemployed?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because she is not looking for work. She is not in the labor force.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE DRILL ============ -->
+<section class="section" id="sorter">
+  <h2>Drill: which group?</h2>
+  <p>Twelve people. Put each in exactly one of the three groups. Check all three conditions for
+  <i>unemployed</i> every time.</p>
+  <div class="widget">
+    <div id="sorter-list"></div>
+    <p class="score" id="sorter-score">0 of 12 answered</p>
+    <button type="button" id="sorter-reset">Start again</button>
+  </div>
+</section>
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>Labor force participation rate</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Labor force &divide; adult population &times; 100.</b> The share of adults who are working or looking.</p></div>
+  <p class="reading">Textbook page 119, equation 12-1.</p>
+
+  <p>&ldquo;Adult population&rdquo; means everyone aged 16 or older. The participation rate tells you how much of it is taking part in the job market at all. It falls when people retire or give up, and rises when people start looking.</p>
+
+  <p>It is the measure that tells you <i>why</i> the unemployment rate moved. If the unemployment rate fell and the participation rate fell too, people probably gave up rather than found jobs.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The denominator is the adult population, not the labor force. The two rates have different denominators &mdash; that is the most tested fact in this module.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 1.</span> 6 million &divide; 12 million &times; 100 = <b>50%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review&rsquo;s table.</span> 100,000 &divide; 200,000 &times; 100 = <b>50%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> 600 &divide; 1,000 = <b>60%</b>. Press <b>Retire</b> and it falls to 58%.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It divides the <a href="#e3">labor force</a> (entry 3) by all adults, including those <a href="#e4">not in the labor force</a> (entry 4). How it moves is <a href="#e8">entry 8</a>; calculating it is <a href="#e7">entry 7</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> Adult population 80,000; employed 46,000; unemployed 4,000. What is the participation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Labor force 50,000; 50,000 &divide; 80,000 &times; 100 = <b>62.5%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> Does an unemployed person finding a job change the participation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. They were in the labor force before and still are.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>Unemployment rate</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Number unemployed &divide; labor force &times; 100.</b> The share of the labor force without a job.</p></div>
+  <p class="reading">Textbook page 119, equation 12-2.</p>
+
+  <p>This is the number in the news. It is a good guide to how easy or hard it is to find a job: at 4% in 2000 employers joked that anyone who could fog a mirror could get hired; in 2009 it passed 10% in seventeen states.</p>
+
+  <p>The denominator is the <b>labor force</b>. People not in the labor force are in neither the top nor the bottom, which is why a discouraged worker leaving can lower the rate.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not divide by the employed, and do not divide by the adult population. Both are classic wrong answers.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">2008&ndash;09.</span> The rate rose from 4.8% in February 2008 to 10.1% in October 2009.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review&rsquo;s table.</span> Unemployed = 100,000 &minus; 20,000 &minus; 70,000 = 10,000; the rate is 10,000 &divide; 100,000 &times; 100 = <b>10%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> 60 &divide; 600 = <b>10%</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Its denominator is the <a href="#e3">labor force</a> (entry 3). Calculating it alongside the participation rate is <a href="#e7">entry 7</a>; its limits are <a href="#e12">entry 12</a>; how it moves over the business cycle is <a href="#e14">entry 14</a>; how single movements shift it is <a href="#e8">entry 8</a>; how it varies between groups is <a href="#e15">entry 15</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> 9.2 million employed, 0.8 million unemployed. What is the unemployment rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Labor force 10 million; 0.8 &divide; 10 &times; 100 = <b>8%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> Why is the adult population no use for this calculation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because the unemployment rate is a share of the labor force, not of all adults.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>Calculating the two rates</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Find the <b>labor force</b> first. Then: participation = labor force &divide; adults; unemployment = unemployed &divide; labor force.</p></div>
+  <p class="reading">Textbook pages 119 and 125.</p>
+
+  <p>Almost every calculation question is these two fractions with different numbers. The trap is always the denominator, so say it out loud before you divide: <i>unemployed over labor force; labor force over adults.</i></p>
+
+  <p>Some questions give you the rates and ask for a number. Work backwards through the same formulas: labor force = participation rate &times; adults; unemployed = unemployment rate &times; labor force.</p>
+
+  <div class="watch"><p><b>Watch out.</b> If a question gives &ldquo;population&rdquo; and &ldquo;labor force&rdquo;, the population is only for the participation rate. Your exam board&rsquo;s own sample question is built on exactly this trap.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 1.</span> Labor force 6 million; participation 6 &divide; 12 = <b>50%</b>; unemployment 1 &divide; 6 = <b>16.7%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your exam board&rsquo;s sample question.</span> Population 250,000; labor force 200,000; 175,000 employed. Unemployed = 25,000; the rate is 25,000 &divide; 200,000 = <b>12.5%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Working backwards.</span> 50 million adults, participation 64%, unemployment 5%. Labor force = 32 million; unemployed = 5% of 32 million = <b>1.6 million</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It uses <a href="#e5">entry 5</a> and <a href="#e6">entry 6</a> together.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> In the sample question, which wrong answer do you get by dividing 25,000 by the population?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>10%. The population is the wrong denominator for the unemployment rate.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> Adults 260 million, employed 160 million, unemployed 8 million. Find both rates.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Labor force 168 million. Participation 168 &divide; 260 = <b>64.6%</b>. Unemployment 8 &divide; 168 = <b>4.8%</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>How changes move the two rates</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Your exam asks you to explain how changes in the labor market affect both rates. Your textbook defines the rates and never moves anyone between categories. The diagram above does it for you.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Every change is someone moving between <b>employed</b>, <b>unemployed</b> and <b>not in the labor force</b>. Work out which two groups, then what that does to each fraction.</p></div>
+  <p class="reading">Not in the textbook. The nearest is Check Your Understanding 1, page 124.</p>
+
+  <p>Use the diagram above: every button moves twenty people. Four results surprise people, and they are the four your exam likes.</p>
+
+  <p><b>Giving up lowers the unemployment rate.</b> Discouraged workers leave the unemployed <i>and</i> the labor force. <b>Starting to look raises it</b> &mdash; so an improving job market can push the rate up. <b>Retiring raises it</b>, by shrinking the labor force. And <b>being cut to part time changes nothing</b>, because the worker is still employed.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A falling unemployment rate is not automatically good news. Check the participation rate: if it fell too, people gave up.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Job websites.</span> Faster job-matching lowers the rate. But websites that draw discouraged workers back into the search <b>raise</b> it &mdash; your textbook&rsquo;s own answer to Check Your Understanding 1.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above: twenty give up.</span> Unemployed 60 &rarr; 40, labor force 600 &rarr; 580. The rate falls from 10% to <b>6.9%</b>; participation from 60% to <b>58%</b>. Nobody found a job.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above: twenty retire.</span> Employed 540 &rarr; 520. The same 60 unemployed are now a share of 580, so the rate <b>rises</b> to 10.3% with no one losing a job.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It moves people among <a href="#e1">entries 1</a>, <a href="#e2">2</a> and <a href="#e4">4</a>, and reads the result off <a href="#e5">entry 5</a> and <a href="#e6">entry 6</a>. Giving up is <a href="#e9">entry 9</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> An unemployed person finds a job. What happens to each rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Unemployment rate falls; participation rate unchanged.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> The unemployment rate fell, and so did the participation rate. What probably happened?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Unemployed people stopped looking and left the labor force.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>Discouraged workers</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>People who are capable of working but have <b>given up looking</b> for a job because of the state of the job market.</p></div>
+  <p class="reading">Textbook page 120, margin.</p>
+
+  <p>They want work. They have stopped searching because they believe there is none to find. Having not searched in the past four weeks, they fail the test for unemployment and are counted as <b>not in the labor force</b>.</p>
+
+  <p>So the unemployment rate leaves them out. That is the first reason your exam gives for the rate <b>understating</b> joblessness, and it matters most in long slumps, when discouragement grows.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A discouraged worker lowers the unemployment rate by leaving. That is a limitation of the measure, not an improvement in the economy.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Rosa, an older worker.</span> Laid off, gave up looking months ago. Discouraged &mdash; not counted as unemployed.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Counting them back in.</span> Labor force 100 million, 5 million unemployed, 2 million discouraged. Counting them: (5 + 2) &divide; (100 + 2) = <b>6.9%</b>, against 5%.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A miner in a closed-mine town.</span> Would take any job, stopped applying a year ago because nobody is hiring. Discouraged.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> They are former <a href="#e2">unemployed</a> (entry 2) now <a href="#e4">outside the labor force</a> (entry 4), and a main reason the rate <a href="#e12">understates</a> joblessness (entry 12). They are part of a wider group, <a href="#e11">entry 11</a>. What their leaving does to the rates is <a href="#e8">entry 8</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> Why is a discouraged worker not unemployed?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>They have not looked for work in the past four weeks, which the definition requires.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> A thousand unemployed people become discouraged. Does the unemployment rate rise or fall?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It falls &mdash; they leave both the unemployed and the labor force.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>Part-time workers and the underemployed</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Part-time workers are <b>employed</b>. The <b>underemployed</b> are part-timers who want full-time work and cannot find it.</p></div>
+  <p class="reading">Textbook pages 119&ndash;120, margin.</p>
+
+  <p>Your exam says the unemployment rate &ldquo;excludes&rdquo; part-time workers. It does not leave them out of the count &mdash; they are in the labor force as employed. What it leaves out is their <b>underemployment</b>: someone working ten hours who wants forty is scored exactly like someone working forty.</p>
+
+  <p>So in a recession, when firms cut hours instead of jobs, a lot of lost work never reaches the unemployment rate at all.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Underemployed means <b>part time</b> against your will. An engineer mowing lawns full time is employed; by your textbook&rsquo;s own definition she is not underemployed, whatever the back of the book says.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Sergio, a classically trained musician.</span> Can only find work playing at local parties. Employed &mdash; and underemployed.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review&rsquo;s table.</span> The 20,000 part-timers are counted in the 90,000 employed. Leave them out and you get the unemployed wrong by 20,000.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> Press <b>Cut to part time</b>: twenty people lose most of their hours and neither rate moves.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> They are <a href="#e1">employed</a> (entry 1), and the second reason the rate <a href="#e12">understates</a> joblessness (entry 12).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> A cashier works 15 hours a week and wants 40. How is she counted?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>As employed. The unemployment rate cannot see her missing hours.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> A firm cuts 500 full-time workers to half time. What happens to the unemployment rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Nothing. They all still have jobs.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>Marginally attached workers and broader measures</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>People who would like a job and have looked <b>recently</b>, but are not looking now. They include the discouraged. Broader measures such as <b>U6</b> add them, and the underemployed, back in.</p></div>
+  <p class="reading">Textbook pages 120&ndash;121, margin and Figure 12.2.</p>
+
+  <p>The government publishes several unemployment measures. The broadest, U6, counts the unemployed, the marginally attached and those working part time for economic reasons. It is always well above the headline rate.</p>
+
+  <p>The useful fact is in Figure 12.2: all the measures <b>move together</b>. So the headline rate is still a good guide to <i>changes</i> in the labor market, even if its <i>level</i> is too low.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Your exam names discouraged workers, not &ldquo;marginally attached&rdquo; or &ldquo;U6&rdquo;. Know them as background.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 12.2.</span> Four measures from 1994 to 2010, each higher than the last, all rising and falling together.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A broad measure.</span> Add 2 million discouraged workers to 5 million unemployed and a labor force of 100 million, and the rate goes from 5% to about <b>6.9%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Someone who stopped for now.</span> Looked for work in the spring, would like a job, stopped looking in the summer to care for a parent. Marginally attached, but not discouraged.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> The discouraged (<a href="#e9">entry 9</a>) are part of this group.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> Is every marginally attached worker discouraged?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. Discouraged workers are the ones who stopped because of the job market; others stopped for other reasons.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> If the official rate rises sharply, what usually happens to U6?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It rises too, staying well above the official rate.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>Why the rate understates joblessness</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The unemployment rate leaves out <b>discouraged workers</b> and counts the <b>underemployed</b> as fully employed, so it understates how many people want work and cannot get it.</p></div>
+  <p class="reading">Textbook page 120.</p>
+
+  <p>This is the limitation your exam names. Two groups: those who have given up looking (entry 9) and those working part time who want more (entry 10). Neither shows up as unemployed.</p>
+
+  <p>Because both groups grow in bad times, the understatement is worst exactly when the rate matters most. Two countries with the same rate can have very different amounts of joblessness.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Understating is a limitation of the <i>measure</i>. It does not mean the official rate is useless &mdash; it still tracks changes well.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Tackle the Test, question 5.</span> The unemployment problem may be understated &ldquo;due to discouraged workers&rdquo; &mdash; the textbook&rsquo;s own answer.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Counting the discouraged.</span> From 5% to <b>6.9%</b> when 2 million discouraged workers join a labor force of 100 million.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Two countries at 6%.</span> One has had high unemployment for years and many people have stopped looking; the other has not. Same rate, more hidden joblessness in the first.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It comes from <a href="#e9">entry 9</a> and <a href="#e10">entry 10</a>, and it is a limitation of the <a href="#e6">unemployment rate</a> (entry 6). The opposite argument is <a href="#e13">entry 13</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> Name the two groups your exam says the rate leaves out.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Discouraged workers and (underemployed) part-time workers.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> Why is the understatement usually worst in a long recession?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because that is when more people become discouraged and more are pushed into part-time work.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>Why the rate can overstate</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Someone between jobs who is sure of finding one soon is still counted as unemployed, so the rate never reaches zero, even in a boom.</p></div>
+  <p class="reading">Textbook page 120.</p>
+
+  <p>Finding the right job takes a few weeks even when jobs are plentiful. Everyone in that search counts as unemployed. In 2000, when jobs were easy to find, the rate was still 4%.</p>
+
+  <p>Your exam criticises the rate only for understating. This side of the story returns in the next module as <b>frictional unemployment</b>, which is part of why there is a natural rate above zero.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background here, but the idea is examinable in Module 13 under its proper name.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">2000.</span> The rate was 4% in a labor market so tight employers joked about the mirror test.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Two weeks between jobs.</span> A worker who quits on the 1st and starts a new job on the 15th is counted as unemployed if the survey reaches them on the 10th.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A designer with an offer.</span> She has an offer she will accept and is doing a few more interviews. Unemployed, for now.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the other side of <a href="#e12">entry 12</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> Why does the unemployment rate never fall to zero?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because people are always between jobs, searching, and they count as unemployed.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> Does your exam list overstating as a limitation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No &mdash; only understating. Overstating comes back as frictional unemployment in Module 13.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e14">
+  <div class="entry-head"><span class="entry-num">14</span><h2>Unemployment over the business cycle</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The unemployment rate <b>rises in every recession</b> and usually falls when the economy grows faster than average.</p></div>
+  <p class="reading">Textbook pages 122&ndash;123, Figures 12.1, 12.4 and 12.5.</p>
+
+  <p>Less output needs fewer workers. In U.S. data from 1949 to 2009, every year of falling real GDP was a year of rising unemployment, without exception.</p>
+
+  <p>The link is with <b>growth</b>, not just with recessions. Real GDP grew about 3.3% a year on average; in years above that the rate usually fell, and in years below it the rate usually rose &mdash; even with no recession, which is sometimes called a <b>growth recession</b>. After the 1990&ndash;91 and 2001 recessions the rate kept rising for over a year, because growth was too slow.</p>
+
+  <div class="watch"><p><b>Watch out.</b> &ldquo;The economy is growing&rdquo; does not guarantee falling unemployment. Slow growth can raise it.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1981&ndash;82.</span> The most severe recession in Figure 12.4 pushed unemployment to 10.8% in November 1982.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">2000.</span> Real GDP grew 4.1%, above the 3.3% average, and the rate fell 0.2 points, from 4.2% to 4.0%.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A slow recovery.</span> Output grows 1% a year after a recession ends. The unemployment rate keeps climbing, because 1% is not enough to absorb a growing labor force.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is read off the <a href="#e6">unemployment rate</a> (entry 6). Why the cycle happens is Unit 3.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">14.1</span> Real GDP falls by 2% this year. What happened to unemployment, most likely?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It rose. In the U.S. data it always has.</p></div></details></div>
+    <div class="q"><p><span class="qn">14.2</span> Can unemployment rise while real GDP is growing?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Yes, when growth is below its average rate &mdash; as after the 1990&ndash;91 and 2001 recessions.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got14"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e15">
+  <div class="entry-head"><span class="entry-num">15</span><h2>Differences across groups and places</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The national rate is an average. Some groups and some regions face <b>far higher</b> rates.</p></div>
+  <p class="reading">Textbook pages 120&ndash;121, Figure 12.3, and the Rocky Mountain Low box, page 124.</p>
+
+  <p>Jobs are easier to find for experienced workers aged 25 to 54 and harder for the young and those near retirement. In August 2007, with the national rate low, rates for some groups were several times higher.</p>
+
+  <p>States differ too, and the gaps close over time because people move to where the jobs are.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A teenager is unemployed only if looking for work. Not having a job at 16 is not enough.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">August 2007.</span> Overall 4.7%; African-American workers 7.7%; White teenagers 14.4%; African-American teenagers 31.2% &mdash; more than six times the national rate.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">July 2007.</span> Montana 2.7%, with its oil boom; Michigan 7.2%, with auto layoffs.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Seven years earlier.</span> In 2000 Michigan was at 3.7% and Montana at 4.8% &mdash; the positions were reversed.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a caution about reading the national <a href="#e6">unemployment rate</a> (entry 6).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">15.1</span> The national rate is 4.7%. Can some group have a rate of 30%?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Yes. The national rate is a weighted average, and small groups barely move it.</p></div></details></div>
+    <div class="q"><p><span class="qn">15.2</span> Why do differences between states tend not to last?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>People move to where the jobs are.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got15"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ MCQ ============ -->
+<section class="section" id="mcq">
+  <h2>Tackle the test &mdash; multiple choice</h2>
+  <p>The five questions from your textbook&rsquo;s AP Review, with <b>every option explained</b>.
+  Questions 2 to 4 share one table.</p>
+
+  <div class="mcq" data-key="E">
+    <p class="stem"><span class="qn">1</span> To be considered unemployed, a person must: I. not be working; II. be actively seeking a job; III. be available for work.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; Not working is one condition of three. Retirees are not working.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10007; Searching matters, but someone who is working and searching is employed.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10007; Availability alone would include every retiree who could work.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>II and III<span class="why" hidden>&#10007; Leaves out the most basic condition: having no job.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II and III<span class="why" hidden>&#10003; <b>Correct.</b> Jobless, looking and available &mdash; all three.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">2</span> Adult population 200,000; labor force 100,000; 20,000 work part time; 70,000 work full time. What is the labor force participation rate?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>70%<span class="why" hidden>&#10007; 70,000 is the full-time workers; they are not the labor force.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>50%<span class="why" hidden>&#10003; <b>Correct.</b> 100,000 &divide; 200,000 &times; 100.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>20%<span class="why" hidden>&#10007; 20,000 is the part-timers, and they are only part of it.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>10%<span class="why" hidden>&#10007; That is the unemployment rate &mdash; question 4.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>5%<span class="why" hidden>&#10007; 10,000 unemployed &divide; 200,000 adults: neither rate.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="A">
+    <p class="stem"><span class="qn">3</span> Using the same table, how many people are unemployed?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>10,000<span class="why" hidden>&#10003; <b>Correct.</b> 100,000 &minus; 20,000 &minus; 70,000. Part-timers are employed.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>20,000<span class="why" hidden>&#10007; Treats the part-time workers as unemployed. They have jobs.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>30,000<span class="why" hidden>&#10007; Counts the part-timers as unemployed and adds the true 10,000.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>100,000<span class="why" hidden>&#10007; That is the whole labor force.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>110,000<span class="why" hidden>&#10007; Not a figure from the table at all.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="D">
+    <p class="stem"><span class="qn">4</span> Using the same table, what is the unemployment rate?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>70%<span class="why" hidden>&#10007; The full-time share of the labor force.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>50%<span class="why" hidden>&#10007; The participation rate.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>20%<span class="why" hidden>&#10007; Treats part-timers as unemployed: 20,000 &divide; 100,000.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>10%<span class="why" hidden>&#10003; <b>Correct.</b> 10,000 &divide; 100,000 &times; 100.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>5%<span class="why" hidden>&#10007; Divides the unemployed by the adult population.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">5</span> The unemployment problem in an economy may be understated by the unemployment rate because of&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>people lying about seeking a job.<span class="why" hidden>&#10007; Possible, but it would <i>raise</i> the measured rate.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>discouraged workers.<span class="why" hidden>&#10003; <b>Correct.</b> They want work, have stopped looking, and are left out.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>job candidates with one offer but waiting for more.<span class="why" hidden>&#10007; They are counted as unemployed, so they make the rate <i>higher</i> &mdash; the overstating argument.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>overemployed workers.<span class="why" hidden>&#10007; Not a category the statistics use.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>none of the above.<span class="why" hidden>&#10007; Discouraged workers are the textbook&rsquo;s own answer.</span></span></button>
+    </div>
+  </div>
+
+  <p class="score" id="mcqScore">0 of 5 answered</p>
+</section>
+
+<!-- ============ FRQ ============ -->
+<section class="section" id="frq">
+  <h2>Tackle the test &mdash; free response</h2>
+
+  <div class="frq">
+    <p><b>Question 1 (6 points).</b> Population age 16 and older = 12 million; employment = 5 million;
+    unemployment = 1 million. Calculate, showing how: (a) the size of the labor force, (b) the labor force
+    participation rate, (c) the unemployment rate.</p>
+    <details class="reveal"><summary>Show the answer and the rubric</summary><div class="ans">
+      <ol class="rubric">
+        <li>(a) <b>6 million</b> &mdash; one point</li>
+        <li>(a) working: employment + unemployment = 5 + 1 &mdash; one point</li>
+        <li>(b) <b>50%</b> &mdash; one point</li>
+        <li>(b) working: labor force &divide; population &times; 100 = 6 &divide; 12 &times; 100 &mdash; one point</li>
+        <li>(c) <b>16.7%</b> (the printed rubric rounds to 17%) &mdash; one point</li>
+        <li>(c) working: unemployment &divide; labor force &times; 100 = 1 &divide; 6 &times; 100 &mdash; one point</li>
+      </ol>
+      <p>Half the marks are for the working. Write the fraction before you divide.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 2.</b> Classify each person as precisely as you can, and explain. (a) Julie has a
+    graduate degree in mechanical engineering and works full time mowing lawns. (b) Jeff was laid off,
+    would take any job, and after a year of looking has stopped. (c) Ian works 25 hours a week in a
+    bookshop and does not want full-time work. (d) Raj is taking a year off to stay home with his
+    daughter.</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p>(a) <b>Employed.</b> The back of your textbook says &ldquo;underemployed&rdquo;, but the
+      textbook&rsquo;s own definition of underemployed is working <i>part time</i> for lack of full-time
+      work. Julie works full time. She is overqualified for her job; in the statistics she is simply
+      employed.</p>
+      <p>(b) <b>Not in the labor force &mdash; a discouraged worker.</b> He stopped searching because of
+      the job market.</p>
+      <p>(c) <b>Employed</b>, part time by choice. Not underemployed.</p>
+      <p>(d) <b>Not in the labor force.</b> Not working and not looking.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 3 &mdash; the one your exam board published.</b> The population of Country X is
+    250,000, and the labor force is 200,000 people. If 175,000 people are employed, what is the
+    unemployment rate? (A) 10% (B) 12.5% (C) 20% (D) 80% (E) 87.5%</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p><b>(B) 12.5%.</b> Unemployed = 200,000 &minus; 175,000 = 25,000. Rate = 25,000 &divide; 200,000 &times;
+      100.</p>
+      <p>Every other option is a real mistake. 10% divides by the population. 20% is the share of the
+      population outside the labor force. 80% is the participation rate. 87.5% is the share of the labor
+      force that is employed. The question is a test of one thing: choosing the denominator.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <h2>One-page summary</h2>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <thead><tr><th>Starting from 540 &middot; 60 &middot; 400</th><th>Unemployment rate (10%)</th><th>Participation rate (60%)</th></tr></thead>
+      <tbody>
+        <tr><td>Twenty people: find jobs</td><td><b>falls</b> (6.7%)</td><td><b>unchanged</b> (60%)</td></tr>
+        <tr><td>Twenty people: lose jobs</td><td><b>rises</b> (13.3%)</td><td><b>unchanged</b> (60%)</td></tr>
+        <tr><td>Twenty people: give up looking</td><td><b>falls</b> (6.9%)</td><td><b>falls</b> (58%)</td></tr>
+        <tr><td>Twenty people: start looking</td><td><b>rises</b> (12.9%)</td><td><b>rises</b> (62%)</td></tr>
+        <tr><td>Twenty people: retire</td><td><b>rises</b> (10.3%)</td><td><b>falls</b> (58%)</td></tr>
+        <tr><td>Twenty people: cut to part time</td><td><b>unchanged</b> (10%)</td><td><b>unchanged</b> (60%)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap"><b>Unemployed</b> = no job + looked in the past four weeks + available.
+  <b>Labor force</b> = employed + unemployed. <b>Unemployment rate</b> = unemployed &divide; labor force.
+  <b>Participation rate</b> = labor force &divide; adults. The rate <b>understates</b> joblessness because
+  it leaves out discouraged workers and counts the underemployed as employed.</p>
+</section>
+
+<section class="section closing" id="final">
+  <h2>The five things to get right from Module 12</h2>
+  <ol>
+    <li><b>Three conditions for unemployed:</b> no job, looked in the past four weeks, available. Not
+      working is not enough.</li>
+    <li><b>Three groups, one each:</b> employed, unemployed, not in the labor force.</li>
+    <li><b>Two denominators.</b> Unemployed over the labor force; the labor force over adults.</li>
+    <li><b>Giving up lowers the unemployment rate, and retiring raises it.</b> Check the participation
+      rate before you call a falling rate good news.</li>
+    <li><b>Part-timers are employed.</b> That is why the rate cannot see underemployment.</li>
+  </ol>
+  <p>The next module asks why the rate never reaches zero, and splits unemployment into three types.
+  In Unit 3 the rate becomes the other side of real GDP: when output falls, unemployment rises &mdash;
+  and in Unit 5 it goes on the axis of the Phillips curve.</p>
+</section>
+
+<p class="footer">
+  Student guide &middot; Module 12, <i>Krugman&rsquo;s Economics for AP</i>, pages 118&ndash;125 &middot;
+  definitions quoted from the textbook &middot; tiers assigned against the AP Macroeconomics Course
+  and Exam Description, Course Framework V.1, &copy; 2020 &middot; every number on this page is computed
+  by the script that writes it, and checked again before it is written.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod12-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ return {}; } }
+  function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){ var s = load(); s[b.id] = b.checked; save(s); paint(); });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- the population diagram ---------- */
+  /* Every value below is written by build/make_m12_student.py from the counts it computes. */
+  var READ = {
+    start: ["540", "60", "400", "600", "60%", "10%"],
+    find: ["560", "40", "400", "600", "60%", "6.7%"],
+    lose: ["520", "80", "400", "600", "60%", "13.3%"],
+    quit: ["540", "40", "420", "580", "58%", "6.9%"],
+    look: ["540", "80", "380", "620", "62%", "12.9%"],
+    retire: ["520", "60", "420", "580", "58%", "10.3%"],
+    part: ["540", "60", "400", "600", "60%", "10%"]
+  };
+  var CAP = {
+    start: "1,000 adults. 540 have a job, 60 have none and are looking, 400 are neither working nor looking. The labor force is 600, so the participation rate is 60% and the unemployment rate 10%.",
+    find: "Twenty job-seekers find work. They were in the labor force before and still are, so the participation rate stays at 60%. The unemployment rate falls to 6.7%.",
+    lose: "Twenty workers lose their jobs and start searching. The labor force is the same size; the unemployment rate rises to 13.3%.",
+    quit: "Twenty job-seekers give up - discouraged workers. Nobody found a job, yet the unemployment rate FALLS to 6.9%, because they left the labor force. The participation rate falls to 58%.",
+    look: "Twenty people start looking - students finishing, or discouraged workers coming back. The unemployment rate RISES to 12.9% and the participation rate to 62%. Good news can raise the rate.",
+    retire: "Twenty workers retire. Nobody lost a job, but the same 60 unemployed are now a share of a smaller labor force: the unemployment rate RISES to 10.3%. Participation falls to 58%.",
+    part: "Twenty full-time workers are cut to part time against their will. They still have jobs, so they are still employed: neither rate moves. This is what the rate cannot see."
+  };
+  var chips = Array.prototype.slice.call(document.querySelectorAll("#diagram .chip"));
+  var cap = document.getElementById("pcap");
+  function show(which){
+    Object.keys(READ).forEach(function(k){
+      var g = document.getElementById("p-" + k);
+      /* SVG elements have no .hidden property; toggle the attribute, which the CSS hides */
+      if (g) { if (k === which) g.removeAttribute("hidden"); else g.setAttribute("hidden", ""); }
+    });
+    READ[which].forEach(function(v, i){ document.getElementById("ro" + i).textContent = v; });
+    cap.textContent = CAP[which];
+    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-show") === which)); });
+  }
+  chips.forEach(function(c){ c.addEventListener("click", function(){ show(c.getAttribute("data-show")); }); });
+  show("start");
+
+  /* ---------- the drill ---------- */
+  var SCEN = [
+    { t: "A teacher is on summer holiday and returns to school in September.", a: "e",
+      w: "EMPLOYED. The job is still theirs; being away from it for a while does not change that." },
+    { t: "A banker was laid off last month and is interviewing for new positions.", a: "u",
+      w: "UNEMPLOYED. No job, looking, available - all three conditions." },
+    { t: "A laid-off worker would like a job but stopped looking months ago because nobody is hiring.", a: "n",
+      w: "NOT IN THE LABOR FORCE - a discouraged worker. No search in the past four weeks." },
+    { t: "A musician can only find work playing at local parties, a few hours a week.", a: "e",
+      w: "EMPLOYED - and underemployed. Part-time work counts as a job." },
+    { t: "A graduate student went back to university and is not looking for work.", a: "n",
+      w: "NOT IN THE LABOR FORCE. Not working, not looking." },
+    { t: "A retired firefighter spends her days gardening.", a: "n",
+      w: "NOT IN THE LABOR FORCE. Retired and not looking." },
+    { t: "A school-leaver has applied for five jobs this week and has never worked before.", a: "u",
+      w: "UNEMPLOYED. You do not need to have had a job before - only to be looking now." },
+    { t: "A bookshop assistant works 25 hours a week and does not want more.", a: "e",
+      w: "EMPLOYED - part time by choice, and not underemployed either." },
+    { t: "A parent left work to look after a young child and is not job-hunting.", a: "n",
+      w: "NOT IN THE LABOR FORCE. Caring at home is unpaid, and there is no search." },
+    { t: "An engineer works full time mowing lawns because no engineering job is available.", a: "e",
+      w: "EMPLOYED - full time. By your textbook's own definition she is not underemployed, which means part time." },
+    { t: "A designer quit, has an offer she expects to accept, and is doing a few more interviews.", a: "u",
+      w: "UNEMPLOYED - for now. One reason the rate never reaches zero." },
+    { t: "A factory worker is on two weeks' unpaid leave with the job held open.", a: "e",
+      w: "EMPLOYED. Still holding the job." }
+  ];
+  var LABELS = {
+    e: "Employed",
+    u: "Unemployed",
+    n: "Not in the labor force"
+  };
+  var list = document.getElementById("sorter-list");
+  var scoreEl = document.getElementById("sorter-score");
+  var answered = 0, right = 0;
+  function build(){
+    list.innerHTML = "";
+    answered = 0; right = 0;
+    SCEN.forEach(function(s, i){
+      var row = document.createElement("div");
+      row.className = "sortrow";
+      var opts = Object.keys(LABELS).map(function(k){
+        return '<button type="button" class="opt" data-a="' + k + '"><span>' + LABELS[k] + '</span></button>';
+      }).join("");
+      row.innerHTML =
+        '<p class="stem"><span class="qn">' + (i + 1) + '</span> ' + s.t + '</p>' +
+        '<div class="opts">' + opts + '</div>' +
+        '<p class="why" hidden></p>';
+      var btns = Array.prototype.slice.call(row.querySelectorAll(".opt"));
+      var why = row.querySelector(".why");
+      btns.forEach(function(b){
+        b.addEventListener("click", function(){
+          if (row.getAttribute("data-done")) return;
+          row.setAttribute("data-done", "1");
+          var ok = b.getAttribute("data-a") === s.a;
+          btns.forEach(function(x){
+            x.disabled = true;
+            if (x.getAttribute("data-a") === s.a) x.setAttribute("data-state", "right");
+            else if (x === b) x.setAttribute("data-state", "wrong");
+          });
+          why.hidden = false;
+          why.textContent = (ok ? "\u2713 " : "\u2717 ") + s.w;
+          answered++; if (ok) right++;
+          scoreEl.textContent = right + " correct out of " + answered + " answered";
+        });
+      });
+      list.appendChild(row);
+    });
+    scoreEl.textContent = "0 of " + SCEN.length + " answered";
+  }
+  build();
+  document.getElementById("sorter-reset").addEventListener("click", build);
+
+  /* ---------- multiple choice ---------- */
+  var mcqs = Array.prototype.slice.call(document.querySelectorAll(".mcq[data-key]"));
+  var mcqScore = document.getElementById("mcqScore");
+  var mDone = 0, mRight = 0;
+  mcqs.forEach(function(q){
+    var key = q.getAttribute("data-key");
+    var opts = Array.prototype.slice.call(q.querySelectorAll(".opt"));
+    opts.forEach(function(o){
+      o.addEventListener("click", function(){
+        if (q.getAttribute("data-done")) return;
+        q.setAttribute("data-done", "1");
+        var ok = o.getAttribute("data-l") === key;
+        opts.forEach(function(x){
+          x.disabled = true;
+          x.querySelector(".why").hidden = false;
+          if (x.getAttribute("data-l") === key) x.setAttribute("data-state", "right");
+          else if (x === o) x.setAttribute("data-state", "wrong");
+        });
+        mDone++; if (ok) mRight++;
+        mcqScore.textContent = mRight + " correct out of " + mDone + " answered";
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "2.3 Unemployment · the two rates", "title": "Module 12 · Measuring Unemployment", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"href": "m01-student.html", "label": "Module 1 · Student guide", "current": false}, {"href": "m01-notes.html", "label": "Module 1 · Teaching notes", "current": false}, {"href": "m01-test.html", "label": "Module 1 · Test", "current": false}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": false}, {"href": "m02-notes.html", "label": "Module 2 · Teaching notes", "current": false}, {"href": "m02-test.html", "label": "Module 2 · Test", "current": false}, {"href": "m03-student.html", "label": "Module 3 · Student guide", "current": false}, {"href": "m03-notes.html", "label": "Module 3 · Teaching notes", "current": false}, {"href": "m03-test.html", "label": "Module 3 · Test", "current": false}, {"href": "m04-student.html", "label": "Module 4 · Student guide", "current": false}, {"href": "m04-notes.html", "label": "Module 4 · Teaching notes", "current": false}, {"href": "m04-test.html", "label": "Module 4 · Test", "current": false}, {"href": "m05-student.html", "label": "Module 5 · Student guide", "current": false}, {"href": "m05-notes.html", "label": "Module 5 · Teaching notes", "current": false}, {"href": "m05-test.html", "label": "Module 5 · Test", "current": false}, {"href": "m06-student.html", "label": "Module 6 · Student guide", "current": false}, {"href": "m06-notes.html", "label": "Module 6 · Teaching notes", "current": false}, {"href": "m06-test.html", "label": "Module 6 · Test", "current": false}, {"href": "m07-student.html", "label": "Module 7 · Student guide", "current": false}, {"href": "m07-notes.html", "label": "Module 7 · Teaching notes", "current": false}, {"href": "m07-test.html", "label": "Module 7 · Test", "current": false}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"href": "m10-student.html", "label": "Module 10 · Student guide", "current": false}, {"href": "m10-notes.html", "label": "Module 10 · Teaching notes", "current": false}, {"href": "m10-test.html", "label": "Module 10 · Test", "current": false}, {"href": "m11-student.html", "label": "Module 11 · Student guide", "current": false}, {"href": "m11-notes.html", "label": "Module 11 · Teaching notes", "current": false}, {"href": "m11-test.html", "label": "Module 11 · Test", "current": false}, {"href": "m12-student.html", "label": "Module 12 · Student guide", "current": true}, {"href": "m12-notes.html", "label": "Module 12 · Teaching notes", "current": false}, {"href": "m12-test.html", "label": "Module 12 · Test", "current": false}, {"label": "Module 13 · Categories of Unemployment", "planned": true}, {"label": "Module 14 · Inflation: An Overview", "planned": true}, {"label": "Module 15 · Measuring Inflation", "planned": true}, {"label": "Unit 2 · Gap analysis", "planned": true}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"label": "Module 16 · Income and Expenditure", "planned": true}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"label": "Module 34 · The Phillips Curve", "planned": true}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "m11-test.html", "label": "Module 11 · Test"}, "next": {"href": "m12-notes.html", "label": "Module 12 · Teaching notes"}, "variants": [{"href": "m12-student.html", "label": "Student", "current": true}, {"href": "m12-notes.html", "label": "Notes", "current": false}, {"href": "m12-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
