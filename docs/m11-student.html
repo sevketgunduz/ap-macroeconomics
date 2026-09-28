@@ -1,0 +1,1422 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 11 · Interpreting Real GDP · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+
+
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+
+/* ---------- Module 3 supplement ---------- */
+.mark.flag{background:var(--flag-soft);color:var(--flag)}
+.ppc-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.ppc-wrap{grid-template-columns:1fr 210px}}
+.ppc-svg{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px;cursor:crosshair;touch-action:none}
+.ppc-side{display:flex;flex-direction:column;gap:10px}
+.status{font-family:var(--mono);font-size:12.5px;padding:9px 11px;border-radius:5px;
+  border:1px solid var(--rule-strong);background:var(--surface-2);line-height:1.45}
+.status[data-s="on"]{border-color:color-mix(in srgb,var(--up) 45%,transparent);background:var(--up-soft);color:var(--up)}
+.status[data-s="in"]{border-color:var(--rule-strong);color:var(--ink-2)}
+.status[data-s="out"]{border-color:color-mix(in srgb,var(--down) 45%,transparent);background:var(--down-soft);color:var(--down)}
+.ppc-legend{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.ppc-legend b{color:var(--ink-2);font-weight:600}
+.chips.tight{gap:6px}
+.tbl{overflow-x:auto;max-width:100%}
+.sumtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.sumtable th,.sumtable td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+.sumtable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.sumtable td.mk{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--accent)}
+.sumtable td.mk.bgm{color:var(--ink-3)}
+.sumtable td.mk.flagm{color:var(--flag)}
+.final{background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:18px 20px;margin:22px 0;box-shadow:var(--shadow)}
+.final ol{margin:0;padding-left:20px}
+.final li{margin:0 0 9px}
+.final li:last-child{margin-bottom:0}
+
+/* ---------- PPC explorer svg ---------- */
+.ppc-svg .ax{stroke:var(--ink);stroke-width:1.6}
+.ppc-svg .tick{stroke:var(--ink-3);stroke-width:1.1}
+.ppc-svg .tl{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.ppc-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.ppc-svg .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ppc-svg .ghost{fill:none;stroke:var(--rule-strong);stroke-width:1.8;stroke-dasharray:6 5}
+.ppc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.ppc-svg .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.ppc-svg .pt{stroke:var(--surface);stroke-width:2}
+.ppc-svg .pt-on{fill:var(--up)}
+.ppc-svg .pt-in{fill:var(--ink-3)}
+.ppc-svg .pt-out{fill:var(--down)}
+
+
+/* ---------- Module 4 supplement ---------- */
+.two-panel{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px}
+.ca-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 14px}
+@media (min-width:640px){.ca-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ca-grid .field{display:flex;flex-direction:column;gap:5px}
+.ca-grid .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.ca-grid .field b{color:var(--ink-2);font-weight:600;text-transform:none;letter-spacing:0}
+.ca-grid input{font-family:var(--mono);font-size:15px;padding:7px 9px;width:100%;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.ca-grid input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.catab{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 14px}
+.catab th,.catab td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left}
+.catab th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.catab td.v{font-family:var(--mono);color:var(--ink)}
+.catab td.win{font-family:var(--mono);color:var(--up);font-weight:600}
+.dealrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 12px}
+.dealrow .field{display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1}
+.dealrow .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.dealrow input{font-family:var(--mono);font-size:16px;padding:8px 10px;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.line-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.line-svg .band{fill:var(--up-soft);stroke:none}
+.line-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.line-svg .tk{stroke:var(--ink-3);stroke-width:1.1}
+.line-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.line-svg .edge{stroke:var(--up);stroke-width:2}
+.line-svg .edgel{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--up)}
+.line-svg .prop{stroke:var(--accent);stroke-width:2.4}
+.line-svg .propbad{stroke:var(--down);stroke-width:2.4}
+.line-svg .propl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.line-svg .propl.bad{fill:var(--down)}
+.two-panel .ax{stroke:var(--ink);stroke-width:1.6}
+.two-panel .tick{stroke:var(--ink-3);stroke-width:1.1}
+.two-panel .tl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.two-panel .al{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.two-panel .ph{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.two-panel .curve{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+.two-panel .slope{font-family:var(--mono);font-size:11px;fill:var(--accent)}
+.two-panel .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.two-panel .pt{stroke:var(--surface);stroke-width:2}
+.two-panel .pt-on{fill:var(--ink-2)}
+.two-panel .pt-out{fill:var(--up)}
+.two-panel .ptl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.two-panel .ptl.good{fill:var(--up);font-weight:600}
+
+</style>
+<style>
+/* Module 5 additions: the movement-or-shift sorter */
+.sortrow{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:0 0 10px;
+  background:var(--surface)}
+.sortrow .stem{margin:0 0 10px}
+.sortrow .opts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sortrow .opt{flex:1 1 220px;justify-content:center;text-align:center}
+.sortrow .why{display:block;margin:10px 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.sortrow[data-done] .opt{cursor:default}
+#sorter-reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer}
+#sorter-reset:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<style>
+/* Module 11 additions: the base-year chart, the drill's four answers, the formula card */
+.bars-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.bars-svg g[hidden]{display:none}
+.bars-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.bars-svg .tk{stroke:var(--rule-strong);stroke-width:1}
+.bars-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.bars-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.bars-svg .bn{fill:var(--ink-3);opacity:.55}
+.bars-svg .br{fill:var(--accent)}
+.bars-svg .bv{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--ink)}
+.bars-svg .key{font-family:var(--mono);font-size:11.5px;fill:var(--ink-2)}
+.sortrow .opts .opt{flex:1 1 180px}
+.formula{font-family:var(--mono);font-size:14px;background:var(--surface-2);border-radius:5px;
+  padding:9px 12px;margin:10px 0;color:var(--ink)}
+</style>
+
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro &middot; Module 11</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 15</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">AP Macroeconomics &middot; Unit 2 &middot; Student guide</p>
+  <h1>Interpreting Real GDP</h1>
+  <p class="standfirst">Fifteen terms from Module 11 of <i>Krugman&rsquo;s Economics for AP</i>: what
+  separates nominal GDP from real GDP, how to calculate one from the other, and what GDP cannot tell
+  you. This is a calculation module &mdash; almost every exam question on it has a number in it &mdash;
+  and five of its entries are things your textbook does not give you.</p>
+  <div class="source-line">
+    <span>Textbook pages 112&ndash;117</span><span>&middot;</span><span>15 terms</span><span>&middot;</span>
+    <span>Topics 2.6 and 2.2</span><span>&middot;</span><span>5 formulas to get right</span>
+  </div>
+<section class="section" id="howto">
+  <h2>How to use this guide</h2>
+  <p>Read Module 11 in your textbook first &mdash; it is six pages. Entries 1 to 7 are real against
+  nominal GDP and how to calculate real GDP; entries 8 to 11 are the deflator and the base-year
+  problem; entries 12 to 15 are per capita GDP and what GDP leaves out.</p>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <tbody>
+        <tr><td><span class="mark exam">&#9733; Exam</span></td><td><b>Exam term.</b> Define it, explain it, and calculate with it. Fourteen of these.</td></tr>
+        <tr><td><span class="mark bg">&#9675; Background</span></td><td><b>Background.</b> Worth knowing, not tested. One of these.</td></tr>
+        <tr><td><span class="mark flag">&#9873; Not in the textbook</span></td><td><b>Learn it from here.</b> Your exam needs it and Module 11 does not have it. Five entries carry this flag.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Every entry ends with two <b>Check yourself</b> questions. Answer them before opening the
+      answer, then tick <b>Got it</b>.</li>
+    <li>Use the chart below with entries 3 to 11. It holds two economies and lets you change the base
+      year.</li>
+    <li>Keep a calculator next to you. The exam allows a four-function one.</li>
+  </ul>
+  <div class="flag">
+    <p><b>Five formulas carry this module.</b> Real GDP = this year&rsquo;s quantities &times;
+    base-year prices. Deflator = nominal &divide; real &times; 100. Real = nominal &divide; deflator
+    &times; 100. Growth = (new &minus; old) &divide; old &times; 100. Per capita = real GDP &divide;
+    population. The one-page summary at the end has them together.</p>
+  </div>
+</section>
+
+<!-- ============ THE BASE-YEAR SWITCH ============ -->
+<section class="section" id="chart">
+  <h2>Same output, different prices</h2>
+  <p>Two economies. The first is your textbook&rsquo;s Table 11.1: apples and oranges, in billions.
+  The second is a case built for entry 10: computers get cheaper and are produced in greater numbers,
+  bread gets dearer and is not. Grey bars are <b>nominal</b> GDP and never change with the base year.
+  Blue bars are <b>real</b> GDP, and they do.</p>
+
+  <div class="widget">
+    <div class="widget-title">Choose the economy and the base year</div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-show="ao1">Textbook &middot; Year 1 prices</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="ao2">Textbook &middot; Year 2 prices</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="cb1">Computers &middot; Year 1 prices</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="cb2">Computers &middot; Year 2 prices</button>
+    </div>
+<svg id="bfig" class="bars-svg" viewBox="0 0 680 330" role="img" aria-label="Nominal and real GDP in two years, for the chosen economy and base year">
+<line class="axl" x1="80" y1="30" x2="80" y2="270"></line>
+<line class="axl" x1="80" y1="270" x2="640" y2="270"></line>
+<text class="al" x="18" y="155" transform="rotate(-90 18 155)" text-anchor="middle">GDP (dollars; billions for the textbook economy)</text>
+<text class="al" x="360" y="314" text-anchor="middle">Year</text>
+<rect class="bn" x="90" y="12" width="12" height="12"></rect><text class="key" x="108" y="22">Nominal GDP (own-year prices)</text>
+<rect class="br" x="370" y="12" width="12" height="12"></rect><text class="key" x="388" y="22">Real GDP (base-year prices)</text>
+<g id="b-ao1" hidden>
+<line class="tk" x1="80" y1="270.0" x2="640" y2="270.0"></line>
+<text class="tlb" x="72" y="274.0" text-anchor="end">0</text>
+<line class="tk" x1="80" y1="212.5" x2="640" y2="212.5"></line>
+<text class="tlb" x="72" y="216.5" text-anchor="end">400</text>
+<line class="tk" x1="80" y1="155.0" x2="640" y2="155.0"></line>
+<text class="tlb" x="72" y="159.0" text-anchor="end">800</text>
+<line class="tk" x1="80" y1="97.5" x2="640" y2="97.5"></line>
+<text class="tlb" x="72" y="101.5" text-anchor="end">1,200</text>
+<line class="tk" x1="80" y1="40.0" x2="640" y2="40.0"></line>
+<text class="tlb" x="72" y="44.0" text-anchor="end">1,600</text>
+<rect class="bn" x="150.0" y="126.2" width="64" height="143.8"></rect>
+<text class="bv" x="182.0" y="119.2" text-anchor="middle">1,000</text>
+<rect class="br" x="226.0" y="126.2" width="64" height="143.8"></rect>
+<text class="bv" x="258.0" y="119.2" text-anchor="middle">1,000</text>
+<text class="al" x="220.0" y="292" text-anchor="middle">Year 1</text>
+<rect class="bn" x="430.0" y="54.4" width="64" height="215.6"></rect>
+<text class="bv" x="462.0" y="47.4" text-anchor="middle">1,500</text>
+<rect class="br" x="506.0" y="104.7" width="64" height="165.3"></rect>
+<text class="bv" x="538.0" y="97.7" text-anchor="middle">1,150</text>
+<text class="al" x="500.0" y="292" text-anchor="middle">Year 2</text>
+</g>
+<g id="b-ao2" hidden>
+<line class="tk" x1="80" y1="270.0" x2="640" y2="270.0"></line>
+<text class="tlb" x="72" y="274.0" text-anchor="end">0</text>
+<line class="tk" x1="80" y1="212.5" x2="640" y2="212.5"></line>
+<text class="tlb" x="72" y="216.5" text-anchor="end">400</text>
+<line class="tk" x1="80" y1="155.0" x2="640" y2="155.0"></line>
+<text class="tlb" x="72" y="159.0" text-anchor="end">800</text>
+<line class="tk" x1="80" y1="97.5" x2="640" y2="97.5"></line>
+<text class="tlb" x="72" y="101.5" text-anchor="end">1,200</text>
+<line class="tk" x1="80" y1="40.0" x2="640" y2="40.0"></line>
+<text class="tlb" x="72" y="44.0" text-anchor="end">1,600</text>
+<rect class="bn" x="150.0" y="126.2" width="64" height="143.8"></rect>
+<text class="bv" x="182.0" y="119.2" text-anchor="middle">1,000</text>
+<rect class="br" x="226.0" y="83.1" width="64" height="186.9"></rect>
+<text class="bv" x="258.0" y="76.1" text-anchor="middle">1,300</text>
+<text class="al" x="220.0" y="292" text-anchor="middle">Year 1</text>
+<rect class="bn" x="430.0" y="54.4" width="64" height="215.6"></rect>
+<text class="bv" x="462.0" y="47.4" text-anchor="middle">1,500</text>
+<rect class="br" x="506.0" y="54.4" width="64" height="215.6"></rect>
+<text class="bv" x="538.0" y="47.4" text-anchor="middle">1,500</text>
+<text class="al" x="500.0" y="292" text-anchor="middle">Year 2</text>
+</g>
+<g id="b-cb1" hidden>
+<line class="tk" x1="80" y1="270.0" x2="640" y2="270.0"></line>
+<text class="tlb" x="72" y="274.0" text-anchor="end">0</text>
+<line class="tk" x1="80" y1="212.5" x2="640" y2="212.5"></line>
+<text class="tlb" x="72" y="216.5" text-anchor="end">12,500</text>
+<line class="tk" x1="80" y1="155.0" x2="640" y2="155.0"></line>
+<text class="tlb" x="72" y="159.0" text-anchor="end">25,000</text>
+<line class="tk" x1="80" y1="97.5" x2="640" y2="97.5"></line>
+<text class="tlb" x="72" y="101.5" text-anchor="end">37,500</text>
+<line class="tk" x1="80" y1="40.0" x2="640" y2="40.0"></line>
+<text class="tlb" x="72" y="44.0" text-anchor="end">50,000</text>
+<rect class="bn" x="150.0" y="155.0" width="64" height="115.0"></rect>
+<text class="bv" x="182.0" y="148.0" text-anchor="middle">25,000</text>
+<rect class="br" x="226.0" y="155.0" width="64" height="115.0"></rect>
+<text class="bv" x="258.0" y="148.0" text-anchor="middle">25,000</text>
+<text class="al" x="220.0" y="292" text-anchor="middle">Year 1</text>
+<rect class="bn" x="430.0" y="132.0" width="64" height="138.0"></rect>
+<text class="bv" x="462.0" y="125.0" text-anchor="middle">30,000</text>
+<rect class="br" x="506.0" y="63.0" width="64" height="207.0"></rect>
+<text class="bv" x="538.0" y="56.0" text-anchor="middle">45,000</text>
+<text class="al" x="500.0" y="292" text-anchor="middle">Year 2</text>
+</g>
+<g id="b-cb2" hidden>
+<line class="tk" x1="80" y1="270.0" x2="640" y2="270.0"></line>
+<text class="tlb" x="72" y="274.0" text-anchor="end">0</text>
+<line class="tk" x1="80" y1="212.5" x2="640" y2="212.5"></line>
+<text class="tlb" x="72" y="216.5" text-anchor="end">12,500</text>
+<line class="tk" x1="80" y1="155.0" x2="640" y2="155.0"></line>
+<text class="tlb" x="72" y="159.0" text-anchor="end">25,000</text>
+<line class="tk" x1="80" y1="97.5" x2="640" y2="97.5"></line>
+<text class="tlb" x="72" y="101.5" text-anchor="end">37,500</text>
+<line class="tk" x1="80" y1="40.0" x2="640" y2="40.0"></line>
+<text class="tlb" x="72" y="44.0" text-anchor="end">50,000</text>
+<rect class="bn" x="150.0" y="155.0" width="64" height="115.0"></rect>
+<text class="bv" x="182.0" y="148.0" text-anchor="middle">25,000</text>
+<rect class="br" x="226.0" y="178.0" width="64" height="92.0"></rect>
+<text class="bv" x="258.0" y="171.0" text-anchor="middle">20,000</text>
+<text class="al" x="220.0" y="292" text-anchor="middle">Year 1</text>
+<rect class="bn" x="430.0" y="132.0" width="64" height="138.0"></rect>
+<text class="bv" x="462.0" y="125.0" text-anchor="middle">30,000</text>
+<rect class="br" x="506.0" y="132.0" width="64" height="138.0"></rect>
+<text class="bv" x="538.0" y="125.0" text-anchor="middle">30,000</text>
+<text class="al" x="500.0" y="292" text-anchor="middle">Year 2</text>
+</g>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Nominal, Year 1</span><span class="v" id="ro0">&ndash;</span></div>
+      <div class="ro"><span class="k">Nominal, Year 2</span><span class="v" id="ro1">&ndash;</span></div>
+      <div class="ro"><span class="k">Real, Year 1</span><span class="v" id="ro2">&ndash;</span></div>
+      <div class="ro"><span class="k">Real, Year 2</span><span class="v" id="ro3">&ndash;</span></div>
+      <div class="ro"><span class="k">Deflator, Year 1</span><span class="v" id="ro4">&ndash;</span></div>
+      <div class="ro"><span class="k">Deflator, Year 2</span><span class="v" id="ro5">&ndash;</span></div>
+      <div class="ro"><span class="k">Nominal growth</span><span class="v" id="ro6">&ndash;</span></div>
+      <div class="ro"><span class="k">Real growth</span><span class="v hl" id="ro7">&ndash;</span></div>
+    </div>
+    <p class="figcap" id="bcap"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The 15 terms</h2>
+</section>
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Aggregate output</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>total quantity</b> of final goods and services an economy produces.</p></div>
+  <p class="reading">Textbook page 113, margin.</p>
+
+  <p>This is the thing both kinds of GDP are trying to measure. It is a <b>quantity</b> &mdash; apples, haircuts, cars &mdash; not a sum of money. You cannot add apples to haircuts, so to get one number you have to value everything at some prices. Which prices you choose is the whole difference between nominal and real GDP.</p>
+
+  <p>Later in the course, aggregate output goes on the horizontal axis of the main diagram of Unit 3, and your textbook will use <i>real GDP</i> and <i>aggregate output</i> to mean the same thing.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A rise in GDP is not automatically a rise in aggregate output. GDP is a value; aggregate output is a quantity. They move together only when prices stay still.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Portugal, 1974&ndash;75.</span> Output was falling, yet GDP measured in escudos rose 11%. The value went up while the quantity went down.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The apples-and-oranges economy.</span> Apple output rose from 2,000 to 2,200 billion (10%) and orange output from 1,000 to 1,200 billion (20%). Those are the changes in aggregate output. Everything else in the table is prices.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A bakery.</span> It bakes 500 loaves this year and 500 next year, but charges more next year. Its output is unchanged; the money it takes in is not.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Nominal GDP (<a href="#e2">entry 2</a>) and real GDP (<a href="#e3">entry 3</a>) are two ways of putting a single dollar figure on it.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> An economy produces the same quantity of everything in two years, and every price doubles. What happens to aggregate output?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Nothing. Aggregate output is a quantity, and no quantity changed. Only the value of the output doubled.</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> Why do you need prices at all to measure aggregate output?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because you cannot add different goods together as quantities. Valuing each one at a price turns them into dollars, which can be added.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Nominal GDP</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The value of all final goods and services produced in a year, calculated at the prices <b>current</b> in that year. It measures <b>how much is spent</b> on output.</p></div>
+  <p class="reading">Textbook page 114, margin; also page 112.</p>
+
+  <p>Nominal GDP is the GDP you met in Module 10: each year&rsquo;s quantities multiplied by that same year&rsquo;s prices, then added up. Economists also call it GDP <b>at current prices</b>.</p>
+
+  <p>Learn the one-line version as well as the calculation: <b>nominal GDP is how much is spent on output</b>. That sentence is how your exam defines it, and it tells you immediately why nominal GDP can rise with no extra output &mdash; people can spend more on the same things.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Nominal GDP moves with <b>two</b> things: quantities and prices. If one rises and the other falls, nominal GDP can go either way.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The United States, 1994&ndash;2009.</span> GDP roughly doubled, from $7,085 billion to $14,259 billion. Production did not double &mdash; part of the rise was prices.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Table 11.1.</span> Year 1: (2,000 &times; $0.25) + (1,000 &times; $0.50) = <b>$1,000 billion</b>. Year 2: (2,200 &times; $0.30) + (1,200 &times; $0.70) = <b>$1,500 billion</b>, a rise of <b>50%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A caf&eacute;.</span> It sells 100 coffees at $3 this year ($300 spent) and 100 at $4 next year ($400 spent). Nominal output is up a third; not one extra coffee was made.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It values <a href="#e1">aggregate output</a> (entry 1) at current prices. It is the starting point for <a href="#e3">real GDP</a> (entry 3), and the numerator of <a href="#e8">the GDP deflator</a> (entry 8).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> In the caf&eacute; example, by what percentage did nominal GDP rise, and by how much did output rise?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Nominal GDP rose from $300 to $400, which is 33.3%. Output did not rise at all &mdash; it was 100 coffees both years.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> Complete the sentence your exam uses: nominal GDP is a measure of how much is &hellip;</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>&hellip; <b>spent</b> on output.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Real GDP</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The value of all final goods and services produced in a year, calculated using the prices of a <b>base year</b>. It measures <b>how much is produced</b>.</p></div>
+  <p class="reading">Textbook page 114, margin.</p>
+
+  <p>Real GDP asks one question: <i>how much would GDP have changed if prices had not changed?</i> To answer it you value every year&rsquo;s output at the same set of prices &mdash; the prices of one chosen year &mdash; so that the only thing left to change is the quantities.</p>
+
+  <p>Your exam puts it in one line: <b>real GDP is how much is produced</b>. It is also described as GDP at <b>constant prices</b>, because the prices are held fixed. Holding them fixed is what removes the effect of changes in the overall price level.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Real GDP is still measured in dollars &mdash; but in the dollars of the base year. A real GDP figure always comes with its base year attached: &ldquo;in 2017 dollars&rdquo;.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Table 11.2.</span> U.S. GDP in 2009 was $14,259 billion nominal but $12,989 billion in 2005 dollars. Prices were higher in 2009 than in 2005, so taking the price effect out makes the figure smaller.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Table 11.1, Year 1 prices.</span> Year 2 output at Year 1 prices: (2,200 &times; $0.25) + (1,200 &times; $0.50) = <b>$1,150 billion</b>, against $1,000 billion in Year 1.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The caf&eacute; again.</span> At this year&rsquo;s $3 price, next year&rsquo;s 100 coffees are worth $300 &mdash; exactly this year&rsquo;s figure. Real GDP did not change, which is the truth about the caf&eacute;.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is <a href="#e2">nominal GDP</a> (entry 2) with the price effect removed, so it tracks <a href="#e1">aggregate output</a> (entry 1) itself. <a href="#e4">Entry 4</a> is why it is needed; the <a href="#e5">base year</a> (entry 5) is what it is measured in.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> Real GDP rose from one year to the next. Does that mean aggregate output rose?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Yes. Real GDP holds prices constant, so the only way it can rise is if quantities rose.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> Give the exam&rsquo;s one-line definitions of nominal and real GDP.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Nominal GDP is a measure of how much is <b>spent</b> on output. Real GDP is a measure of how much is <b>produced</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>Why nominal GDP misleads over time</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Nominal GDP can rise because output rises <b>or</b> because prices rise. Over time, only real GDP tells you which.</p></div>
+  <p class="reading">Textbook pages 112&ndash;113, and the Venezuela box on page 116.</p>
+
+  <p>For one year, nominal GDP is a good measure of the <b>size</b> of an economy. For comparing years, it is not, because prices change between them. With inflation, nominal GDP <b>overstates</b> growth. With falling prices, it <b>understates</b> it.</p>
+
+  <p>The rule to learn: <b>nominal moves with output and prices; real moves with output only</b>. Once you know which way prices went, you know which way the gap goes.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not simply subtract the inflation rate from nominal growth. It is a rough shortcut that breaks down for large numbers. Convert properly (entry 9).</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Venezuela, 1997&ndash;2007.</span> Nominal GDP grew about 28% a year &mdash; faster than China&rsquo;s. Real GDP grew 2.9% a year. It was not a miracle; it was inflation.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Portugal-style.</span> Suppose nominal GDP rises 11% while prices rise 15%. Real GDP changes by 1.11 &divide; 1.15 = 0.965, a <b>fall of about 3.5%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Falling prices.</span> If output rises 2% and prices fall 5%, nominal GDP changes by 1.02 &times; 0.95 = 0.969 &mdash; it <b>falls</b> about 3.1% while output rises.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> The fix is <a href="#e3">real GDP</a> (entry 3), calculated in <a href="#e6">entry 6</a> or converted with the deflator in <a href="#e9">entry 9</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> Nominal GDP rose 11% and the price level rose 15%. Did the economy produce more or less?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Less. Spending rose more slowly than prices, so the quantity bought fell &mdash; by about 3.5%.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> Can nominal GDP ever understate growth?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Yes, when the price level falls. Then nominal GDP grows more slowly than output, or even falls while output rises.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>The base year</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The year whose prices are used to calculate real GDP. <b>In the base year, real GDP equals nominal GDP.</b></p></div>
+  <p class="reading">Textbook page 114.</p>
+
+  <p>In the base year, &ldquo;base-year prices&rdquo; and &ldquo;current prices&rdquo; are the same prices, so the two calculations give the same number. That is the quickest check you have that you set a calculation up correctly.</p>
+
+  <p>It also fixes the GDP deflator (entry 8) at exactly <b>100</b> in the base year. Before the base year, when prices were usually lower, real GDP is above nominal. After it, below.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Your textbook&rsquo;s Table 11.2 prints 2005 nominal GDP as 12,683 and 2005 real GDP as 12,638 &mdash; but 2005 is the base year, and the text above the table says they are the same. Two digits have been swapped in one cell. Trust the rule, not the misprint.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Table 11.2, 2005 dollars.</span> Real GDP is above nominal in 2001 ($11,347 bn against $10,286 bn) and below it in 2009, because prices in 2001 were lower than in the base year and prices in 2009 higher.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Table 11.1, Year 1 as base.</span> Year 1 real GDP = Year 1 nominal GDP = <b>$1,000 billion</b>, and the deflator is 100.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Official statistics.</span> U.S. real GDP is currently reported in &ldquo;chained 2017 dollars&rdquo;. The year in the label is the base.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is what <a href="#e3">real GDP</a> (entry 3) is measured in. Choosing a different one changes measured growth &mdash; <a href="#e10">entry 10</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> Real GDP for 2017 is reported in 2017 dollars. Nominal GDP in 2017 was $19.5 trillion. What was real GDP in 2017?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>$19.5 trillion. In the base year the two are equal.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> Before the base year, is real GDP usually above or below nominal GDP? Why?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Above. Prices were usually lower before the base year, so valuing that output at the higher base-year prices gives a bigger number.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>Calculating real GDP</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Multiply <b>this year&rsquo;s quantities</b> by <b>the base year&rsquo;s prices</b>, and add them up.</p></div>
+  <p class="reading">Textbook pages 113&ndash;114, Table 11.1.</p>
+
+  <p>Three steps, and the second is the only one people get wrong.</p>
+
+  <p><b>1.</b> Take the quantities of the year you want. <b>2.</b> Multiply each by its price in the <b>base</b> year &mdash; not the current year. <b>3.</b> Add. If the year you want is the base year, you have just calculated nominal GDP, which is correct.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Keep the quantities from the year you are measuring and change only the prices. Swapping which year the quantities come from gives a number that means nothing.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Table 11.1.</span> Year 2 at Year 1 prices: (2,200 &times; $0.25) + (1,200 &times; $0.50) = $550 + $600 = <b>$1,150 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Britannica (your AP Review, question 1).</span> 2010 output at 2008 prices: ($900 &times; 12) + ($10 &times; 110) + ($15 &times; 3) = <b>$11,945</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A school canteen.</span> Year 1: 200 sandwiches at $4, 100 juices at $2. Year 2: 220 sandwiches at $5, 90 juices at $2.50. Real GDP in Year 2 at Year 1 prices = (220 &times; $4) + (90 &times; $2) = <b>$1,060</b>, against $1,000 in Year 1.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the fix for <a href="#e4">entry 4</a>&rsquo;s problem, and it produces the two figures you need for <a href="#e7">the growth rate</a> (entry 7) and <a href="#e8">the deflator</a> (entry 8).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> Using the canteen numbers, what is nominal GDP in Year 2?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>(220 &times; $5) + (90 &times; $2.50) = $1,100 + $225 = <b>$1,325</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> In Table 11.1, what do you get if you value Year 1 quantities at Year 2 prices?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>(2,000 &times; $0.30) + (1,000 &times; $0.70) = <b>$1,300 billion</b> &mdash; Year 1&rsquo;s real GDP with Year 2 as the base. It is a legitimate number, but a different base year.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>The growth rate of real GDP</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>(new &minus; old) &divide; old &times; 100</b>, using <b>real</b> GDP figures.</p></div>
+  <p class="reading">Textbook page 114.</p>
+
+  <p>The growth rate of real GDP is how economists say how much more an economy produced. Use real figures, or you measure prices as well as output.</p>
+
+  <p>In Table 11.1 nominal GDP grew 50% and real GDP 15%. The difference, 35 points, is not output at all.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Always divide by the <b>old</b> value. Dividing the change by the new value is the commonest arithmetic slip in this unit.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Table 11.1.</span> Real GDP: ($1,150 &minus; $1,000) &divide; $1,000 &times; 100 = <b>15%</b>. Nominal: ($1,500 &minus; $1,000) &divide; $1,000 &times; 100 = 50%.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The canteen.</span> Real GDP rose from $1,000 to $1,060: growth of <b>6%</b>. Nominal GDP rose to $1,325: 32.5%. Most of the nominal rise was prices.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Venezuela.</span> Real growth of 2.9% a year over a decade in which nominal GDP grew 28% a year. Only the first number is growth.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It needs two real GDP figures from <a href="#e6">entry 6</a>. And it depends on the base year chosen &mdash; <a href="#e10">entry 10</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> Real GDP rises from $400 to $480. What is the growth rate? What do you get if you wrongly divide by the new value?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>(480 &minus; 400) &divide; 400 = <b>20%</b>. Dividing by 480 gives 16.7%, which is wrong.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> Nominal GDP grew 50% but real GDP grew 15%. What accounts for the difference?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Higher prices. Real GDP removes the effect of the price level; nominal GDP does not.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>The GDP deflator</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook&rsquo;s Module 11 &mdash; learn it from here.</b> Your exam asks you to <b>calculate</b> it alongside real GDP. The textbook does not define it until Module 15 (page 146).</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A price index for everything in GDP: <b>nominal GDP &divide; real GDP &times; 100</b>. It is <b>100</b> in the base year.</p></div>
+  <p class="reading">Not in Module 11. Defined in Module 15, page 146.</p>
+
+  <p>If nominal GDP is output at today&rsquo;s prices and real GDP is the same output at base-year prices, their ratio tells you how much higher today&rsquo;s prices are. Multiply by 100 and you have the GDP deflator.</p>
+
+  <p>A deflator of 130 means the prices of the economy&rsquo;s final goods and services are, on average, 30% above their base-year level. And because it is a price index, the percentage change in the deflator from one year to the next is an <b>inflation rate</b>.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not forget the &times;100. Nominal &divide; real gives 1.304; the deflator is 130.4.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Table 11.2.</span> 2009: 14,259 &divide; 12,989 &times; 100 = <b>109.8</b>. 2001: 10,286 &divide; 11,347 &times; 100 = <b>90.6</b>. Above 100 after the base year, below it before.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Table 11.1, Year 1 base.</span> Year 2: 1,500 &divide; 1,150 &times; 100 = <b>130.4</b>. Prices rose about 30.4% on average.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Fehran, from your exam board&rsquo;s sample question.</span> The deflator went from 100 to 125, so the inflation rate was (125 &minus; 100) &divide; 100 &times; 100 = <b>25%</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Its top line is <a href="#e2">nominal GDP</a> (entry 2) and its bottom line real GDP from <a href="#e6">entry 6</a>. Rearrange it and you can turn nominal GDP into real GDP &mdash; <a href="#e9">entry 9</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> Nominal GDP is $2,400 billion and real GDP is $2,000 billion. What is the GDP deflator?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>2,400 &divide; 2,000 &times; 100 = <b>120</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> The deflator rises from 110 to 121. What is the inflation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>(121 &minus; 110) &divide; 110 &times; 100 = <b>10%</b>. Not 11% &mdash; the change is 11 points, but the starting value is 110, not 100.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>Converting nominal GDP to real GDP</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> This exact calculation is the first point of a published sample exam question, and your textbook never writes it out.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Real GDP = nominal GDP &divide; GDP deflator &times; 100.</b></p></div>
+  <p class="reading">Not in the textbook as a procedure. It is entry 8 rearranged.</p>
+
+  <p>This is the deflator&rsquo;s definition turned round. If you know how much was spent and how much higher prices are than in the base year, dividing takes the price effect out and leaves the quantity, in base-year dollars.</p>
+
+  <p>A quick sense-check: when the deflator is above 100, real GDP must come out <b>smaller</b> than nominal; below 100, <b>larger</b>. If your answer goes the wrong way, you multiplied instead of dividing.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Divide by the deflator, then multiply by 100. Multiplying by the deflator adds inflation instead of removing it.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 2, Country B.</span> 2010 nominal GDP $6,000 with a price level of 200: $6,000 &divide; 200 &times; 100 = <b>$3,000</b> in 2005 prices.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Fehran, 2012.</span> $225,000 &divide; 125 &times; 100 = <b>$180,000</b>. This is the scored answer to the published question.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Comparing two years.</span> Nominal GDP rises from $11,000 bn (deflator 110) to $13,200 bn (deflator 120). Real GDP: $10,000 bn, then $11,000 bn &mdash; real growth of exactly <b>10%</b>, while nominal growth was 20%.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is <a href="#e8">entry 8</a> rearranged, and the proper answer to <a href="#e4">entry 4</a>. Real GDP divided by population gives <a href="#e12">real GDP per capita</a> (entry 12), which is how living standards are compared (entry 13).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> Nominal GDP is $450 billion and the deflator is 125. What is real GDP?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>$450 &divide; 125 &times; 100 = <b>$360 billion</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> A student converts $450 billion with a deflator of 125 and gets $562.5 billion. What went wrong, and how could they have spotted it?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>They multiplied by 1.25 instead of dividing. With a deflator above 100, real GDP must be <b>below</b> nominal, so an answer above $450 billion is impossible.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>Why a fixed base year can overstate growth</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Your textbook shows that two base years give two answers. Your exam also says which way the error usually runs.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Valuing output at <b>old</b> prices gives too much weight to goods whose prices have <b>fallen</b> &mdash; usually the goods whose output has grown fastest &mdash; and so <b>overstates</b> real GDP growth.</p></div>
+  <p class="reading">Textbook page 115 shows the two base years. The direction is not in the textbook.</p>
+
+  <p>Real GDP needs one set of prices, but the choice matters. Each good counts in proportion to its price, so the base year decides how much each good&rsquo;s growth contributes.</p>
+
+  <p>In real economies the goods whose output grows fastest are usually the ones technology is making cheaper &mdash; computers, phones, solar panels. An early base year values each of them at its old, high price, so their growth counts for too much. That is the overstatement, and it is why statistical agencies do not use one fixed base year for ever.</p>
+
+  <div class="watch"><p><b>Watch out.</b> This is about <b>relative</b> prices, not inflation. Both calculations hold all prices constant; they differ only in <i>which</i> year&rsquo;s prices they hold.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Computers and bread (the chart above).</span> Computers go from 10 at $2,000 to 20 at $1,000; bread stays at 1,000 loaves while its price rises from $5 to $10. At Year 1 prices real GDP grows <b>80%</b>; at Year 2 prices, <b>50%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Apples and oranges, both ways.</span> Year 1 prices give 15%, Year 2 prices 15.4%. Here the early base gives the <i>lower</i> figure, because oranges got dearer and also grew faster &mdash; the unusual case. Your textbook concludes that neither answer is more correct.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Computing power since 1990.</span> Its price has fallen by more than 90% while its output has multiplied. Measured at 1990 prices, it would dominate growth figures far beyond its real importance.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a problem with choosing a <a href="#e5">base year</a> (entry 5), and it shows up in <a href="#e7">growth rates</a> (entry 7). What statistical agencies do instead is <a href="#e11">chain-linking</a> (entry 11).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> An economy&rsquo;s fastest-growing good is one whose price is falling. Will an early base year give a higher or a lower growth rate than a late one?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Higher. The early base year values the fast-growing good at its old, higher price, giving its growth more weight.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> Does this problem mean real GDP still contains inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. Each calculation holds all prices constant. The problem is which year&rsquo;s relative prices are used as weights.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>Chain-linking</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Calculating real GDP growth as the <b>average</b> of the growth rate using an early base year and the growth rate using a late base year.</p></div>
+  <p class="reading">Textbook page 115, margin.</p>
+
+  <p>This is how your textbook describes the method U.S. statisticians use, and why U.S. real GDP is reported in &ldquo;chained dollars&rdquo;. It splits the difference between an early and a late base year.</p>
+
+  <p>Your exam does not ask you to chain-link anything. What it does expect you to know is the reason for it: a single fixed base year can overstate growth, so agencies use other methods (entry 10).</p>
+
+  <div class="watch"><p><b>Watch out.</b> The average is a method, not the &ldquo;true&rdquo; growth rate. Neither base year is right; chain-linking is a compromise between them.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Apples and oranges.</span> (15% + 15.4%) &divide; 2 &asymp; <b>15.2%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Computers and bread.</span> (80% + 50%) &divide; 2 = <b>65%</b> &mdash; between the two, and a long way below the early base year&rsquo;s figure.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The label on official figures.</span> &ldquo;Real GDP, billions of chained 2017 dollars&rdquo; means a chain-linked series whose reference year is 2017.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the agencies&rsquo; answer to <a href="#e10">entry 10</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> Two base years give growth of 15% and 15.4%. What does chain-linking report?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>About 15.2%, the average of the two.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> Do you need to perform chain-linking on the exam?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. You need to know <i>why</i> agencies do not use one fixed base year &mdash; that is entry 10.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE DRILL ============ -->
+<section class="section" id="sorter">
+  <h2>Drill: is it in GDP?</h2>
+  <p>Twelve events. For each, decide whether it is counted in GDP &mdash; and if not, why not. Entries
+  14 and 15 are the reasons; two of the reasons come from Module 10.</p>
+  <div class="widget">
+    <div id="sorter-list"></div>
+    <p class="score" id="sorter-score">0 of 12 answered</p>
+    <button type="button" id="sorter-reset">Start again</button>
+  </div>
+</section>
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>GDP per capita and real GDP per capita</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>GDP divided by the population &mdash; the <b>average GDP per person</b>. Real GDP per capita is <b>real GDP &divide; population</b>.</p></div>
+  <p class="reading">Textbook page 115, margin.</p>
+
+  <p>A country with more people will usually have a bigger GDP simply because more people are working. To compare output <b>per person</b>, divide by the population. Use real GDP when you compare over time, for the same reasons as entry 4.</p>
+
+  <p>Keep the two questions apart. <b>Which economy is bigger?</b> Compare GDP. <b>Where does the average person have more output?</b> Compare GDP per capita. They often have different answers.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Check the units. $840 billion &divide; 60 million is $14,000, not $14. Write the zeros out if you need to.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">2009 GDP.</span> The United States $14,259 billion, Japan $5,049 billion, the European Union $16,191 billion. That tells you the EU&rsquo;s economy is the largest &mdash; and nothing about who is better off, because it gives no populations.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review, question 2, Country A in 2010.</span> Real GDP $4,000 and a population of 20: $4,000 &divide; 20 = <b>$200</b> per person.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A big economy and a small one.</span> Real GDP of $2,000 billion shared among 1,000 million people is <b>$2,000</b> each; $400 billion among 8 million is <b>$50,000</b> each. The first economy is five times bigger.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It divides the real GDP of <a href="#e9">entry 9</a> by population, and it is what you use to compare <a href="#e13">living standards</a> (entry 13).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> Country Z has real GDP of $840 billion and 60 million people. What is its real GDP per capita?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>840,000,000,000 &divide; 60,000,000 = <b>$14,000</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> Country P has three times Country Q&rsquo;s GDP. Does P have the higher GDP per capita?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Not necessarily. It depends on the populations. P could have many more people and a lower figure per person.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>Real GDP per capita and the standard of living</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>When a question asks whether the <b>average person&rsquo;s standard of living</b> rose, fell or stayed the same, compare <b>real GDP per capita</b>.</p></div>
+  <p class="reading">Textbook page 115.</p>
+
+  <p>Your textbook calls real GDP per capita <i>&ldquo;a rough measure of the average real output per person&rdquo;</i> &mdash; of what a country can do. On the exam it is the measure you compute when you are asked about living standards from data.</p>
+
+  <p>The method is two steps you already have: <b>convert</b> nominal to real (entry 9), then <b>divide</b> by population (entry 12). Compare the two years. A rise in real GDP is not enough, because the population may have grown just as fast.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Use real, not nominal, GDP per person. Nominal GDP per person rises with inflation even when nobody has more.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 2.</span> Country A&rsquo;s real GDP doubled and Country B&rsquo;s rose 50%, but real GDP per capita in 2010 is <b>$200</b> in both, exactly where it started.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Fehran.</span> Real GDP per capita: $150,000 &divide; 100 = <b>$1,500</b> in 2011; $180,000 &divide; 120 = <b>$1,500</b> in 2012. The standard of living <b>stayed the same</b>, which is the scored answer.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A growing town.</span> Output rises 5% in a year while the population rises 5%. Real GDP is up; the average resident has exactly as much as before.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is <a href="#e12">entry 12</a> applied to two years. What this measure <i>cannot</i> capture is <a href="#e14">entries 14</a> and <a href="#e15">15</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> Real GDP rose 20% and the population rose 20%. What happened to the average standard of living?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It stayed the same. Real GDP per capita did not change.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> Why is nominal GDP per capita the wrong measure?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because it rises with prices. Inflation alone would make it look as though living standards rose.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e14">
+  <div class="entry-head"><span class="entry-num">14</span><h2>Nonmarket transactions</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; The word is not in your textbook &mdash; learn it from here.</b> Your textbook describes the idea (housework, volunteering) without using the name. Your exam uses the name: it is the one limitation of GDP it spells out.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Production that is <b>not bought and sold</b> in a market &mdash; housework, caring for your own children, volunteering. GDP does not count it.</p></div>
+  <p class="reading">Textbook page 115, in substance.</p>
+
+  <p>GDP adds up the <b>market value</b> of output, so something that is never sold has no market value to add. The meal you cook at home is production; the same meal cooked in a restaurant is production <i>and</i> part of GDP.</p>
+
+  <p>The consequence cuts both ways. When work moves <b>out</b> of the market &mdash; a family stops paying a cleaner and cleans itself &mdash; measured GDP falls although nothing less is done. When it moves <b>into</b> the market, measured GDP rises although nothing more is done.</p>
+
+  <div class="watch"><p><b>Watch out.</b> &ldquo;Not counted&rdquo; does not mean &ldquo;not produced&rdquo;. Nonmarket work is real output; it is just invisible to GDP.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Page 115.</span> Real GDP does not include <i>housework</i> or <i>volunteerism</i>. Both are nonmarket transactions.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A childminder.</span> A family pays a childminder $12,000 a year, then one parent stays home and does the same care unpaid. Measured GDP falls by <b>$12,000</b>; the amount of childcare does not change.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A vegetable garden.</span> Growing your own vegetables instead of buying them replaces market output with nonmarket output. The food is the same; measured GDP is lower.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is why <a href="#e13">real GDP per capita</a> (entry 13) is only a rough guide to well-being. It is one of several limitations; <a href="#e15">entry 15</a> has the rest.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">14.1</span> A retired engineer volunteers at a food bank every week. Is that work counted in GDP?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It is a nonmarket transaction &mdash; nothing is sold.</p></div></details></div>
+    <div class="q"><p><span class="qn">14.2</span> Two neighbours start paying each other to mow each other&rsquo;s lawns instead of mowing their own. What happens to measured GDP and to actual production?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Measured GDP rises, because the mowing is now sold. Actual production is unchanged &mdash; two lawns, mowed.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got14"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e15">
+  <div class="entry-head"><span class="entry-num">15</span><h2>The other limitations of GDP</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Two of these are not in your textbook.</b> The underground economy and changes in product quality appear in your exam board&rsquo;s own sample question. Learn them from here.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>GDP is a useful indicator, but it leaves out things that matter and counts things that do not make anyone better off.</p></div>
+  <p class="reading">Textbook page 115.</p>
+
+  <p>Your textbook&rsquo;s list: real GDP does not include <b>leisure time</b>, volunteering, housework or natural beauty; it <b>does</b> rise with spending on things that make people unhappy &mdash; disease, divorce, crime, natural disasters; and it says nothing about how a country <b>uses</b> its output.</p>
+
+  <p>Add two more. The <b>underground economy</b> &mdash; work paid in cash and hidden from the authorities &mdash; is not recorded. And <b>changes in product quality</b> are not captured: a better phone at the same price adds nothing to GDP.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A limitation is a reason GDP is an imperfect measure of <i>well-being</i>. It does not change how you answer a calculation question about living standards &mdash; for that, still compare real GDP per capita.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Disasters.</span> Rebuilding after a hurricane raises GDP, because new construction is counted. The destroyed homes are never subtracted. GDP rises; nobody is better off.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Leisure.</span> Two countries have the same real GDP per capita, but one works 1,600 hours a year and the other 2,000. The first produces <b>25%</b> more per hour worked and has far more free time. GDP per capita shows them as equal.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The underground economy.</span> A painter paid in cash who never reports the work produces real output that never appears in GDP.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Each is a reason <a href="#e13">real GDP per capita</a> (entry 13) falls short. The one limitation your exam names is <a href="#e14">nonmarket transactions</a> (entry 14).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">15.1</span> A hurricane destroys homes and the rebuilding raises real GDP. Is the country better off?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. GDP counts the rebuilding but never subtracts the destruction, so it rises while the country is only getting back to where it was.</p></div></details></div>
+    <div class="q"><p><span class="qn">15.2</span> Name two things GDP leaves out that your textbook does not mention.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The underground economy, and changes in product quality.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got15"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ MCQ ============ -->
+<section class="section" id="mcq">
+  <h2>Tackle the test &mdash; multiple choice</h2>
+  <p>The five questions from your textbook&rsquo;s AP Review, with <b>every option explained</b>.</p>
+
+  <div class="mcq" data-key="D">
+    <p class="stem"><span class="qn">1</span> Which of the following is true of real GDP? I. It is adjusted for changes in prices. II. It is always equal to nominal GDP. III. It increases whenever aggregate output increases.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; I is true, but so is III: real GDP holds prices constant, so any rise in output raises it.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10007; Real GDP equals nominal GDP only in the base year.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10007; III is true, but so is I &mdash; adjusting for prices is what real GDP is.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>I and III<span class="why" hidden>&#10003; <b>Correct.</b> Real GDP is adjusted for prices, and with prices held fixed it moves only when output moves.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II and III<span class="why" hidden>&#10007; II is false except in the base year.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">2</span> The best measure for comparing a country&rsquo;s aggregate output over time is&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>nominal GDP.<span class="why" hidden>&#10007; Nominal GDP rises with prices as well as output.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>real GDP.<span class="why" hidden>&#10003; <b>Correct.</b> It holds prices constant, so it changes only when output changes.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>nominal GDP per capita.<span class="why" hidden>&#10007; Two problems: nominal, and per person rather than aggregate.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>real GDP per capita.<span class="why" hidden>&#10007; The trap. It measures output <b>per person</b>, not aggregate output.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>average GDP per capita.<span class="why" hidden>&#10007; GDP per capita already is an average. And it is still per person.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">3</span> Apples and oranges, Year 1 as the base year: apples 3,000 at $0.20 then 4,000 at $0.30; oranges 2,000 at $0.40 then 3,000 at $0.50. What is real GDP in each year?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>$1,400 and $2,700<span class="why" hidden>&#10007; $2,700 is Year 2 <b>nominal</b> GDP &mdash; Year 2 quantities at Year 2 prices.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>$1,900 and $2,700<span class="why" hidden>&#10007; Both figures use the wrong prices.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>$1,400 and $2,000<span class="why" hidden>&#10003; <b>Correct.</b> Year 1: (3,000 &times; $0.20) + (2,000 &times; $0.40) = $1,400. Year 2 at Year 1 prices: (4,000 &times; $0.20) + (3,000 &times; $0.40) = $2,000.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>$1,900 and $2,000<span class="why" hidden>&#10007; The Year 2 figure is right; the Year 1 figure is not a calculation from the table.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>$1,400 and $1,900<span class="why" hidden>&#10007; The Year 1 figure is right; the Year 2 figure is not.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">4</span> Real GDP per capita is an imperfect measure of the quality of life in part because it&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>includes the value of leisure time.<span class="why" hidden>&#10007; The reverse: leisure is left out.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>excludes spending on education.<span class="why" hidden>&#10007; Education that is bought and sold is counted.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>includes spending on natural disasters.<span class="why" hidden>&#10003; <b>Correct.</b> Rebuilding after a disaster raises GDP without making anyone better off.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>excludes spending on entertainment.<span class="why" hidden>&#10007; Entertainment that is sold is counted.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>includes the value of housework.<span class="why" hidden>&#10007; Housework is a nonmarket transaction and is left out.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">5</span> In 2009 nominal GDP was $14,259 billion in the United States, $5,049 billion in Japan and $16,191 billion in the European Union. Which must be true? I. Residents of Japan were worse off. II. The EU had a higher nominal GDP per capita than the U.S. III. The EU had a larger economy than the U.S.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; GDP measures the size of an economy, not how well off its residents are.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10007; Per capita figures need populations, and the table gives none.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10003; <b>Correct.</b> A larger GDP is a larger economy. That is all the table can tell you.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>II and III<span class="why" hidden>&#10007; III is right, but II cannot be known from the table.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II and III<span class="why" hidden>&#10007; Only III follows from the data.</span></span></button>
+    </div>
+  </div>
+
+  <p class="score" id="mcqScore">0 of 5 answered</p>
+</section>
+
+<!-- ============ FRQ ============ -->
+<section class="section" id="frq">
+  <h2>Tackle the test &mdash; free response</h2>
+
+  <div class="frq">
+    <p><b>Question 1 (5 points).</b> Britannica produces computers, DVDs and pizza. In 2008: computers
+    $900 &times; 10, DVDs $10 &times; 100, pizza $15 &times; 2. In 2009: $1,000 &times; 10.5, $12
+    &times; 105, $16 &times; 2. In 2010: $1,050 &times; 12, $14 &times; 110, $17 &times; 3. (a) Percent
+    change in computer production 2008&ndash;09? (b) Percent change in the price of pizza 2009&ndash;10?
+    (c) Nominal GDP in 2008? (d) Real GDP in 2008, 2008 base? (e) Real GDP in 2010, 2008 base?</p>
+    <details class="reveal"><summary>Show the answer and the rubric</summary><div class="ans">
+      <ol class="rubric">
+        <li>(a) (10.5 &minus; 10) &divide; 10 &times; 100 = <b>5%</b></li>
+        <li>(b) ($17 &minus; $16) &divide; $16 &times; 100 = <b>6.25%</b></li>
+        <li>(c) ($900 &times; 10) + ($10 &times; 100) + ($15 &times; 2) = <b>$10,030</b></li>
+        <li>(d) <b>$10,030</b> again &mdash; in the base year, real GDP equals nominal GDP</li>
+        <li>(e) ($900 &times; 12) + ($10 &times; 110) + ($15 &times; 3) = <b>$11,945</b></li>
+      </ol>
+      <p>One point each. Part (e) is entry 6: 2010 quantities, 2008 prices.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 2.</b> Country A: nominal GDP $2,000, price level 100, population 10 in 2005; $4,000,
+    100 and 20 in 2010. Country B: $2,000, 100 and 10 in 2005; $6,000, 200 and 15 in 2010. (a) Percent
+    increase in nominal GDP for each? (b) What happened to the price level? (c) Real GDP in 2010, 2005
+    base? (d) Percent increase in real GDP? (e) Compare real GDP per capita in 2010.</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p>(a) A: <b>100%</b>. B: <b>200%</b>.</p>
+      <p>(b) A: unchanged. B: it doubled, from 100 to 200.</p>
+      <p>(c) A: $4,000 &divide; 100 &times; 100 = <b>$4,000</b>. B: $6,000 &divide; 200 &times; 100 =
+      <b>$3,000</b>. That is entry 9.</p>
+      <p>(d) A: <b>100%</b>. B: <b>50%</b>.</p>
+      <p>(e) A: $4,000 &divide; 20 = <b>$200</b>. B: $3,000 &divide; 15 = <b>$200</b>. The same &mdash; and
+      the same as in 2005. B&rsquo;s nominal GDP tripled and its average resident has no more than
+      before.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 3 &mdash; the one your exam board published.</b> The table shows statistics for the
+    country of Fehran: in 2011, nominal GDP $150,000, population 100, GDP deflator 100; in 2012, nominal
+    GDP $225,000, population 120, GDP deflator 125. (a) Calculate (i) Fehran&rsquo;s real GDP in 2012
+    and (ii) the inflation rate from 2011 to 2012, showing your work. (c) Did the standard of living of
+    the average person in Fehran increase, decrease or stay the same between 2011 and 2012? Explain.</p>
+    <details class="reveal"><summary>Show the scored answers</summary><div class="ans">
+      <p>(a)(i) ($225,000 &divide; 125) &times; 100 = <b>$180,000</b>. One point.</p>
+      <p>(a)(ii) (125 &minus; 100) &divide; 100 &times; 100 = <b>25%</b>. One point.</p>
+      <p>(c) It <b>stayed the same</b>, because real GDP per capita did not change: $1,500 in 2011
+      ($150,000 &divide; 100) and $1,500 in 2012 ($180,000 &divide; 120). One point.</p>
+      <p>The published question has two more parts, on exports and on the national debt, which belong
+      to later units. The three points above are this module, and the first of them is entry 9 &mdash;
+      the calculation your textbook never writes out.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <h2>One-page summary</h2>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <thead><tr><th>To find</th><th>Do this</th><th>Textbook example</th></tr></thead>
+      <tbody>
+        <tr><td>Nominal GDP</td><td>this year&rsquo;s quantities &times; this year&rsquo;s prices, summed</td><td>1,000 bn &rarr; 1,500 bn</td></tr>
+        <tr><td>Real GDP</td><td>this year&rsquo;s quantities &times; <b>base-year</b> prices, summed</td><td>1,000 bn &rarr; 1,150 bn</td></tr>
+        <tr><td>GDP deflator</td><td>nominal &divide; real &times; 100</td><td>100 &rarr; 130.4</td></tr>
+        <tr><td>Real from nominal</td><td>nominal &divide; deflator &times; 100</td><td>Fehran: $180,000</td></tr>
+        <tr><td>Growth rate</td><td>(new &minus; old) &divide; <b>old</b> &times; 100</td><td>real 15%, nominal 50%</td></tr>
+        <tr><td>Inflation rate</td><td>percentage change in the deflator</td><td>Fehran: 25%</td></tr>
+        <tr><td>Real GDP per capita</td><td>real GDP &divide; population</td><td>Fehran: $1,500 both years</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap">Nominal GDP is how much is <b>spent</b>; real GDP is how much is <b>produced</b>.
+  GDP leaves out <b>nonmarket transactions</b>, leisure, the underground economy and quality changes,
+  and it counts spending on disasters, crime and disease.</p>
+</section>
+
+<section class="section closing" id="final">
+  <h2>The five things to get right from Module 11</h2>
+  <ol>
+    <li><b>Nominal is spent, real is produced.</b> Nominal moves with output and prices; real moves with
+      output only.</li>
+    <li><b>Real GDP keeps this year&rsquo;s quantities and changes only the prices</b> &mdash; to the
+      base year&rsquo;s. In the base year, real equals nominal and the deflator is 100.</li>
+    <li><b>Divide by the deflator, then multiply by 100.</b> If the deflator is above 100, real GDP must
+      come out smaller than nominal.</li>
+    <li><b>Living standards means real GDP per capita.</b> Convert first, then divide by population,
+      then compare.</li>
+    <li><b>Say &ldquo;nonmarket transactions&rdquo;.</b> It is the one limitation your exam names, and
+      the word is not in your textbook.</li>
+  </ol>
+  <p>Everything in this module comes back. Real GDP goes on the horizontal axis of the aggregate
+  demand and aggregate supply diagram in Unit 3, the GDP deflator goes on its vertical axis as the
+  price level, and real GDP per capita becomes the definition of economic growth in Unit 5.</p>
+</section>
+
+<p class="footer">
+  Student guide &middot; Module 11, <i>Krugman&rsquo;s Economics for AP</i>, pages 112&ndash;117 &middot;
+  definitions quoted from the textbook &middot; tiers assigned against the AP Macroeconomics Course
+  and Exam Description, Course Framework V.1, &copy; 2020 &middot; every number on this page is computed
+  by the script that writes it, and checked again before it is written.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod11-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ return {}; } }
+  function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){ var s = load(); s[b.id] = b.checked; save(s); paint(); });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- the base-year switch ---------- */
+  /* Every value below is written by build/make_m11_student.py from the tables it computes. */
+  var READ = {
+    ao1: ["$1,000", "$1,500", "$1,000", "$1,150", "100", "130.4", "50%", "15%"],
+    ao2: ["$1,000", "$1,500", "$1,300", "$1,500", "76.9", "100", "50%", "15.4%"],
+    cb1: ["$25,000", "$30,000", "$25,000", "$45,000", "100", "66.7", "20%", "80%"],
+    cb2: ["$25,000", "$30,000", "$20,000", "$30,000", "125", "100", "20%", "50%"]
+  };
+  var CAP = {
+    ao1: "The textbook's economy with Year 1 as the base. Nominal GDP rises 50%; real GDP rises only 15%, from $1,000 bn to $1,150 bn. The rest of the 50% is higher prices, and the deflator shows it: 130.4 in Year 2.",
+    ao2: "The same economy with Year 2 as the base. Now Year 1 is re-valued at Year 2 prices ($1,300 bn) and real growth is 15.4%. A different base year gives a slightly different answer. Here the late base gives the higher figure, because oranges got dearer AND grew faster.",
+    cb1: "Computers doubled, bread did not change. With Year 1 prices each computer is still worth $2,000, so real GDP jumps from $25,000 to $45,000: growth of 80%. That is the overstatement - the fast-growing good is valued at its old, high price.",
+    cb2: "The same quantities at Year 2 prices, where a computer is worth $1,000. Real growth is 50%. Same output, same quantities, and the old base year said 80%. This is why statistical agencies do not use one fixed base year."
+  };
+  var chips = Array.prototype.slice.call(document.querySelectorAll("#chart .chip"));
+  var cap = document.getElementById("bcap");
+  function show(which){
+    Object.keys(READ).forEach(function(k){
+      var g = document.getElementById("b-" + k);
+      /* SVG elements have no .hidden property; toggle the attribute, which the CSS hides */
+      if (g) { if (k === which) g.removeAttribute("hidden"); else g.setAttribute("hidden", ""); }
+    });
+    READ[which].forEach(function(v, i){ document.getElementById("ro" + i).textContent = v; });
+    cap.textContent = CAP[which];
+    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-show") === which)); });
+  }
+  chips.forEach(function(c){ c.addEventListener("click", function(){ show(c.getAttribute("data-show")); }); });
+  show("ao1");
+
+  /* ---------- the drill ---------- */
+  var SCEN = [
+    { t: "A parent cooks dinner for the family every night.", a: "nm",
+      w: "Nothing is sold, so it is a NONMARKET transaction. The meal is real production that GDP never sees." },
+    { t: "A restaurant cooks the same dinner and sells it.", a: "in",
+      w: "COUNTED. Same meal as the one above - but now it is sold, so it has a market value." },
+    { t: "You sell your old bicycle online.", a: "np",
+      w: "NOT NEW PRODUCTION. The bicycle was counted when it was made; counting it again would double-count." },
+    { t: "A painter is paid in cash and never reports the work.", a: "ug",
+      w: "HIDDEN. It is a market transaction, but it is never recorded - the underground economy." },
+    { t: "A volunteer spends Saturdays at a food bank.", a: "nm",
+      w: "NONMARKET. Real work, nothing sold." },
+    { t: "An investor buys shares in a company.", a: "np",
+      w: "NOT NEW PRODUCTION. A share is a financial asset - a transfer of ownership, not a good or service." },
+    { t: "A builder completes a new house and sells it to a family.", a: "in",
+      w: "COUNTED. New construction is new production." },
+    { t: "A car maker adds unsold new cars to its inventory.", a: "in",
+      w: "COUNTED. Additions to inventories are counted as investment - the cars were produced this year." },
+    { t: "A student tutors a younger brother for free.", a: "nm",
+      w: "NONMARKET. The tutoring is real, the price is zero, and GDP counts only market value." },
+    { t: "A street trader sells goods off the books to avoid tax.", a: "ug",
+      w: "HIDDEN. The underground economy again: sold, but never recorded." },
+    { t: "Homes are rebuilt after a hurricane.", a: "in",
+      w: "COUNTED - the trap. The rebuilding is new production and raises GDP, even though the country is only replacing what it lost." },
+    { t: "A car maker buys steel to build its cars.", a: "np",
+      w: "NOT COUNTED SEPARATELY. Steel is an intermediate good; its value is already inside the price of the finished car." }
+  ];
+  var LABELS = {
+    in: "Counted in GDP",
+    nm: "Not counted: nonmarket",
+    np: "Not counted: not new final output",
+    ug: "Not counted: hidden"
+  };
+  var list = document.getElementById("sorter-list");
+  var scoreEl = document.getElementById("sorter-score");
+  var answered = 0, right = 0;
+  function build(){
+    list.innerHTML = "";
+    answered = 0; right = 0;
+    SCEN.forEach(function(s, i){
+      var row = document.createElement("div");
+      row.className = "sortrow";
+      var opts = Object.keys(LABELS).map(function(k){
+        return '<button type="button" class="opt" data-a="' + k + '"><span>' + LABELS[k] + '</span></button>';
+      }).join("");
+      row.innerHTML =
+        '<p class="stem"><span class="qn">' + (i + 1) + '</span> ' + s.t + '</p>' +
+        '<div class="opts">' + opts + '</div>' +
+        '<p class="why" hidden></p>';
+      var btns = Array.prototype.slice.call(row.querySelectorAll(".opt"));
+      var why = row.querySelector(".why");
+      btns.forEach(function(b){
+        b.addEventListener("click", function(){
+          if (row.getAttribute("data-done")) return;
+          row.setAttribute("data-done", "1");
+          var ok = b.getAttribute("data-a") === s.a;
+          btns.forEach(function(x){
+            x.disabled = true;
+            if (x.getAttribute("data-a") === s.a) x.setAttribute("data-state", "right");
+            else if (x === b) x.setAttribute("data-state", "wrong");
+          });
+          why.hidden = false;
+          why.textContent = (ok ? "\u2713 " : "\u2717 ") + s.w;
+          answered++; if (ok) right++;
+          scoreEl.textContent = right + " correct out of " + answered + " answered";
+        });
+      });
+      list.appendChild(row);
+    });
+    scoreEl.textContent = "0 of " + SCEN.length + " answered";
+  }
+  build();
+  document.getElementById("sorter-reset").addEventListener("click", build);
+
+  /* ---------- multiple choice ---------- */
+  var mcqs = Array.prototype.slice.call(document.querySelectorAll(".mcq[data-key]"));
+  var mcqScore = document.getElementById("mcqScore");
+  var mDone = 0, mRight = 0;
+  mcqs.forEach(function(q){
+    var key = q.getAttribute("data-key");
+    var opts = Array.prototype.slice.call(q.querySelectorAll(".opt"));
+    opts.forEach(function(o){
+      o.addEventListener("click", function(){
+        if (q.getAttribute("data-done")) return;
+        q.setAttribute("data-done", "1");
+        var ok = o.getAttribute("data-l") === key;
+        opts.forEach(function(x){
+          x.disabled = true;
+          x.querySelector(".why").hidden = false;
+          if (x.getAttribute("data-l") === key) x.setAttribute("data-state", "right");
+          else if (x === o) x.setAttribute("data-state", "wrong");
+        });
+        mDone++; if (ok) mRight++;
+        mcqScore.textContent = mRight + " correct out of " + mDone + " answered";
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "2.6 Real v. nominal GDP · 2.2 Limitations", "title": "Module 11 · Interpreting Real GDP", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"href": "m01-student.html", "label": "Module 1 · Student guide", "current": false}, {"href": "m01-notes.html", "label": "Module 1 · Teaching notes", "current": false}, {"href": "m01-test.html", "label": "Module 1 · Test", "current": false}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": false}, {"href": "m02-notes.html", "label": "Module 2 · Teaching notes", "current": false}, {"href": "m02-test.html", "label": "Module 2 · Test", "current": false}, {"href": "m03-student.html", "label": "Module 3 · Student guide", "current": false}, {"href": "m03-notes.html", "label": "Module 3 · Teaching notes", "current": false}, {"href": "m03-test.html", "label": "Module 3 · Test", "current": false}, {"href": "m04-student.html", "label": "Module 4 · Student guide", "current": false}, {"href": "m04-notes.html", "label": "Module 4 · Teaching notes", "current": false}, {"href": "m04-test.html", "label": "Module 4 · Test", "current": false}, {"href": "m05-student.html", "label": "Module 5 · Student guide", "current": false}, {"href": "m05-notes.html", "label": "Module 5 · Teaching notes", "current": false}, {"href": "m05-test.html", "label": "Module 5 · Test", "current": false}, {"href": "m06-student.html", "label": "Module 6 · Student guide", "current": false}, {"href": "m06-notes.html", "label": "Module 6 · Teaching notes", "current": false}, {"href": "m06-test.html", "label": "Module 6 · Test", "current": false}, {"href": "m07-student.html", "label": "Module 7 · Student guide", "current": false}, {"href": "m07-notes.html", "label": "Module 7 · Teaching notes", "current": false}, {"href": "m07-test.html", "label": "Module 7 · Test", "current": false}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"href": "m10-student.html", "label": "Module 10 · Student guide", "current": false}, {"href": "m10-notes.html", "label": "Module 10 · Teaching notes", "current": false}, {"href": "m10-test.html", "label": "Module 10 · Test", "current": false}, {"href": "m11-student.html", "label": "Module 11 · Student guide", "current": true}, {"href": "m11-notes.html", "label": "Module 11 · Teaching notes", "current": false}, {"href": "m11-test.html", "label": "Module 11 · Test", "current": false}, {"label": "Module 12 · Measuring Unemployment", "planned": true}, {"label": "Module 13 · Categories of Unemployment", "planned": true}, {"label": "Module 14 · Inflation: An Overview", "planned": true}, {"label": "Module 15 · Measuring Inflation", "planned": true}, {"label": "Unit 2 · Gap analysis", "planned": true}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"label": "Module 16 · Income and Expenditure", "planned": true}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"label": "Module 34 · The Phillips Curve", "planned": true}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "m10-test.html", "label": "Module 10 · Test"}, "next": {"href": "m11-notes.html", "label": "Module 11 · Teaching notes"}, "variants": [{"href": "m11-student.html", "label": "Student", "current": true}, {"href": "m11-notes.html", "label": "Notes", "current": false}, {"href": "m11-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
