@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 15 · Measuring Inflation · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+
+
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+
+/* ---------- Module 3 supplement ---------- */
+.mark.flag{background:var(--flag-soft);color:var(--flag)}
+.ppc-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.ppc-wrap{grid-template-columns:1fr 210px}}
+.ppc-svg{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px;cursor:crosshair;touch-action:none}
+.ppc-side{display:flex;flex-direction:column;gap:10px}
+.status{font-family:var(--mono);font-size:12.5px;padding:9px 11px;border-radius:5px;
+  border:1px solid var(--rule-strong);background:var(--surface-2);line-height:1.45}
+.status[data-s="on"]{border-color:color-mix(in srgb,var(--up) 45%,transparent);background:var(--up-soft);color:var(--up)}
+.status[data-s="in"]{border-color:var(--rule-strong);color:var(--ink-2)}
+.status[data-s="out"]{border-color:color-mix(in srgb,var(--down) 45%,transparent);background:var(--down-soft);color:var(--down)}
+.ppc-legend{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.ppc-legend b{color:var(--ink-2);font-weight:600}
+.chips.tight{gap:6px}
+.tbl{overflow-x:auto;max-width:100%}
+.sumtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.sumtable th,.sumtable td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+.sumtable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.sumtable td.mk{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--accent)}
+.sumtable td.mk.bgm{color:var(--ink-3)}
+.sumtable td.mk.flagm{color:var(--flag)}
+.final{background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:18px 20px;margin:22px 0;box-shadow:var(--shadow)}
+.final ol{margin:0;padding-left:20px}
+.final li{margin:0 0 9px}
+.final li:last-child{margin-bottom:0}
+
+/* ---------- PPC explorer svg ---------- */
+.ppc-svg .ax{stroke:var(--ink);stroke-width:1.6}
+.ppc-svg .tick{stroke:var(--ink-3);stroke-width:1.1}
+.ppc-svg .tl{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.ppc-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.ppc-svg .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ppc-svg .ghost{fill:none;stroke:var(--rule-strong);stroke-width:1.8;stroke-dasharray:6 5}
+.ppc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.ppc-svg .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.ppc-svg .pt{stroke:var(--surface);stroke-width:2}
+.ppc-svg .pt-on{fill:var(--up)}
+.ppc-svg .pt-in{fill:var(--ink-3)}
+.ppc-svg .pt-out{fill:var(--down)}
+
+
+/* ---------- Module 4 supplement ---------- */
+.two-panel{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px}
+.ca-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 14px}
+@media (min-width:640px){.ca-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ca-grid .field{display:flex;flex-direction:column;gap:5px}
+.ca-grid .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.ca-grid .field b{color:var(--ink-2);font-weight:600;text-transform:none;letter-spacing:0}
+.ca-grid input{font-family:var(--mono);font-size:15px;padding:7px 9px;width:100%;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.ca-grid input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.catab{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 14px}
+.catab th,.catab td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left}
+.catab th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.catab td.v{font-family:var(--mono);color:var(--ink)}
+.catab td.win{font-family:var(--mono);color:var(--up);font-weight:600}
+.dealrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 12px}
+.dealrow .field{display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1}
+.dealrow .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.dealrow input{font-family:var(--mono);font-size:16px;padding:8px 10px;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.line-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.line-svg g[hidden]{display:none}
+.line-svg .band{fill:var(--up-soft);stroke:none}
+.line-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.line-svg .tk{stroke:var(--ink-3);stroke-width:1.1}
+.line-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.line-svg .edge{stroke:var(--up);stroke-width:2}
+.line-svg .edgel{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--up)}
+.line-svg .prop{stroke:var(--accent);stroke-width:2.4}
+.line-svg .propbad{stroke:var(--down);stroke-width:2.4}
+.line-svg .propl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.line-svg .propl.bad{fill:var(--down)}
+.two-panel .ax{stroke:var(--ink);stroke-width:1.6}
+.two-panel .tick{stroke:var(--ink-3);stroke-width:1.1}
+.two-panel .tl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.two-panel .al{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.two-panel .ph{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.two-panel .curve{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+.two-panel .slope{font-family:var(--mono);font-size:11px;fill:var(--accent)}
+.two-panel .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.two-panel .pt{stroke:var(--surface);stroke-width:2}
+.two-panel .pt-on{fill:var(--ink-2)}
+.two-panel .pt-out{fill:var(--up)}
+.two-panel .ptl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.two-panel .ptl.good{fill:var(--up);font-weight:600}
+
+</style>
+<style>
+/* Module 5 additions: the movement-or-shift sorter */
+.sortrow{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:0 0 10px;
+  background:var(--surface)}
+.sortrow .stem{margin:0 0 10px}
+.sortrow .opts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sortrow .opt{flex:1 1 220px;justify-content:center;text-align:center}
+.sortrow .why{display:block;margin:10px 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.sortrow[data-done] .opt{cursor:default}
+#sorter-reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer}
+#sorter-reset:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<style>
+/* Module 15 additions: the basket chart, the drill's three answers */
+.basket-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.basket-svg g[hidden]{display:none}
+.basket-svg .or{fill:var(--flag)}
+.basket-svg .gf{fill:var(--down)}
+.basket-svg .lm{fill:var(--accent)}
+.basket-svg .ax{stroke:var(--rule-strong);stroke-width:1;fill:none}
+.basket-svg .gl{stroke:var(--rule);stroke-width:1;stroke-dasharray:3 4;fill:none}
+.basket-svg .tk{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.basket-svg .rl{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink)}
+.basket-svg .vl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink)}
+.sortrow .opts .opt{flex:1 1 140px}
+</style>
+
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro &middot; Module 15</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 13</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">AP Macroeconomics &middot; Unit 2 &middot; Student guide</p>
+  <h1>Measuring Inflation</h1>
+  <p class="standfirst">Thirteen terms from Module 15 of <i>Krugman&rsquo;s Economics for AP</i>: how a price
+  index is built from a market basket, how the consumer price index and the GDP deflator measure inflation,
+  how to compare dollars from different years &mdash; and why the CPI overstates inflation, which your
+  textbook explains without the name your exam uses.</p>
+  <div class="source-line">
+    <span>Textbook pages 142&ndash;147</span><span>&middot;</span><span>13 terms</span><span>&middot;</span>
+    <span>Topic 2.4</span><span>&middot;</span><span>2 formulas, 1 basket</span>
+  </div>
+<section class="section" id="howto">
+  <h2>How to use this guide</h2>
+  <p>Read Module 15 in your textbook first. Entries 1 to 7 build and use a price index; entries 8 to 10 are
+  why the CPI is not a perfect measure; entry 11 is the second index your exam names; entries 12 and 13 are
+  background.</p>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <tbody>
+        <tr><td><span class="mark exam">&#9733; Exam</span></td><td><b>Exam term.</b> Define it and calculate with it. Eleven of these.</td></tr>
+        <tr><td><span class="mark bg">&#9675; Background</span></td><td><b>Background.</b> Worth knowing, not tested. Two of these.</td></tr>
+        <tr><td><span class="mark flag">&#9873; Not in the textbook</span></td><td><b>Learn it from here.</b> Your exam needs it and Module 15 does not have it. Two entries carry this flag.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Every entry ends with two <b>Check yourself</b> questions. Answer them before opening the
+      answer, then tick <b>Got it</b>.</li>
+    <li>Use the basket diagram below with entries 2 to 4, 8 and 10. Press every button.</li>
+    <li>Do the drill after entry 10, and again at the end.</li>
+  </ul>
+  <div class="flag">
+    <p><b>Two formulas carry this module.</b> Price index = basket cost now &divide; basket cost in the base
+    year &times; 100. Inflation rate = change in the index &divide; the earlier index &times; 100. A change in
+    index <b>points</b> is not a <b>percentage</b> unless you started from 100.</p>
+  </div>
+</section>
+
+<!-- ============ THE BASKET DIAGRAM ============ -->
+<section class="section" id="diagram">
+  <h2>Same prices, five baskets</h2>
+  <p>Your textbook&rsquo;s frost: oranges go from 20 to 40 cents, grapefruit from 60 cents to $1.00, lemons
+  from 25 to 45 cents. Each button prices a different basket at those same prices. Watch how the index and
+  the inflation rate change with the basket alone.</p>
+
+  <div class="widget">
+    <div class="widget-title">Choose a market basket</div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-show="start">Your textbook&rsquo;s basket</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="cyu">More lemons, fewer oranges</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="or">Oranges only</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="gf">Grapefruit only</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="lm">Lemons only</button>
+    </div>
+<svg id="bfig" class="basket-svg" viewBox="0 0 700 208" role="img" aria-label="The cost of a citrus market basket before and after a frost">
+<path class="gl" d="M160.0 18 V146"></path>
+<text class="tk" x="160.0" y="162" text-anchor="middle">$0</text>
+<path class="gl" d="M280.0 18 V146"></path>
+<text class="tk" x="280.0" y="162" text-anchor="middle">$50</text>
+<path class="gl" d="M400.0 18 V146"></path>
+<text class="tk" x="400.0" y="162" text-anchor="middle">$100</text>
+<path class="gl" d="M520.0 18 V146"></path>
+<text class="tk" x="520.0" y="162" text-anchor="middle">$150</text>
+<path class="gl" d="M640.0 18 V146"></path>
+<text class="tk" x="640.0" y="162" text-anchor="middle">$200</text>
+<path class="ax" d="M160 18 V146"></path>
+<text class="rl" x="150" y="51" text-anchor="end">Before the frost</text>
+<text class="rl" x="150" y="117" text-anchor="end">After the frost</text>
+<rect class="or" x="160" y="178" width="12" height="12"></rect>
+<text class="tk" x="178" y="188">Oranges</text>
+<rect class="gf" x="290" y="178" width="12" height="12"></rect>
+<text class="tk" x="308" y="188">Grapefruit</text>
+<rect class="lm" x="420" y="178" width="12" height="12"></rect>
+<text class="tk" x="438" y="188">Lemons</text>
+<g id="b-start" hidden>
+<rect class="or" x="160.0" y="26" width="96.0" height="40"></rect>
+<rect class="gf" x="256.0" y="26" width="72.0" height="40"></rect>
+<rect class="lm" x="328.0" y="26" width="60.0" height="40"></rect>
+<text class="vl" x="394.0" y="51">$95</text>
+<rect class="or" x="160.0" y="92" width="192.0" height="40"></rect>
+<rect class="gf" x="352.0" y="92" width="120.0" height="40"></rect>
+<rect class="lm" x="472.0" y="92" width="108.0" height="40"></rect>
+<text class="vl" x="586.0" y="117">$175</text>
+</g>
+<g id="b-cyu" hidden>
+<rect class="or" x="160.0" y="26" width="48.0" height="40"></rect>
+<rect class="gf" x="208.0" y="26" width="72.0" height="40"></rect>
+<rect class="lm" x="280.0" y="26" width="120.0" height="40"></rect>
+<text class="vl" x="406.0" y="51">$100</text>
+<rect class="or" x="160.0" y="92" width="96.0" height="40"></rect>
+<rect class="gf" x="256.0" y="92" width="120.0" height="40"></rect>
+<rect class="lm" x="376.0" y="92" width="216.0" height="40"></rect>
+<text class="vl" x="598.0" y="117">$180</text>
+</g>
+<g id="b-or" hidden>
+<rect class="or" x="160.0" y="26" width="96.0" height="40"></rect>
+<text class="vl" x="262.0" y="51">$40</text>
+<rect class="or" x="160.0" y="92" width="192.0" height="40"></rect>
+<text class="vl" x="358.0" y="117">$80</text>
+</g>
+<g id="b-gf" hidden>
+<rect class="gf" x="160.0" y="26" width="72.0" height="40"></rect>
+<text class="vl" x="238.0" y="51">$30</text>
+<rect class="gf" x="160.0" y="92" width="120.0" height="40"></rect>
+<text class="vl" x="286.0" y="117">$50</text>
+</g>
+<g id="b-lm" hidden>
+<rect class="lm" x="160.0" y="26" width="60.0" height="40"></rect>
+<text class="vl" x="226.0" y="51">$25</text>
+<rect class="lm" x="160.0" y="92" width="108.0" height="40"></rect>
+<text class="vl" x="274.0" y="117">$45</text>
+</g>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Basket cost before</span><span class="v" id="ro0">&ndash;</span></div>
+      <div class="ro"><span class="k">Basket cost after</span><span class="v" id="ro1">&ndash;</span></div>
+      <div class="ro"><span class="k">Index before</span><span class="v" id="ro2">&ndash;</span></div>
+      <div class="ro"><span class="k">Index after</span><span class="v hl" id="ro3">&ndash;</span></div>
+      <div class="ro"><span class="k">Inflation</span><span class="v hl" id="ro4">&ndash;</span></div>
+    </div>
+    <p class="figcap" id="pcap"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The 13 terms</h2>
+</section>
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Aggregate price level</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A single measure of the <b>overall level of prices</b> in the economy.</p></div>
+  <p class="reading">Textbook page 142, margin.</p>
+
+  <p>In any year some prices rise, some fall and some stay put. Gasoline jumped from $3 to $4 a gallon in 2008 while electronics got cheaper. The aggregate price level sums all of that up in one number.</p>
+
+  <p>You never see it directly. It is measured by a <b>price index</b> &mdash; entries 4, 5 and 11.</p>
+
+  <div class="watch"><p><b>Watch out.</b> One price rising is not inflation. Inflation is the <i>overall</i> level rising.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Summer 2008.</span> Gasoline rose from about $3 to over $4 a gallon, while egg and electronics prices fell. People still felt the cost of living rising.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Three fruit prices rose by 100%, 66.7% and 80%; for your textbook&rsquo;s basket the overall rise is <b>84.2%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A month at the shops.</span> Bread up, phones down, rent up. Whether prices <i>overall</i> rose depends on how much of each you buy.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is measured by a <a href="#e4">price index</a> (entry 4) built on a <a href="#e2">market basket</a> (entry 2); the best known is the <a href="#e5">CPI</a> (entry 5).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> Can the aggregate price level rise while some prices fall?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Yes. It is an average across goods.</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> Why is one price not enough to measure inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because prices move differently, and what matters is the cost of what people actually buy.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Market basket</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A <b>fixed</b> set of goods and services &mdash; what a typical consumer buys &mdash; whose cost is tracked over time.</p></div>
+  <p class="reading">Textbook page 142, margin.</p>
+
+  <p>To measure prices overall, pick a basket and keep it the same. Then any change in its cost is a change in prices, not in what people buy.</p>
+
+  <p>That is both the strength and the weakness of the method. Keeping the basket fixed isolates price changes; but real people do change what they buy &mdash; entries 8 and 10.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The quantities in the basket stay the same in both years. Only the prices change.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Table 15.1.</span> 200 oranges, 50 grapefruit and 100 lemons, priced before and after a frost.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Pricing it.</span> (200 &times; $0.20) + (50 &times; $0.60) + (100 &times; $0.25) = <b>$95</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Your own basket.</span> A month of lunches, bus fares, phone data and streaming. Price the same list every year and you have your own price index.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is how the <a href="#e1">price level</a> (entry 1) is measured, priced against a <a href="#e3">base year</a> (entry 3) to make a <a href="#e4">price index</a> (entry 4). What goes in it matters &mdash; <a href="#e10">entry 10</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> Why must the basket stay fixed?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>So that a change in its cost reflects prices, not a change in what is bought.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> A basket has 10 sandwiches at $4 and 5 coffees at $2. What does it cost?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>40 + 10 = <b>$50</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Base year</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The year the others are compared with. A price index always equals <b>100</b> in its base year.</p></div>
+  <p class="reading">Textbook page 143.</p>
+
+  <p>The base year is the reference point. Dividing the basket&rsquo;s cost in the base year by itself and multiplying by 100 always gives 100, so you never need to remember what the basket cost then.</p>
+
+  <p>The U.S. CPI uses a base <i>period</i>, 1982&ndash;84, rather than a single year.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The base year&rsquo;s index is 100, not the basket&rsquo;s cost in that year.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 4.</span> The value of a price index in the base year is <b>100</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> The basket cost $95 in the base year; the index for that year is <b>100</b>, not 95.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Moving the base.</span> Choose a different base year and every index number changes, but the percentage changes between years do not.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the denominator of a <a href="#e4">price index</a> (entry 4), and it prices the same <a href="#e2">basket</a> (entry 2).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> What is the CPI&rsquo;s value in its base period?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>100.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> An index is 125 this year. What does that mean?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Prices are 25% higher than in the base year.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>Calculating a price index</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Price index = cost of the basket in a given year &divide; cost of the basket in the base year &times; 100.</b></p></div>
+  <p class="reading">Textbook page 143, equation 15-1 and Table 15.1.</p>
+
+  <p>Two steps. First price the basket in each year: multiply each price by its quantity and add. Then divide this year&rsquo;s cost by the base year&rsquo;s and multiply by 100.</p>
+
+  <p>The result tells you how much the basket&rsquo;s cost has risen since the base year: an index of 184.2 means 84.2% more.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Price the <b>same</b> quantities in both years. A common slip is to use different quantities after prices change.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Table 15.1.</span> $95 before the frost, $175 after: 175 &divide; 95 &times; 100 = <b>184.2</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review, question 1.</span> A basket costing $100 in the base year and $108 now has an index of <b>108</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> Press <b>More lemons, fewer oranges</b>: $100 &rarr; $180, an index of <b>180</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It measures the <a href="#e1">price level</a> (entry 1) from a <a href="#e2">basket</a> (entry 2) and a <a href="#e3">base year</a> (entry 3). The <a href="#e5">CPI</a> (entry 5) is one; the inflation rate is its change (<a href="#e6">entry 6</a>); the <a href="#e11">GDP deflator</a> (entry 11) is another.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> A basket cost $60 in the base year and costs $72 now. What is the index?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>72 &divide; 60 &times; 100 = <b>120</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> The same basket costs $57 a year later still. What is the index?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>57 &divide; 60 &times; 100 = <b>95</b> &mdash; prices fell below the base year.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>Consumer price index</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The price index for the <b>market basket of a typical urban family</b>. It measures how much more income that family needs to keep the <b>same standard of living</b> as prices change.</p></div>
+  <p class="reading">Textbook page 144, margin.</p>
+
+  <p>The government prices about 80,000 items a month in some 23,000 shops in 87 cities. The basket is weighted by what families actually spend: in 2008, housing was 43% of it and motor fuel 3%.</p>
+
+  <p>It is the number behind &ldquo;the inflation rate&rdquo; in the news, and it is used to adjust pensions and tax brackets (entry 13). But a fixed basket only approximates the cost of living &mdash; entries 8 and 9.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The CPI prices what <b>consumers</b> buy. It is not the price of everything produced &mdash; that is closer to the GDP deflator.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 15.1.</span> Housing 43%, food and beverages 16%, transportation 12%, motor fuel 3% of the CPI basket in December 2008.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Two families.</span> $20,000 in 1985 and $40,000 in 2010, when the CPI had doubled: about the same standard of living.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Other countries.</span> Poor countries weight food heavily; Japan weights raw fish more and beef less; France weights wine more.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a <a href="#e4">price index</a> (entry 4) for consumers, with <a href="#e1">entry 1</a> as its purpose. Its weights are <a href="#e10">entry 10</a>; its biases are <a href="#e8">entry 8</a> and <a href="#e9">entry 9</a>; payments tied to it are <a href="#e13">entry 13</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> What does the CPI try to measure?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>How much more income a typical family needs to keep the same standard of living as prices change.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> Why does housing matter more than motor fuel in the CPI?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Families spend far more on it, so it has a bigger weight in the basket.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>The inflation rate from a price index</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Inflation rate = (index in year 2 &minus; index in year 1) &divide; index in year 1 &times; 100.</b></p></div>
+  <p class="reading">Textbook page 143, equation 15-2.</p>
+
+  <p>The inflation rate is the percentage change in a price index from one year to the next. Usually that index is the CPI, but the GDP deflator works the same way.</p>
+
+  <p>The difference between two index numbers is in <b>points</b>. The inflation rate is a <b>percentage</b>. They are equal only when the first index is exactly 100.</p>
+
+  <div class="watch"><p><b>Watch out.</b> From 80 to 120 is 40 points but <b>50%</b>.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 3.</span> The CPI was 201.6 in 2006 and 207.3 in 2007: (207.3 &minus; 201.6) &divide; 201.6 &times; 100 = <b>2.8%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review, multiple choice 2.</span> From 80 to 120: 40 &divide; 80 &times; 100 = <b>50%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Two indexes, two answers.</span> The GDP deflator went from 96.8 to 100.0 in 2004&ndash;05 (<b>3.3%</b>) while the CPI went from 188.9 to 195.3 (<b>3.4%</b>).</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the change in a <a href="#e4">price index</a> (entry 4), and it can be measured with the <a href="#e11">GDP deflator</a> (entry 11). Comparing dollar amounts uses the same index numbers &mdash; <a href="#e7">entry 7</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> The CPI rises from 250 to 260. What is the inflation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>10 &divide; 250 &times; 100 = <b>4%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> A price index falls from 120 to 114. What is the inflation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>&minus;6 &divide; 120 &times; 100 = <b>&minus;5%</b> &mdash; deflation.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>Comparing dollar amounts across years</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>To express an amount in another year&rsquo;s dollars, <b>multiply by the ratio of the two years&rsquo; index values</b>: value in year B = value in year A &times; (index in B &divide; index in A).</p></div>
+  <p class="reading">Textbook page 144, in words. The formula is not written out.</p>
+
+  <p>This is how you compare a 1985 salary with a 2010 salary, or a price from your grandparents&rsquo; day with today&rsquo;s. Scale the old amount up by however much prices have risen since.</p>
+
+  <p>If the converted old amount is bigger than the new one, the new one buys less &mdash; even if it is more dollars.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Put the year you are converting <b>to</b> on top of the ratio.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The 1985 and 2010 families.</span> The CPI doubled, so $20,000 in 1985 is worth about <b>$40,000</b> in 2010 dollars &mdash; the same as the 2010 family&rsquo;s income.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A price then and now.</span> $50 when the CPI was 120, in dollars of a year when the CPI is 180: 50 &times; 180 &divide; 120 = <b>$75</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A starting salary.</span> $30,000 when the CPI was 150; the CPI is now 240. In today&rsquo;s dollars that is 30,000 &times; 1.6 = <b>$48,000</b>. A $45,000 offer today buys less.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It uses the index numbers of <a href="#e6">entry 6</a> and the <a href="#e13">indexing</a> idea of entry 13: payments scaled by the CPI.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> $200 when the CPI was 100. What is it in dollars of a year when the CPI is 150?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>200 &times; 150 &divide; 100 = <b>$300</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> Your grandfather earned $10,000 when the CPI was 40. The CPI is now 300. What is that in today&rsquo;s dollars?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>10,000 &times; 300 &divide; 40 = <b>$75,000</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>Substitution bias</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; The name is not in your textbook &mdash; learn it from here.</b> Your textbook describes this with hamburgers on page 145 but never calls it <i>substitution bias</i>. Your exam uses exactly that name.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>When a price rises, people <b>switch to cheaper substitutes</b>. A fixed basket keeps buying the expensive good, so the CPI <b>overstates</b> the rise in the cost of living.</p></div>
+  <p class="reading">Textbook page 145 describes it, without this name.</p>
+
+  <p>The CPI prices the same basket every year. Real families do not: if hamburgers double in price, many people eat something else. Their cost of living rises by less than the fixed basket says.</p>
+
+  <p>This is the shortcoming your exam names. It makes the CPI a little too high as a measure of inflation.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The direction is <b>overstate</b>. The CPI shows more inflation than people actually face.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Hamburgers.</span> If their price suddenly doubled, many Americans would switch to cheaper food; an index heavy in hamburgers would overstate the rise in the cost of living.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Your textbook&rsquo;s basket shows <b>84.2%</b>. A household that switched towards lemons, which rose less than oranges, faces <b>80%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Beef and chicken.</span> Beef prices jump; families buy more chicken. The CPI, still pricing last year&rsquo;s beef, reports more inflation than they feel.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a flaw of the <a href="#e5">CPI</a>&rsquo;s fixed basket (entry 5): the <a href="#e10">weights</a> (entry 10) go out of date. <a href="#e9">Entry 9</a> gives two more reasons for the same overstatement.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> Does substitution bias make the CPI overstate or understate inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Overstate.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> Why does a fixed basket cause it?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because it keeps pricing goods that people have stopped buying because they became expensive.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>New goods and quality changes</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Partly not in your textbook &mdash; learn it from here.</b> Your textbook explains new goods. It never mentions <b>quality</b> changes, which are the other half of this idea.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>New goods</b> and <b>better quality</b> at the same price make a dollar worth more. A fixed basket misses both, so the CPI <b>overstates</b> inflation.</p></div>
+  <p class="reading">Textbook page 145 for new goods. Quality is not in the textbook.</p>
+
+  <p>New goods: in 1985 there was no internet and no smartphone. Innovation widens what money can buy, which is like a fall in prices &mdash; but a basket set before the good existed cannot see it.</p>
+
+  <p>Quality: a laptop that costs the same as five years ago but is far faster is really cheaper. If the index records only the price tag, it counts no improvement.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A higher price is not always inflation. If the product is better, part of the price rise is paying for quality.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Innovation.</span> By widening the range of consumer choice, innovation makes a given amount of money worth more.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A better phone.</span> A phone rises from $600 to $630 (5%) but has twice the storage and a better camera. Counting the whole $30 as inflation overstates it.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Broadband.</span> Almost no household had broadband a decade before your textbook; an old basket misses both the new service and its falling price.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It adds to <a href="#e8">substitution bias</a> (entry 8), and is another flaw of the <a href="#e5">CPI</a> (entry 5).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> Name three reasons the CPI overstates inflation.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Substitution bias, new goods, and quality improvements.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> A car costs 3% more but is safer and uses less fuel. Is the full 3% inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. Part of it pays for better quality.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>The basket's weights decide the answer</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The same price changes give a <b>different index</b> for a different basket. The weights &mdash; how much of each good &mdash; matter as much as the prices.</p></div>
+  <p class="reading">Textbook pages 144&ndash;145, Check Your Understanding 1 and Figure 15.1.</p>
+
+  <p>Oranges doubled in price, lemons rose 80% and grapefruit two-thirds. A basket heavy in oranges shows more inflation; one heavy in lemons shows less.</p>
+
+  <p>So different households face different inflation rates: a retiree who spends mostly on medical care and a student who spends on tuition can both differ a lot from the CPI.</p>
+
+  <div class="watch"><p><b>Watch out.</b> An out-of-date basket can bias either way for a particular good. Overall, though, the CPI&rsquo;s net bias is upward.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Check Your Understanding 1.</span> With 100 oranges and 200 lemons the index is <b>180</b>, not 184.2: the index is very sensitive to the basket.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Oranges only: <b>100%</b>. Grapefruit only: <b>66.7%</b>. Lemons only: <b>80%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">An old basket and cars.</span> A ten-year-old basket with too few cars, whose prices rose faster, <b>understates</b> inflation &mdash; your textbook&rsquo;s own example.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is about the <a href="#e2">basket</a> (entry 2) behind the <a href="#e5">CPI</a> (entry 5), and it is why <a href="#e8">substitution bias</a> (entry 8) happens.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> Which basket shows more inflation after the frost: mostly oranges or mostly grapefruit?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Mostly oranges &mdash; their price rose the most.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> Why might a retiree&rsquo;s inflation rate differ from the CPI?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Their basket has different weights, for example much more medical care.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE DRILL ============ -->
+<section class="section" id="sorter">
+  <h2>Drill: which bias?</h2>
+  <p>Twelve cases where the CPI overstates inflation. Name the reason: people switching goods, a product that
+  did not exist, or a product that got better.</p>
+  <div class="widget">
+    <div id="sorter-list"></div>
+    <p class="score" id="sorter-score">0 of 12 answered</p>
+    <button type="button" id="sorter-reset">Start again</button>
+  </div>
+</section>
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>GDP deflator</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Nominal GDP &divide; real GDP &times; 100.</b> A price index for <b>everything produced</b> in the economy.</p></div>
+  <p class="reading">Textbook page 146, margin.</p>
+
+  <p>It is not built from a basket, but it does the same job: it equals 100 in the base year and rises with prices. Its percentage change is an inflation rate, just like the CPI&rsquo;s.</p>
+
+  <p>It covers investment and government purchases as well as consumer goods, and leaves out imports. So it can differ a little from the CPI, though the two usually move together.</p>
+
+  <div class="watch"><p><b>Watch out.</b> If nominal GDP doubles and real GDP is unchanged, the deflator has doubled: all of the rise was prices.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 15.3.</span> The CPI, the PPI and the GDP deflator all show deflation in the early Depression, inflation in World War II and the 1970s, and stability in the 1990s.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Nominal against real.</span> Nominal GDP $150 billion, real GDP $120 billion: deflator = <b>125</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Your AP Review, question 2.</span> The deflator went from 100.0 to 103.3 in 2005&ndash;06: <b>3.3%</b> inflation; the CPI gave 3.2%.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is another <a href="#e4">price index</a> (entry 4), whose change is an <a href="#e6">inflation rate</a> (entry 6). A third index is the <a href="#e12">PPI</a> (entry 12).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> Nominal GDP is $500 billion and real GDP $400 billion. What is the deflator?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>500 &divide; 400 &times; 100 = <b>125</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> Name one difference between what the CPI and the GDP deflator cover.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The deflator includes investment and government goods and excludes imports; the CPI prices a consumer basket, imports included.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>Producer price index</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A price index for goods and services <b>bought by producers</b> &mdash; raw materials such as steel, electricity and coal.</p></div>
+  <p class="reading">Textbook pages 145&ndash;146, margin.</p>
+
+  <p>Producers of raw materials raise prices quickly when demand changes, so the PPI often moves before the CPI. That makes it an early warning of inflation.</p>
+
+  <p>You will not be asked to calculate it. Know what it is and why people watch it.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background only. Your exam does not ask you to calculate the PPI.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The late 2000s.</span> Energy and food prices surged and then dropped; the PPI showed the swing far more than the CPI or the GDP deflator.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Figure 15.3.</span> The PPI&rsquo;s annual changes range far wider than the other two indexes.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A steel shortage.</span> Steel prices jump this month. Car prices, and the CPI, follow months later.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a third index alongside the <a href="#e11">GDP deflator</a> (entry 11).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> Why is the PPI called an early warning signal?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Producer prices respond quickly to demand, so they move before consumer prices.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> Will you need to calculate the PPI?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>Indexing to the CPI</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Payments that <b>rise automatically with the CPI</b> &mdash; Social Security, tax brackets and wages with a <b>cost-of-living adjustment</b> (COLA).</p></div>
+  <p class="reading">Textbook page 147, the box on indexing.</p>
+
+  <p>Tying a payment to the CPI protects it from inflation: if prices rise 3%, the payment rises 3%. That is why people on indexed pensions do not lose from unexpected inflation.</p>
+
+  <p>It also makes the CPI&rsquo;s biases expensive. If the CPI overstates inflation by 1 point, every indexed payment rises 1 point more than the cost of living.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background here. It connects to who loses from unexpected inflation in Module 14.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1780.</span> Massachusetts tied its soldiers&rsquo; pay to a basket of corn, beef, wool and leather.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Social Security.</span> 48 million people; each extra point of measured inflation adds 1% to every check.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A COLA clause.</span> A union contract raises wages each year by the CPI&rsquo;s percentage change.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It uses the <a href="#e5">CPI</a> (entry 5) to do what <a href="#e7">entry 7</a> does by hand: scale a dollar amount by the change in prices.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> Why does an indexed pension protect against inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It rises by the same percentage as the CPI.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> If the CPI overstates inflation, who gains from indexing?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>People receiving indexed payments: they get slightly more than the true rise in their cost of living.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ MCQ ============ -->
+<section class="section" id="mcq">
+  <h2>Tackle the test &mdash; multiple choice</h2>
+  <p>The five questions from your textbook&rsquo;s AP Review, with <b>every option explained</b>.</p>
+
+  <div class="mcq" data-key="D">
+    <p class="stem"><span class="qn">1</span> If the cost of a market basket of goods increases from $100 in year 1 to $108 in year 2, the consumer price index in year 2 equals ___ if year 1 is the base year.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>8<span class="why" hidden>&#10007; That is the inflation rate, 8%, not the index.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>10<span class="why" hidden>&#10007; Not a figure the data give.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>100<span class="why" hidden>&#10007; That is the index in the base year, year 1.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>108<span class="why" hidden>&#10003; <b>Correct.</b> 108 &divide; 100 &times; 100.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>110<span class="why" hidden>&#10007; Not a figure the data give.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">2</span> If the consumer price index increases from 80 to 120 from one year to the next, the inflation rate over that time period was&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>20%<span class="why" hidden>&#10007; Not 40 &divide; 80 or anything else in the data.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>40%<span class="why" hidden>&#10007; 40 is the change in index points, not the percentage.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>50%<span class="why" hidden>&#10003; <b>Correct.</b> 40 &divide; 80 &times; 100.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>80%<span class="why" hidden>&#10007; That is the first index value.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>120%<span class="why" hidden>&#10007; That is the second index value.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="E">
+    <p class="stem"><span class="qn">3</span> Which of the following is true of the CPI? I. It is the most common measure of the price level. II. It measures the price of a typical market basket of goods. III. It currently uses a base period of 1982&ndash;1984.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; True, but II and III are true as well.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10007; True, but I and III are true as well.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10007; True, but I and II are true as well.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>I and II only<span class="why" hidden>&#10007; Statement III is true too.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II and III<span class="why" hidden>&#10003; <b>Correct.</b> All three are on page 144.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">4</span> The value of a price index in the base year is&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>0.<span class="why" hidden>&#10007; Base-year cost divided by itself is 1, times 100.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>100.<span class="why" hidden>&#10003; <b>Correct.</b> By construction.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>200.<span class="why" hidden>&#10007; Not by construction.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>the inflation rate.<span class="why" hidden>&#10007; The inflation rate compares two years.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>the average cost of a market basket of goods.<span class="why" hidden>&#10007; The cost disappears into the ratio.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">5</span> If your wage doubles at the same time as the consumer price index goes from 100 to 300, your real wage&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>doubles.<span class="why" hidden>&#10007; That is your nominal wage.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>falls.<span class="why" hidden>&#10003; <b>Correct.</b> Prices tripled; your wage only doubled.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>increases.<span class="why" hidden>&#10007; Prices rose faster than your wage.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>stays the same.<span class="why" hidden>&#10007; Only if the CPI had doubled too.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>cannot be determined.<span class="why" hidden>&#10007; You have both changes.</span></span></button>
+    </div>
+  </div>
+
+  <p class="score" id="mcqScore">0 of 5 answered</p>
+</section>
+
+<!-- ============ FRQ ============ -->
+<section class="section" id="frq">
+  <h2>Tackle the test &mdash; free response</h2>
+
+  <div class="frq">
+    <p><b>Question 1 (5 points).</b> The year 2000 is the base year for a price index. Between 2000 and 2020
+    prices double, and your nominal income rises from $40,000 to $80,000. (a) What is the index in 2000?
+    (b) In 2020? (c) By what percentage did your nominal income rise? (d) What happened to your real income?
+    Explain.</p>
+    <details class="reveal"><summary>Show the answer and the rubric</summary><div class="ans">
+      <ol class="rubric">
+        <li>(a) <b>100</b> &mdash; one point</li>
+        <li>(b) <b>200</b> &mdash; one point</li>
+        <li>(c) <b>100%</b> &mdash; one point</li>
+        <li>(d) It stayed the same &mdash; one point</li>
+        <li>(d) Income and prices both doubled, so purchasing power is unchanged: $40,000 / 100 = $80,000 / 200
+          &mdash; one point</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 2.</b> Calculate the inflation rate from 2004 to 2005 and from 2005 to 2006 using each index.</p>
+    <div class="tablewrap">
+      <table class="sumtable">
+        <thead><tr><th>Year</th><th>GDP deflator</th><th>CPI</th></tr></thead>
+        <tbody>
+          <tr><td>2004</td><td>96.8</td><td>188.9</td></tr>
+          <tr><td>2005</td><td>100.0</td><td>195.3</td></tr>
+          <tr><td>2006</td><td>103.3</td><td>201.6</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p>GDP deflator: (100.0 &minus; 96.8) &divide; 96.8 &times; 100 = <b>3.3%</b>; then (103.3 &minus; 100.0) &divide; 100.0
+      &times; 100 = <b>3.3%</b>.</p>
+      <p>CPI: (195.3 &minus; 188.9) &divide; 188.9 &times; 100 = <b>3.4%</b>; then (201.6 &minus; 195.3) &divide; 195.3 &times; 100
+      = <b>3.2%</b>.</p>
+      <p>The two indexes give similar answers, as they usually do. Note that the CPI rose about 6 points each
+      year and the deflator about 3, yet the percentages are close: points are not percentages.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <h2>One-page summary</h2>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <thead><tr><th>Basket</th><th>Oranges &middot; grapefruit &middot; lemons</th><th>Cost before</th><th>Cost after</th><th>Index</th><th>Inflation</th></tr></thead>
+      <tbody>
+        <tr><td>Your textbook&rsquo;s basket</td><td>200 &middot; 50 &middot; 100</td><td>$95</td><td>$175</td><td><b>184.2</b></td><td><b>84.2%</b></td></tr>
+        <tr><td>More lemons, fewer oranges</td><td>100 &middot; 50 &middot; 200</td><td>$100</td><td>$180</td><td><b>180</b></td><td><b>80%</b></td></tr>
+        <tr><td>Oranges only</td><td>200 &middot; 0 &middot; 0</td><td>$40</td><td>$80</td><td><b>200</b></td><td><b>100%</b></td></tr>
+        <tr><td>Grapefruit only</td><td>0 &middot; 50 &middot; 0</td><td>$30</td><td>$50</td><td><b>166.7</b></td><td><b>66.7%</b></td></tr>
+        <tr><td>Lemons only</td><td>0 &middot; 0 &middot; 100</td><td>$25</td><td>$45</td><td><b>180</b></td><td><b>80%</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap"><b>Price index</b> = basket cost &divide; base-year basket cost &times; 100 (100 in the base
+  year). <b>Inflation rate</b> = change in the index &divide; the earlier index &times; 100. <b>Converting
+  dollars</b>: multiply by index in the target year &divide; index in the original year. <b>GDP deflator</b> =
+  nominal GDP &divide; real GDP &times; 100. The CPI <b>overstates</b> inflation: substitution bias, new goods,
+  quality.</p>
+</section>
+
+<section class="section closing" id="final">
+  <h2>The five things to get right from Module 15</h2>
+  <ol>
+    <li><b>A price index prices the same basket in two years</b> and divides by the base year&rsquo;s cost.
+      The base year is 100.</li>
+    <li><b>Index points are not percentages.</b> Divide the change by the earlier index.</li>
+    <li><b>To compare dollars across years,</b> scale by the ratio of the two index values.</li>
+    <li><b>The CPI overstates inflation:</b> substitution bias, new goods and quality changes. Know the name
+      <i>substitution bias</i>.</li>
+    <li><b>The GDP deflator is a second index</b> &mdash; everything produced, not a consumer basket.</li>
+  </ol>
+  <p>That completes the measurement of Unit 2: output, unemployment and prices. In Unit 3 the price level
+  becomes the vertical axis of the aggregate demand and supply model, and inflation becomes a movement up
+  it.</p>
+</section>
+
+<p class="footer">
+  Student guide &middot; Module 15, <i>Krugman&rsquo;s Economics for AP</i>, pages 142&ndash;147 &middot;
+  definitions quoted from the textbook &middot; tiers assigned against the AP Macroeconomics Course
+  and Exam Description, Course Framework V.1, &copy; 2020 &middot; every number on this page is computed
+  by the script that writes it, and checked again before it is written.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod15-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ return {}; } }
+  function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){ var s = load(); s[b.id] = b.checked; save(s); paint(); });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- the basket diagram ---------- */
+  /* Every value below is written by build/make_m15_student.py from the costs it computes. */
+  var READ = {
+    start: ["$95", "$175", "100", "184.2", "84.2%"],
+    cyu: ["$100", "$180", "100", "180", "80%"],
+    or: ["$40", "$80", "100", "200", "100%"],
+    gf: ["$30", "$50", "100", "166.7", "66.7%"],
+    lm: ["$25", "$45", "100", "180", "80%"]
+  };
+  var CAP = {
+    start: "200 oranges, 50 grapefruit and 100 lemons cost $95 before the frost and $175 after. Index: 175 / 95 x 100 = 184.2. Prices of citrus rose 84.2% on average - for this basket.",
+    cyu: "Swap 100 oranges (up 100%) for 100 more lemons (up 80%). Same prices, different basket: the index is 180 and inflation 80%. A household that switched towards lemons after the frost faces less inflation than the fixed basket reports.",
+    or: "Oranges doubled in price, so a basket of oranges alone shows 100% inflation.",
+    gf: "Grapefruit rose from 60 cents to $1.00: 66.7% - the smallest rise of the three.",
+    lm: "Lemons rose from 25 to 45 cents: 80%. Every basket gives a different answer, because the weights differ."
+  };
+  var chips = Array.prototype.slice.call(document.querySelectorAll("#diagram .chip"));
+  var cap = document.getElementById("pcap");
+  function show(which){
+    Object.keys(READ).forEach(function(k){
+      var g = document.getElementById("b-" + k);
+      /* SVG elements have no .hidden property; toggle the attribute, which the CSS hides */
+      if (g) { if (k === which) g.removeAttribute("hidden"); else g.setAttribute("hidden", ""); }
+    });
+    READ[which].forEach(function(v, i){ document.getElementById("ro" + i).textContent = v; });
+    cap.textContent = CAP[which];
+    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-show") === which)); });
+  }
+  chips.forEach(function(c){ c.addEventListener("click", function(){ show(c.getAttribute("data-show")); }); });
+  show("start");
+
+  /* ---------- the drill ---------- */
+  var SCEN = [
+    { t: "Beef prices jump and families buy more chicken, but the CPI keeps pricing last year's beef.", a: "s",
+      w: "SUBSTITUTION. People switched to a cheaper good the fixed basket ignores." },
+    { t: "A smartphone with features no phone had before goes on sale.", a: "n",
+      w: "NEW GOODS. An old basket cannot see a product that did not exist." },
+    { t: "A laptop costs the same as five years ago but is three times faster.", a: "q",
+      w: "QUALITY. Same price, better product: really a price fall." },
+    { t: "Coffee doubles in price and many people switch to tea.", a: "s",
+      w: "SUBSTITUTION. The basket still holds the coffee they stopped buying." },
+    { t: "Streaming services appear and replace video rental.", a: "n",
+      w: "NEW GOODS. A new way to buy something the old basket does not include." },
+    { t: "A new car costs 2% more but is much safer and uses less fuel.", a: "q",
+      w: "QUALITY. Part of the price rise pays for a better car." },
+    { t: "Bus fares rise sharply and commuters start cycling instead.", a: "s",
+      w: "SUBSTITUTION. They moved away from the good whose price rose." },
+    { t: "Tyres last twice as long as they did ten years ago, for the same price.", a: "q",
+      w: "QUALITY. Each tyre now gives twice the service." },
+    { t: "Broadband internet becomes common and its price keeps falling.", a: "n",
+      w: "NEW GOODS. An old basket misses both the product and its price fall." },
+    { t: "Apples get expensive after a bad harvest and shoppers buy pears.", a: "s",
+      w: "SUBSTITUTION. A cheaper substitute replaces the dearer good." },
+    { t: "Electric cars become widely available for the first time.", a: "n",
+      w: "NEW GOODS. A product outside the old basket." },
+    { t: "A television costs the same as last year but has a much sharper screen.", a: "q",
+      w: "QUALITY. More for the same money." }
+  ];
+  var LABELS = {
+    s: "Substitution",
+    n: "New goods",
+    q: "Quality"
+  };
+  var list = document.getElementById("sorter-list");
+  var scoreEl = document.getElementById("sorter-score");
+  var answered = 0, right = 0;
+  function build(){
+    list.innerHTML = "";
+    answered = 0; right = 0;
+    SCEN.forEach(function(s, i){
+      var row = document.createElement("div");
+      row.className = "sortrow";
+      var opts = Object.keys(LABELS).map(function(k){
+        return '<button type="button" class="opt" data-a="' + k + '"><span>' + LABELS[k] + '</span></button>';
+      }).join("");
+      row.innerHTML =
+        '<p class="stem"><span class="qn">' + (i + 1) + '</span> ' + s.t + '</p>' +
+        '<div class="opts">' + opts + '</div>' +
+        '<p class="why" hidden></p>';
+      var btns = Array.prototype.slice.call(row.querySelectorAll(".opt"));
+      var why = row.querySelector(".why");
+      btns.forEach(function(b){
+        b.addEventListener("click", function(){
+          if (row.getAttribute("data-done")) return;
+          row.setAttribute("data-done", "1");
+          var ok = b.getAttribute("data-a") === s.a;
+          btns.forEach(function(x){
+            x.disabled = true;
+            if (x.getAttribute("data-a") === s.a) x.setAttribute("data-state", "right");
+            else if (x === b) x.setAttribute("data-state", "wrong");
+          });
+          why.hidden = false;
+          why.textContent = (ok ? "\u2713 " : "\u2717 ") + s.w;
+          answered++; if (ok) right++;
+          scoreEl.textContent = right + " correct out of " + answered + " answered";
+        });
+      });
+      list.appendChild(row);
+    });
+    scoreEl.textContent = "0 of " + SCEN.length + " answered";
+  }
+  build();
+  document.getElementById("sorter-reset").addEventListener("click", build);
+
+  /* ---------- multiple choice ---------- */
+  var mcqs = Array.prototype.slice.call(document.querySelectorAll(".mcq[data-key]"));
+  var mcqScore = document.getElementById("mcqScore");
+  var mDone = 0, mRight = 0;
+  mcqs.forEach(function(q){
+    var key = q.getAttribute("data-key");
+    var opts = Array.prototype.slice.call(q.querySelectorAll(".opt"));
+    opts.forEach(function(o){
+      o.addEventListener("click", function(){
+        if (q.getAttribute("data-done")) return;
+        q.setAttribute("data-done", "1");
+        var ok = o.getAttribute("data-l") === key;
+        opts.forEach(function(x){
+          x.disabled = true;
+          x.querySelector(".why").hidden = false;
+          if (x.getAttribute("data-l") === key) x.setAttribute("data-state", "right");
+          else if (x === o) x.setAttribute("data-state", "wrong");
+        });
+        mDone++; if (ok) mRight++;
+        mcqScore.textContent = mRight + " correct out of " + mDone + " answered";
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "2.4 Price indices · the CPI", "title": "Module 15 · Measuring Inflation", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"href": "m01-student.html", "label": "Module 1 · Student guide", "current": false}, {"href": "m01-notes.html", "label": "Module 1 · Teaching notes", "current": false}, {"href": "m01-test.html", "label": "Module 1 · Test", "current": false}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": false}, {"href": "m02-notes.html", "label": "Module 2 · Teaching notes", "current": false}, {"href": "m02-test.html", "label": "Module 2 · Test", "current": false}, {"href": "m03-student.html", "label": "Module 3 · Student guide", "current": false}, {"href": "m03-notes.html", "label": "Module 3 · Teaching notes", "current": false}, {"href": "m03-test.html", "label": "Module 3 · Test", "current": false}, {"href": "m04-student.html", "label": "Module 4 · Student guide", "current": false}, {"href": "m04-notes.html", "label": "Module 4 · Teaching notes", "current": false}, {"href": "m04-test.html", "label": "Module 4 · Test", "current": false}, {"href": "m05-student.html", "label": "Module 5 · Student guide", "current": false}, {"href": "m05-notes.html", "label": "Module 5 · Teaching notes", "current": false}, {"href": "m05-test.html", "label": "Module 5 · Test", "current": false}, {"href": "m06-student.html", "label": "Module 6 · Student guide", "current": false}, {"href": "m06-notes.html", "label": "Module 6 · Teaching notes", "current": false}, {"href": "m06-test.html", "label": "Module 6 · Test", "current": false}, {"href": "m07-student.html", "label": "Module 7 · Student guide", "current": false}, {"href": "m07-notes.html", "label": "Module 7 · Teaching notes", "current": false}, {"href": "m07-test.html", "label": "Module 7 · Test", "current": false}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"href": "m10-student.html", "label": "Module 10 · Student guide", "current": false}, {"href": "m10-notes.html", "label": "Module 10 · Teaching notes", "current": false}, {"href": "m10-test.html", "label": "Module 10 · Test", "current": false}, {"href": "m11-student.html", "label": "Module 11 · Student guide", "current": false}, {"href": "m11-notes.html", "label": "Module 11 · Teaching notes", "current": false}, {"href": "m11-test.html", "label": "Module 11 · Test", "current": false}, {"href": "m12-student.html", "label": "Module 12 · Student guide", "current": false}, {"href": "m12-notes.html", "label": "Module 12 · Teaching notes", "current": false}, {"href": "m12-test.html", "label": "Module 12 · Test", "current": false}, {"href": "m13-student.html", "label": "Module 13 · Student guide", "current": false}, {"href": "m13-notes.html", "label": "Module 13 · Teaching notes", "current": false}, {"href": "m13-test.html", "label": "Module 13 · Test", "current": false}, {"href": "m14-student.html", "label": "Module 14 · Student guide", "current": false}, {"href": "m14-notes.html", "label": "Module 14 · Teaching notes", "current": false}, {"href": "m14-test.html", "label": "Module 14 · Test", "current": false}, {"href": "m15-student.html", "label": "Module 15 · Student guide", "current": true}, {"href": "m15-notes.html", "label": "Module 15 · Teaching notes", "current": false}, {"href": "m15-test.html", "label": "Module 15 · Test", "current": false}, {"label": "Unit 2 · Gap analysis", "planned": true}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"label": "Module 16 · Income and Expenditure", "planned": true}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"label": "Module 34 · The Phillips Curve", "planned": true}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "m14-test.html", "label": "Module 14 · Test"}, "next": {"href": "m15-notes.html", "label": "Module 15 · Teaching notes"}, "variants": [{"href": "m15-student.html", "label": "Student", "current": true}, {"href": "m15-notes.html", "label": "Notes", "current": false}, {"href": "m15-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
