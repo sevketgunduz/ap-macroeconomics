@@ -1,0 +1,1464 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 14 · Inflation: Who Wins, Who Loses · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+
+
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+
+/* ---------- Module 3 supplement ---------- */
+.mark.flag{background:var(--flag-soft);color:var(--flag)}
+.ppc-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.ppc-wrap{grid-template-columns:1fr 210px}}
+.ppc-svg{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px;cursor:crosshair;touch-action:none}
+.ppc-side{display:flex;flex-direction:column;gap:10px}
+.status{font-family:var(--mono);font-size:12.5px;padding:9px 11px;border-radius:5px;
+  border:1px solid var(--rule-strong);background:var(--surface-2);line-height:1.45}
+.status[data-s="on"]{border-color:color-mix(in srgb,var(--up) 45%,transparent);background:var(--up-soft);color:var(--up)}
+.status[data-s="in"]{border-color:var(--rule-strong);color:var(--ink-2)}
+.status[data-s="out"]{border-color:color-mix(in srgb,var(--down) 45%,transparent);background:var(--down-soft);color:var(--down)}
+.ppc-legend{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.ppc-legend b{color:var(--ink-2);font-weight:600}
+.chips.tight{gap:6px}
+.tbl{overflow-x:auto;max-width:100%}
+.sumtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.sumtable th,.sumtable td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+.sumtable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.sumtable td.mk{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--accent)}
+.sumtable td.mk.bgm{color:var(--ink-3)}
+.sumtable td.mk.flagm{color:var(--flag)}
+.final{background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:18px 20px;margin:22px 0;box-shadow:var(--shadow)}
+.final ol{margin:0;padding-left:20px}
+.final li{margin:0 0 9px}
+.final li:last-child{margin-bottom:0}
+
+/* ---------- PPC explorer svg ---------- */
+.ppc-svg .ax{stroke:var(--ink);stroke-width:1.6}
+.ppc-svg .tick{stroke:var(--ink-3);stroke-width:1.1}
+.ppc-svg .tl{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.ppc-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.ppc-svg .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ppc-svg .ghost{fill:none;stroke:var(--rule-strong);stroke-width:1.8;stroke-dasharray:6 5}
+.ppc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.ppc-svg .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.ppc-svg .pt{stroke:var(--surface);stroke-width:2}
+.ppc-svg .pt-on{fill:var(--up)}
+.ppc-svg .pt-in{fill:var(--ink-3)}
+.ppc-svg .pt-out{fill:var(--down)}
+
+
+/* ---------- Module 4 supplement ---------- */
+.two-panel{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px}
+.ca-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 14px}
+@media (min-width:640px){.ca-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ca-grid .field{display:flex;flex-direction:column;gap:5px}
+.ca-grid .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.ca-grid .field b{color:var(--ink-2);font-weight:600;text-transform:none;letter-spacing:0}
+.ca-grid input{font-family:var(--mono);font-size:15px;padding:7px 9px;width:100%;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.ca-grid input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.catab{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 14px}
+.catab th,.catab td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left}
+.catab th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.catab td.v{font-family:var(--mono);color:var(--ink)}
+.catab td.win{font-family:var(--mono);color:var(--up);font-weight:600}
+.dealrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 12px}
+.dealrow .field{display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1}
+.dealrow .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.dealrow input{font-family:var(--mono);font-size:16px;padding:8px 10px;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.line-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.line-svg g[hidden]{display:none}
+.line-svg .band{fill:var(--up-soft);stroke:none}
+.line-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.line-svg .tk{stroke:var(--ink-3);stroke-width:1.1}
+.line-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.line-svg .edge{stroke:var(--up);stroke-width:2}
+.line-svg .edgel{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--up)}
+.line-svg .prop{stroke:var(--accent);stroke-width:2.4}
+.line-svg .propbad{stroke:var(--down);stroke-width:2.4}
+.line-svg .propl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.line-svg .propl.bad{fill:var(--down)}
+.two-panel .ax{stroke:var(--ink);stroke-width:1.6}
+.two-panel .tick{stroke:var(--ink-3);stroke-width:1.1}
+.two-panel .tl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.two-panel .al{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.two-panel .ph{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.two-panel .curve{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+.two-panel .slope{font-family:var(--mono);font-size:11px;fill:var(--accent)}
+.two-panel .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.two-panel .pt{stroke:var(--surface);stroke-width:2}
+.two-panel .pt-on{fill:var(--ink-2)}
+.two-panel .pt-out{fill:var(--up)}
+.two-panel .ptl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.two-panel .ptl.good{fill:var(--up);font-weight:600}
+
+</style>
+<style>
+/* Module 5 additions: the movement-or-shift sorter */
+.sortrow{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:0 0 10px;
+  background:var(--surface)}
+.sortrow .stem{margin:0 0 10px}
+.sortrow .opts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sortrow .opt{flex:1 1 220px;justify-content:center;text-align:center}
+.sortrow .why{display:block;margin:10px 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.sortrow[data-done] .opt{cursor:default}
+#sorter-reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer}
+#sorter-reset:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<style>
+/* Module 14 additions: the loan chart, the drill's three answers */
+.loan-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.loan-svg g[hidden]{display:none}
+.loan-svg .nm{fill:var(--ink-3);opacity:.6}
+.loan-svg .ei{fill:var(--flag);opacity:.55}
+.loan-svg .ai{fill:var(--flag)}
+.loan-svg .pr{fill:var(--accent);opacity:.55}
+.loan-svg .ar{fill:var(--accent)}
+.loan-svg .zl{stroke:var(--ink-2);stroke-width:1.4;fill:none}
+.loan-svg .gl{stroke:var(--rule);stroke-width:1;stroke-dasharray:3 4;fill:none}
+.loan-svg .tk{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.loan-svg .rl{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink)}
+.loan-svg .vl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink)}
+.sortrow .opts .opt{flex:1 1 140px}
+</style>
+
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro &middot; Module 14</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 17</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">AP Macroeconomics &middot; Unit 2 &middot; Student guide</p>
+  <h1>Inflation: Who Wins, Who Loses</h1>
+  <p class="standfirst">Seventeen terms from Module 14 of <i>Krugman&rsquo;s Economics for AP</i>: what
+  inflation, deflation and disinflation are, how to turn nominal values into real ones, and who gains and
+  who loses when inflation is not what people expected. That last idea is what your exam means by the
+  <i>costs of inflation</i>.</p>
+  <div class="source-line">
+    <span>Textbook pages 134&ndash;141</span><span>&middot;</span><span>17 terms</span><span>&middot;</span>
+    <span>Topics 2.4 and 2.5</span><span>&middot;</span><span>real = nominal &minus; inflation</span>
+  </div>
+<section class="section" id="howto">
+  <h2>How to use this guide</h2>
+  <p>Read Module 14 in your textbook first. Entries 1 to 7 are the definitions and real values; entries 8
+  to 10 are the three costs your textbook names; entries 11 to 15 are interest rates and who wins and
+  loses &mdash; the part your exam tests most; entries 16 and 17 are background.</p>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <tbody>
+        <tr><td><span class="mark exam">&#9733; Exam</span></td><td><b>Exam term.</b> Define it, calculate with it, and use it to say who gains and who loses. Eleven of these.</td></tr>
+        <tr><td><span class="mark bg">&#9675; Background</span></td><td><b>Background.</b> Worth knowing, not tested. Six of these &mdash; including the shoe-leather, menu and unit-of-account costs your textbook spends pages on.</td></tr>
+        <tr><td><span class="mark flag">&#9873; Not in the textbook</span></td><td><b>Learn it from here.</b> Your exam needs it and Module 14 does not have it. Two entries carry this flag.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Every entry ends with two <b>Check yourself</b> questions. Answer them before opening the
+      answer, then tick <b>Got it</b>.</li>
+    <li>Use the loan diagram below with entries 11 to 15. Press every button.</li>
+    <li>Do the drill after entry 15, and again at the end.</li>
+  </ul>
+  <div class="flag">
+    <p><b>One word carries this module: unexpected.</b> Inflation that everyone expected is built into
+    loans and wages, and moves nothing. Inflation that surprises people moves purchasing power from anyone
+    owed fixed dollars to anyone who owes them.</p>
+  </div>
+</section>
+
+<!-- ============ THE LOAN DIAGRAM ============ -->
+<section class="section" id="diagram">
+  <h2>One loan, six outcomes</h2>
+  <p>You lend a friend $1,000 for a year. You both expect 2% inflation and agree on 5% interest, so you both
+  expect a real return of 3%. The contract is fixed in dollars: $1,050 at the end of the year, whatever
+  happens to prices. Now choose what inflation actually does.</p>
+
+  <div class="widget">
+    <div class="widget-title">Choose what happens to inflation</div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-show="start">As expected</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="hi">Inflation higher than expected</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="vhi">Much higher</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="lo">Lower than expected</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="defl">Deflation</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="exp">High, but expected</button>
+    </div>
+<svg id="lfig" class="loan-svg" viewBox="0 0 700 242" role="img" aria-label="Nominal rate, expected and actual inflation, and planned and actual real interest rates">
+<path class="gl" d="M230.0 14 V212"></path>
+<text class="tk" x="230.0" y="228" text-anchor="middle">−4%</text>
+<path class="gl" d="M292.9 14 V212"></path>
+<text class="tk" x="292.9" y="228" text-anchor="middle">−2%</text>
+<path class="gl" d="M355.7 14 V212"></path>
+<text class="tk" x="355.7" y="228" text-anchor="middle">0%</text>
+<path class="gl" d="M418.6 14 V212"></path>
+<text class="tk" x="418.6" y="228" text-anchor="middle">2%</text>
+<path class="gl" d="M481.4 14 V212"></path>
+<text class="tk" x="481.4" y="228" text-anchor="middle">4%</text>
+<path class="gl" d="M544.3 14 V212"></path>
+<text class="tk" x="544.3" y="228" text-anchor="middle">6%</text>
+<path class="gl" d="M607.1 14 V212"></path>
+<text class="tk" x="607.1" y="228" text-anchor="middle">8%</text>
+<path class="gl" d="M670.0 14 V212"></path>
+<text class="tk" x="670.0" y="228" text-anchor="middle">10%</text>
+<path class="zl" d="M355.7 14 V212"></path>
+<text class="rl" x="166" y="39" text-anchor="end">Nominal rate</text>
+<text class="rl" x="166" y="77" text-anchor="end">Expected inflation</text>
+<text class="rl" x="166" y="115" text-anchor="end">Actual inflation</text>
+<text class="rl" x="166" y="153" text-anchor="end">Planned real rate</text>
+<text class="rl" x="166" y="191" text-anchor="end">Actual real rate</text>
+<g id="l-start" hidden>
+<rect class="nm" x="355.7" y="22" width="157.1" height="24"></rect>
+<text class="vl" x="518.9" y="39">5%</text>
+<rect class="ei" x="355.7" y="60" width="62.9" height="24"></rect>
+<text class="vl" x="424.6" y="77">2%</text>
+<rect class="ai" x="355.7" y="98" width="62.9" height="24"></rect>
+<text class="vl" x="424.6" y="115">2%</text>
+<rect class="pr" x="355.7" y="136" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="153">3%</text>
+<rect class="ar" x="355.7" y="174" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="191">3%</text>
+</g>
+<g id="l-hi" hidden>
+<rect class="nm" x="355.7" y="22" width="157.1" height="24"></rect>
+<text class="vl" x="518.9" y="39">5%</text>
+<rect class="ei" x="355.7" y="60" width="62.9" height="24"></rect>
+<text class="vl" x="424.6" y="77">2%</text>
+<rect class="ai" x="355.7" y="98" width="157.1" height="24"></rect>
+<text class="vl" x="518.9" y="115">5%</text>
+<rect class="pr" x="355.7" y="136" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="153">3%</text>
+<text class="vl" x="361.7" y="191">0%</text>
+</g>
+<g id="l-vhi" hidden>
+<rect class="nm" x="355.7" y="22" width="157.1" height="24"></rect>
+<text class="vl" x="518.9" y="39">5%</text>
+<rect class="ei" x="355.7" y="60" width="62.9" height="24"></rect>
+<text class="vl" x="424.6" y="77">2%</text>
+<rect class="ai" x="355.7" y="98" width="251.4" height="24"></rect>
+<text class="vl" x="613.1" y="115">8%</text>
+<rect class="pr" x="355.7" y="136" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="153">3%</text>
+<rect class="ar" x="261.4" y="174" width="94.3" height="24"></rect>
+<text class="vl" x="255.4" y="191" text-anchor="end">−3%</text>
+</g>
+<g id="l-lo" hidden>
+<rect class="nm" x="355.7" y="22" width="157.1" height="24"></rect>
+<text class="vl" x="518.9" y="39">5%</text>
+<rect class="ei" x="355.7" y="60" width="62.9" height="24"></rect>
+<text class="vl" x="424.6" y="77">2%</text>
+<text class="vl" x="361.7" y="115">0%</text>
+<rect class="pr" x="355.7" y="136" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="153">3%</text>
+<rect class="ar" x="355.7" y="174" width="157.1" height="24"></rect>
+<text class="vl" x="518.9" y="191">5%</text>
+</g>
+<g id="l-defl" hidden>
+<rect class="nm" x="355.7" y="22" width="157.1" height="24"></rect>
+<text class="vl" x="518.9" y="39">5%</text>
+<rect class="ei" x="355.7" y="60" width="62.9" height="24"></rect>
+<text class="vl" x="424.6" y="77">2%</text>
+<rect class="ai" x="292.9" y="98" width="62.9" height="24"></rect>
+<text class="vl" x="286.9" y="115" text-anchor="end">−2%</text>
+<rect class="pr" x="355.7" y="136" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="153">3%</text>
+<rect class="ar" x="355.7" y="174" width="220.0" height="24"></rect>
+<text class="vl" x="581.7" y="191">7%</text>
+</g>
+<g id="l-exp" hidden>
+<rect class="nm" x="355.7" y="22" width="282.9" height="24"></rect>
+<text class="vl" x="644.6" y="39">9%</text>
+<rect class="ei" x="355.7" y="60" width="188.6" height="24"></rect>
+<text class="vl" x="550.3" y="77">6%</text>
+<rect class="ai" x="355.7" y="98" width="188.6" height="24"></rect>
+<text class="vl" x="550.3" y="115">6%</text>
+<rect class="pr" x="355.7" y="136" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="153">3%</text>
+<rect class="ar" x="355.7" y="174" width="94.3" height="24"></rect>
+<text class="vl" x="456.0" y="191">3%</text>
+</g>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Nominal rate</span><span class="v" id="ro0">&ndash;</span></div>
+      <div class="ro"><span class="k">Expected inflation</span><span class="v" id="ro1">&ndash;</span></div>
+      <div class="ro"><span class="k">Actual inflation</span><span class="v" id="ro2">&ndash;</span></div>
+      <div class="ro"><span class="k">Planned real rate</span><span class="v" id="ro3">&ndash;</span></div>
+      <div class="ro"><span class="k">Actual real rate</span><span class="v hl" id="ro4">&ndash;</span></div>
+      <div class="ro"><span class="k">Who gains (per $1,000)</span><span class="v hl" id="ro5">&ndash;</span></div>
+    </div>
+    <p class="figcap" id="pcap"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The 17 terms</h2>
+</section>
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Inflation and the price level</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Inflation</b> is a rise in the <b>overall level of prices</b>.</p></div>
+  <p class="reading">Textbook pages 134&ndash;135.</p>
+
+  <p>Your textbook&rsquo;s surprising point: the <i>level</i> of prices does not matter. Replace every dollar with one-seventh of a &ldquo;new dollar&rdquo; &mdash; prices, wages, debts, everything &mdash; and nobody is richer or poorer. Prices are lower, but so is everyone&rsquo;s income.</p>
+
+  <p>What matters is the <b>rate of change</b> of prices, and above all whether it was <b>expected</b>. That is where the costs come from.</p>
+
+  <div class="watch"><p><b>Watch out.</b> &ldquo;Prices are high&rdquo; is not inflation. Inflation is prices <i>rising</i>.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The &ldquo;new dollar&rdquo;.</span> At 7 to 1, a $140,000 mortgage becomes 20,000 new dollars and a $14 wage becomes 2 new dollars an hour. The real wage is unchanged.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Figure 14.1.</span> The U.S. price level rose in every year from 1969 to 2009, while the inflation rate rose above 13% around 1980 and fell below zero in 2009.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A country&rsquo;s new currency.</span> France swapped francs for euros at 6.55957 to 1 in 2002. Every price and every wage was divided by the same number. Nobody got poorer.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> The rate of change is <a href="#e4">entry 4</a>; dividing by the price level is <a href="#e2">entry 2</a>; a fall in the level is <a href="#e5">entry 5</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> All prices and all wages double overnight. Is anyone worse off?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. Real wages and real incomes are unchanged. (Anyone owed a fixed number of dollars is worse off &mdash; entry 15.)</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> What is the difference between a high price level and a high inflation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The first is where prices are; the second is how fast they are rising.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Real wage and real income</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>real wage</b> is the wage rate <b>divided by the price level</b>. <b>Real income</b> is income <b>divided by the price level</b>. They measure purchasing power.</p></div>
+  <p class="reading">Textbook page 135, margin.</p>
+
+  <p>A <b>nominal</b> wage is the number of dollars you are paid. A <b>real</b> wage is what those dollars buy. If your pay and every price rise by the same percentage, your nominal wage rises and your real wage does not.</p>
+
+  <p>This is the general rule for any <b>real variable</b>: take the nominal value and deflate it by the price level.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A raise is not a real raise unless it beats inflation.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 2.</span> Your nominal wage doubles and prices double: your real wage does <b>not change</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A wage that only keeps up.</span> $20 an hour becomes $22 while the price index goes from 100 to 110. The real wage is $20 both years.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A pay freeze.</span> Your pay is frozen for a year while prices rise 3%. Your nominal wage is unchanged; your real wage has fallen about 3%.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It deflates by the <a href="#e1">price level</a> (entry 1). Calculating it is <a href="#e3">entry 3</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> Your wage rises 4% and prices rise 4%. What happens to your real wage?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Nothing. It is unchanged.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> Your wage rises 2% and prices rise 5%. Did you get a real raise?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. Your real wage fell, by about 3%.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Calculating changes in real variables</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Your exam asks you to calculate changes in real variables. Module 14 defines the real wage and real income but never works one out with a price index.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Real value = nominal value &divide; (price index &divide; 100).</b> For a quick answer: <b>% change in the real value &asymp; % change in the nominal value &minus; the inflation rate.</b></p></div>
+  <p class="reading">Not worked in your textbook. The definitions are on page 135.</p>
+
+  <p>Dividing by the index over 100 turns this year&rsquo;s dollars into base-year dollars. Then you can compare across years honestly.</p>
+
+  <p>The shortcut is close when the numbers are small, and it is what most questions expect. If the question gives you index numbers, divide; if it gives you percentage changes, subtract.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Divide by the index <b>over 100</b>. Dividing $22 by 110 gives 20 cents, not $20.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your textbook, Module 15.</span> Income doubles from $40,000 to $80,000 while the price index goes from 100 to 200: real income is unchanged.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">An income that beats inflation.</span> $40,000 becomes $42,000 while the index goes from 100 to 102. Real income = 42,000 &divide; 1 = <b>$41,176.47</b>, up <b>2.9%</b>. The shortcut: 5% &minus; 2% = <b>3%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A wage that only keeps up.</span> $20 becomes $22 while the index goes from 100 to 110. Real wage = 22 &divide; 1.1 = <b>$20</b>: no change.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It applies <a href="#e2">entry 2</a>, using the <a href="#e4">inflation rate</a> (entry 4).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> Your wage rises from $15 to $16.50 while the price index rises from 100 to 110. What happened to your real wage?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>16.50 &divide; 1.10 = <b>$15</b>. It is unchanged.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> Nominal income rises 7% and the inflation rate is 3%. About how much did real income change?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>About <b>+4%</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>The inflation rate</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>percentage change per year in a price index</b>: (price level in year 2 &minus; price level in year 1) &divide; price level in year 1 &times; 100.</p></div>
+  <p class="reading">Textbook page 135, margin and formula.</p>
+
+  <p>The price level is measured by an index such as the consumer price index (next module) or the GDP deflator (Module 11). The inflation rate is how fast that index is rising.</p>
+
+  <p>Any price index will do, as long as you use the same one for both years.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Divide by the <b>first</b> year&rsquo;s level, not the second&rsquo;s.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The U.S. in peacetime.</span> Inflation has never been above 15% a year.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your exam board&rsquo;s sample question.</span> A price index rises from 100 to 125: (125 &minus; 100) &divide; 100 &times; 100 = <b>25%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Not starting from 100.</span> An index rises from 200 to 210: 10 &divide; 200 &times; 100 = <b>5%</b>, not 10%.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the rate of change of the <a href="#e1">price level</a> (entry 1). Below zero it is <a href="#e5">deflation</a> (entry 5); falling, it is <a href="#e6">disinflation</a> (entry 6). Real variables subtract it (<a href="#e3">entry 3</a>), and so do <a href="#e11">real interest rates</a> (entry 11).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> A price index goes from 240 to 252. What is the inflation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>12 &divide; 240 &times; 100 = <b>5%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> A price index falls from 150 to 147. What is the inflation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>&minus;3 &divide; 150 &times; 100 = <b>&minus;2%</b> &mdash; deflation.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>Deflation</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A <b>fall in the overall price level</b> &mdash; an inflation rate below zero.</p></div>
+  <p class="reading">Textbook pages 134 and 139.</p>
+
+  <p>Deflation is rare but not harmless. Between 1929 and 1933 the U.S. price level fell by 35%. Debts were fixed in dollars, so their real value rose: farmers and homeowners owed more purchasing power than they had borrowed.</p>
+
+  <p>That led to bankruptcies, and lenders whose customers could not repay got into trouble too.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Deflation is prices <b>falling</b>, not inflation slowing &mdash; that is entry 6.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1929&ndash;33.</span> The price level fell 35% as the economy plunged into the Great Depression.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">An index that falls.</span> From 100 to 98: an inflation rate of <b>&minus;2%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Cheaper next year.</span> If you expect a TV to cost less next year, you wait. When many people wait, spending falls.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a negative <a href="#e4">inflation rate</a> (entry 4) and a fall in the <a href="#e1">price level</a> (entry 1). Compare <a href="#e6">disinflation</a> (entry 6). Its winners and losers are <a href="#e14">entry 14</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> Inflation goes from 2% to &minus;1%. Is that disinflation or deflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Deflation: the price level is now falling.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> In deflation, does a fixed-dollar debt get easier or harder to repay?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Harder. Each dollar repaid is worth more.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>Disinflation</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Bringing the inflation rate down</b>. Prices are still rising &mdash; just more slowly.</p></div>
+  <p class="reading">Textbook page 139, margin.</p>
+
+  <p>The U.S. inflation rate peaked around 1980 and fell to about 4% by the end of the decade. That was disinflation: the price level kept rising every year, but by less.</p>
+
+  <p>Disinflation and deflation are different things. Disinflation is the <i>rate</i> falling. Deflation is the <i>level</i> falling.</p>
+
+  <div class="watch"><p><b>Watch out.</b> From 8% to 3% is disinflation. From 3% to &minus;1% is deflation.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The 1980s.</span> Inflation fell from its 1980 peak to about 4% by 1988.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Two years.</span> Inflation is 6% one year and 2% the next. Prices rose both years; the rate fell by <b>4 points</b>. Disinflation.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Slower, not lower.</span> A coffee that rose 30 cents last year rises only 10 cents this year. Still more expensive &mdash; just rising more slowly.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a falling <a href="#e4">inflation rate</a> (entry 4), not <a href="#e5">deflation</a> (entry 5). What it cost the U.S. is <a href="#e7">entry 7</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> Inflation goes from 9% to 4%. Did prices fall?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. They rose 4%. The rate fell: disinflation.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> Name the difference between deflation and disinflation in one sentence.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Deflation is a falling price level; disinflation is a falling inflation rate.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>Why disinflation is costly</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Once high inflation is built into expectations, bringing it down usually takes a <b>period of high unemployment</b>.</p></div>
+  <p class="reading">Textbook page 139, Figure 14.2.</p>
+
+  <p>Policy makers try to stop inflation creeping above 2&ndash;3%. The reason is not that 5% is a disaster, but that getting back down from an established high rate is painful.</p>
+
+  <p>In 1981&ndash;82 the U.S. brought inflation down with a severe recession. You meet the reason in Unit 5, on the Phillips curve.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background here. The idea returns, with a graph, in Unit 5.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1981&ndash;82.</span> The recession that brought inflation down drove unemployment to 10.8%, its highest since the Great Depression.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Figure 14.2.</span> Inflation peaked above 13% in 1980; by the late 1980s it averaged about 4%.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Prevention.</span> A central bank raises interest rates when inflation reaches 3%, to avoid having to fight 10% later.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the price of <a href="#e6">disinflation</a> (entry 6).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> Why do policy makers act when inflation is only a little above 2&ndash;3%?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because bringing it down once it is established is much more costly.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> What did the U.S. disinflation of the early 1980s cost?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>A deep recession and unemployment of 10.8%.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>Shoe-leather costs</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>increased costs of transactions</b> caused by inflation &mdash; the time and effort people spend avoiding holding money.</p></div>
+  <p class="reading">Textbook pages 136&ndash;137, margin.</p>
+
+  <p>When prices rise fast, cash loses value while you hold it, so people go to the bank more often and keep less money. That uses real resources: time, staff, bank branches.</p>
+
+  <p>At U.S. inflation rates these costs are small. In hyperinflations they are huge.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Your exam does not name this cost. Know it as background.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Germany, 1921&ndash;23.</span> Employment at German banks rose from about 100,000 in 1913 to 375,000 in 1923.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Brazil, early 1990s.</span> The banking sector grew to 15% of GDP &mdash; more than twice the U.S. share.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Payday shopping.</span> Workers paid daily rush to spend their wages before prices rise again.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is one of three named costs, with <a href="#e9">menu costs</a> (entry 9) and <a href="#e10">unit-of-account costs</a> (entry 10); it is worst in <a href="#e17">hyperinflation</a> (entry 17).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> Why do people hold less money when inflation is high?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because money loses purchasing power the longer they hold it.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> Banking apps make it easier to move money. Are shoe-leather costs higher or lower?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Lower: avoiding holding money costs less effort.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>Menu costs</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>real costs of changing listed prices</b>.</p></div>
+  <p class="reading">Textbook page 137, margin.</p>
+
+  <p>Every listed price &mdash; shelf labels, menus, catalogues, websites &mdash; costs something to change. Inflation forces firms to change them more often.</p>
+
+  <p>Small at low inflation, especially now that many prices change electronically. Large at very high inflation.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Your exam does not name this cost. Know it as background.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Brazil, early 1990s.</span> Supermarket workers reportedly spent half their time replacing price stickers.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Zimbabwe, 2008.</span> Official estimates put inflation at 1,694,000%. Prices were quoted in U.S. dollars instead.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A rental brochure.</span> A holiday company reprints its colour brochures because the prices in them are out of date.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is one of three named costs, with <a href="#e8">entry 8</a> and its extreme form is <a href="#e17">hyperinflation</a> (entry 17).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> Why are menu costs smaller today than fifty years ago?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Prices can be changed electronically.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> Name one menu cost a restaurant faces in high inflation.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Reprinting its menus.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>Unit-of-account costs</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Costs that arise because inflation makes money a <b>less reliable unit of measurement</b>.</p></div>
+  <p class="reading">Textbook pages 137&ndash;138, margin.</p>
+
+  <p>Contracts, budgets and taxes are all measured in dollars. When the dollar keeps changing in value, decisions made in dollars get worse.</p>
+
+  <p>Taxes are the clearest case: tax law counts <b>nominal</b> gains, so people pay tax on gains that are only inflation &mdash; <b>phantom gains</b>.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Your exam does not name this cost. Know it as background.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Land bought and sold.</span> Bought for $100,000, sold a year later for $110,000 with 10% inflation: no real profit, but tax on a <b>$10,000</b> phantom gain.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The 1970s.</span> With inflation high, some firms were discouraged from productive investment by taxes on phantom gains.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A household budget.</span> A family cannot tell whether it is saving enough when prices change unpredictably month to month.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the third named cost with <a href="#e8">entry 8</a>. Its uncertainty is <a href="#e16">entry 16</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> What is a phantom gain?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>A nominal gain that is only inflation, with no real gain, yet still taxed.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> Why is money a worse unit of account in high inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because a dollar is worth a different amount each time you measure with it.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>Nominal and real interest rates</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>nominal</b> interest rate is the rate actually paid on a loan, unadjusted for inflation. The <b>real</b> interest rate is the <b>nominal rate minus the inflation rate</b>.</p></div>
+  <p class="reading">Textbook page 138, margin.</p>
+
+  <p>Every rate you see advertised is nominal. The real rate tells you what the lender actually gains in purchasing power.</p>
+
+  <p>Measured afterwards, the real rate uses the <b>actual</b> inflation rate. That is how you check who came out ahead.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The real rate can be negative. Inflation above the nominal rate means the lender lost purchasing power.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your textbook&rsquo;s example.</span> Nominal 8%, inflation 5%: real rate = 8 &minus; 5 = <b>3%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review, question 2.</span> $1,000 at 5%, with 5% inflation: real rate <b>0%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> Press <b>Much higher</b>: nominal 5%, inflation 8%, real rate <b>−3%</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It subtracts the <a href="#e4">inflation rate</a> (entry 4). Loans are priced on <a href="#e12">expected inflation</a> (entry 12), and the gap decides <a href="#e13">entry 13</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> Nominal rate 7%, inflation 3%. Real rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p><b>4%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> Nominal rate 4%, inflation 6%. Real rate, and who lost?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p><b>&minus;2%</b>. The lender.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>Expected inflation and the real interest rate</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A loan&rsquo;s nominal rate is agreed in advance, so both sides work from the inflation they <b>expect</b>. Nominal rate &asymp; the real rate they want + the inflation they expect.</p></div>
+  <p class="reading">Textbook page 138.</p>
+
+  <p>A lender who wants a 3% real return and expects 2% inflation asks for 5%. If she expected 6% inflation she would ask 9%.</p>
+
+  <p>So there are two real rates: the one <b>planned</b> (nominal minus expected inflation) and the one that <b>happened</b> (nominal minus actual inflation). Everything in entry 13 is the gap between them.</p>
+
+  <div class="watch"><p><b>Watch out.</b> If inflation turns out exactly as expected, nobody gains or loses, however high it is.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your textbook, page 138.</span> Each party has an expectation about future inflation, and so an expectation about the real interest rate.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Nominal 5%, expected inflation 2%: a planned real rate of <b>3%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">High but expected.</span> Press <b>High, but expected</b>: everyone expects 6%, the lender asks 9%, inflation is 6%. Real rate <b>3%</b>, as planned.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It applies <a href="#e11">entry 11</a> before the fact. The surprise is <a href="#e13">entry 13</a>; the risk of not knowing is <a href="#e16">entry 16</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> A lender wants a 4% real return and expects 3% inflation. What nominal rate does she ask?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>About <b>7%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> Inflation is 10% and everyone expected 10%. Who gains?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Nobody. The nominal rate already allowed for it.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>Unexpected inflation: borrowers gain, lenders lose</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>If inflation turns out <b>higher than expected</b>, borrowers gain at the expense of lenders. If it is <b>lower than expected</b>, lenders gain at the expense of borrowers.</p></div>
+  <p class="reading">Textbook page 138.</p>
+
+  <p>The borrower repays a fixed number of dollars. If prices have risen more than expected, those dollars buy less than either side planned: the real rate is lower, and the borrower has won.</p>
+
+  <p>Your exam calls this <b>redistribution</b>: unexpected inflation moves wealth from one group to another. It is not a loss to the economy as a whole &mdash; one side&rsquo;s loss is the other&rsquo;s gain.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Always say <b>unexpected</b>. Expected inflation redistributes nothing.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Mortgages, 1973&ndash;83.</span> By 1983 a dollar bought only 45% of what it had in 1973, so people with early-1970s mortgages repaid in much cheaper dollars.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Press <b>Inflation higher than expected</b>: the real rate falls from 3% to 0%, and about <b>$30</b> of purchasing power moves to the borrower.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Mortgages, 1993&ndash;2003.</span> Inflation came in lower than expected: by 2003 a dollar still bought 78% of its 1993 value, and lenders gained.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the gap between <a href="#e12">entry 12</a> and <a href="#e11">entry 11</a>. Run backwards it is <a href="#e14">deflation</a> (entry 14); other groups are <a href="#e15">entry 15</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> You borrowed at a fixed 6% expecting 2% inflation. Inflation is 5%. Did you gain or lose?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Gain. Your real rate is 1%, not the 4% you expected.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> Does unexpected inflation make the economy as a whole poorer through this channel?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It redistributes: the borrower&rsquo;s gain is the lender&rsquo;s loss.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e14">
+  <div class="entry-head"><span class="entry-num">14</span><h2>Unexpected deflation</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A <b>surprise fall in the price level</b> raises the real value of debts: <b>lenders gain, borrowers lose</b>.</p></div>
+  <p class="reading">Textbook page 139.</p>
+
+  <p>It is entry 13 in reverse. The borrower repays fixed dollars that now buy more than when they were borrowed.</p>
+
+  <p>If debts become too heavy, borrowers default &mdash; and then lenders lose too. That is what happened in the early 1930s.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Unexpected disinflation (inflation lower than expected, but positive) works the same way, just less strongly.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1929&ndash;33.</span> Prices fell 35%; debtors saw the real value of their debts rise sharply, and many went bankrupt.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Press <b>Deflation</b>: the real rate is <b>7%</b> instead of 3%, and about $40 moves to the lender.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A farmer in 1932.</span> She borrowed when wheat sold for $1 a bushel; now it sells for 50 cents. Her debt is the same number of dollars and twice as many bushels.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is <a href="#e13">entry 13</a> reversed, caused by <a href="#e5">deflation</a> (entry 5). People on fixed incomes gain from it &mdash; <a href="#e15">entry 15</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">14.1</span> Unexpected deflation: who gains, the borrower or the lender?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The lender.</p></div></details></div>
+    <div class="q"><p><span class="qn">14.2</span> Why can deflation end up hurting lenders too?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Borrowers who cannot repay default.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got14"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e15">
+  <div class="entry-head"><span class="entry-num">15</span><h2>Fixed incomes, savers and contracts</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Your textbook names only borrowers and lenders. Your exam can ask about anyone whose income or savings are fixed in dollars &mdash; and people living on fixed incomes are the group it names most often.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Anyone <b>paid or owed a fixed number of dollars</b> loses from unexpected inflation and gains from unexpected deflation: people on <b>fixed incomes</b>, <b>savers</b> holding cash or fixed-rate deposits, workers on <b>fixed-wage contracts</b>.</p></div>
+  <p class="reading">Not in your textbook. The borrower&ndash;lender reasoning on page 138 is the same.</p>
+
+  <p>A pensioner receiving a fixed $2,000 a month is a lender in disguise: she is owed fixed dollars every month. So is a saver with cash in a drawer or a deposit at a fixed rate, and a worker whose wage is fixed for three years.</p>
+
+  <p>The other side gains: the firm paying the fixed wage, the bank paying the fixed deposit rate. Payments that are <b>indexed</b> &mdash; tied to a price index &mdash; are protected, because they rise with prices (next module).</p>
+
+  <div class="watch"><p><b>Watch out.</b> &ldquo;Fixed income&rdquo; means fixed in <b>dollars</b>. An indexed pension is not fixed in this sense.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 1(b).</span> Lanwei is reimbursed in dollars, late. When inflation is high, the payment she receives is worth less than what she spent.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A fixed pension.</span> $2,000 a month with 4% unexpected inflation buys about <b>$1,920</b> of today&rsquo;s goods a year later.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A three-year wage deal.</span> Workers agree to 2% raises expecting 2% inflation. Inflation is 5%: their real wages fall and their employer gains.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It extends <a href="#e13">entry 13</a> to everyone owed fixed dollars, and reverses in <a href="#e14">deflation</a> (entry 14).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">15.1</span> A retiree's pension is fixed at $1,500 a month. Inflation is unexpectedly high. Gain or lose?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Lose. Her fixed dollars buy less.</p></div></details></div>
+    <div class="q"><p><span class="qn">15.2</span> Her pension is indexed to the price index instead. What changes?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It rises with prices, so her real income is protected.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got15"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE DRILL ============ -->
+<section class="section" id="sorter">
+  <h2>Drill: gains, loses or neither?</h2>
+  <p>Twelve people. Decide whether each gains, loses or is unaffected. Ask: are they owed fixed dollars, do
+  they owe fixed dollars &mdash; and was the inflation a surprise?</p>
+  <div class="widget">
+    <div id="sorter-list"></div>
+    <p class="score" id="sorter-score">0 of 12 answered</p>
+    <button type="button" id="sorter-reset">Start again</button>
+  </div>
+</section>
+<article class="entry" id="e16">
+  <div class="entry-head"><span class="entry-num">16</span><h2>Uncertainty and long-term contracts</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Because unexpected inflation creates winners and losers, <b>unpredictable</b> inflation makes people reluctant to sign long-term contracts.</p></div>
+  <p class="reading">Textbook pages 138&ndash;139.</p>
+
+  <p>Nobody wants to lend for thirty years at a fixed rate if inflation might jump. In countries with high and uncertain inflation, long-term loans are rare.</p>
+
+  <p>That makes long-term investment harder &mdash; a real cost, not just a transfer.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background. The examinable point is the redistribution itself, entry 13.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">High-inflation countries.</span> Long-term loans are rare, so people struggle to commit to long-term investments.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A risk premium.</span> A lender unsure whether inflation will be 2% or 8% asks for a higher nominal rate to be safe.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A house purchase.</span> Without a long fixed-rate mortgage, a family has to save for years longer.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It comes from not knowing <a href="#e12">expected inflation</a> (entry 12), and adds to the costs of <a href="#e10">entry 10</a> and <a href="#e17">hyperinflation</a> (entry 17).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">16.1</span> Why are long-term loans rare where inflation is high and variable?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Lenders cannot be sure what real rate they will earn.</p></div></details></div>
+    <div class="q"><p><span class="qn">16.2</span> Is this a transfer or a real cost?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>A real cost: some productive investment does not happen.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got16"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e17">
+  <div class="entry-head"><span class="entry-num">17</span><h2>Hyperinflation</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Extremely high</b> inflation &mdash; hundreds or thousands of percent a year.</p></div>
+  <p class="reading">Textbook pages 136&ndash;137 and the box on Israel, page 136.</p>
+
+  <p>Every cost of inflation becomes severe: people spend hours avoiding money, prices change by the day, and nobody can plan.</p>
+
+  <p>Your exam does not use the word. It is the extreme case of everything in entries 8, 9 and 16.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background only.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Israel, 1985.</span> Inflation reached 500%; restaurant menus listed numbers to multiply by a figure on a chalkboard that changed every day.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Zimbabwe, May 2008.</span> Official estimates of inflation reached 1,694,000%.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Germany, 1923.</span> Merchants sent runners to the bank many times a day to swap cash for something that would hold its value.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It magnifies <a href="#e8">shoe-leather</a> (entry 8), <a href="#e9">menu</a> (entry 9) and <a href="#e16">uncertainty</a> (entry 16) costs.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">17.1</span> Why do people in hyperinflation keep almost no cash?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It loses value within hours or days.</p></div></details></div>
+    <div class="q"><p><span class="qn">17.2</span> Does your exam name hyperinflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. Know it as background.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got17"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ MCQ ============ -->
+<section class="section" id="mcq">
+  <h2>Tackle the test &mdash; multiple choice</h2>
+  <p>The five questions from your textbook&rsquo;s AP Review, with <b>every option explained</b>. Questions 3
+  to 5 test the three named costs, which are background for your exam.</p>
+
+  <div class="mcq" data-key="E">
+    <p class="stem"><span class="qn">1</span> Which of the following is true regarding prices in an economy? I. An increase in the price level is called inflation. II. The level of prices doesn&rsquo;t matter. III. The rate of change in prices matters.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; True, but II and III are true as well.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10007; True, but I and III are true as well.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10007; True, but I and II are true as well.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>II and III only<span class="why" hidden>&#10007; Statement I is the definition of inflation, and true.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II and III<span class="why" hidden>&#10003; <b>Correct.</b> All three are your textbook&rsquo;s own points.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">2</span> If your nominal wage doubles at the same time as prices double, your real wage will&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>increase.<span class="why" hidden>&#10007; Your dollars doubled, but so did what everything costs.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>decrease.<span class="why" hidden>&#10007; It would fall only if prices rose faster than your wage.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>not change.<span class="why" hidden>&#10003; <b>Correct.</b> Real wage = wage &divide; price level; both doubled.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>double.<span class="why" hidden>&#10007; That is your nominal wage.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>be impossible to determine.<span class="why" hidden>&#10007; You have everything you need: both doubled.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">3</span> If inflation causes people to frequently convert their dollars into other assets, the economy experiences what type of cost?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>price level<span class="why" hidden>&#10007; Not a cost your textbook names.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>shoe-leather<span class="why" hidden>&#10003; <b>Correct.</b> Effort spent avoiding holding money.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>menu<span class="why" hidden>&#10007; That is changing listed prices.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>unit-of-account<span class="why" hidden>&#10007; That is money as a poor measuring rod.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>monetary<span class="why" hidden>&#10007; Not a cost your textbook names.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="D">
+    <p class="stem"><span class="qn">4</span> Because dollars are used as the basis for contracts, inflation leads to which type of cost?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>price level<span class="why" hidden>&#10007; Not a cost your textbook names.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>shoe-leather<span class="why" hidden>&#10007; That is avoiding holding money.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>menu<span class="why" hidden>&#10007; That is changing listed prices.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>unit-of-account<span class="why" hidden>&#10003; <b>Correct.</b> Contracts and calculations in dollars become less reliable.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>monetary<span class="why" hidden>&#10007; Not a cost your textbook names.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">5</span> Changing the listed price when inflation leads to a price increase is an example of which type of cost?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>price level<span class="why" hidden>&#10007; Not a cost your textbook names.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>shoe-leather<span class="why" hidden>&#10007; That is avoiding holding money.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>menu<span class="why" hidden>&#10003; <b>Correct.</b> The real cost of changing listed prices.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>unit-of-account<span class="why" hidden>&#10007; That is money as a poor measuring rod.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>monetary<span class="why" hidden>&#10007; Not a cost your textbook names.</span></span></button>
+    </div>
+  </div>
+
+  <p class="score" id="mcqScore">0 of 5 answered</p>
+</section>
+
+<!-- ============ FRQ ============ -->
+<section class="section" id="frq">
+  <h2>Tackle the test &mdash; free response</h2>
+
+  <div class="frq">
+    <p><b>Question 1 (11 points).</b> In each example, is inflation creating winners and losers at no net
+    cost to the economy, or imposing a net cost? Explain, and name the cost if there is one. (a) When
+    inflation is expected to be high, workers get paid more often and make more trips to the bank.
+    (b) Lanwei&rsquo;s company reimburses her travel expenses, sometimes late; when inflation is high she is
+    less willing to travel for work. (c) Hector has a mortgage at a fixed 6% nominal rate, taken out five
+    years ago; inflation has crept up unexpectedly to 7%. (d) After unexpectedly high inflation, a rental
+    company must reprint and resend expensive colour brochures with new prices.</p>
+    <details class="reveal"><summary>Show the answer and the rubric</summary><div class="ans">
+      <ol class="rubric">
+        <li>(a) A net cost &mdash; one point</li>
+        <li>(a) Higher costs of financial transactions &mdash; one point</li>
+        <li>(a) Shoe-leather cost &mdash; one point</li>
+        <li>(b) A net cost &mdash; one point</li>
+        <li>(b) Lanwei&rsquo;s forgone work is a cost to the economy &mdash; one point</li>
+        <li>(b) Unit-of-account cost &mdash; one point</li>
+        <li>(c) <b>No net cost</b> &mdash; one point</li>
+        <li>(c) Hector gains and the bank loses: he repays dollars worth less than expected &mdash; one point</li>
+        <li>(d) A net cost &mdash; one point</li>
+        <li>(d) Reprinting the brochures when prices rise &mdash; one point</li>
+        <li>(d) Menu cost &mdash; one point</li>
+      </ol>
+      <p>Part (c) is the one your exam cares about most: <b>redistribution</b>, with no net cost. In part (b)
+      you could also argue a redistribution &mdash; Lanwei is owed fixed dollars, paid late &mdash; as long as
+      you explain it.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 2.</b> You borrow $1,000 for one year at 5% interest to buy a couch. You did not expect any
+    inflation, but there is unexpected inflation of 5% over the year. (a) What was the real interest rate on
+    your loan? (b) Explain how you gained. (c) Who lost? Explain.</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p>(a) Real rate = 5% &minus; 5% = <b>0%</b>.</p>
+      <p>(b) You repaid $1,050, but prices had risen 5%, so that buys only what $1,000 bought a year earlier. You had
+      the couch for a year at no real cost.</p>
+      <p>(c) The lender. She expected a 5% real return and got 0%: the inflation she did not expect moved
+      purchasing power from her to you.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <h2>One-page summary</h2>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <thead><tr><th>Outcome</th><th>Nominal</th><th>Expected inflation</th><th>Actual inflation</th><th>Actual real rate</th><th>Who gains</th></tr></thead>
+      <tbody>
+        <tr><td>As expected</td><td>5%</td><td>2%</td><td>2%</td><td><b>3%</b></td><td><b>Neither</b></td></tr>
+        <tr><td>Inflation higher than expected</td><td>5%</td><td>2%</td><td>5%</td><td><b>0%</b></td><td><b>Borrower +$30</b></td></tr>
+        <tr><td>Much higher</td><td>5%</td><td>2%</td><td>8%</td><td><b>−3%</b></td><td><b>Borrower +$60</b></td></tr>
+        <tr><td>Lower than expected</td><td>5%</td><td>2%</td><td>0%</td><td><b>5%</b></td><td><b>Lender +$20</b></td></tr>
+        <tr><td>Deflation</td><td>5%</td><td>2%</td><td>−2%</td><td><b>7%</b></td><td><b>Lender +$40</b></td></tr>
+        <tr><td>High, but expected</td><td>9%</td><td>6%</td><td>6%</td><td><b>3%</b></td><td><b>Neither</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap"><b>Inflation rate</b> = change in the price index &divide; its first value &times; 100.
+  <b>Real value</b> = nominal &divide; (index &divide; 100). <b>Real interest rate</b> = nominal &minus;
+  inflation. <b>Deflation</b> = falling prices; <b>disinflation</b> = falling inflation. <b>Unexpected</b>
+  inflation helps anyone who owes fixed dollars and hurts anyone owed them; unexpected deflation does the
+  reverse.</p>
+</section>
+
+<section class="section closing" id="final">
+  <h2>The five things to get right from Module 14</h2>
+  <ol>
+    <li><b>Inflation is the price level rising.</b> The level does not matter; the rate &mdash; and the
+      surprise &mdash; does.</li>
+    <li><b>Real = nominal deflated by the price level.</b> Divide by the index over 100, or subtract the
+      inflation rate from the percentage change.</li>
+    <li><b>Disinflation is not deflation.</b> One is the rate falling, the other the level.</li>
+    <li><b>Real interest rate = nominal &minus; inflation.</b> Planned with expected inflation; measured
+      with actual.</li>
+    <li><b>Unexpected inflation redistributes:</b> borrowers and payers of fixed dollars gain; lenders,
+      savers and people on fixed incomes lose. Deflation reverses it.</li>
+  </ol>
+  <p>The next module measures the price level itself &mdash; the consumer price index and its market
+  basket. In Unit 4 the nominal and real interest rates return in the money and loanable-funds markets,
+  and in Unit 5 disinflation becomes a movement along the Phillips curve.</p>
+</section>
+
+<p class="footer">
+  Student guide &middot; Module 14, <i>Krugman&rsquo;s Economics for AP</i>, pages 134&ndash;141 &middot;
+  definitions quoted from the textbook &middot; tiers assigned against the AP Macroeconomics Course
+  and Exam Description, Course Framework V.1, &copy; 2020 &middot; every number on this page is computed
+  by the script that writes it, and checked again before it is written.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod14-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ return {}; } }
+  function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){ var s = load(); s[b.id] = b.checked; save(s); paint(); });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- the loan diagram ---------- */
+  /* Every value below is written by build/make_m14_student.py from the rates it computes. */
+  var READ = {
+    start: ["5%", "2%", "2%", "3%", "3%", "Neither"],
+    hi: ["5%", "2%", "5%", "3%", "0%", "Borrower +$30"],
+    vhi: ["5%", "2%", "8%", "3%", "−3%", "Borrower +$60"],
+    lo: ["5%", "2%", "0%", "3%", "5%", "Lender +$20"],
+    defl: ["5%", "2%", "−2%", "3%", "7%", "Lender +$40"],
+    exp: ["9%", "6%", "6%", "3%", "3%", "Neither"]
+  };
+  var CAP = {
+    start: "A $1,000 loan for one year at 5%. Both sides expect 2% inflation, so both expect a real rate of 3%. Inflation turns out to be 2%: the real rate is 3%, exactly as planned. Nobody gains.",
+    hi: "Inflation is 5% instead of 2%. The borrower still repays $1,050, but those dollars buy less: the real rate is 0%, not 3%. About $30 of purchasing power has moved from the lender to the borrower.",
+    vhi: "Inflation is 8%. The real rate is −3% - negative. The lender is repaid less, in real terms, than she lent. About $60 has moved to the borrower.",
+    lo: "Inflation is 0% instead of 2%. The repayment is worth more than either side planned: the real rate is 5%. About $20 has moved from the borrower to the lender.",
+    defl: "Prices fall by 2%. The real rate is 7%, and the borrower repays far more purchasing power than planned - the problem of 1929-33. About $40 moves to the lender.",
+    exp: "Both sides expect 6% inflation, so the lender asks 9%. Inflation is 6%: the real rate is 3%, as planned. High inflation that everyone expected moves nothing."
+  };
+  var chips = Array.prototype.slice.call(document.querySelectorAll("#diagram .chip"));
+  var cap = document.getElementById("pcap");
+  function show(which){
+    Object.keys(READ).forEach(function(k){
+      var g = document.getElementById("l-" + k);
+      /* SVG elements have no .hidden property; toggle the attribute, which the CSS hides */
+      if (g) { if (k === which) g.removeAttribute("hidden"); else g.setAttribute("hidden", ""); }
+    });
+    READ[which].forEach(function(v, i){ document.getElementById("ro" + i).textContent = v; });
+    cap.textContent = CAP[which];
+    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-show") === which)); });
+  }
+  chips.forEach(function(c){ c.addEventListener("click", function(){ show(c.getAttribute("data-show")); }); });
+  show("start");
+
+  /* ---------- the drill ---------- */
+  var SCEN = [
+    { t: "Inflation turns out higher than expected. You have a fixed-rate car loan.", a: "g",
+      w: "GAINS. You repay fixed dollars that are worth less than planned." },
+    { t: "Inflation turns out higher than expected. You are a bank that made fixed-rate mortgages.", a: "l",
+      w: "LOSES. You are repaid in dollars worth less than planned." },
+    { t: "Inflation turns out higher than expected. You live on a pension fixed at $1,800 a month.", a: "l",
+      w: "LOSES. Fixed dollars buy less." },
+    { t: "Inflation is 7%, exactly as everyone expected when your loan was signed. You are the borrower.", a: "n",
+      w: "NEITHER. The nominal rate already allowed for 7%." },
+    { t: "Prices fall unexpectedly. You owe a fixed-rate student loan.", a: "l",
+      w: "LOSES. Each dollar you repay is worth more than when you borrowed it." },
+    { t: "Prices fall unexpectedly. You receive a fixed pension.", a: "g",
+      w: "GAINS. Your fixed dollars buy more." },
+    { t: "Inflation turns out higher than expected. Your wage is indexed to the price index.", a: "n",
+      w: "NEITHER. Your pay rises with prices." },
+    { t: "Inflation turns out lower than expected. You lent money at a fixed rate.", a: "g",
+      w: "GAINS. The real rate is higher than you planned." },
+    { t: "Inflation turns out higher than expected. You keep your savings as cash at home.", a: "l",
+      w: "LOSES. Cash pays no interest and buys less." },
+    { t: "Inflation turns out higher than expected. Your firm pays workers a wage fixed for three years.", a: "g",
+      w: "GAINS. You pay fixed wages while your prices rise." },
+    { t: "Every price and every wage in the country doubles overnight, and you have no debts or savings.", a: "n",
+      w: "NEITHER. Your real wage is unchanged." },
+    { t: "Your loan has a variable rate that adjusts with inflation. Inflation jumps unexpectedly. You are the lender.", a: "n",
+      w: "NEITHER, roughly. The rate rises with inflation, so the real rate is protected." }
+  ];
+  var LABELS = {
+    g: "Gains",
+    l: "Loses",
+    n: "Neither"
+  };
+  var list = document.getElementById("sorter-list");
+  var scoreEl = document.getElementById("sorter-score");
+  var answered = 0, right = 0;
+  function build(){
+    list.innerHTML = "";
+    answered = 0; right = 0;
+    SCEN.forEach(function(s, i){
+      var row = document.createElement("div");
+      row.className = "sortrow";
+      var opts = Object.keys(LABELS).map(function(k){
+        return '<button type="button" class="opt" data-a="' + k + '"><span>' + LABELS[k] + '</span></button>';
+      }).join("");
+      row.innerHTML =
+        '<p class="stem"><span class="qn">' + (i + 1) + '</span> ' + s.t + '</p>' +
+        '<div class="opts">' + opts + '</div>' +
+        '<p class="why" hidden></p>';
+      var btns = Array.prototype.slice.call(row.querySelectorAll(".opt"));
+      var why = row.querySelector(".why");
+      btns.forEach(function(b){
+        b.addEventListener("click", function(){
+          if (row.getAttribute("data-done")) return;
+          row.setAttribute("data-done", "1");
+          var ok = b.getAttribute("data-a") === s.a;
+          btns.forEach(function(x){
+            x.disabled = true;
+            if (x.getAttribute("data-a") === s.a) x.setAttribute("data-state", "right");
+            else if (x === b) x.setAttribute("data-state", "wrong");
+          });
+          why.hidden = false;
+          why.textContent = (ok ? "\u2713 " : "\u2717 ") + s.w;
+          answered++; if (ok) right++;
+          scoreEl.textContent = right + " correct out of " + answered + " answered";
+        });
+      });
+      list.appendChild(row);
+    });
+    scoreEl.textContent = "0 of " + SCEN.length + " answered";
+  }
+  build();
+  document.getElementById("sorter-reset").addEventListener("click", build);
+
+  /* ---------- multiple choice ---------- */
+  var mcqs = Array.prototype.slice.call(document.querySelectorAll(".mcq[data-key]"));
+  var mcqScore = document.getElementById("mcqScore");
+  var mDone = 0, mRight = 0;
+  mcqs.forEach(function(q){
+    var key = q.getAttribute("data-key");
+    var opts = Array.prototype.slice.call(q.querySelectorAll(".opt"));
+    opts.forEach(function(o){
+      o.addEventListener("click", function(){
+        if (q.getAttribute("data-done")) return;
+        q.setAttribute("data-done", "1");
+        var ok = o.getAttribute("data-l") === key;
+        opts.forEach(function(x){
+          x.disabled = true;
+          x.querySelector(".why").hidden = false;
+          if (x.getAttribute("data-l") === key) x.setAttribute("data-state", "right");
+          else if (x === o) x.setAttribute("data-state", "wrong");
+        });
+        mDone++; if (ok) mRight++;
+        mcqScore.textContent = mRight + " correct out of " + mDone + " answered";
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "2.4–2.5 Inflation · costs of inflation", "title": "Module 14 · Inflation: Who Wins, Who Loses", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"href": "m01-student.html", "label": "Module 1 · Student guide", "current": false}, {"href": "m01-notes.html", "label": "Module 1 · Teaching notes", "current": false}, {"href": "m01-test.html", "label": "Module 1 · Test", "current": false}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": false}, {"href": "m02-notes.html", "label": "Module 2 · Teaching notes", "current": false}, {"href": "m02-test.html", "label": "Module 2 · Test", "current": false}, {"href": "m03-student.html", "label": "Module 3 · Student guide", "current": false}, {"href": "m03-notes.html", "label": "Module 3 · Teaching notes", "current": false}, {"href": "m03-test.html", "label": "Module 3 · Test", "current": false}, {"href": "m04-student.html", "label": "Module 4 · Student guide", "current": false}, {"href": "m04-notes.html", "label": "Module 4 · Teaching notes", "current": false}, {"href": "m04-test.html", "label": "Module 4 · Test", "current": false}, {"href": "m05-student.html", "label": "Module 5 · Student guide", "current": false}, {"href": "m05-notes.html", "label": "Module 5 · Teaching notes", "current": false}, {"href": "m05-test.html", "label": "Module 5 · Test", "current": false}, {"href": "m06-student.html", "label": "Module 6 · Student guide", "current": false}, {"href": "m06-notes.html", "label": "Module 6 · Teaching notes", "current": false}, {"href": "m06-test.html", "label": "Module 6 · Test", "current": false}, {"href": "m07-student.html", "label": "Module 7 · Student guide", "current": false}, {"href": "m07-notes.html", "label": "Module 7 · Teaching notes", "current": false}, {"href": "m07-test.html", "label": "Module 7 · Test", "current": false}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"href": "m10-student.html", "label": "Module 10 · Student guide", "current": false}, {"href": "m10-notes.html", "label": "Module 10 · Teaching notes", "current": false}, {"href": "m10-test.html", "label": "Module 10 · Test", "current": false}, {"href": "m11-student.html", "label": "Module 11 · Student guide", "current": false}, {"href": "m11-notes.html", "label": "Module 11 · Teaching notes", "current": false}, {"href": "m11-test.html", "label": "Module 11 · Test", "current": false}, {"href": "m12-student.html", "label": "Module 12 · Student guide", "current": false}, {"href": "m12-notes.html", "label": "Module 12 · Teaching notes", "current": false}, {"href": "m12-test.html", "label": "Module 12 · Test", "current": false}, {"href": "m13-student.html", "label": "Module 13 · Student guide", "current": false}, {"href": "m13-notes.html", "label": "Module 13 · Teaching notes", "current": false}, {"href": "m13-test.html", "label": "Module 13 · Test", "current": false}, {"href": "m14-student.html", "label": "Module 14 · Student guide", "current": true}, {"href": "m14-notes.html", "label": "Module 14 · Teaching notes", "current": false}, {"href": "m14-test.html", "label": "Module 14 · Test", "current": false}, {"label": "Module 15 · Measuring Inflation", "planned": true}, {"label": "Unit 2 · Gap analysis", "planned": true}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"label": "Module 16 · Income and Expenditure", "planned": true}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"label": "Module 34 · The Phillips Curve", "planned": true}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "m13-test.html", "label": "Module 13 · Test"}, "next": {"href": "m14-notes.html", "label": "Module 14 · Teaching notes"}, "variants": [{"href": "m14-student.html", "label": "Student", "current": true}, {"href": "m14-notes.html", "label": "Notes", "current": false}, {"href": "m14-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
