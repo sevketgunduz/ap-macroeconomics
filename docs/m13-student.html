@@ -1,0 +1,1553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 13 · Types of Unemployment · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+
+
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+
+/* ---------- Module 3 supplement ---------- */
+.mark.flag{background:var(--flag-soft);color:var(--flag)}
+.ppc-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.ppc-wrap{grid-template-columns:1fr 210px}}
+.ppc-svg{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px;cursor:crosshair;touch-action:none}
+.ppc-side{display:flex;flex-direction:column;gap:10px}
+.status{font-family:var(--mono);font-size:12.5px;padding:9px 11px;border-radius:5px;
+  border:1px solid var(--rule-strong);background:var(--surface-2);line-height:1.45}
+.status[data-s="on"]{border-color:color-mix(in srgb,var(--up) 45%,transparent);background:var(--up-soft);color:var(--up)}
+.status[data-s="in"]{border-color:var(--rule-strong);color:var(--ink-2)}
+.status[data-s="out"]{border-color:color-mix(in srgb,var(--down) 45%,transparent);background:var(--down-soft);color:var(--down)}
+.ppc-legend{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.ppc-legend b{color:var(--ink-2);font-weight:600}
+.chips.tight{gap:6px}
+.tbl{overflow-x:auto;max-width:100%}
+.sumtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.sumtable th,.sumtable td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+.sumtable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.sumtable td.mk{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--accent)}
+.sumtable td.mk.bgm{color:var(--ink-3)}
+.sumtable td.mk.flagm{color:var(--flag)}
+.final{background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:18px 20px;margin:22px 0;box-shadow:var(--shadow)}
+.final ol{margin:0;padding-left:20px}
+.final li{margin:0 0 9px}
+.final li:last-child{margin-bottom:0}
+
+/* ---------- PPC explorer svg ---------- */
+.ppc-svg .ax{stroke:var(--ink);stroke-width:1.6}
+.ppc-svg .tick{stroke:var(--ink-3);stroke-width:1.1}
+.ppc-svg .tl{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.ppc-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.ppc-svg .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ppc-svg .ghost{fill:none;stroke:var(--rule-strong);stroke-width:1.8;stroke-dasharray:6 5}
+.ppc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.ppc-svg .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.ppc-svg .pt{stroke:var(--surface);stroke-width:2}
+.ppc-svg .pt-on{fill:var(--up)}
+.ppc-svg .pt-in{fill:var(--ink-3)}
+.ppc-svg .pt-out{fill:var(--down)}
+
+
+/* ---------- Module 4 supplement ---------- */
+.two-panel{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px}
+.ca-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 14px}
+@media (min-width:640px){.ca-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ca-grid .field{display:flex;flex-direction:column;gap:5px}
+.ca-grid .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.ca-grid .field b{color:var(--ink-2);font-weight:600;text-transform:none;letter-spacing:0}
+.ca-grid input{font-family:var(--mono);font-size:15px;padding:7px 9px;width:100%;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.ca-grid input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.catab{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 14px}
+.catab th,.catab td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left}
+.catab th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.catab td.v{font-family:var(--mono);color:var(--ink)}
+.catab td.win{font-family:var(--mono);color:var(--up);font-weight:600}
+.dealrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 12px}
+.dealrow .field{display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1}
+.dealrow .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.dealrow input{font-family:var(--mono);font-size:16px;padding:8px 10px;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.line-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.line-svg g[hidden]{display:none}
+.line-svg .band{fill:var(--up-soft);stroke:none}
+.line-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.line-svg .tk{stroke:var(--ink-3);stroke-width:1.1}
+.line-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.line-svg .edge{stroke:var(--up);stroke-width:2}
+.line-svg .edgel{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--up)}
+.line-svg .prop{stroke:var(--accent);stroke-width:2.4}
+.line-svg .propbad{stroke:var(--down);stroke-width:2.4}
+.line-svg .propl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.line-svg .propl.bad{fill:var(--down)}
+.two-panel .ax{stroke:var(--ink);stroke-width:1.6}
+.two-panel .tick{stroke:var(--ink-3);stroke-width:1.1}
+.two-panel .tl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.two-panel .al{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.two-panel .ph{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.two-panel .curve{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+.two-panel .slope{font-family:var(--mono);font-size:11px;fill:var(--accent)}
+.two-panel .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.two-panel .pt{stroke:var(--surface);stroke-width:2}
+.two-panel .pt-on{fill:var(--ink-2)}
+.two-panel .pt-out{fill:var(--up)}
+.two-panel .ptl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.two-panel .ptl.good{fill:var(--up);font-weight:600}
+
+</style>
+<style>
+/* Module 5 additions: the movement-or-shift sorter */
+.sortrow{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:0 0 10px;
+  background:var(--surface)}
+.sortrow .stem{margin:0 0 10px}
+.sortrow .opts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sortrow .opt{flex:1 1 220px;justify-content:center;text-align:center}
+.sortrow .why{display:block;margin:10px 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.sortrow[data-done] .opt{cursor:default}
+#sorter-reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer}
+#sorter-reset:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<style>
+/* Module 13 additions: the decomposition diagram, the labor market, the drill's three answers */
+.dec-svg,.lab-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.lab-svg{max-width:560px;margin-left:auto;margin-right:auto}
+.dec-svg g[hidden]{display:none}
+.dec-svg .fr{fill:var(--accent)}
+.dec-svg .st{fill:var(--flag)}
+.dec-svg .cy{fill:var(--down)}
+.dec-svg .ac{fill:var(--ink-3);opacity:.55}
+.dec-svg .cn{fill:none;stroke:var(--up);stroke-width:2;stroke-dasharray:5 4}
+.dec-svg .nl{stroke:var(--ink-2);stroke-width:1.4;stroke-dasharray:4 4;fill:none}
+.dec-svg .ax{stroke:var(--rule-strong);stroke-width:1;fill:none}
+.dec-svg .tk{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.dec-svg .rl{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink)}
+.dec-svg .sl{font-family:var(--mono);font-size:12px;font-weight:600;fill:#fff}
+.dec-svg .slk{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink)}
+.dec-svg .nll{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.lab-svg .lax{stroke:var(--ink-2);stroke-width:1.4;fill:none}
+.lab-svg .dl{stroke:var(--accent);stroke-width:2.6;fill:none}
+.lab-svg .sp{stroke:var(--up);stroke-width:2.6;fill:none}
+.lab-svg .fl{stroke:var(--down);stroke-width:2;stroke-dasharray:6 4;fill:none}
+.lab-svg .gd{stroke:var(--ink-3);stroke-width:1;stroke-dasharray:3 3;fill:none}
+.lab-svg .gp{stroke:var(--down);stroke-width:2;fill:none}
+.lab-svg .pt{fill:var(--ink);stroke:none}
+.lab-svg .lt{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink)}
+.lab-svg .lk{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.lab-svg .lg{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--down)}
+.sortrow .opts .opt{flex:1 1 160px}
+</style>
+
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro &middot; Module 13</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 17</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">AP Macroeconomics &middot; Unit 2 &middot; Student guide</p>
+  <h1>Types of Unemployment</h1>
+  <p class="standfirst">Seventeen terms from Module 13 of <i>Krugman&rsquo;s Economics for AP</i>: why the
+  unemployment rate is never zero, the three types of unemployment, and the natural rate they add up to.
+  Two equations, one classification skill, and two ideas your textbook leaves for later &mdash; what
+  <i>full employment</i> means, and what happens when unemployment falls below its natural rate.</p>
+  <div class="source-line">
+    <span>Textbook pages 126&ndash;133</span><span>&middot;</span><span>17 terms</span><span>&middot;</span>
+    <span>Topic 2.3</span><span>&middot;</span><span>3 types, 2 equations</span>
+  </div>
+<section class="section" id="howto">
+  <h2>How to use this guide</h2>
+  <p>Read Module 13 in your textbook first. Entries 1 to 8 are where unemployment comes from; entries 9 to
+  14 put the types together into the natural rate and cyclical unemployment; entries 15 and 16 are why the
+  natural rate changes; entry 17 is a term you will meet in review books.</p>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <tbody>
+        <tr><td><span class="mark exam">&#9733; Exam</span></td><td><b>Exam term.</b> Define it, classify people with it, and calculate with it. Fourteen of these.</td></tr>
+        <tr><td><span class="mark bg">&#9675; Background</span></td><td><b>Background.</b> Worth knowing, not tested. Three of these.</td></tr>
+        <tr><td><span class="mark flag">&#9873; Not in the textbook</span></td><td><b>Learn it from here.</b> Your exam needs it and Module 13 does not have it. Two entries carry this flag.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Every entry ends with two <b>Check yourself</b> questions. Answer them before opening the
+      answer, then tick <b>Got it</b>.</li>
+    <li>Use the diagram below with entries 3, 4 and 8 to 16. Press every button.</li>
+    <li>Do the drill after entry 14, and again at the end.</li>
+  </ul>
+  <div class="flag">
+    <p><b>Two equations carry this module.</b> Natural rate = frictional + structural. Cyclical = actual
+    &minus; natural. Cyclical unemployment can be <b>negative</b>, and full employment is <b>not</b> zero
+    unemployment.</p>
+  </div>
+</section>
+
+<!-- ============ THE DECOMPOSITION DIAGRAM ============ -->
+<section class="section" id="diagram">
+  <h2>Take the unemployment rate apart</h2>
+  <p>One economy&rsquo;s unemployment, as a percentage of its labor force. The top bar is the natural rate:
+  frictional plus structural. The bottom bar is the actual rate. The difference is cyclical unemployment.
+  The first three buttons are the business cycle; the last four change the natural rate itself.</p>
+
+  <div class="widget">
+    <div class="widget-title">Choose what happens to the economy</div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-show="start">Full employment</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="rec">A recession</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="boom">A boom</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="ben">More generous benefits</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="web">Job-matching websites</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="young">A younger labor force</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="minw">A higher minimum wage</button>
+    </div>
+<svg id="dfig" class="dec-svg" viewBox="0 0 700 236" role="img" aria-label="The unemployment rate split into frictional, structural and cyclical unemployment">
+<text class="rl" x="140" y="59" text-anchor="end">Natural rate</text>
+<text class="rl" x="140" y="129" text-anchor="end">Actual rate</text>
+<path class="ax" d="M150 164 H650"></path>
+<path class="ax" d="M150.0 164 V169"></path>
+<text class="tk" x="150.0" y="182" text-anchor="middle">0%</text>
+<path class="ax" d="M200.0 164 V169"></path>
+<text class="tk" x="200.0" y="182" text-anchor="middle">1%</text>
+<path class="ax" d="M250.0 164 V169"></path>
+<text class="tk" x="250.0" y="182" text-anchor="middle">2%</text>
+<path class="ax" d="M300.0 164 V169"></path>
+<text class="tk" x="300.0" y="182" text-anchor="middle">3%</text>
+<path class="ax" d="M350.0 164 V169"></path>
+<text class="tk" x="350.0" y="182" text-anchor="middle">4%</text>
+<path class="ax" d="M400.0 164 V169"></path>
+<text class="tk" x="400.0" y="182" text-anchor="middle">5%</text>
+<path class="ax" d="M450.0 164 V169"></path>
+<text class="tk" x="450.0" y="182" text-anchor="middle">6%</text>
+<path class="ax" d="M500.0 164 V169"></path>
+<text class="tk" x="500.0" y="182" text-anchor="middle">7%</text>
+<path class="ax" d="M550.0 164 V169"></path>
+<text class="tk" x="550.0" y="182" text-anchor="middle">8%</text>
+<path class="ax" d="M600.0 164 V169"></path>
+<text class="tk" x="600.0" y="182" text-anchor="middle">9%</text>
+<path class="ax" d="M650.0 164 V169"></path>
+<text class="tk" x="650.0" y="182" text-anchor="middle">10%</text>
+<rect class="fr" x="150" y="212" width="12" height="12"></rect>
+<text class="tk" x="168" y="222">Frictional</text>
+<rect class="st" x="275" y="212" width="12" height="12"></rect>
+<text class="tk" x="293" y="222">Structural</text>
+<rect class="cy" x="400" y="212" width="12" height="12"></rect>
+<text class="tk" x="418" y="222">Cyclical</text>
+<rect class="cn" x="525" y="212" width="12" height="12"></rect>
+<text class="tk" x="543" y="222">Cyclical, negative</text>
+<g id="d-start" hidden>
+<rect class="fr" x="150.0" y="34" width="150.0" height="40"></rect>
+<text class="sl" x="225.0" y="59" text-anchor="middle">3%</text>
+<rect class="st" x="300.0" y="34" width="100.0" height="40"></rect>
+<text class="sl" x="350.0" y="59" text-anchor="middle">2%</text>
+<rect class="ac" x="150.0" y="104" width="250.0" height="40"></rect>
+<text class="slk" x="275.0" y="129" text-anchor="middle">5%</text>
+<path class="nl" d="M400.0 22 V156"></path>
+<text class="nll" x="400.0" y="18" text-anchor="middle">natural rate 5%</text>
+</g>
+<g id="d-rec" hidden>
+<rect class="fr" x="150.0" y="34" width="150.0" height="40"></rect>
+<text class="sl" x="225.0" y="59" text-anchor="middle">3%</text>
+<rect class="st" x="300.0" y="34" width="100.0" height="40"></rect>
+<text class="sl" x="350.0" y="59" text-anchor="middle">2%</text>
+<rect class="ac" x="150.0" y="104" width="250.0" height="40"></rect>
+<text class="slk" x="275.0" y="129" text-anchor="middle">5%</text>
+<rect class="cy" x="400.0" y="104" width="150.0" height="40"></rect>
+<text class="sl" x="475.0" y="129" text-anchor="middle">+3</text>
+<path class="nl" d="M400.0 22 V156"></path>
+<text class="nll" x="400.0" y="18" text-anchor="middle">natural rate 5%</text>
+</g>
+<g id="d-boom" hidden>
+<rect class="fr" x="150.0" y="34" width="150.0" height="40"></rect>
+<text class="sl" x="225.0" y="59" text-anchor="middle">3%</text>
+<rect class="st" x="300.0" y="34" width="100.0" height="40"></rect>
+<text class="sl" x="350.0" y="59" text-anchor="middle">2%</text>
+<rect class="ac" x="150.0" y="104" width="200.0" height="40"></rect>
+<text class="slk" x="250.0" y="129" text-anchor="middle">4%</text>
+<rect class="cn" x="350.0" y="104" width="50.0" height="40"></rect>
+<text class="slk" x="375.0" y="129" text-anchor="middle">−1</text>
+<path class="nl" d="M400.0 22 V156"></path>
+<text class="nll" x="400.0" y="18" text-anchor="middle">natural rate 5%</text>
+</g>
+<g id="d-ben" hidden>
+<rect class="fr" x="150.0" y="34" width="175.0" height="40"></rect>
+<text class="sl" x="237.5" y="59" text-anchor="middle">3.5%</text>
+<rect class="st" x="325.0" y="34" width="125.0" height="40"></rect>
+<text class="sl" x="387.5" y="59" text-anchor="middle">2.5%</text>
+<rect class="ac" x="150.0" y="104" width="300.0" height="40"></rect>
+<text class="slk" x="300.0" y="129" text-anchor="middle">6%</text>
+<path class="nl" d="M450.0 22 V156"></path>
+<text class="nll" x="450.0" y="18" text-anchor="middle">natural rate 6%</text>
+</g>
+<g id="d-web" hidden>
+<rect class="fr" x="150.0" y="34" width="125.0" height="40"></rect>
+<text class="sl" x="212.5" y="59" text-anchor="middle">2.5%</text>
+<rect class="st" x="275.0" y="34" width="100.0" height="40"></rect>
+<text class="sl" x="325.0" y="59" text-anchor="middle">2%</text>
+<rect class="ac" x="150.0" y="104" width="225.0" height="40"></rect>
+<text class="slk" x="262.5" y="129" text-anchor="middle">4.5%</text>
+<path class="nl" d="M375.0 22 V156"></path>
+<text class="nll" x="375.0" y="18" text-anchor="middle">natural rate 4.5%</text>
+</g>
+<g id="d-young" hidden>
+<rect class="fr" x="150.0" y="34" width="190.0" height="40"></rect>
+<text class="sl" x="245.0" y="59" text-anchor="middle">3.8%</text>
+<rect class="st" x="340.0" y="34" width="100.0" height="40"></rect>
+<text class="sl" x="390.0" y="59" text-anchor="middle">2%</text>
+<rect class="ac" x="150.0" y="104" width="290.0" height="40"></rect>
+<text class="slk" x="295.0" y="129" text-anchor="middle">5.8%</text>
+<path class="nl" d="M440.0 22 V156"></path>
+<text class="nll" x="440.0" y="18" text-anchor="middle">natural rate 5.8%</text>
+</g>
+<g id="d-minw" hidden>
+<rect class="fr" x="150.0" y="34" width="150.0" height="40"></rect>
+<text class="sl" x="225.0" y="59" text-anchor="middle">3%</text>
+<rect class="st" x="300.0" y="34" width="130.0" height="40"></rect>
+<text class="sl" x="365.0" y="59" text-anchor="middle">2.6%</text>
+<rect class="ac" x="150.0" y="104" width="280.0" height="40"></rect>
+<text class="slk" x="290.0" y="129" text-anchor="middle">5.6%</text>
+<path class="nl" d="M430.0 22 V156"></path>
+<text class="nll" x="430.0" y="18" text-anchor="middle">natural rate 5.6%</text>
+</g>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Frictional</span><span class="v" id="ro0">&ndash;</span></div>
+      <div class="ro"><span class="k">Structural</span><span class="v" id="ro1">&ndash;</span></div>
+      <div class="ro"><span class="k">Natural rate</span><span class="v hl" id="ro2">&ndash;</span></div>
+      <div class="ro"><span class="k">Actual rate</span><span class="v" id="ro3">&ndash;</span></div>
+      <div class="ro"><span class="k">Cyclical</span><span class="v hl" id="ro4">&ndash;</span></div>
+      <div class="ro"><span class="k">Frictional share</span><span class="v" id="ro5">&ndash;</span></div>
+    </div>
+    <p class="figcap" id="pcap"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The 17 terms</h2>
+</section>
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Job creation and job destruction</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Even in good times, jobs are constantly being <b>created and destroyed</b> as industries rise and fall and firms succeed or fail.</p></div>
+  <p class="reading">Textbook pages 126&ndash;127.</p>
+
+  <p>Unemployment never reaches zero because the economy never stands still. New technologies and changing tastes close some jobs and open others; some firms are badly run or unlucky. Workers also quit, to move, to change careers or because they are unhappy.</p>
+
+  <p>Each of those changes leaves someone looking for work for a while. That churning is where the first type of unemployment comes from.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A low unemployment rate does not mean nobody is losing a job. It means people find new ones quickly.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">July 2007.</span> The unemployment rate was only 4.7%, yet 4.5 million job separations &mdash; people fired or quitting &mdash; happened in that one month.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A half-century low.</span> Over the past fifty years the U.S. rate has never fallen below <b>2.9%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Two industries at once.</span> Telecom jobs slumped after 2000 while healthcare jobs surged with new treatments and an ageing population.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Churning is why there is always <a href="#e2">job search</a> (entry 2), and so always <a href="#e3">frictional unemployment</a> (entry 3).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> If jobs are plentiful, why do millions still lose jobs each month?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because jobs are always being destroyed in some firms and industries while others are created.</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> Is job destruction always a sign of a weak economy?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It happens in booms too, as some industries shrink and others grow.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Job search</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The time workers spend <b>looking for a job</b> that fits their skills and pays accordingly.</p></div>
+  <p class="reading">Textbook page 127, margin.</p>
+
+  <p>If all jobs and all workers were alike, nobody would need to search. They are not, and information about them is not perfect, so finding the right match takes time &mdash; usually at least a few weeks.</p>
+
+  <p>Searching is often the sensible thing to do. A laid-off programmer could take the first clerical job advertised; she does better, and so does the economy, if she waits for one that uses her skills.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A worker who turns down poor offers while searching is still unemployed &mdash; and still frictionally unemployed, not lazy.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The laid-off programmer.</span> She passes over a clerical job to look for one that uses her programming skills.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Short searches in good times.</span> In 2000, <b>45%</b> of the unemployed had been out of work for less than 5 weeks.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A chef who moved.</span> She relocates with her family and spends a month visiting restaurants in the new city before accepting an offer.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It comes from <a href="#e1">job creation and destruction</a> (entry 1), and the time it takes is <a href="#e3">frictional unemployment</a> (entry 3).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> Why does job search take time even when jobs are plentiful?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because workers and jobs differ, and finding a good match takes information and time.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> Is it a waste for a skilled worker to turn down a low-skill job while searching?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. A better match makes the worker and the economy more productive.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Frictional unemployment</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Unemployment due to the <b>time workers spend in job search</b>.</p></div>
+  <p class="reading">Textbook page 127, margin.</p>
+
+  <p>Some frictional unemployment is <b>inevitable</b>, for two reasons: jobs are always being created and destroyed, and new workers are always entering the labor force &mdash; school-leavers, graduates, and people coming back after time away.</p>
+
+  <p>A limited amount is harmless and even good: the economy is more productive when workers take the time to find well-matched jobs, and short spells of search cause little hardship. It exists even when there are as many jobs as job-seekers.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Frictional unemployment is part of the natural rate. It does not disappear at full employment.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">January 2010.</span> Of 14.8 million unemployed, 1.2 million were new entrants and 3.6 million re-entrants &mdash; <b>32.4%</b> of the unemployed were just joining or rejoining.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Frictional unemployment is <b>3%</b> of the labor force at the start &mdash; three-fifths of all unemployment.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A new graduate.</span> She finished her degree in May and is interviewing for her first job. Frictionally unemployed.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the time spent in <a href="#e2">job search</a> (entry 2), caused by <a href="#e1">churning</a> (entry 1). Its share changes over the cycle (<a href="#e4">entry 4</a>); it is half of the <a href="#e9">natural rate</a> (entry 9); <a href="#e8">benefits</a> (entry 8) lengthen it; <a href="#e14">entry 14</a> tells it from the other types; <a href="#e17">seasonal</a> unemployment (entry 17) is a kind of it.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> Name the two reasons frictional unemployment is always present.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Jobs are constantly created and destroyed, and new workers are always entering the labor force.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> Does an economy with no frictional unemployment sound healthy?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It would mean nobody ever changes jobs or enters the labor force.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>Frictional unemployment over the cycle</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>When the unemployment rate is <b>low</b>, spells are short and <b>most</b> unemployment is frictional. When the rate is <b>high</b>, frictional unemployment is a <b>smaller share</b>.</p></div>
+  <p class="reading">Textbook pages 127&ndash;128, Figure 13.1.</p>
+
+  <p>Frictional unemployment does not vanish in a slump &mdash; people still change jobs and enter the labor force. But other unemployment piles on top of it, and people stay out of work longer, so its <i>share</i> of the total falls.</p>
+
+  <p>Figure 13.1 shows it through how long people have been unemployed. Short spells are mostly search; very long ones are mostly something else.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The <i>share</i> falls in a recession; the amount need not. Read which one the question asks about.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">2000 against 2010.</span> In 2000, 45% had been unemployed under 5 weeks and 11% for 27 weeks or more. In early 2010 it was 20% and <b>41%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> At the start frictional unemployment is 60% of all unemployment. Press <b>A recession</b>: the same 3% is now <b>37.5%</b> of the total.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A town in two years.</span> In a good year most of its unemployed are students and people between jobs; after a factory closes, most are laid-off workers who have searched for months.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is about <a href="#e3">frictional unemployment</a> (entry 3) and what <a href="#e11">cyclical unemployment</a> (entry 11) adds on top of it.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> In 2000, what share of the unemployed had been out of work less than 15 weeks?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>45% + 32% = <b>77%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> Why is frictional unemployment a larger share when the rate is low?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because the other kinds have shrunk, so search makes up most of what is left.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>Structural unemployment</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Unemployment that results when there are <b>more people seeking jobs in a labor market</b> than there are jobs available at the current wage &mdash; a <b>persistent</b> surplus of workers with a particular skill or in a particular place.</p></div>
+  <p class="reading">Textbook page 128, margin.</p>
+
+  <p>Frictional unemployment exists even when job-seekers and jobs are equal in number. Structural unemployment is different: there are simply too many workers for the jobs in one labor market. Sometimes their skills are no longer wanted; sometimes there are more of them in a region than there are jobs; sometimes the wage is held above the level that would clear the market.</p>
+
+  <p>It lasts. Searching longer will not fix it, because the jobs are not there for that skill, in that place, at that wage. And it is still there when the economy as a whole is doing well.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A recession also leaves more job-seekers than jobs. What makes unemployment <i>structural</i> is that it would remain at full employment.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Eastern Germany.</span> After reunification, wages were set near western levels while productivity stayed far lower. In December 2009 unemployment was 12.1% in the east against 6.7% in the west.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The labor market below.</span> At a $12 wage, 240 thousand people want jobs and 180 thousand jobs exist: <b>60 thousand</b> structurally unemployed.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Typesetters.</span> Once publishers switched to software, typesetters&rsquo; skills were not wanted at any firm, however strong the economy.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the other half of the <a href="#e9">natural rate</a> (entry 9). One cause is the <a href="#e6">minimum wage</a> (entry 6); others are <a href="#e7">unions and efficiency wages</a> (entry 7). <a href="#e14">Entry 14</a> tells it from cyclical unemployment.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> Coal mines in a region close for good. The miners cannot find work there. Which type?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Structural. Their skills and location no longer match the jobs available.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> Can structural unemployment exist when the economy is booming?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Yes. It is a mismatch in particular labor markets, not a shortage of output overall.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE LABOR MARKET ============ -->
+<section class="section" id="labor">
+  <h2>The labor market behind structural unemployment</h2>
+  <p>Your textbook&rsquo;s Figure 13.2, with numbers. Labor demand is Q = 300 &minus; 10W and labor supply
+  is Q = 20W, in thousands of workers at a wage of W dollars an hour. They meet at <b>$10</b> and
+  <b>200 thousand</b> workers. A minimum wage of $12 is above that.</p>
+  <div class="widget">
+<svg id="lfig" class="lab-svg" viewBox="0 0 520 344" role="img" aria-label="A labor market with a minimum wage above the equilibrium wage">
+<path class="lax" d="M70 21 V300 H499"></path>
+<text class="lk" x="64" y="304.0" text-anchor="end">$0</text>
+<text class="lk" x="64" y="214.0" text-anchor="end">$10</text>
+<text class="lk" x="64" y="196.0" text-anchor="end">$12</text>
+<text class="lk" x="64" y="124.0" text-anchor="end">$20</text>
+<text class="lk" x="64" y="34.0" text-anchor="end">$30</text>
+<text class="lk" x="70.0" y="316" text-anchor="middle">0</text>
+<text class="lk" x="200.0" y="316" text-anchor="middle">100</text>
+<text class="lk" x="304.0" y="316" text-anchor="middle">180</text>
+<text class="lk" x="330.0" y="316" text-anchor="middle">200</text>
+<text class="lk" x="382.0" y="316" text-anchor="middle">240</text>
+<text class="lk" x="460.0" y="316" text-anchor="middle">300</text>
+<text class="lt" x="14" y="11.0">Wage rate ($ an hour)</text>
+<text class="lt" x="499.0" y="336" text-anchor="end">Quantity of labor (thousands)</text>
+<path class="dl" d="M70.0 30.0 L460.0 300.0"></path>
+<path class="sp" d="M70.0 300.0 L486.0 156.0"></path>
+<text class="lt" x="414.0" y="258.0">Labor demand</text>
+<text class="lt" x="486.0" y="146.0" text-anchor="end">Labor supply</text>
+<path class="gd" d="M330.0 210.0 V300"></path>
+<path class="gd" d="M304.0 192.0 V300"></path>
+<path class="gd" d="M382.0 192.0 V300"></path>
+<path class="gd" d="M70 210.0 H330.0"></path>
+<path class="fl" d="M70 192.0 H483.4"></path>
+<text class="lg" x="76" y="186.0">Minimum wage $12</text>
+<path class="gp" d="M304.0 176.0 V170.0 H382.0 V176.0"></path>
+<text class="lg" x="343.0" y="150.0" text-anchor="middle">Structural</text>
+<text class="lg" x="343.0" y="164.0" text-anchor="middle">unemployment: 60</text>
+<circle class="pt" cx="330.0" cy="210.0" r="4"></circle>
+<text class="lt" x="338.0" y="226.0">E</text>
+<circle class="pt" cx="304.0" cy="192.0" r="4"></circle>
+<circle class="pt" cx="382.0" cy="192.0" r="4"></circle>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Equilibrium</span><span class="v">$10 &middot; 200</span></div>
+      <div class="ro"><span class="k">Want jobs at $12</span><span class="v">240</span></div>
+      <div class="ro"><span class="k">Jobs at $12</span><span class="v">180</span></div>
+      <div class="ro"><span class="k">Structural unemployment</span><span class="v hl">60</span></div>
+      <div class="ro"><span class="k">Fewer working</span><span class="v hl">20</span></div>
+    </div>
+    <p class="figcap">At $12, 240 thousand people want work and firms fill 180 thousand jobs. The 60 thousand
+    left over are structurally unemployed: searching longer will not help, because the jobs are not there
+    at that wage. And 20 thousand fewer people work than would at $10.</p>
+  </div>
+</section>
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>Minimum wages</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A <b>binding</b> minimum wage &mdash; one set above the equilibrium wage &mdash; makes the quantity of labor supplied exceed the quantity demanded. The surplus is structural unemployment.</p></div>
+  <p class="reading">Textbook pages 128&ndash;129, Figure 13.2.</p>
+
+  <p>At the equilibrium wage the number of jobs equals the number of people who want them, and there is no structural unemployment &mdash; only frictional. A legal floor above that wage does two things at once: more people want to work, and firms want fewer workers.</p>
+
+  <p>So there are <b>more job-seekers than jobs</b>, and <b>fewer people working</b> than with no minimum wage. For most workers the minimum wage is below what they earn and does nothing; it binds for the less skilled.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A minimum wage below the equilibrium wage is not binding and causes no structural unemployment.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The 2009 floor.</span> The national minimum wage was $7.25 an hour &mdash; irrelevant for most workers, binding for some less-skilled ones.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The labor market below.</span> Equilibrium is $10 and 200 thousand workers. At $12, 240 thousand look for work and 180 thousand are hired: 60 thousand unemployed, and <b>20 thousand fewer</b> working than with no floor.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A higher floor.</span> Raise the floor in the diagram above and structural unemployment rises, so the natural rate rises with it &mdash; press <b>A higher minimum wage</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is one cause of <a href="#e5">structural unemployment</a> (entry 5). <a href="#e7">Unions and efficiency wages</a> (entry 7) work the same way, and combined with new technology it can raise the natural rate &mdash; <a href="#e16">entry 16</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> Labor demand Q = 300 &minus; 10W, labor supply Q = 20W. What happens with a floor of $11?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Supplied 220, demanded 190: <b>30 thousand</b> structurally unemployed.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> A floor of $8 in the same market. How much structural unemployment does it cause?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>None. $8 is below the $10 equilibrium, so the floor does not bind.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>Labor unions and efficiency wages</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Two more reasons a wage can sit <b>above equilibrium</b>: unions bargaining collectively, and firms paying <b>efficiency wages</b> &mdash; above-market pay to make workers work harder.</p></div>
+  <p class="reading">Textbook pages 129&ndash;130, margin.</p>
+
+  <p>Unions win higher wages and benefits by bargaining for all of a firm&rsquo;s workers together, backed by the threat of a strike. Some firms raise pay on their own, because effort is hard to watch and a worker paid above the market works hard to keep the job.</p>
+
+  <p>Either way the effect is the minimum-wage diagram again: more people want those jobs than there are jobs, so the result is structural unemployment.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Your exam does not name these. Know the mechanism &mdash; a wage above equilibrium &mdash; and you can handle any version of it.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your textbook&rsquo;s comparison.</span> Union members earn higher wages and more generous benefits than non-union workers with similar skills.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The labor market below.</span> A union wage of $12 does exactly what the $12 floor does: <b>60 thousand</b> more job-seekers than jobs.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A delivery firm.</span> It pays drivers well above the going rate so that none risks being fired for slacking. Hundreds apply for every opening.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> They are the <a href="#e6">minimum-wage</a> mechanism (entry 6) with a different cause, and they lead to <a href="#e5">structural unemployment</a> (entry 5).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> Why does collective bargaining have the same effect as a minimum wage?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Both push the wage above equilibrium, so more people want jobs than firms will fill.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> Why might a firm choose to pay more than it has to?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>To make workers try harder to keep a job they could not easily match elsewhere.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>Unemployment benefits</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Payments to laid-off workers while they look for work. Generous benefits raise <b>both frictional and structural</b> unemployment, and so raise the natural rate.</p></div>
+  <p class="reading">Textbook pages 130 and 132.</p>
+
+  <p>Benefits help people through a job loss. Their side effect is that they lower the cost of staying unemployed, so people search longer and are slower to accept a job they would otherwise take.</p>
+
+  <p>The more generous and the longer-lasting the benefits, the bigger the effect. Generous European benefits are often blamed for <b>Eurosclerosis</b>, the persistently high unemployment in some European countries.</p>
+
+  <div class="watch"><p><b>Watch out.</b> More generous benefits raise the <i>natural</i> rate. They are not a cause of cyclical unemployment.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The U.S. against Europe.</span> U.S. benefits replace a small part of income and usually end after 26 weeks; in much of Europe they are larger and last longer.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Press <b>More generous benefits</b>: frictional rises to 3.5%, structural to 2.5%, and the natural rate to <b>6%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Two job offers.</span> A laid-off accountant on generous benefits turns down two offers and keeps searching for a better one; without benefits she would have taken the first.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> They lengthen <a href="#e3">frictional unemployment</a> (entry 3), raise the <a href="#e9">natural rate</a> (entry 9), and are one of the policies of <a href="#e16">entry 16</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> A country doubles how long unemployment benefits last. What happens to the natural rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It rises. People search longer, so frictional and structural unemployment rise.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> Does that change raise cyclical unemployment?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It changes the natural rate, not the gap between the actual and natural rates.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>Natural rate of unemployment</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Frictional plus structural unemployment.</b> The normal unemployment rate around which the actual rate fluctuates.</p></div>
+  <p class="reading">Textbook page 130, margin, and equation 13-1.</p>
+
+  <p>Because some frictional unemployment is inevitable and most economies also have some structural unemployment, a certain amount of unemployment is normal. That amount is the natural rate.</p>
+
+  <p>&ldquo;Natural&rdquo; does not mean zero, and it does not mean fixed. The natural rate changes over time and can be changed by policy &mdash; entries 15 and 16.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Cyclical unemployment is <b>not</b> part of the natural rate. The natural rate is two types, not three.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Estimates over time.</span> The U.S. natural rate was about 5.3% in 1950, rose to 6.3% by the end of the 1970s and later fell to 4.8%.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> 3% frictional + 2% structural = a natural rate of <b>5%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Counting people.</span> A labor force of 160 million with 4.8 million frictionally and 3.2 million structurally unemployed: a natural rate of <b>5%</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It adds <a href="#e3">frictional</a> (entry 3) and <a href="#e5">structural</a> (entry 5) unemployment. It is the rate at <a href="#e10">full employment</a> (entry 10); the gap from it is <a href="#e11">cyclical unemployment</a> (entry 11). <a href="#e8">Benefits</a> (entry 8), <a href="#e15">the labor force</a> (entry 15) and <a href="#e16">institutions and policies</a> (entry 16) move it.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> Frictional 2.5%, structural 1.5%. What is the natural rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>2.5 + 1.5 = <b>4%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> Is the natural rate the lowest unemployment an economy can ever reach?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. The actual rate can fall below it for a while, in a boom &mdash; entry 13.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>Full employment and the natural rate</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in this module &mdash; learn it from here.</b> Your exam defines the natural rate as the unemployment rate when the economy produces its <b>full-employment</b> output. The phrase &ldquo;full employment&rdquo; does not appear anywhere in Module 13. You will need it from Unit 3 on.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The natural rate is the unemployment rate when the economy produces its <b>full-employment</b> real output. <b>Full employment does not mean zero unemployment</b> &mdash; it means unemployment equal to the natural rate.</p></div>
+  <p class="reading">Not in this module. Your textbook links output and the natural rate in Module 33.</p>
+
+  <p>Full-employment output (your exam also calls it <b>potential output</b>) is what the economy produces when unemployment is at its natural rate. At that output there is still frictional and structural unemployment, but no cyclical unemployment.</p>
+
+  <p>So the two ideas are one: output at full employment &harr; unemployment at the natural rate &harr; cyclical unemployment of zero. When output is below full employment, unemployment is above the natural rate; when output is above it, unemployment is below.</p>
+
+  <div class="watch"><p><b>Watch out.</b> &ldquo;The economy is at full employment&rdquo; and &ldquo;unemployment is 5%&rdquo; can both be true.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Module 33, page 328.</span> &ldquo;When actual aggregate output is equal to potential output, the actual unemployment rate is equal to the natural rate of unemployment.&rdquo;</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> At the start the economy is at full employment, and unemployment is still <b>5%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A 4.8% economy.</span> If the natural rate is 4.8% and the actual rate is 4.8%, the economy is at full employment &mdash; with millions unemployed.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the <a href="#e9">natural rate</a> (entry 9) seen from the output side. Above or below it, the difference is <a href="#e11">cyclical unemployment</a> (entry 11); <a href="#e13">entry 13</a> is the case where output is above it.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> The economy is at full employment. How much cyclical unemployment is there?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>None. The actual rate equals the natural rate.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> Unemployment is above the natural rate. Is output above or below full employment?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Below. There is cyclical unemployment because output has fallen short.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>Cyclical unemployment</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>deviation of the actual unemployment rate from the natural rate</b>: the part of unemployment caused by the business cycle.</p></div>
+  <p class="reading">Textbook page 130, margin.</p>
+
+  <p>When output falls in a recession, firms need fewer workers and lay people off across the whole economy. That extra unemployment, on top of the natural rate, is cyclical. When output recovers, it goes away.</p>
+
+  <p>It is the only type the cycle creates. Frictional and structural unemployment are there in good times and bad; cyclical unemployment is what a slump adds.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A worker laid off in a recession whose job will come back is cyclically unemployed, however skilled she is.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Melanie, part (c).</span> Laid off in a slump in investment spending, with a promise to be rehired when business picks up. Cyclical.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your textbook&rsquo;s figures.</span> An actual rate of 9.7% in January 2010 against a natural rate of 4.8%: cyclical unemployment of about <b>4.9 points</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> Press <b>A recession</b>: the actual rate rises to 8%, the natural rate stays at 5%, and cyclical unemployment is <b>+3 points</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is measured from the <a href="#e9">natural rate</a> (entry 9) and is zero at <a href="#e10">full employment</a> (entry 10). It shrinks the frictional share (<a href="#e4">entry 4</a>), the arithmetic is <a href="#e12">entry 12</a>, it can be negative (<a href="#e13">entry 13</a>), and <a href="#e14">entry 14</a> tells it from the other types.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> Natural rate 5%, actual rate 7.5%. What is cyclical unemployment?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>7.5 &minus; 5 = <b>2.5 points</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> A car plant lays off workers because car sales have fallen nationwide in a recession. Which type?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Cyclical. The jobs disappeared because output fell, and they return when it recovers.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>Actual = natural + cyclical</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Natural = frictional + structural.</b> <b>Actual = natural + cyclical.</b> So cyclical = actual &minus; natural.</p></div>
+  <p class="reading">Textbook page 130, equations 13-1 and 13-2.</p>
+
+  <p>Every calculation on this topic is one of these two lines. Given any three of frictional, structural, cyclical and actual, you can find the fourth.</p>
+
+  <p>Questions can give the parts as rates or as numbers of people. If they give people, divide by the labor force first, then add and subtract as usual.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Subtract the natural rate from the actual rate, not the other way round. Get the sign wrong and you will call a boom a recession.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 1.</span> The rubric: the natural rate is frictional plus structural; cyclical is the difference between the actual and natural rates.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Counting people.</span> Labor force 160 million; 11.2 million unemployed of whom 4.8 million frictional and 3.2 million structural. Actual <b>7%</b>, natural 5%, cyclical <b>2 points</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Working backwards.</span> Actual 6.5%, cyclical 1.5 points, structural 2%. Natural rate = 5%; frictional = <b>3%</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the definition of <a href="#e11">cyclical unemployment</a> (entry 11) as arithmetic. When the answer comes out negative, read <a href="#e13">entry 13</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> Frictional 3%, structural 1.5%, actual 7%. What is cyclical unemployment?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Natural = 4.5%; cyclical = 7 &minus; 4.5 = <b>2.5 points</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> Labor force 50 million; 1.5 million frictional, 1 million structural, 3.5 million unemployed in all. Find the actual and natural rates.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Actual 3.5 &divide; 50 = <b>7%</b>; natural 2.5 &divide; 50 = <b>5%</b>; cyclical 2 points.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>When the actual rate is below the natural rate</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in this module &mdash; learn it from here.</b> Every example in Module 13 is a slump, with the actual rate above the natural rate. Your exam also asks about the opposite case, and its own sample free-response question starts there.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>In a boom the actual rate can fall <b>below</b> the natural rate. Cyclical unemployment is then <b>negative</b>, and output is <b>above</b> its full-employment level.</p></div>
+  <p class="reading">Not in this module. Your textbook gives the rule in Module 33, page 328.</p>
+
+  <p>When demand is very strong, firms hire people they would normally pass over and workers find jobs faster than usual. Unemployment drops below its normal level. The subtraction actual &minus; natural comes out negative.</p>
+
+  <p>It cannot last. Your textbook warns that holding unemployment below the natural rate leads to <b>accelerating inflation</b>, and Unit 3 shows the economy moving back. On the exam, write it as &ldquo;unemployment is below the natural rate&rdquo; and &ldquo;output is above full employment&rdquo;.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A negative answer for cyclical unemployment is not a mistake. It tells you the economy is in a boom, not a recession.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Module 33, page 328.</span> &ldquo;When the output gap is positive (an inflationary gap), the unemployment rate is below the natural rate.&rdquo;</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your exam board&rsquo;s sample question.</span> Actual rate 5%, natural rate 6%: cyclical unemployment is <b>−1 point</b>, so output is above full employment.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> Press <b>A boom</b>: the actual rate is 4%, the natural rate 5%, and the dashed box is cyclical unemployment of <b>−1 point</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is <a href="#e11">cyclical unemployment</a> (entry 11) with the sign reversed, worked by <a href="#e12">entry 12</a>, and the other side of <a href="#e10">full employment</a> (entry 10).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> Natural rate 5.5%, actual rate 4%. What is cyclical unemployment, and where is output?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>&minus;1.5 points; output is above full employment.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> Why can the actual rate not stay below the natural rate for long?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because it drives up wages and prices &mdash; accelerating inflation &mdash; and the economy moves back.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e14">
+  <div class="entry-head"><span class="entry-num">14</span><h2>Telling the three types apart</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Ask: Is the worker <b>between jobs</b> and searching? <b>Frictional.</b> Is there a lasting surplus of workers in their <b>particular</b> market? <b>Structural.</b> Did they lose the job because <b>output fell</b>? <b>Cyclical.</b></p></div>
+  <p class="reading">Textbook pages 126&ndash;130 and Tackle the Test, free-response question 2.</p>
+
+  <p>The best single test: <i>would this person still be unemployed if the economy were at full employment?</i> If yes, the unemployment is frictional or structural. If no, it is cyclical.</p>
+
+  <p>Then separate the first two by asking whether more searching would solve it. A searcher with skills employers want is frictional. A worker whose skill, region or wage does not match any available job is structural.</p>
+
+  <div class="watch"><p><b>Watch out.</b> &ldquo;Laid off&rdquo; can be any of the three. Look for the reason: a move, a dying industry, or a slump.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Melanie, three times.</span> Laid off and turning down poor offers: frictional. Her industry moved the work abroad: structural. Laid off in a slump, rehire promised: cyclical.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your textbook&rsquo;s review, question 1.</span> Moved to a new state and took two months to find a job: <b>frictional</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Bank tellers.</span> Apps and ATMs replace most tellers&rsquo; work, and the jobs do not come back when the economy recovers. Structural.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It sorts <a href="#e3">frictional</a> (entry 3), <a href="#e5">structural</a> (entry 5) and <a href="#e11">cyclical</a> (entry 11) unemployment; <a href="#e17">seasonal</a> unemployment (entry 17) goes with the first. The drill above practises it.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">14.1</span> A construction worker loses his job when house-building collapses in a recession. Which type?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Cyclical. The jobs vanished because output fell, and they return with the recovery.</p></div></details></div>
+    <div class="q"><p><span class="qn">14.2</span> A worker's factory moves overseas and no local firm needs his skills. Which type?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Structural. More searching will not find a job that no longer exists in his market.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got14"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE DRILL ============ -->
+<section class="section" id="sorter">
+  <h2>Drill: which type?</h2>
+  <p>Twelve unemployed people. Put each in one of the three types. Ask first: would they still be
+  unemployed if the economy were at full employment?</p>
+  <div class="widget">
+    <div id="sorter-list"></div>
+    <p class="score" id="sorter-score">0 of 12 answered</p>
+    <button type="button" id="sorter-reset">Start again</button>
+  </div>
+</section>
+<article class="entry" id="e15">
+  <div class="entry-head"><span class="entry-num">15</span><h2>Changes in labor force characteristics</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The natural rate changes when the labor force changes. <b>Younger, less experienced</b> workers change jobs more often and so have more frictional unemployment.</p></div>
+  <p class="reading">Textbook page 131, Figure 13.3.</p>
+
+  <p>Experienced workers stay in jobs longer, and older workers are more often family breadwinners with a strong reason to find and keep work. So a labor force with more young and new workers has a higher natural rate.</p>
+
+  <p>In the 1970s the baby boomers came of working age and many married women entered the paid labor force for the first time. The natural rate rose. By the late 1990s the labor force was more experienced, and the natural rate had fallen.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A change in the labor force moves the <b>natural</b> rate. It is not cyclical unemployment, even if the actual rate rises too.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">January 2010.</span> Overall unemployment was 9.7%; teenagers 26.4%; ages 20&ndash;24, 15.8%; ages 25&ndash;54, only 8.6%.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Press <b>A younger labor force</b>: frictional rises to 3.8% and the natural rate to <b>5.8%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">An ageing country.</span> Few young people are entering the labor force and most workers have been in their jobs for years. Its natural rate is likely to be low.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It changes the <a href="#e9">natural rate</a> (entry 9). The other causes are <a href="#e16">entry 16</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">15.1</span> Why did the U.S. natural rate rise in the 1970s?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>A large influx of young, inexperienced workers &mdash; baby boomers &mdash; and of women entering the labor force for the first time.</p></div></details></div>
+    <div class="q"><p><span class="qn">15.2</span> A country's labor force becomes older and more experienced. What happens to its natural rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It tends to fall, because frictional unemployment falls.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got15"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e16">
+  <div class="entry-head"><span class="entry-num">16</span><h2>Changes in institutions and policies</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Labor-market institutions and government policies move the natural rate too: <b>unions</b>, <b>job-matching</b> services, <b>technology</b>, <b>benefits</b>, <b>job training</b> and <b>employment subsidies</b>.</p></div>
+  <p class="reading">Textbook pages 131&ndash;132.</p>
+
+  <p>Things that raise it: strong unions, generous benefits, a high binding minimum wage, and new technology that cuts demand for unskilled workers when their wages cannot fall.</p>
+
+  <p>Things that lower it: temporary agencies and job websites, which shorten searches; job training, which widens the jobs a worker can do; and employment subsidies, which pay workers or employers to accept or offer jobs.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A policy that lowers the natural rate makes full employment come with less unemployment. It does not create cyclical unemployment.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The U.S. after 1980.</span> A sharp fall in union membership may be one reason the natural rate fell between the 1970s and the 1990s.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Press <b>Job-matching websites</b>: frictional falls to 2.5% and the natural rate to <b>4.5%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A retraining scheme.</span> Laid-off factory workers are taught to service wind turbines, where jobs are going unfilled. Structural unemployment falls.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It moves the <a href="#e9">natural rate</a> (entry 9), alongside <a href="#e15">entry 15</a>. <a href="#e8">Benefits</a> (entry 8) and the <a href="#e6">minimum wage</a> (entry 6) are two of these policies.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">16.1</span> Name one policy that lowers the natural rate, and say how.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Job training: it gives the structurally unemployed skills for jobs that exist. (Or employment subsidies, or anything that speeds up matching.)</p></div></details></div>
+    <div class="q"><p><span class="qn">16.2</span> New technology raises demand for skilled workers and cuts it for unskilled ones, whose wage cannot fall because of a binding minimum wage. What happens?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Structural unemployment rises, and so does the natural rate.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got16"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e17">
+  <div class="entry-head"><span class="entry-num">17</span><h2>Seasonal unemployment</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Unemployment that comes back at the <b>same time every year</b> because some work is seasonal: a ski instructor in summer, a farm worker after the harvest.</p></div>
+  <p class="reading">Not in your textbook. Many review books use the term.</p>
+
+  <p>It is predictable and temporary, and the worker is between jobs and searching &mdash; so it behaves like frictional unemployment. Official figures are usually &ldquo;seasonally adjusted&rdquo; to take it out.</p>
+
+  <p>Your exam names only three types: frictional, structural and cyclical. If a question describes seasonal work, the answer it wants is almost always <b>frictional</b>.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not answer &ldquo;seasonal&rdquo; when the options are frictional, structural and cyclical.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Not in your textbook.</span> Module 13 never uses the word &ldquo;seasonal&rdquo;; it treats every short spell between jobs as frictional.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A beach town.</span> Unemployment is 4% in July and 9% in January, the same every year &mdash; the extra five points are seasonal.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A department-store temp.</span> Hired for the holiday rush and let go in January, she looks for her next job.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is a kind of <a href="#e3">frictional unemployment</a> (entry 3), and <a href="#e14">entry 14</a> is how to classify it on the exam.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">17.1</span> Is seasonal unemployment one of the three types your exam names?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. The three are frictional, structural and cyclical; seasonal behaves like frictional.</p></div></details></div>
+    <div class="q"><p><span class="qn">17.2</span> A lifeguard is out of work every winter and looks for indoor work. Which of the three types?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Frictional.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got17"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ MCQ ============ -->
+<section class="section" id="mcq">
+  <h2>Tackle the test &mdash; multiple choice</h2>
+  <p>The five questions from your textbook&rsquo;s AP Review, with <b>every option explained</b>.</p>
+
+  <div class="mcq" data-key="A">
+    <p class="stem"><span class="qn">1</span> A person who moved to a new state and took two months to find a new job experienced which type of unemployment?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>frictional<span class="why" hidden>&#10003; <b>Correct.</b> Time spent searching after a move is frictional unemployment.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>structural<span class="why" hidden>&#10007; Nothing suggests a lasting surplus of workers in their market. They found a job.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>cyclical<span class="why" hidden>&#10007; Nothing in the question is about a slump in output.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>natural<span class="why" hidden>&#10007; The natural rate is a rate made of two types, not a type itself.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>none of the above<span class="why" hidden>&#10007; Frictional fits exactly.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">2</span> What type of unemployment is created by a recession?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>frictional<span class="why" hidden>&#10007; Search goes on in good times and bad; recessions do not create it.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>structural<span class="why" hidden>&#10007; Structural unemployment persists at full employment. A recession adds something on top.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>cyclical<span class="why" hidden>&#10003; <b>Correct.</b> Cyclical unemployment is what the business cycle adds.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>natural<span class="why" hidden>&#10007; The natural rate is the unemployment that exists without a recession.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>none of the above<span class="why" hidden>&#10007; Cyclical is the answer.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">3</span> A person who is unemployed because of a mismatch between the quantity of labor supplied and the quantity of labor demanded is experiencing what type of unemployment?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>frictional<span class="why" hidden>&#10007; Frictional unemployment exists even when labor supplied equals labor demanded.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>structural<span class="why" hidden>&#10003; <b>Correct.</b> Your textbook&rsquo;s definition: more job-seekers in a labor market than jobs at the current wage.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>cyclical<span class="why" hidden>&#10007; A slump also creates a surplus, but then the question would mention a recession. A mismatch in a labor market is the textbook&rsquo;s structural unemployment.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>natural<span class="why" hidden>&#10007; Not a type.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>none of the above<span class="why" hidden>&#10007; Structural fits.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="D">
+    <p class="stem"><span class="qn">4</span> Which of the following is true of the natural rate of unemployment? I. It includes frictional unemployment. II. It includes structural unemployment. III. It is equal to 0%.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; Leaves out structural unemployment.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10007; Leaves out frictional unemployment.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10007; The natural rate is never zero: frictional unemployment is always present.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>I and II<span class="why" hidden>&#10003; <b>Correct.</b> Frictional plus structural.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II and III<span class="why" hidden>&#10007; Statement III is false.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="E">
+    <p class="stem"><span class="qn">5</span> Which of the following can affect the natural rate of unemployment in an economy over time?</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>labor force characteristics such as age and work experience<span class="why" hidden>&#10007; True, but not the only one.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>the existence of labor unions<span class="why" hidden>&#10007; True, but not the only one.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>advances in technologies that help workers find jobs<span class="why" hidden>&#10007; True, but not the only one.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>government job training programs<span class="why" hidden>&#10007; True, but not the only one.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>all of the above<span class="why" hidden>&#10003; <b>Correct.</b> Each changes frictional or structural unemployment.</span></span></button>
+    </div>
+  </div>
+
+  <p class="score" id="mcqScore">0 of 5 answered</p>
+</section>
+
+<!-- ============ FRQ ============ -->
+<section class="section" id="frq">
+  <h2>Tackle the test &mdash; free response</h2>
+
+  <div class="frq">
+    <p><b>Question 1 (7 points).</b> (a) Define the natural rate of unemployment. (b) The natural rate of
+    unemployment is made up of which of the types of unemployment? (c) Explain how cyclical unemployment
+    relates to the natural rate of unemployment. (d) List three factors that can lead to a change in the
+    natural rate of unemployment.</p>
+    <details class="reveal"><summary>Show the answer and the rubric</summary><div class="ans">
+      <ol class="rubric">
+        <li>(a) The normal unemployment rate around which the actual unemployment rate fluctuates &mdash; one point</li>
+        <li>(b) Frictional unemployment&hellip; &mdash; one point</li>
+        <li>(b) &hellip;plus structural unemployment &mdash; one point</li>
+        <li>(c) Cyclical unemployment is the deviation of the actual rate from the natural rate &mdash; one point</li>
+        <li>(d) Changes in labor force characteristics &mdash; one point</li>
+        <li>(d) Changes in labor market institutions, such as unions &mdash; one point</li>
+        <li>(d) Changes in government policies &mdash; one point</li>
+      </ol>
+      <p>For (a), your exam&rsquo;s own wording is worth knowing too: the unemployment rate when the economy
+      produces its full-employment output.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 2.</b> In each situation, what type of unemployment is Melanie facing? Explain.
+    (a) After completing a complex programming project, Melanie is laid off. Her prospects for a new job
+    requiring similar skills are good, and she has signed up with a programmer placement service. She has
+    passed up offers for low-paying jobs. (b) When Melanie and her co-workers refused to accept pay cuts,
+    her employer outsourced their programming tasks to workers in another country. This is happening
+    throughout the programming industry. (c) Because of a slump in investment spending, Melanie has been
+    laid off. Her employer promises to rehire her when business picks up.</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p>(a) <b>Frictional.</b> She is between jobs and searching for a good match.</p>
+      <p>(b) <b>Structural.</b> Wages in her market are above the level at which local jobs would exist, and
+      the change is industry-wide and lasting.</p>
+      <p>(c) <b>Cyclical.</b> She lost the job because output fell, and it returns when output recovers.</p>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 3 &mdash; how your exam board&rsquo;s sample question begins.</b> &ldquo;The expected
+    inflation rate is 4 percent, the actual rate of unemployment is 5 percent, the natural rate of
+    unemployment is 6 percent&hellip;&rdquo; (a) What is cyclical unemployment? (b) Is real output above,
+    below or at its full-employment level?</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p>(a) Cyclical = actual &minus; natural = 5 &minus; 6 = <b>−1 point</b>.</p>
+      <p>(b) <b>Above.</b> Unemployment is below the natural rate, so the economy is producing more than its
+      full-employment output. The full question goes on to the AD&ndash;AS graph, which is Unit 3 &mdash;
+      but reading these two numbers correctly is this module.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <h2>One-page summary</h2>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <thead><tr><th>Event</th><th>Frictional</th><th>Structural</th><th>Natural rate</th><th>Actual rate</th><th>Cyclical</th></tr></thead>
+      <tbody>
+        <tr><td>Full employment</td><td>3%</td><td>2%</td><td><b>5%</b></td><td>5%</td><td><b>0</b></td></tr>
+        <tr><td>A recession</td><td>3%</td><td>2%</td><td><b>5%</b></td><td>8%</td><td><b>+3 points</b></td></tr>
+        <tr><td>A boom</td><td>3%</td><td>2%</td><td><b>5%</b></td><td>4%</td><td><b>−1 point</b></td></tr>
+        <tr><td>More generous benefits</td><td>3.5%</td><td>2.5%</td><td><b>6%</b></td><td>6%</td><td><b>0</b></td></tr>
+        <tr><td>Job-matching websites</td><td>2.5%</td><td>2%</td><td><b>4.5%</b></td><td>4.5%</td><td><b>0</b></td></tr>
+        <tr><td>A younger labor force</td><td>3.8%</td><td>2%</td><td><b>5.8%</b></td><td>5.8%</td><td><b>0</b></td></tr>
+        <tr><td>A higher minimum wage</td><td>3%</td><td>2.6%</td><td><b>5.6%</b></td><td>5.6%</td><td><b>0</b></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap"><b>Frictional</b> = searching between jobs. <b>Structural</b> = a lasting surplus of
+  workers in a particular labor market. <b>Cyclical</b> = what a slump adds. <b>Natural rate</b> = frictional
+  + structural = the rate at full employment. <b>Cyclical</b> = actual &minus; natural, and it can be
+  negative. The cycle moves the actual rate; the labor force, institutions and policy move the natural rate.</p>
+</section>
+
+<section class="section closing" id="final">
+  <h2>The five things to get right from Module 13</h2>
+  <ol>
+    <li><b>Three types, and only three:</b> frictional, structural, cyclical.</li>
+    <li><b>Natural = frictional + structural.</b> Cyclical is not part of it.</li>
+    <li><b>Full employment is not zero unemployment.</b> It is unemployment at the natural rate.</li>
+    <li><b>Cyclical = actual &minus; natural,</b> and a negative answer means output is above full
+      employment.</li>
+    <li><b>To classify, ask:</b> would this person still be unemployed at full employment? If not, it is
+      cyclical.</li>
+  </ol>
+  <p>The next two modules turn to inflation. In Unit 3 the natural rate becomes the vertical long-run
+  aggregate supply line, and in Unit 5 it is where the long-run Phillips curve stands &mdash; and
+  everything in entries 15 and 16 moves it.</p>
+</section>
+
+<p class="footer">
+  Student guide &middot; Module 13, <i>Krugman&rsquo;s Economics for AP</i>, pages 126&ndash;133 &middot;
+  definitions quoted from the textbook &middot; tiers assigned against the AP Macroeconomics Course
+  and Exam Description, Course Framework V.1, &copy; 2020 &middot; every number on this page is computed
+  by the script that writes it, and checked again before it is written.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod13-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ return {}; } }
+  function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){ var s = load(); s[b.id] = b.checked; save(s); paint(); });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- the decomposition diagram ---------- */
+  /* Every value below is written by build/make_m13_student.py from the rates it computes. */
+  var READ = {
+    start: ["3%", "2%", "5%", "5%", "0", "60%"],
+    rec: ["3%", "2%", "5%", "8%", "+3 points", "37.5%"],
+    boom: ["3%", "2%", "5%", "4%", "−1 point", "75%"],
+    ben: ["3.5%", "2.5%", "6%", "6%", "0", "58.3%"],
+    web: ["2.5%", "2%", "4.5%", "4.5%", "0", "55.6%"],
+    young: ["3.8%", "2%", "5.8%", "5.8%", "0", "65.5%"],
+    minw: ["3%", "2.6%", "5.6%", "5.6%", "0", "53.6%"]
+  };
+  var CAP = {
+    start: "Frictional 3% plus structural 2%: a natural rate of 5%. The economy is at full employment, so the actual rate is also 5% and cyclical unemployment is zero. Unemployment is not zero.",
+    rec: "Output falls and firms lay workers off. The natural rate has not moved; the actual rate rises to 8%. The difference, +3 points, is cyclical unemployment. Frictional unemployment is now only 37.5% of the total.",
+    boom: "Output rises above its full-employment level and firms hire hard. The actual rate falls to 4%, below the natural rate. Cyclical unemployment is −1 point - negative. This cannot last: Unit 3 shows why.",
+    ben: "Benefits last longer and pay more, so people search longer and take fewer low-wage jobs. Frictional and structural unemployment both rise: the natural rate itself is now 6%.",
+    web: "Workers and jobs find each other faster. Searches are shorter, so frictional unemployment falls and the natural rate falls to 4.5%.",
+    young: "Many young, inexperienced workers join the labor force, as baby boomers did in the 1970s. They change jobs more often, so frictional unemployment rises and the natural rate rises to 5.8%.",
+    minw: "A binding minimum wage is raised. More people want jobs at it than firms will fill, so structural unemployment rises and the natural rate rises to 5.6%."
+  };
+  var chips = Array.prototype.slice.call(document.querySelectorAll("#diagram .chip"));
+  var cap = document.getElementById("pcap");
+  function show(which){
+    Object.keys(READ).forEach(function(k){
+      var g = document.getElementById("d-" + k);
+      /* SVG elements have no .hidden property; toggle the attribute, which the CSS hides */
+      if (g) { if (k === which) g.removeAttribute("hidden"); else g.setAttribute("hidden", ""); }
+    });
+    READ[which].forEach(function(v, i){ document.getElementById("ro" + i).textContent = v; });
+    cap.textContent = CAP[which];
+    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-show") === which)); });
+  }
+  chips.forEach(function(c){ c.addEventListener("click", function(){ show(c.getAttribute("data-show")); }); });
+  show("start");
+
+  /* ---------- the drill ---------- */
+  var SCEN = [
+    { t: "A nurse moved to a new city with her partner and is applying to hospitals there.", a: "f",
+      w: "FRICTIONAL. She is between jobs and searching; nothing is wrong with her skills or the economy." },
+    { t: "A carpenter is laid off as house-building collapses during a recession.", a: "c",
+      w: "CYCLICAL. The job disappeared because output fell, and it returns with the recovery." },
+    { t: "A typesetter's skill is no longer used by any publisher in his town, and he cannot find similar work.", a: "s",
+      w: "STRUCTURAL. More searching will not help; the jobs for that skill are gone." },
+    { t: "A graduate finished college in May and is interviewing for her first job.", a: "f",
+      w: "FRICTIONAL. A new entrant to the labor force, searching." },
+    { t: "A restaurant server is let go when spending falls across the whole economy in a downturn.", a: "c",
+      w: "CYCLICAL. Caused by the slump, not by anything about her market." },
+    { t: "Teenagers want work at the minimum wage, but even in a boom more of them want jobs at that wage than firms will hire.", a: "s",
+      w: "STRUCTURAL. A binding minimum wage leaves a lasting surplus in that labor market." },
+    { t: "A programmer quit to look for a better-paid job and has two interviews next week.", a: "f",
+      w: "FRICTIONAL. Voluntary search between jobs." },
+    { t: "Coal miners are out of work after every mine in their region closed for good.", a: "s",
+      w: "STRUCTURAL. Their skills and location no longer match the jobs that exist." },
+    { t: "A factory worker is laid off because car sales have fallen nationwide; the firm promises to rehire when sales recover.", a: "c",
+      w: "CYCLICAL. Rehiring when output recovers is the mark of cyclical unemployment." },
+    { t: "A ski instructor is out of work every summer and looks for a summer job.", a: "f",
+      w: "FRICTIONAL. Seasonal, and on your exam that counts as frictional." },
+    { t: "Bank tellers lose their jobs as apps replace branch banking, and the jobs do not return when the economy grows.", a: "s",
+      w: "STRUCTURAL. Technology has cut demand for that skill for good." },
+    { t: "A steelworker is temporarily laid off when demand for almost everything falls in a recession.", a: "c",
+      w: "CYCLICAL. Economy-wide, and it ends when output recovers." }
+  ];
+  var LABELS = {
+    f: "Frictional",
+    s: "Structural",
+    c: "Cyclical"
+  };
+  var list = document.getElementById("sorter-list");
+  var scoreEl = document.getElementById("sorter-score");
+  var answered = 0, right = 0;
+  function build(){
+    list.innerHTML = "";
+    answered = 0; right = 0;
+    SCEN.forEach(function(s, i){
+      var row = document.createElement("div");
+      row.className = "sortrow";
+      var opts = Object.keys(LABELS).map(function(k){
+        return '<button type="button" class="opt" data-a="' + k + '"><span>' + LABELS[k] + '</span></button>';
+      }).join("");
+      row.innerHTML =
+        '<p class="stem"><span class="qn">' + (i + 1) + '</span> ' + s.t + '</p>' +
+        '<div class="opts">' + opts + '</div>' +
+        '<p class="why" hidden></p>';
+      var btns = Array.prototype.slice.call(row.querySelectorAll(".opt"));
+      var why = row.querySelector(".why");
+      btns.forEach(function(b){
+        b.addEventListener("click", function(){
+          if (row.getAttribute("data-done")) return;
+          row.setAttribute("data-done", "1");
+          var ok = b.getAttribute("data-a") === s.a;
+          btns.forEach(function(x){
+            x.disabled = true;
+            if (x.getAttribute("data-a") === s.a) x.setAttribute("data-state", "right");
+            else if (x === b) x.setAttribute("data-state", "wrong");
+          });
+          why.hidden = false;
+          why.textContent = (ok ? "\u2713 " : "\u2717 ") + s.w;
+          answered++; if (ok) right++;
+          scoreEl.textContent = right + " correct out of " + answered + " answered";
+        });
+      });
+      list.appendChild(row);
+    });
+    scoreEl.textContent = "0 of " + SCEN.length + " answered";
+  }
+  build();
+  document.getElementById("sorter-reset").addEventListener("click", build);
+
+  /* ---------- multiple choice ---------- */
+  var mcqs = Array.prototype.slice.call(document.querySelectorAll(".mcq[data-key]"));
+  var mcqScore = document.getElementById("mcqScore");
+  var mDone = 0, mRight = 0;
+  mcqs.forEach(function(q){
+    var key = q.getAttribute("data-key");
+    var opts = Array.prototype.slice.call(q.querySelectorAll(".opt"));
+    opts.forEach(function(o){
+      o.addEventListener("click", function(){
+        if (q.getAttribute("data-done")) return;
+        q.setAttribute("data-done", "1");
+        var ok = o.getAttribute("data-l") === key;
+        opts.forEach(function(x){
+          x.disabled = true;
+          x.querySelector(".why").hidden = false;
+          if (x.getAttribute("data-l") === key) x.setAttribute("data-state", "right");
+          else if (x === o) x.setAttribute("data-state", "wrong");
+        });
+        mDone++; if (ok) mRight++;
+        mcqScore.textContent = mRight + " correct out of " + mDone + " answered";
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "2.3 Unemployment · the natural rate", "title": "Module 13 · Types of Unemployment", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"href": "m01-student.html", "label": "Module 1 · Student guide", "current": false}, {"href": "m01-notes.html", "label": "Module 1 · Teaching notes", "current": false}, {"href": "m01-test.html", "label": "Module 1 · Test", "current": false}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": false}, {"href": "m02-notes.html", "label": "Module 2 · Teaching notes", "current": false}, {"href": "m02-test.html", "label": "Module 2 · Test", "current": false}, {"href": "m03-student.html", "label": "Module 3 · Student guide", "current": false}, {"href": "m03-notes.html", "label": "Module 3 · Teaching notes", "current": false}, {"href": "m03-test.html", "label": "Module 3 · Test", "current": false}, {"href": "m04-student.html", "label": "Module 4 · Student guide", "current": false}, {"href": "m04-notes.html", "label": "Module 4 · Teaching notes", "current": false}, {"href": "m04-test.html", "label": "Module 4 · Test", "current": false}, {"href": "m05-student.html", "label": "Module 5 · Student guide", "current": false}, {"href": "m05-notes.html", "label": "Module 5 · Teaching notes", "current": false}, {"href": "m05-test.html", "label": "Module 5 · Test", "current": false}, {"href": "m06-student.html", "label": "Module 6 · Student guide", "current": false}, {"href": "m06-notes.html", "label": "Module 6 · Teaching notes", "current": false}, {"href": "m06-test.html", "label": "Module 6 · Test", "current": false}, {"href": "m07-student.html", "label": "Module 7 · Student guide", "current": false}, {"href": "m07-notes.html", "label": "Module 7 · Teaching notes", "current": false}, {"href": "m07-test.html", "label": "Module 7 · Test", "current": false}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"href": "m10-student.html", "label": "Module 10 · Student guide", "current": false}, {"href": "m10-notes.html", "label": "Module 10 · Teaching notes", "current": false}, {"href": "m10-test.html", "label": "Module 10 · Test", "current": false}, {"href": "m11-student.html", "label": "Module 11 · Student guide", "current": false}, {"href": "m11-notes.html", "label": "Module 11 · Teaching notes", "current": false}, {"href": "m11-test.html", "label": "Module 11 · Test", "current": false}, {"href": "m12-student.html", "label": "Module 12 · Student guide", "current": false}, {"href": "m12-notes.html", "label": "Module 12 · Teaching notes", "current": false}, {"href": "m12-test.html", "label": "Module 12 · Test", "current": false}, {"href": "m13-student.html", "label": "Module 13 · Student guide", "current": true}, {"href": "m13-notes.html", "label": "Module 13 · Teaching notes", "current": false}, {"href": "m13-test.html", "label": "Module 13 · Test", "current": false}, {"label": "Module 14 · Inflation: An Overview", "planned": true}, {"label": "Module 15 · Measuring Inflation", "planned": true}, {"label": "Unit 2 · Gap analysis", "planned": true}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"label": "Module 16 · Income and Expenditure", "planned": true}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"label": "Module 34 · The Phillips Curve", "planned": true}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "m12-test.html", "label": "Module 12 · Test"}, "next": {"href": "m13-notes.html", "label": "Module 13 · Teaching notes"}, "variants": [{"href": "m13-student.html", "label": "Student", "current": true}, {"href": "m13-notes.html", "label": "Notes", "current": false}, {"href": "m13-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
