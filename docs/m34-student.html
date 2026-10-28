@@ -1,0 +1,1487 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 34 · The Phillips Curve · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+
+
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+
+/* ---------- Module 3 supplement ---------- */
+.mark.flag{background:var(--flag-soft);color:var(--flag)}
+.ppc-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.ppc-wrap{grid-template-columns:1fr 210px}}
+.ppc-svg{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px;cursor:crosshair;touch-action:none}
+.ppc-side{display:flex;flex-direction:column;gap:10px}
+.status{font-family:var(--mono);font-size:12.5px;padding:9px 11px;border-radius:5px;
+  border:1px solid var(--rule-strong);background:var(--surface-2);line-height:1.45}
+.status[data-s="on"]{border-color:color-mix(in srgb,var(--up) 45%,transparent);background:var(--up-soft);color:var(--up)}
+.status[data-s="in"]{border-color:var(--rule-strong);color:var(--ink-2)}
+.status[data-s="out"]{border-color:color-mix(in srgb,var(--down) 45%,transparent);background:var(--down-soft);color:var(--down)}
+.ppc-legend{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.ppc-legend b{color:var(--ink-2);font-weight:600}
+.chips.tight{gap:6px}
+.tbl{overflow-x:auto;max-width:100%}
+.sumtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.sumtable th,.sumtable td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+.sumtable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.sumtable td.mk{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--accent)}
+.sumtable td.mk.bgm{color:var(--ink-3)}
+.sumtable td.mk.flagm{color:var(--flag)}
+.final{background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:18px 20px;margin:22px 0;box-shadow:var(--shadow)}
+.final ol{margin:0;padding-left:20px}
+.final li{margin:0 0 9px}
+.final li:last-child{margin-bottom:0}
+
+/* ---------- PPC explorer svg ---------- */
+.ppc-svg .ax{stroke:var(--ink);stroke-width:1.6}
+.ppc-svg .tick{stroke:var(--ink-3);stroke-width:1.1}
+.ppc-svg .tl{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.ppc-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.ppc-svg .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ppc-svg .ghost{fill:none;stroke:var(--rule-strong);stroke-width:1.8;stroke-dasharray:6 5}
+.ppc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.ppc-svg .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.ppc-svg .pt{stroke:var(--surface);stroke-width:2}
+.ppc-svg .pt-on{fill:var(--up)}
+.ppc-svg .pt-in{fill:var(--ink-3)}
+.ppc-svg .pt-out{fill:var(--down)}
+
+
+/* ---------- Module 4 supplement ---------- */
+.two-panel{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px}
+.ca-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 14px}
+@media (min-width:640px){.ca-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ca-grid .field{display:flex;flex-direction:column;gap:5px}
+.ca-grid .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.ca-grid .field b{color:var(--ink-2);font-weight:600;text-transform:none;letter-spacing:0}
+.ca-grid input{font-family:var(--mono);font-size:15px;padding:7px 9px;width:100%;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.ca-grid input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.catab{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 14px}
+.catab th,.catab td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left}
+.catab th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.catab td.v{font-family:var(--mono);color:var(--ink)}
+.catab td.win{font-family:var(--mono);color:var(--up);font-weight:600}
+.dealrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 12px}
+.dealrow .field{display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1}
+.dealrow .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.dealrow input{font-family:var(--mono);font-size:16px;padding:8px 10px;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.line-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.line-svg g[hidden]{display:none}
+.line-svg .band{fill:var(--up-soft);stroke:none}
+.line-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.line-svg .tk{stroke:var(--ink-3);stroke-width:1.1}
+.line-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.line-svg .edge{stroke:var(--up);stroke-width:2}
+.line-svg .edgel{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--up)}
+.line-svg .prop{stroke:var(--accent);stroke-width:2.4}
+.line-svg .propbad{stroke:var(--down);stroke-width:2.4}
+.line-svg .propl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.line-svg .propl.bad{fill:var(--down)}
+.two-panel .ax{stroke:var(--ink);stroke-width:1.6}
+.two-panel .tick{stroke:var(--ink-3);stroke-width:1.1}
+.two-panel .tl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.two-panel .al{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.two-panel .ph{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.two-panel .curve{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+.two-panel .slope{font-family:var(--mono);font-size:11px;fill:var(--accent)}
+.two-panel .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.two-panel .pt{stroke:var(--surface);stroke-width:2}
+.two-panel .pt-on{fill:var(--ink-2)}
+.two-panel .pt-out{fill:var(--up)}
+.two-panel .ptl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.two-panel .ptl.good{fill:var(--up);font-weight:600}
+
+</style>
+<style>
+/* Module 5 additions: the movement-or-shift sorter */
+.sortrow{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:0 0 10px;
+  background:var(--surface)}
+.sortrow .stem{margin:0 0 10px}
+.sortrow .opts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sortrow .opt{flex:1 1 220px;justify-content:center;text-align:center}
+.sortrow .why{display:block;margin:10px 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.sortrow[data-done] .opt{cursor:default}
+#sorter-reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer}
+#sorter-reset:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<style>
+/* Module 34 additions: the two-panel AD-AS and Phillips-curve diagram, the drill's three answers */
+.adpc-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.adpc-svg g[hidden]{display:none}
+.adpc-svg .ax{stroke:var(--rule-strong);stroke-width:1.2;fill:none}
+.adpc-svg .tk{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.adpc-svg .tl{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.adpc-svg .pn{font-family:var(--sans);font-size:13px;font-weight:700;fill:var(--ink)}
+.adpc-svg .cv{stroke:var(--accent);stroke-width:2.6;fill:none}
+.adpc-svg .gh{stroke:var(--ink-3);stroke-width:1.6;stroke-dasharray:5 4;fill:none}
+.adpc-svg .lr{stroke:var(--down);stroke-width:2.6;fill:none}
+.adpc-svg .gl{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:2 3;fill:none}
+.adpc-svg .pt{fill:var(--flag);stroke:var(--paper);stroke-width:1.5}
+.adpc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink)}
+.readouts #ro4{font-size:15px;line-height:1.35}
+.sortrow .opts .opt{flex:1 1 140px}
+</style>
+
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro &middot; Module 34</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 15</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">AP Macroeconomics &middot; Unit 5 &middot; Student guide</p>
+  <h1>The Phillips Curve</h1>
+  <p class="standfirst">Fifteen terms from Module 34 of <i>Krugman&rsquo;s Economics for AP</i>: the short-run
+  trade-off between inflation and unemployment, why it disappears in the long run, and what shifts each curve
+  &mdash; with the words your exam uses and your textbook does not: demand shocks, long-run equilibrium, and the
+  inflationary and recessionary gaps.</p>
+  <div class="source-line">
+    <span>Textbook pages 331&ndash;342</span><span>&middot;</span><span>15 terms</span><span>&middot;</span>
+    <span>Topic 5.2</span><span>&middot;</span><span>2 curves, 2 graphs</span>
+  </div>
+<section class="section" id="howto">
+  <h2>How to use this guide</h2>
+  <p>Read Module 34 in your textbook first. Entries 1 to 6 are the short run; entries 7 to 12 are the long run and
+  what moves the economy between the two; entry 13 is disinflation; entries 14 and 15 are background.</p>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <tbody>
+        <tr><td><span class="mark exam">&#9733; Exam</span></td><td><b>Exam term.</b> Define it, draw it and explain it. Thirteen of these.</td></tr>
+        <tr><td><span class="mark bg">&#9675; Background</span></td><td><b>Background.</b> Worth knowing, not tested. Two of these.</td></tr>
+        <tr><td><span class="mark flag">&#9873; Not in the textbook</span></td><td><b>Learn it from here.</b> Your exam needs it and Module 34 does not have it. Four entries carry this flag.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Every entry ends with two <b>Check yourself</b> questions. Answer them before opening the
+      answer, then tick <b>Got it</b>.</li>
+    <li>Use the two-panel diagram below with entries 3, 4 and 6 to 12. Press every button, and watch both panels.</li>
+    <li>Do the drill after entry 12, and again at the end.</li>
+  </ul>
+  <div class="flag">
+    <p><b>One question decides most Phillips-curve answers: along, or shift?</b> Changes in spending move the
+    economy <b>along</b> the short-run curve. Supply shocks and expected inflation <b>shift</b> the short-run curve.
+    Only a change in the natural rate <b>shifts</b> the long-run curve.</p>
+  </div>
+</section>
+
+<!-- ============ THE TWO-PANEL DIAGRAM ============ -->
+<section class="section" id="diagram">
+  <h2>One shock, two graphs</h2>
+  <p>The same economy on the aggregate demand and supply graph and on the Phillips curve. More real GDP means
+  less unemployment, so a move to the right on the left-hand graph is a move to the left on the right-hand one.
+  Dashed lines are where the curves started.</p>
+
+  <div class="widget">
+    <div class="widget-title">Choose what happens</div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-show="start">Long-run equilibrium</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="adup">Aggregate demand rises</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="addown">Aggregate demand falls</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="supply">Negative supply shock</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="longrun">Expectations catch up</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="hold">Unemployment held at 4%</button>
+      <button type="button" class="chip" aria-pressed="false" data-show="natfall">The natural rate falls</button>
+    </div>
+<svg id="pcfig" class="adpc-svg" viewBox="0 0 720 320" role="img" aria-label="The AD-AS model and the Phillips curve side by side">
+<text class="pn" x="190" y="16" text-anchor="middle">Aggregate demand and supply</text>
+<text class="pn" x="550" y="16" text-anchor="middle">Phillips curve</text>
+<path class="ax" d="M60 30 V270 H320"></path>
+<path class="ax" d="M410 30 V270 H690"></path>
+<text class="tk" x="410.0" y="286" text-anchor="middle">2</text>
+<text class="tk" x="445.0" y="286" text-anchor="middle">3</text>
+<text class="tk" x="480.0" y="286" text-anchor="middle">4</text>
+<text class="tk" x="515.0" y="286" text-anchor="middle">5</text>
+<text class="tk" x="550.0" y="286" text-anchor="middle">6</text>
+<text class="tk" x="585.0" y="286" text-anchor="middle">7</text>
+<text class="tk" x="620.0" y="286" text-anchor="middle">8</text>
+<text class="tk" x="655.0" y="286" text-anchor="middle">9</text>
+<text class="tk" x="690.0" y="286" text-anchor="middle">10</text>
+<text class="tk" x="404" y="274.0" text-anchor="end">&minus;2</text>
+<text class="tk" x="404" y="226.0" text-anchor="end">0</text>
+<text class="tk" x="404" y="178.0" text-anchor="end">2</text>
+<text class="tk" x="404" y="130.0" text-anchor="end">4</text>
+<text class="tk" x="404" y="82.0" text-anchor="end">6</text>
+<text class="tk" x="404" y="34.0" text-anchor="end">8</text>
+<text class="tl" x="190" y="306" text-anchor="middle">Real GDP</text>
+<text class="tl" x="550" y="306" text-anchor="middle">Unemployment rate (%)</text>
+<text class="tl" x="44" y="150" text-anchor="middle" transform="rotate(-90 44 150)">Price level</text>
+<text class="tl" x="378" y="150" text-anchor="middle" transform="rotate(-90 378 150)">Inflation rate (%)</text>
+<g id="s-start" hidden>
+<path class="cv" d="M60.0 90.0 L320.0 270.0"></path>
+<text class="cl" x="316.0" y="264.0" text-anchor="end">AD&#8320;</text>
+<path class="cv" d="M60.0 225.0 L320.0 135.0"></path>
+<text class="cl" x="316.0" y="129.0" text-anchor="end">SRAS&#8320;</text>
+<path class="lr" d="M190.0 30 V270"></path>
+<text class="cl" x="194.0" y="42.0" text-anchor="start">LRAS</text>
+<path class="gl" d="M190.0 180.0 V270 M190.0 180.0 H60"></path>
+<circle class="pt" cx="190.0" cy="180.0" r="5.5"></circle>
+<path class="cv" d="M410.0 78.0 L690.0 270.0"></path>
+<text class="cl" x="686.0" y="264.0" text-anchor="end">SRPC&#8320;</text>
+<path class="lr" d="M550.0 30 V270"></path>
+<text class="cl" x="554.0" y="42.0" text-anchor="start">LRPC</text>
+<path class="gl" d="M550.0 174.0 V270 M550.0 174.0 H410"></path>
+<circle class="pt" cx="550.0" cy="174.0" r="5.5"></circle>
+</g>
+<g id="s-adup" hidden>
+<path class="gh" d="M60.0 90.0 L320.0 270.0"></path>
+<text class="cl" x="64.0" y="84.0" text-anchor="start">AD&#8320;</text>
+<path class="cv" d="M103.3 30.0 L320.0 180.0"></path>
+<text class="cl" x="316.0" y="174.0" text-anchor="end">AD&#8321;</text>
+<path class="cv" d="M60.0 225.0 L320.0 135.0"></path>
+<text class="cl" x="316.0" y="129.0" text-anchor="end">SRAS&#8320;</text>
+<path class="lr" d="M190.0 30 V270"></path>
+<text class="cl" x="194.0" y="42.0" text-anchor="start">LRAS</text>
+<path class="gl" d="M276.7 150.0 V270 M276.7 150.0 H60"></path>
+<circle class="pt" cx="276.7" cy="150.0" r="5.5"></circle>
+<path class="cv" d="M410.0 78.0 L690.0 270.0"></path>
+<text class="cl" x="686.0" y="264.0" text-anchor="end">SRPC&#8320;</text>
+<path class="lr" d="M550.0 30 V270"></path>
+<text class="cl" x="554.0" y="42.0" text-anchor="start">LRPC</text>
+<path class="gl" d="M480.0 126.0 V270 M480.0 126.0 H410"></path>
+<circle class="pt" cx="480.0" cy="126.0" r="5.5"></circle>
+</g>
+<g id="s-addown" hidden>
+<path class="gh" d="M60.0 90.0 L320.0 270.0"></path>
+<text class="cl" x="64.0" y="84.0" text-anchor="start">AD&#8320;</text>
+<path class="cv" d="M60.0 180.0 L190.0 270.0"></path>
+<text class="cl" x="186.0" y="264.0" text-anchor="end">AD&#8321;</text>
+<path class="cv" d="M60.0 225.0 L320.0 135.0"></path>
+<text class="cl" x="316.0" y="129.0" text-anchor="end">SRAS&#8320;</text>
+<path class="lr" d="M190.0 30 V270"></path>
+<text class="cl" x="194.0" y="42.0" text-anchor="start">LRAS</text>
+<path class="gl" d="M103.3 210.0 V270 M103.3 210.0 H60"></path>
+<circle class="pt" cx="103.3" cy="210.0" r="5.5"></circle>
+<path class="cv" d="M410.0 78.0 L690.0 270.0"></path>
+<text class="cl" x="686.0" y="264.0" text-anchor="end">SRPC&#8320;</text>
+<path class="lr" d="M550.0 30 V270"></path>
+<text class="cl" x="554.0" y="42.0" text-anchor="start">LRPC</text>
+<path class="gl" d="M620.0 222.0 V270 M620.0 222.0 H410"></path>
+<circle class="pt" cx="620.0" cy="222.0" r="5.5"></circle>
+</g>
+<g id="s-supply" hidden>
+<path class="cv" d="M60.0 90.0 L320.0 270.0"></path>
+<text class="cl" x="316.0" y="264.0" text-anchor="end">AD&#8320;</text>
+<path class="gh" d="M60.0 225.0 L320.0 135.0"></path>
+<text class="cl" x="64.0" y="219.0" text-anchor="start">SRAS&#8320;</text>
+<path class="cv" d="M60.0 180.0 L320.0 90.0"></path>
+<text class="cl" x="316.0" y="84.0" text-anchor="end">SRAS&#8321;</text>
+<path class="lr" d="M190.0 30 V270"></path>
+<text class="cl" x="194.0" y="42.0" text-anchor="start">LRAS</text>
+<path class="gl" d="M146.7 150.0 V270 M146.7 150.0 H60"></path>
+<circle class="pt" cx="146.7" cy="150.0" r="5.5"></circle>
+<path class="gh" d="M410.0 78.0 L690.0 270.0"></path>
+<text class="cl" x="414.0" y="94.0" text-anchor="start">SRPC&#8320;</text>
+<path class="cv" d="M445.0 30.0 L690.0 198.0"></path>
+<text class="cl" x="686.0" y="192.0" text-anchor="end">SRPC&#8321;</text>
+<path class="lr" d="M550.0 30 V270"></path>
+<text class="cl" x="554.0" y="42.0" text-anchor="start">LRPC</text>
+<path class="gl" d="M585.0 126.0 V270 M585.0 126.0 H410"></path>
+<circle class="pt" cx="585.0" cy="126.0" r="5.5"></circle>
+</g>
+<g id="s-longrun" hidden>
+<path class="gh" d="M60.0 90.0 L320.0 270.0"></path>
+<text class="cl" x="64.0" y="84.0" text-anchor="start">AD&#8320;</text>
+<path class="cv" d="M103.3 30.0 L320.0 180.0"></path>
+<text class="cl" x="316.0" y="174.0" text-anchor="end">AD&#8321;</text>
+<path class="gh" d="M60.0 225.0 L320.0 135.0"></path>
+<text class="cl" x="64.0" y="219.0" text-anchor="start">SRAS&#8320;</text>
+<path class="cv" d="M60.0 135.0 L320.0 45.0"></path>
+<text class="cl" x="316.0" y="39.0" text-anchor="end">SRAS&#8321;</text>
+<path class="lr" d="M190.0 30 V270"></path>
+<text class="cl" x="194.0" y="42.0" text-anchor="start">LRAS</text>
+<path class="gl" d="M190.0 90.0 V270 M190.0 90.0 H60"></path>
+<circle class="pt" cx="190.0" cy="90.0" r="5.5"></circle>
+<path class="gh" d="M410.0 78.0 L690.0 270.0"></path>
+<text class="cl" x="414.0" y="94.0" text-anchor="start">SRPC&#8320;</text>
+<path class="cv" d="M410.0 30.0 L690.0 222.0"></path>
+<text class="cl" x="686.0" y="216.0" text-anchor="end">SRPC&#8321;</text>
+<path class="lr" d="M550.0 30 V270"></path>
+<text class="cl" x="554.0" y="42.0" text-anchor="start">LRPC</text>
+<path class="gl" d="M550.0 126.0 V270 M550.0 126.0 H410"></path>
+<circle class="pt" cx="550.0" cy="126.0" r="5.5"></circle>
+</g>
+<g id="s-hold" hidden>
+<path class="gh" d="M60.0 90.0 L320.0 270.0"></path>
+<text class="cl" x="64.0" y="84.0" text-anchor="start">AD&#8320;</text>
+<path class="cv" d="M233.3 30.0 L320.0 90.0"></path>
+<text class="cl" x="316.0" y="84.0" text-anchor="end">AD&#8321;</text>
+<path class="gh" d="M60.0 225.0 L320.0 135.0"></path>
+<text class="cl" x="64.0" y="219.0" text-anchor="start">SRAS&#8320;</text>
+<path class="cv" d="M60.0 135.0 L320.0 45.0"></path>
+<text class="cl" x="316.0" y="39.0" text-anchor="end">SRAS&#8321;</text>
+<path class="lr" d="M190.0 30 V270"></path>
+<text class="cl" x="194.0" y="42.0" text-anchor="start">LRAS</text>
+<path class="gl" d="M276.7 60.0 V270 M276.7 60.0 H60"></path>
+<circle class="pt" cx="276.7" cy="60.0" r="5.5"></circle>
+<path class="gh" d="M410.0 78.0 L690.0 270.0"></path>
+<text class="cl" x="414.0" y="94.0" text-anchor="start">SRPC&#8320;</text>
+<path class="cv" d="M410.0 30.0 L690.0 222.0"></path>
+<text class="cl" x="686.0" y="216.0" text-anchor="end">SRPC&#8321;</text>
+<path class="lr" d="M550.0 30 V270"></path>
+<text class="cl" x="554.0" y="42.0" text-anchor="start">LRPC</text>
+<path class="gl" d="M480.0 78.0 V270 M480.0 78.0 H410"></path>
+<circle class="pt" cx="480.0" cy="78.0" r="5.5"></circle>
+</g>
+<g id="s-natfall" hidden>
+<path class="gh" d="M60.0 90.0 L320.0 270.0"></path>
+<text class="cl" x="64.0" y="84.0" text-anchor="start">AD&#8320;</text>
+<path class="cv" d="M60.0 60.0 L320.0 240.0"></path>
+<text class="cl" x="316.0" y="234.0" text-anchor="end">AD&#8321;</text>
+<path class="gh" d="M60.0 225.0 L320.0 135.0"></path>
+<text class="cl" x="64.0" y="219.0" text-anchor="start">SRAS&#8320;</text>
+<path class="cv" d="M60.0 240.0 L320.0 150.0"></path>
+<text class="cl" x="316.0" y="144.0" text-anchor="end">SRAS&#8321;</text>
+<path class="gh" d="M190.0 30 V270"></path>
+<text class="cl" x="186.0" y="42.0" text-anchor="end">LRAS&#8320;</text>
+<path class="lr" d="M233.3 30 V270"></path>
+<text class="cl" x="237.3" y="42.0" text-anchor="start">LRAS&#8321;</text>
+<path class="gl" d="M233.3 180.0 V270 M233.3 180.0 H60"></path>
+<circle class="pt" cx="233.3" cy="180.0" r="5.5"></circle>
+<path class="gh" d="M410.0 78.0 L690.0 270.0"></path>
+<text class="cl" x="414.0" y="94.0" text-anchor="start">SRPC&#8320;</text>
+<path class="cv" d="M410.0 102.0 L655.0 270.0"></path>
+<text class="cl" x="651.0" y="264.0" text-anchor="end">SRPC&#8321;</text>
+<path class="gh" d="M550.0 30 V270"></path>
+<text class="cl" x="554.0" y="42.0" text-anchor="start">LRPC&#8320;</text>
+<path class="lr" d="M515.0 30 V270"></path>
+<text class="cl" x="511.0" y="42.0" text-anchor="end">LRPC&#8321;</text>
+<path class="gl" d="M515.0 174.0 V270 M515.0 174.0 H410"></path>
+<circle class="pt" cx="515.0" cy="174.0" r="5.5"></circle>
+</g>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Unemployment</span><span class="v" id="ro0">&ndash;</span></div>
+      <div class="ro"><span class="k">Inflation</span><span class="v hl" id="ro1">&ndash;</span></div>
+      <div class="ro"><span class="k">Expected inflation</span><span class="v" id="ro2">&ndash;</span></div>
+      <div class="ro"><span class="k">Natural rate</span><span class="v" id="ro3">&ndash;</span></div>
+      <div class="ro"><span class="k">Position</span><span class="v" id="ro4">&ndash;</span></div>
+    </div>
+    <p class="figcap" id="pcap"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The 15 terms</h2>
+</section>
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Short-run Phillips curve</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>negative short-run relationship</b> between the unemployment rate and the inflation rate: a downward-sloping curve, the <b>SRPC</b>.</p></div>
+  <p class="reading">Textbook page 331, margin, and Figure 34.2.</p>
+
+  <p>Low unemployment comes with high inflation, and high unemployment with low inflation. When spending is strong, firms hire more and raise prices faster; when it is weak, they hire less and raise prices more slowly.</p>
+
+  <p>Draw it with the <b>inflation rate</b> on the vertical axis and the <b>unemployment rate</b> on the horizontal. Both axes are rates, not levels.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The axes are not the price level and real GDP &mdash; those belong to the aggregate demand and supply graph. A Phillips curve labeled with the price level earns nothing.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 34.1.</span> U.S. data, 1955&ndash;1968: each dot is a year, and the low-unemployment years sit high on the inflation axis while the high-unemployment years sit low.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your textbook&rsquo;s curve.</span> With 0% expected inflation, 6% unemployment gives <b>0%</b> inflation and 4% gives <b>2%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A hiring boom.</span> Unemployment falls from 6% to 4%; firms short of workers raise wages and prices faster.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> You read the economy&rsquo;s position off it (<a href="#e2">entry 2</a>). Demand moves the economy along it (<a href="#e3">entry 3</a>); supply shocks shift it (<a href="#e4">entry 4</a>). Its long-run partner is the <a href="#e7">LRPC</a> (entry 7).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> Which axis carries the inflation rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The vertical axis. The unemployment rate is on the horizontal.</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> Unemployment falls along an SRPC. What happens to inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It rises.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Reading a point</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>An economy is <b>always somewhere on a short-run Phillips curve</b>. Its unemployment rate and inflation rate today are one point on it.</p></div>
+  <p class="reading">Shown in every figure of the module; not said in words.</p>
+
+  <p>To read the economy&rsquo;s position, use the SRPC. Given the inflation rate, go across to the SRPC and down to the unemployment rate; given unemployment, go up to the SRPC and across.</p>
+
+  <p>The long-run curve tells you where the economy will end up, not where it is now.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Read the point off the <b>SRPC</b>, not the vertical LRPC. The LRPC gives the natural rate, not the current rate.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 34.5.</span> Points A, B and C are each on a short-run curve: A is on SRPC0, at 4% unemployment and 2% inflation.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A straight-line SRPC.</span> It runs from 1% unemployment and 8% inflation to 5% and 0%; the LRPC is at 4%. At 6% inflation, unemployment is <b>2%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> Whatever button you press, the dot sits on the solid SRPC.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It reads the <a href="#e1">SRPC</a> (entry 1). Where the point sits against the LRPC tells you <a href="#e9">long-run equilibrium</a> (entry 9) or a <a href="#e10">gap</a> (entry 10).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> On that straight-line SRPC, what is unemployment when inflation is 4%?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p><b>3%</b>: inflation falls 2 points for each point of unemployment, from 8% at 1%.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> Why not read the current rate off the LRPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The LRPC is vertical at the natural rate. It shows the long run, not the economy&rsquo;s current point.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Demand shocks: movement along the SRPC</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Partly not in your textbook &mdash; learn it from here.</b> Your textbook moves the economy along the curve with &ldquo;monetary policy, fiscal policy, or both&rdquo; but never calls it a <i>demand shock</i>, and links it to the aggregate demand and supply graph only in the solutions at the back of the book.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A change in <b>aggregate demand</b> moves the economy <b>along</b> the short-run Phillips curve. It does not shift the curve.</p></div>
+  <p class="reading">Textbook page 335, and the solution to Check Your Understanding 1.</p>
+
+  <p>When aggregate demand rises, real GDP rises, firms hire and unemployment falls; the price level rises faster, so inflation rises. On the Phillips curve that is a move <b>up and to the left</b>.</p>
+
+  <p>When aggregate demand falls, unemployment rises and inflation falls &mdash; a move <b>down and to the right</b>. Consumer and business spending, government purchases, taxes and the money supply all work this way.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A demand shock never shifts the SRPC. If your answer shifts the curve after a change in spending, it is wrong.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Point A.</span> Policy pushes unemployment from 6% to 4%: the economy moves from E0 to point A on SRPC0, and inflation rises from 0% to 2%.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Press <b>Aggregate demand rises</b>. Unemployment falls from 6% to <b>4%</b> and inflation rises from 2% to <b>4%</b>, along the same curve.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A loss of confidence.</span> Households cut spending: unemployment rises and inflation falls, down the SRPC.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It moves the economy along the <a href="#e1">SRPC</a> (entry 1), unlike a <a href="#e4">supply shock</a> (entry 4), and can open either <a href="#e10">gap</a> (entry 10).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> The central bank increases the money supply. Along the SRPC, or a shift?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Along it: up and to the left.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> Government spending falls. Which way does the economy move on the SRPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Down and to the right: higher unemployment, lower inflation.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>Supply shocks: the SRPC shifts</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A <b>negative supply shock</b> shifts the SRPC <b>up</b>; a <b>positive supply shock</b> shifts it <b>down</b>.</p></div>
+  <p class="reading">Textbook page 332 and Figure 34.3.</p>
+
+  <p>A supply shock shifts the short-run aggregate supply curve. A surge in oil prices raises costs, so inflation is higher at every unemployment rate: the whole SRPC moves up.</p>
+
+  <p>That is how inflation and unemployment can rise together &mdash; <b>stagflation</b>, the 1970s. Falling raw-material prices or faster productivity growth do the reverse, as in the 1990s.</p>
+
+  <div class="watch"><p><b>Watch out.</b> After a negative supply shock the economy is to the <b>right</b> of long-run equilibrium &mdash; a recessionary gap &mdash; even though inflation is higher.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The 1970s.</span> Oil prices soared and productivity growth slowed; the SRPC shifted up, and high unemployment came with high inflation.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> <b>Negative supply shock</b> raises the SRPC by 3 points. Unemployment goes from 6% to <b>7%</b> and inflation from 2% to <b>4%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A drought.</span> Food prices jump across the economy; costs rise, and inflation and unemployment rise together.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It shifts the <a href="#e1">SRPC</a> (entry 1), where a <a href="#e3">demand shock</a> (entry 3) moves along it. <a href="#e6">Expected inflation</a> (entry 6) shifts it the same way.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> Oil prices fall sharply. Which way does the SRPC shift?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Down &mdash; a positive supply shock.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> What is stagflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Higher inflation and higher unemployment at the same time, from a negative supply shock.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>Expected inflation</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The rate of inflation that <b>employers and workers expect</b> in the near future.</p></div>
+  <p class="reading">Textbook page 333, margin.</p>
+
+  <p>People base it on experience: if inflation has been about 2% for a few years, they expect about 2%; if it has averaged 5%, they expect 5%.</p>
+
+  <p>It matters because it is built into wage contracts and prices. A worker who expects 5% inflation asks for a raise that keeps up; an employer who expects to sell at higher prices can agree to it.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Expected inflation is not actual inflation. In the short run they can differ; in the long run they are equal.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The 1960s.</span> Inflation had been low for decades, so people expected little; only after 1965 did persistent inflation become a fact of life and enter expectations.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Recent experience.</span> Inflation of 4%, 5% and 6% in the last three years: people expect about <b>5%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A wage contract.</span> A union that expects 3% inflation asks for 3% just to stand still, before any real raise.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It shifts the SRPC (<a href="#e6">entry 6</a>), and it is what catches up in the long run (<a href="#e11">entry 11</a>).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> How do people form expected inflation, in your textbook?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>From experience: recent inflation.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> Actual inflation is 6% and expected inflation is 4%. Can that last?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Not in the long run: expectations catch up.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>Expected inflation shifts the SRPC</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A rise in expected inflation shifts the SRPC <b>up by the same amount</b>: each extra point of expected inflation adds one point to inflation at every unemployment rate.</p></div>
+  <p class="reading">Textbook pages 333&ndash;335 and Figure 34.4.</p>
+
+  <p>With 0% expected inflation, your textbook&rsquo;s curve gives 0% inflation at 6% unemployment and 2% at 4%. With 2% expected, every point is 2 higher: 2% at 6%, 4% at 4%.</p>
+
+  <p>It works through costs: higher expected inflation raises wages, which shifts the short-run aggregate supply curve left and the SRPC up. A fall in expected inflation shifts both back.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A change in expected inflation shifts the curve. It is not a movement along it.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 34.4.</span> SRPC0 and SRPC2 are 2 points apart at every unemployment rate.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> <b>Expectations catch up</b>: expected inflation rises from 2% to 4%, the SRPC rises 2 points, and at 6% unemployment inflation is <b>4%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A believed announcement.</span> The central bank convinces everyone that inflation will fall to 2%; expected inflation drops and the SRPC shifts down.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is how <a href="#e5">expected inflation</a> (entry 5) acts, in the same direction as a <a href="#e4">supply shock</a> (entry 4), and it drives the <a href="#e11">long-run adjustment</a> (entry 11).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> Expected inflation rises from 3% to 5%. How far does the SRPC move?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Up 2 percentage points at every unemployment rate.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> On SRPC0 inflation is 2% at 4% unemployment. What is it at 4% on the curve for 4% expected inflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p><b>6%</b> &mdash; four points higher.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>Long-run Phillips curve</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The relationship between unemployment and inflation <b>after expectations have had time to adjust</b>. It is <b>vertical at the natural rate of unemployment</b>: the <b>LRPC</b>.</p></div>
+  <p class="reading">Textbook page 336, margin, and Figure 34.5.</p>
+
+  <p>In the long run any steady rate of inflation is expected, and once it is expected it no longer lowers unemployment. Unemployment returns to the natural rate whatever the inflation rate.</p>
+
+  <p>So there is <b>no long-run trade-off</b>. The LRPC is the Phillips-curve twin of the vertical long-run aggregate supply curve.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Vertical does not mean inflation cannot change. Inflation can settle at any rate; unemployment cannot stay off the natural rate.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 34.5.</span> E0, E2 and E4 &mdash; 0%, 2% and 4% inflation &mdash; are all at 6% unemployment; the LRPC passes through all three.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your textbook&rsquo;s natural rate.</span> <b>6%</b>: the LRPC is drawn there at every inflation rate.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Two decades.</span> A country averages 2% inflation one decade and 8% the next; its unemployment averages the same natural rate in both.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the long-run partner of the <a href="#e1">SRPC</a> (entry 1), standing at the <a href="#e8">natural rate</a> (entry 8). Where the two cross is <a href="#e9">long-run equilibrium</a> (entry 9); it moves only when the natural rate does (<a href="#e12">entry 12</a>).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> What shape is the LRPC, and where does it stand?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Vertical, at the natural rate of unemployment.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> Why is there no long-run trade-off?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Once inflation is expected, unemployment returns to the natural rate at any inflation rate.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>The natural rate and the NAIRU</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>natural rate of unemployment</b> &mdash; frictional plus structural &mdash; is where the LRPC stands. Your textbook also calls it the <b>NAIRU</b>, the nonaccelerating inflation rate of unemployment.</p></div>
+  <p class="reading">Textbook pages 336&ndash;337.</p>
+
+  <p>The name NAIRU describes what happens at that rate: inflation stays constant. Below it, inflation keeps speeding up; above it, inflation keeps slowing down.</p>
+
+  <p>Your textbook says plainly that the NAIRU is another name for the natural rate. Your exam uses only <b>natural rate</b> &mdash; use that name on every graph.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The natural rate is not zero, and it is not the lowest unemployment the economy can reach in the short run. It is the rate the economy returns to.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Europe.</span> When European unemployment fell from above 9% towards 8% in the late 1980s, inflation began to speed up: Europe&rsquo;s natural rate was 9% or more.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Figure 34.5.</span> At 6% unemployment inflation is constant, at 0%, 2% or 4%: whatever was expected.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">From Module 13.</span> Frictional unemployment of 3% plus structural unemployment of 2% is a natural rate of <b>5%</b>; the LRPC stands there.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It places the <a href="#e7">LRPC</a> (entry 7), which moves when it changes (<a href="#e12">entry 12</a>).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> What other name does your textbook use for the natural rate?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>The NAIRU.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> Frictional unemployment is 4% and structural unemployment 1.5%. Where is the LRPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>At <b>5.5%</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>Long-run equilibrium</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; The name is not in your textbook &mdash; learn it from here.</b> Your textbook marks these points E0, E2 and E4 but never calls them <i>long-run equilibrium</i>. Your exam does.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Long-run equilibrium is where the <b>SRPC crosses the LRPC</b>: unemployment is at the natural rate and actual inflation equals expected inflation.</p></div>
+  <p class="reading">Textbook pages 335&ndash;336, Figure 34.5, without the name.</p>
+
+  <p>At that point nobody is surprised: inflation is what people expected, so wages and prices have no reason to change course, and unemployment stays at the natural rate.</p>
+
+  <p>Every SRPC crosses the LRPC once, at an inflation rate equal to its expected inflation. That crossing is the long-run equilibrium for that curve.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Long-run equilibrium can come with any inflation rate &mdash; 0%, 2% or 4%. What makes it long-run equilibrium is unemployment at the natural rate.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">E2.</span> Expected inflation 2%, unemployment 6%, inflation 2%.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> <b>Long-run equilibrium</b>: 6% unemployment, 2% inflation, 2% expected.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A steady economy.</span> Inflation has run at 3% for years and everyone expects 3%; unemployment sits at the natural rate.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the point where the <a href="#e7">LRPC</a> (entry 7) crosses the curve you <a href="#e2">read</a> (entry 2). Points off it are <a href="#e10">gaps</a> (entry 10), and the economy returns to it (<a href="#e11">entry 11</a>).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> An SRPC was drawn for 5% expected inflation. At what inflation rate does it cross the LRPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p><b>5%</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> The natural rate is 6% and unemployment is 4%. Is the economy in long-run equilibrium?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It is off the LRPC, to its left.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>Inflationary and recessionary gaps</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Your textbook uses these two words only on the aggregate demand and supply graph, never on the Phillips curve. Your exam asks for them on both.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>A point to the <b>left</b> of long-run equilibrium &mdash; unemployment below the natural rate &mdash; is an <b>inflationary gap</b>. A point to the <b>right</b> &mdash; unemployment above it &mdash; is a <b>recessionary gap</b>.</p></div>
+  <p class="reading">Not in the textbook on this graph. Its aggregate demand and supply version is in Unit 3.</p>
+
+  <p>Left of the LRPC, real GDP is above potential output: the economy is overheating, as in an inflationary gap on the aggregate demand and supply graph. Right of it, real GDP is below potential: a recessionary gap.</p>
+
+  <p>The sides swap between the two graphs. More output means less unemployment, so a gap on the right of the aggregate demand and supply graph is on the left of the Phillips curve.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Judge the gap by unemployment, not by inflation. A negative supply shock brings higher inflation and a <b>recessionary</b> gap.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 34.5.</span> Point A, at 4% unemployment against a 6% natural rate, is to the left: an inflationary gap.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> <b>Aggregate demand falls</b>: unemployment of <b>8%</b> against a natural rate of 6% &mdash; a recessionary gap.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Two countries.</span> Both have a natural rate of 5%; one has unemployment of 3.5%, the other 7%. The first has an inflationary gap, the second a recessionary gap.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is read from the point (<a href="#e2">entry 2</a>) against <a href="#e9">long-run equilibrium</a> (entry 9); a <a href="#e3">demand shock</a> (entry 3) opens one.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> The natural rate is 5% and unemployment is 6.5%. Which gap?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>A recessionary gap &mdash; to the right.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> On the aggregate demand and supply graph an inflationary gap is to the right of potential output. Where is it on the Phillips curve?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>To the left of the natural rate.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>From the short run to the long run</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>In the long run, expected inflation <b>catches up</b> with actual inflation, the SRPC shifts, and unemployment <b>returns to the natural rate</b>.</p></div>
+  <p class="reading">Textbook pages 335&ndash;336 and Figure 34.5.</p>
+
+  <p>Start in long-run equilibrium and raise aggregate demand: unemployment falls and inflation rises, along the SRPC. Inflation is now above what people expected. As they come to expect it, wages rise, short-run aggregate supply shifts left and the SRPC shifts up. Unemployment returns to the natural rate at the higher inflation rate.</p>
+
+  <p>If policy keeps pushing unemployment below the natural rate, the process repeats: inflation rises again and again &mdash; 2%, then 4%, then 6% in your textbook. Holding unemployment below the natural rate means <b>accelerating inflation</b>, so it cannot be kept up.</p>
+
+  <div class="watch"><p><b>Watch out.</b> In the long run unemployment returns to the natural rate, but inflation does <b>not</b> return to where it started. It ends higher.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">A, B and C.</span> Holding unemployment at 4%: inflation 2% at A, 4% at B, 6% at C.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> Press <b>Aggregate demand rises</b>, then <b>Expectations catch up</b>: from 4% unemployment and 4% inflation back to <b>6%</b> unemployment, with inflation still 4%.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A recession left alone.</span> Unemployment is above the natural rate and inflation falls below what was expected; expectations fall, the SRPC shifts down, and unemployment returns to the natural rate.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is <a href="#e5">expected inflation</a> (entry 5) catching up and <a href="#e6">shifting the SRPC</a> (entry 6) until the economy is back in <a href="#e9">long-run equilibrium</a> (entry 9). Run in reverse, it is <a href="#e13">disinflation</a> (entry 13).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> Inflation turns out higher than expected. In the long run, where does unemployment go?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Back to the natural rate, as expected inflation rises and the SRPC shifts up.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> Why can&rsquo;t policy keep unemployment below the natural rate for ever?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Inflation would keep accelerating as expectations rise.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>Shifts of the LRPC</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Your textbook never moves the long-run Phillips curve. Your exam expects you to shift it when the natural rate changes; the causes are the ones you met in Module 13.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Anything that <b>changes the natural rate of unemployment</b> shifts the LRPC: a lower natural rate moves it <b>left</b>, a higher one <b>right</b>.</p></div>
+  <p class="reading">Not in the textbook. The causes are in Module 13, pages 128&ndash;131.</p>
+
+  <p>The natural rate changes with the labor force and with institutions. Job-matching websites and training programs lower it; more inexperienced workers, more generous unemployment benefits or a minimum wage above equilibrium raise it.</p>
+
+  <p>When the LRPC shifts, the SRPC moves with it, so that the two still cross at expected inflation. Potential output moves the other way round: a lower natural rate means the long-run aggregate supply curve shifts right.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Changes in spending, supply shocks and expected inflation do not shift the LRPC. Only a change in the natural rate does.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Module 13.</span> Job websites cut frictional unemployment; a wave of young, inexperienced workers raises it.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> <b>The natural rate falls</b> from 6% to <b>5%</b>; the LRPC moves left, and the economy settles at 5% unemployment with 2% inflation.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Longer benefits.</span> Unemployment benefits are extended from six months to two years; people search longer, the natural rate rises and the LRPC shifts right.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It moves the <a href="#e7">LRPC</a> (entry 7) because it moves the <a href="#e8">natural rate</a> (entry 8).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> A government retraining program cuts structural unemployment. Which way does the LRPC shift?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Left.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> Does an increase in aggregate demand shift the LRPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It moves the economy along the SRPC.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE DRILL ============ -->
+<section class="section" id="sorter">
+  <h2>Drill: along, or shift?</h2>
+  <p>Twelve events. Does each move the economy along the short-run Phillips curve, shift the short-run curve, or
+  shift the long-run curve?</p>
+  <div class="widget">
+    <div id="sorter-list"></div>
+    <p class="score" id="sorter-score">0 of 12 answered</p>
+    <button type="button" id="sorter-reset">Start again</button>
+  </div>
+</section>
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>Disinflation and its cost</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Disinflation</b> is bringing the inflation rate down. Once high inflation is built into expectations, it needs unemployment <b>above the natural rate</b> for a time.</p></div>
+  <p class="reading">Textbook pages 337&ndash;338 and the FYI on the 1980s.</p>
+
+  <p>Run the long-run adjustment in reverse. Contractionary policy moves the economy down the SRPC: unemployment rises above the natural rate and inflation falls below what people expected. As expectations fall, the SRPC shifts down and unemployment returns to the natural rate at the lower inflation rate.</p>
+
+  <p>The cost is the output lost in between. A credible, clearly announced policy can lower expectations faster and so lower the cost.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Disinflation is a fall in the <b>rate</b> of inflation &mdash; prices still rise, more slowly. Deflation is a fall in the price level.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">1980&ndash;1987.</span> Core inflation fell from about 12% to about 4%; unemployment rose above 9%, output fell 7% below potential, and the cost was about <b>18%</b> of a year&rsquo;s real GDP.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Down the curve.</span> Expected inflation 6%, natural rate 6%: contractionary policy raises unemployment to 8%, and inflation falls to <b>4%</b> on that curve before expectations follow.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A promise believed.</span> A new central-bank head announces a 2% target and is believed; expected inflation falls quickly and less unemployment is needed.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the <a href="#e11">long-run adjustment</a> (entry 11) run backwards. Its opposite number in prices, deflation, brings <a href="#e14">debt deflation</a> (entry 14).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> Inflation falls from 5% to 3%. Disinflation or deflation?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Disinflation &mdash; prices still rise, more slowly.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> Why does disinflation raise unemployment for a while?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Inflation has to fall below what people expect, which means moving down the SRPC until expectations adjust.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e14">
+  <div class="entry-head"><span class="entry-num">14</span><h2>Debt deflation</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The fall in aggregate demand caused when <b>deflation raises the real burden of debts</b>.</p></div>
+  <p class="reading">Textbook pages 338&ndash;339, margin.</p>
+
+  <p>When the price level falls, each dollar owed is worth more. Borrowers lose and cut their spending sharply; lenders gain but spend little more. Aggregate demand falls, which can push prices down further.</p>
+
+  <p>Irving Fisher argued that this vicious circle deepened the Great Depression.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background only. Who gains and loses from unexpected deflation is Module 14; the spiral is not on your exam.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">The Great Depression.</span> Prices fell, debts fixed in dollars grew heavier, and spending collapsed.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A $10,000 loan.</span> Prices fall 10%: repaying $10,000 now costs what about <b>$11,111</b> did before.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A farmer.</span> Crop prices fall and the mortgage does not; the farmer stops buying equipment.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It follows from deflation, the opposite of <a href="#e13">disinflation</a> (entry 13), and is one reason policy makers fear the <a href="#e15">zero bound</a> (entry 15).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">14.1</span> Who gains from deflation, borrowers or lenders?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Lenders.</p></div></details></div>
+    <div class="q"><p><span class="qn">14.2</span> Why does debt deflation reduce aggregate demand?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Borrowers cut their spending by more than lenders raise theirs.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got14"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e15">
+  <div class="entry-head"><span class="entry-num">15</span><h2>The zero bound and the liquidity trap</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>zero bound</b>: a nominal interest rate cannot fall below zero. A <b>liquidity trap</b> is when monetary policy cannot help because interest rates are already at zero.</p></div>
+  <p class="reading">Textbook pages 339&ndash;341, margins, and Figures 34.6&ndash;34.8.</p>
+
+  <p>Nobody lends at a negative nominal rate when holding cash pays zero. So when expected deflation drags the equilibrium rate towards zero, the central bank cannot cut it any further.</p>
+
+  <p>Japan reached it in the 1990s with its zero interest rate policy; the United States did in 2008&ndash;2009. It is one reason central banks prefer low but positive inflation.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background only. Your exam does not ask about the zero bound.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Japan.</span> The Lost Decade: deflation, and an interest rate cut all the way to zero.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review, free response 2.</span> A 4% real rate with &minus;2% expected inflation gives a nominal rate of 2%; with &minus;6% it would be &minus;2%, but it stops at <b>0%</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Cash under the mattress.</span> If the bank charged you to lend it money, you would keep cash instead.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is where <a href="#e14">debt deflation</a> (entry 14) leaves monetary policy.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">15.1</span> Why can&rsquo;t the nominal interest rate go below zero?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Lenders would rather hold cash, which pays zero.</p></div></details></div>
+    <div class="q"><p><span class="qn">15.2</span> What is a liquidity trap?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>A situation in which monetary policy cannot cut interest rates further because they are already at zero.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got15"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ MCQ ============ -->
+<section class="section" id="mcq">
+  <h2>Tackle the test &mdash; multiple choice</h2>
+  <p>The five questions from your textbook&rsquo;s AP Review, with <b>every option explained</b>.</p>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">1</span> The long-run Phillips curve is&hellip; I. the same as the short-run Phillips curve. II. vertical. III. the short-run Phillips curve plus expected inflation.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; The two curves differ: one slopes down, the other is vertical.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10003; <b>Correct.</b> Vertical at the natural rate.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10007; Expected inflation shifts the short-run curve; it does not turn it into the long-run curve.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>I and II only<span class="why" hidden>&#10007; Statement I is false.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II, and III<span class="why" hidden>&#10007; Only statement II is true.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">2</span> The short-run Phillips curve shows a ___ relationship between ___.</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>negative &mdash; the aggregate price level and aggregate output<span class="why" hidden>&#10007; Those are the axes of the aggregate demand and supply graph.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>positive &mdash; the aggregate price level and aggregate output<span class="why" hidden>&#10007; The wrong graph, and the short-run aggregate supply curve&rsquo;s slope.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>negative &mdash; unemployment and inflation<span class="why" hidden>&#10003; <b>Correct.</b> Lower unemployment, higher inflation.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>positive &mdash; unemployment and aggregate output<span class="why" hidden>&#10007; More output means less unemployment, and neither is on both axes.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>positive &mdash; unemployment and the aggregate price level<span class="why" hidden>&#10007; The vertical axis is the inflation rate, and the slope is negative.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">3</span> An increase in expected inflation will shift&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>the short-run Phillips curve downward.<span class="why" hidden>&#10007; Higher expected inflation raises it.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>the short-run Phillips curve upward.<span class="why" hidden>&#10003; <b>Correct.</b> By the amount of the increase.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>the long-run Phillips curve upward.<span class="why" hidden>&#10007; The LRPC is vertical; only the natural rate moves it.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>the long-run Phillips curve downward.<span class="why" hidden>&#10007; The LRPC does not respond to expected inflation.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>neither the short-run nor the long-run Phillips curve.<span class="why" hidden>&#10007; It shifts the short-run curve.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="E">
+    <p class="stem"><span class="qn">4</span> Bringing down inflation that has become embedded in expectations is called&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>deflation.<span class="why" hidden>&#10007; Deflation is a falling price level.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>negative inflation.<span class="why" hidden>&#10007; That is deflation again.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>anti-inflation.<span class="why" hidden>&#10007; Not an economic term.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>unexpected inflation.<span class="why" hidden>&#10007; Inflation that differs from what was expected.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>disinflation.<span class="why" hidden>&#10003; <b>Correct.</b> A falling inflation rate.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="E">
+    <p class="stem"><span class="qn">5</span> Debt deflation is&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>the effect of deflation in decreasing aggregate demand.<span class="why" hidden>&#10007; True, but so are the others.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>an idea proposed by Irving Fisher.<span class="why" hidden>&#10007; True, but so are the others.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>a contributing factor in causing the Great Depression.<span class="why" hidden>&#10007; True, but so are the others.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>due to differences in how borrowers and lenders respond to their losses and gains.<span class="why" hidden>&#10007; True, but so are the others.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>all of the above.<span class="why" hidden>&#10003; <b>Correct.</b> Every statement is on pages 338&ndash;339.</span></span></button>
+    </div>
+  </div>
+
+  <p class="score" id="mcqScore">0 of 5 answered</p>
+</section>
+
+<!-- ============ FRQ ============ -->
+<section class="section" id="frq">
+  <h2>Tackle the test &mdash; free response</h2>
+
+  <div class="frq">
+    <p><b>Question 1 (8 points), from your textbook.</b> (a) Draw a correctly labeled graph showing a short-run
+    Phillips curve with an expected inflation rate of 0% and the corresponding long-run Phillips curve. (b) On
+    your graph, label the nonaccelerating inflation rate of unemployment. (c) On your graph, show what happens in
+    the long run if the government decides to decrease the unemployment rate below the nonaccelerating inflation
+    rate of unemployment. Explain.</p>
+    <details class="reveal"><summary>Show the answer and the rubric</summary><div class="ans">
+      <ol class="rubric">
+        <li>Vertical axis labeled <b>Inflation rate</b> &mdash; one point</li>
+        <li>Horizontal axis labeled <b>Unemployment rate</b> &mdash; one point</li>
+        <li>A downward-sloping curve labeled <b>SRPC<sub>0</sub></b> &mdash; one point</li>
+        <li>A vertical curve labeled <b>LRPC</b> &mdash; one point</li>
+        <li>SRPC<sub>0</sub> crosses the horizontal axis where it crosses the LRPC, since expected inflation is
+          0% &mdash; one point</li>
+        <li>The natural rate (your textbook&rsquo;s NAIRU) labeled where SRPC<sub>0</sub> crosses the LRPC &mdash;
+          one point</li>
+        <li>A new short-run curve, <b>SRPC&prime;</b>, drawn above SRPC<sub>0</sub> &mdash; one point. Your
+          textbook&rsquo;s rubric prints &ldquo;SRAS&prime;&rdquo; here; it means SRPC&prime;. Label a Phillips
+          curve SRAS on the exam and you lose the point.</li>
+        <li>Unemployment below the natural rate raises inflation, moving the economy along SRPC<sub>0</sub> to a
+          point such as A; people come to expect that inflation, so the SRPC shifts up to SRPC&prime; &mdash; one
+          point</li>
+      </ol>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 2 (5 points), in the exam&rsquo;s style.</b> Expected inflation is 4%, the unemployment rate is
+    5% and the natural rate of unemployment is 6%. (a) Draw a correctly labeled graph of the short-run and
+    long-run Phillips curves and label the current point X. (b) Is the inflation rate above, below or equal to
+    4%? (c) Is there an inflationary gap or a recessionary gap? (d) If no policy action is taken, what happens in
+    the long run to expected inflation, the short-run Phillips curve and the unemployment rate?</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <ol class="rubric">
+        <li>(a) Axes labeled inflation rate and unemployment rate, a downward-sloping SRPC and a vertical LRPC at
+          6% &mdash; one point</li>
+        <li>(a) X on the SRPC, to the left of the LRPC, at 5% unemployment &mdash; one point</li>
+        <li>(b) <b>Above</b> 4%: unemployment is below the natural rate. On a curve with your textbook&rsquo;s
+          slope it is 5% &mdash; one point</li>
+        <li>(c) An <b>inflationary gap</b>: the point is to the left of long-run equilibrium &mdash; one point</li>
+        <li>(d) Expected inflation rises, the SRPC shifts up, and unemployment rises back to 6% &mdash; one
+          point</li>
+      </ol>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <h2>One-page summary</h2>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <thead><tr><th>What happens</th><th>Expected inflation</th><th>Natural rate</th><th>Unemployment</th><th>Inflation</th><th>Position</th></tr></thead>
+      <tbody>
+        <tr><td>Long-run equilibrium</td><td>2%</td><td>6%</td><td>6%</td><td><b>2%</b></td><td>Long-run equilibrium</td></tr>
+        <tr><td>Aggregate demand rises</td><td>2%</td><td>6%</td><td>4%</td><td><b>4%</b></td><td>Inflationary gap</td></tr>
+        <tr><td>Aggregate demand falls</td><td>2%</td><td>6%</td><td>8%</td><td><b>0%</b></td><td>Recessionary gap</td></tr>
+        <tr><td>Negative supply shock</td><td>2%</td><td>6%</td><td>7%</td><td><b>4%</b></td><td>Recessionary gap</td></tr>
+        <tr><td>Expectations catch up</td><td>4%</td><td>6%</td><td>6%</td><td><b>4%</b></td><td>Long-run equilibrium</td></tr>
+        <tr><td>Unemployment held at 4%</td><td>4%</td><td>6%</td><td>4%</td><td><b>6%</b></td><td>Inflationary gap</td></tr>
+        <tr><td>The natural rate falls</td><td>2%</td><td>5%</td><td>5%</td><td><b>2%</b></td><td>Long-run equilibrium</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap"><b>Along the SRPC</b>: changes in aggregate demand. <b>Shift the SRPC</b>: supply shocks and
+  expected inflation &mdash; up for a negative shock or higher expectations. <b>Shift the LRPC</b>: a change in the
+  natural rate. <b>Left</b> of long-run equilibrium is an inflationary gap; <b>right</b> is a recessionary gap.</p>
+</section>
+
+<section class="section closing" id="final">
+  <h2>The five things to get right from Module 34</h2>
+  <ol>
+    <li><b>Label the axes as rates:</b> inflation rate up, unemployment rate across. The SRPC slopes down; the
+      LRPC is vertical at the natural rate.</li>
+    <li><b>Along or shift.</b> Demand moves the economy along the SRPC; supply shocks and expected inflation shift
+      it; only the natural rate shifts the LRPC.</li>
+    <li><b>Long-run equilibrium is where the two curves cross</b> &mdash; at any inflation rate.</li>
+    <li><b>Left is inflationary, right is recessionary</b> &mdash; the opposite sides from the aggregate demand and
+      supply graph.</li>
+    <li><b>In the long run unemployment returns to the natural rate;</b> inflation ends wherever expectations
+      settle.</li>
+  </ol>
+  <p>The Phillips curve is the aggregate demand and supply model told in unemployment and inflation. Every shock
+  you learn in Units 3 and 4 can be drawn on both graphs &mdash; practise drawing them side by side.</p>
+</section>
+
+<p class="footer">
+  Student guide &middot; Module 34, <i>Krugman&rsquo;s Economics for AP</i>, pages 331&ndash;342 &middot;
+  definitions quoted from the textbook &middot; tiers assigned against the AP Macroeconomics Course
+  and Exam Description, Course Framework V.1, &copy; 2020 &middot; every number on this page is computed
+  by the script that writes it, and checked again before it is written.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod34-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ return {}; } }
+  function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){ var s = load(); s[b.id] = b.checked; save(s); paint(); });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- the two-panel diagram ---------- */
+  /* Every value below is written by build/make_m34_student.py from the model it computes. */
+  var READ = {
+    start: ["6%", "2%", "2%", "6%", "Long-run equilibrium"],
+    adup: ["4%", "4%", "2%", "6%", "Inflationary gap"],
+    addown: ["8%", "0%", "2%", "6%", "Recessionary gap"],
+    supply: ["7%", "4%", "2%", "6%", "Recessionary gap"],
+    longrun: ["6%", "4%", "4%", "6%", "Long-run equilibrium"],
+    hold: ["4%", "6%", "4%", "6%", "Inflationary gap"],
+    natfall: ["5%", "2%", "2%", "5%", "Long-run equilibrium"]
+  };
+  var CAP = {
+    start: "Expected inflation is 2%, unemployment is at the natural rate of 6% and inflation is 2%. The SRPC crosses the LRPC here; on the left, AD and SRAS cross on LRAS.",
+    adup: "Aggregate demand rises. On the left, real GDP rises above potential. On the right, the economy moves along the same SRPC: unemployment 4%, inflation 4%. Left of the LRPC: an inflationary gap.",
+    addown: "Aggregate demand falls. Real GDP falls below potential; along the SRPC unemployment rises to 8% and inflation falls to 0%. Right of the LRPC: a recessionary gap.",
+    supply: "Oil prices surge. SRAS shifts left and the SRPC shifts up by 3 percentage points. Unemployment 7% and inflation 4% are both higher: stagflation, and a recessionary gap.",
+    longrun: "After the rise in demand, people come to expect 4% inflation. Wages rise, SRAS shifts left, the SRPC shifts up, and unemployment is back at the natural rate - with inflation at 4%, not 2%.",
+    hold: "Policy pushes demand up again to hold unemployment at 4%. On the new SRPC that now takes 6% inflation: holding unemployment below the natural rate means accelerating inflation.",
+    natfall: "Job-matching websites cut frictional unemployment and the natural rate falls to 5%. The LRPC shifts left, LRAS shifts right, and the economy settles at 5% unemployment with 2% inflation."
+  };
+  var chips = Array.prototype.slice.call(document.querySelectorAll("#diagram .chip"));
+  var cap = document.getElementById("pcap");
+  function show(which){
+    Object.keys(READ).forEach(function(k){
+      var g = document.getElementById("s-" + k);
+      /* SVG elements have no .hidden property; toggle the attribute, which the CSS hides */
+      if (g) { if (k === which) g.removeAttribute("hidden"); else g.setAttribute("hidden", ""); }
+    });
+    READ[which].forEach(function(v, i){ document.getElementById("ro" + i).innerHTML = v; });
+    cap.innerHTML = CAP[which];
+    chips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-show") === which)); });
+  }
+  chips.forEach(function(c){ c.addEventListener("click", function(){ show(c.getAttribute("data-show")); }); });
+  show("start");
+
+  /* ---------- the drill ---------- */
+  var SCEN = [
+    { t: "The government cuts income taxes and households spend more.", a: "a",
+      w: "ALONG THE SRPC. More spending is a demand shock: up and to the left." },
+    { t: "World oil prices double.", a: "s",
+      w: "SHIFT THE SRPC. A negative supply shock: the SRPC shifts up." },
+    { t: "Job-matching websites make it quicker to find the right job.", a: "l",
+      w: "SHIFT THE LRPC. Less frictional unemployment lowers the natural rate: the LRPC shifts left." },
+    { t: "The central bank raises interest rates.", a: "a",
+      w: "ALONG THE SRPC. Less spending: down and to the right." },
+    { t: "After years of 6% inflation, workers and firms come to expect 6%.", a: "s",
+      w: "SHIFT THE SRPC. Higher expected inflation shifts it up." },
+    { t: "Unemployment benefits are made much more generous.", a: "l",
+      w: "SHIFT THE LRPC. Longer searches raise the natural rate: the LRPC shifts right." },
+    { t: "Business confidence collapses and investment spending falls.", a: "a",
+      w: "ALONG THE SRPC. A fall in aggregate demand: down and to the right." },
+    { t: "Prices of raw materials fall sharply around the world.", a: "s",
+      w: "SHIFT THE SRPC. A positive supply shock: the SRPC shifts down." },
+    { t: "A large wave of teenagers enters the labor force.", a: "l",
+      w: "SHIFT THE LRPC. Inexperienced workers raise the natural rate: the LRPC shifts right." },
+    { t: "A stock-market boom makes households feel richer, and they spend more.", a: "a",
+      w: "ALONG THE SRPC. A rise in aggregate demand: up and to the left." },
+    { t: "The central bank's promise of 2% inflation is believed, and expected inflation falls.", a: "s",
+      w: "SHIFT THE SRPC. Lower expected inflation shifts it down." },
+    { t: "Training programs give workers the skills that new industries need.", a: "l",
+      w: "SHIFT THE LRPC. Less structural unemployment lowers the natural rate: the LRPC shifts left." }
+  ];
+  var LABELS = {
+    a: "Along the SRPC",
+    s: "Shift the SRPC",
+    l: "Shift the LRPC"
+  };
+  var list = document.getElementById("sorter-list");
+  var scoreEl = document.getElementById("sorter-score");
+  var answered = 0, right = 0;
+  function build(){
+    list.innerHTML = "";
+    answered = 0; right = 0;
+    SCEN.forEach(function(s, i){
+      var row = document.createElement("div");
+      row.className = "sortrow";
+      var opts = Object.keys(LABELS).map(function(k){
+        return '<button type="button" class="opt" data-a="' + k + '"><span>' + LABELS[k] + '</span></button>';
+      }).join("");
+      row.innerHTML =
+        '<p class="stem"><span class="qn">' + (i + 1) + '</span> ' + s.t + '</p>' +
+        '<div class="opts">' + opts + '</div>' +
+        '<p class="why" hidden></p>';
+      var btns = Array.prototype.slice.call(row.querySelectorAll(".opt"));
+      var why = row.querySelector(".why");
+      btns.forEach(function(b){
+        b.addEventListener("click", function(){
+          if (row.getAttribute("data-done")) return;
+          row.setAttribute("data-done", "1");
+          var ok = b.getAttribute("data-a") === s.a;
+          btns.forEach(function(x){
+            x.disabled = true;
+            if (x.getAttribute("data-a") === s.a) x.setAttribute("data-state", "right");
+            else if (x === b) x.setAttribute("data-state", "wrong");
+          });
+          why.hidden = false;
+          why.textContent = (ok ? "\u2713 " : "\u2717 ") + s.w;
+          answered++; if (ok) right++;
+          scoreEl.textContent = right + " correct out of " + answered + " answered";
+        });
+      });
+      list.appendChild(row);
+    });
+    scoreEl.textContent = "0 of " + SCEN.length + " answered";
+  }
+  build();
+  document.getElementById("sorter-reset").addEventListener("click", build);
+
+  /* ---------- multiple choice ---------- */
+  var mcqs = Array.prototype.slice.call(document.querySelectorAll(".mcq[data-key]"));
+  var mcqScore = document.getElementById("mcqScore");
+  var mDone = 0, mRight = 0;
+  mcqs.forEach(function(q){
+    var key = q.getAttribute("data-key");
+    var opts = Array.prototype.slice.call(q.querySelectorAll(".opt"));
+    opts.forEach(function(o){
+      o.addEventListener("click", function(){
+        if (q.getAttribute("data-done")) return;
+        q.setAttribute("data-done", "1");
+        var ok = o.getAttribute("data-l") === key;
+        opts.forEach(function(x){
+          x.disabled = true;
+          x.querySelector(".why").hidden = false;
+          if (x.getAttribute("data-l") === key) x.setAttribute("data-state", "right");
+          else if (x === o) x.setAttribute("data-state", "wrong");
+        });
+        mDone++; if (ok) mRight++;
+        mcqScore.textContent = mRight + " correct out of " + mDone + " answered";
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "5.2 The Phillips curve", "title": "Module 34 · The Phillips Curve", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"href": "m01-student.html", "label": "Module 1 · Student guide", "current": false}, {"href": "m01-notes.html", "label": "Module 1 · Teaching notes", "current": false}, {"href": "m01-test.html", "label": "Module 1 · Test", "current": false}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": false}, {"href": "m02-notes.html", "label": "Module 2 · Teaching notes", "current": false}, {"href": "m02-test.html", "label": "Module 2 · Test", "current": false}, {"href": "m03-student.html", "label": "Module 3 · Student guide", "current": false}, {"href": "m03-notes.html", "label": "Module 3 · Teaching notes", "current": false}, {"href": "m03-test.html", "label": "Module 3 · Test", "current": false}, {"href": "m04-student.html", "label": "Module 4 · Student guide", "current": false}, {"href": "m04-notes.html", "label": "Module 4 · Teaching notes", "current": false}, {"href": "m04-test.html", "label": "Module 4 · Test", "current": false}, {"href": "m05-student.html", "label": "Module 5 · Student guide", "current": false}, {"href": "m05-notes.html", "label": "Module 5 · Teaching notes", "current": false}, {"href": "m05-test.html", "label": "Module 5 · Test", "current": false}, {"href": "m06-student.html", "label": "Module 6 · Student guide", "current": false}, {"href": "m06-notes.html", "label": "Module 6 · Teaching notes", "current": false}, {"href": "m06-test.html", "label": "Module 6 · Test", "current": false}, {"href": "m07-student.html", "label": "Module 7 · Student guide", "current": false}, {"href": "m07-notes.html", "label": "Module 7 · Teaching notes", "current": false}, {"href": "m07-test.html", "label": "Module 7 · Test", "current": false}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"href": "m10-student.html", "label": "Module 10 · Student guide", "current": false}, {"href": "m10-notes.html", "label": "Module 10 · Teaching notes", "current": false}, {"href": "m10-test.html", "label": "Module 10 · Test", "current": false}, {"href": "m11-student.html", "label": "Module 11 · Student guide", "current": false}, {"href": "m11-notes.html", "label": "Module 11 · Teaching notes", "current": false}, {"href": "m11-test.html", "label": "Module 11 · Test", "current": false}, {"href": "m12-student.html", "label": "Module 12 · Student guide", "current": false}, {"href": "m12-notes.html", "label": "Module 12 · Teaching notes", "current": false}, {"href": "m12-test.html", "label": "Module 12 · Test", "current": false}, {"href": "m13-student.html", "label": "Module 13 · Student guide", "current": false}, {"href": "m13-notes.html", "label": "Module 13 · Teaching notes", "current": false}, {"href": "m13-test.html", "label": "Module 13 · Test", "current": false}, {"href": "m14-student.html", "label": "Module 14 · Student guide", "current": false}, {"href": "m14-notes.html", "label": "Module 14 · Teaching notes", "current": false}, {"href": "m14-test.html", "label": "Module 14 · Test", "current": false}, {"href": "m15-student.html", "label": "Module 15 · Student guide", "current": false}, {"href": "m15-notes.html", "label": "Module 15 · Teaching notes", "current": false}, {"href": "m15-test.html", "label": "Module 15 · Test", "current": false}, {"href": "u02-gap.html", "label": "Unit 2 · Gap analysis", "current": false}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"label": "Module 16 · Income and Expenditure", "planned": true}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"href": "m34-student.html", "label": "Module 34 · Student guide", "current": true}, {"href": "m34-notes.html", "label": "Module 34 · Teaching notes", "current": false}, {"href": "m34-test.html", "label": "Module 34 · Test", "current": false}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "u02-gap.html", "label": "Unit 2 · Gap analysis"}, "next": {"href": "m34-notes.html", "label": "Module 34 · Teaching notes"}, "variants": [{"href": "m34-student.html", "label": "Student", "current": true}, {"href": "m34-notes.html", "label": "Notes", "current": false}, {"href": "m34-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
