@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module 16 · Income, Spending and the Multiplier · AP Macroeconomics</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Serif:wght@600;700&display=swap">
+<link rel="stylesheet" href="assets/course.css">
+<style>.page .bar{position:static;background:none;backdrop-filter:none}.page .bar-in{max-width:none;padding-inline:0}.page .wrap{max-width:none;padding-inline:0;padding-block:0 24px}.page .masthead{padding-block:10px 24px}</style></head>
+<body>
+<main class="page">
+<style>
+
+
+:root{
+  --paper:#f3f5f8;
+  --surface:#ffffff;
+  --surface-2:#eef1f6;
+  --ink:#15181f;
+  --ink-2:#4d5566;
+  --ink-3:#737c8e;
+  --rule:#d6dae2;
+  --rule-strong:#b3bac7;
+  --accent:#1d4e89;
+  --accent-soft:#e6edf7;
+  --down:#a3372a;
+  --down-soft:#fbeeeb;
+  --up:#1a6b55;
+  --up-soft:#e6f2ee;
+  --flag:#7a5310;
+  --flag-soft:#f8f0e0;
+  --shadow:0 1px 2px rgba(21,24,31,.06), 0 8px 24px rgba(21,24,31,.05);
+  --serif:"IBM Plex Serif", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1218;
+    --surface:#171b23;
+    --surface-2:#1e232d;
+    --ink:#e8ebf1;
+    --ink-2:#a3adc0;
+    --ink-3:#7e8799;
+    --rule:#2c323d;
+    --rule-strong:#3c4351;
+    --accent:#7dabe2;
+    --accent-soft:#1a2634;
+    --down:#e5907f;
+    --down-soft:#2a1d1a;
+    --up:#6cc4a7;
+    --up-soft:#16291f;
+    --flag:#d8b169;
+    --flag-soft:#2a2418;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1218;
+  --surface:#171b23;
+  --surface-2:#1e232d;
+  --ink:#e8ebf1;
+  --ink-2:#a3adc0;
+  --ink-3:#7e8799;
+  --rule:#2c323d;
+  --rule-strong:#3c4351;
+  --accent:#7dabe2;
+  --accent-soft:#1a2634;
+  --down:#e5907f;
+  --down-soft:#2a1d1a;
+  --up:#6cc4a7;
+  --up-soft:#16291f;
+  --flag:#d8b169;
+  --flag-soft:#2a2418;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:16px;
+  line-height:1.65;
+  margin:0;
+}
+.wrap{max-width:820px;margin:0 auto;padding-inline:18px;padding-block:0 72px}
+
+/* ---------- sticky bar ---------- */
+.bar{
+  position:sticky;
+  top:env(safe-area-inset-top, 0px);
+  z-index:40;
+  background:color-mix(in srgb, var(--paper) 88%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.bar-in{
+  max-width:820px;margin:0 auto;padding-inline:18px;
+  display:flex;align-items:center;gap:14px;min-height:50px;flex-wrap:wrap;
+}
+.bar-title{font-family:var(--mono);font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink-2);white-space:nowrap}
+.progress{flex:1 1 140px;min-width:120px;display:flex;align-items:center;gap:9px}
+.progress-track{flex:1;height:5px;border-radius:3px;background:var(--rule);overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--accent);transition:width .25s ease}
+.progress-num{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums;white-space:nowrap}
+.bar button{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.05em;text-transform:uppercase;
+  background:none;border:1px solid var(--rule-strong);color:var(--ink-2);
+  padding:5px 10px;border-radius:4px;cursor:pointer;
+}
+.bar button:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- masthead ---------- */
+.masthead{padding-block:40px 28px;border-bottom:2px solid var(--ink)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);margin:0 0 12px;
+}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(30px,6.4vw,44px);
+  line-height:1.1;margin:0 0 14px;text-wrap:balance;letter-spacing:-.01em;
+}
+.standfirst{font-size:17.5px;color:var(--ink-2);margin:0;max-width:62ch}
+.source-line{
+  font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-top:18px;
+  display:flex;gap:6px 18px;flex-wrap:wrap;
+}
+
+h2{
+  font-family:var(--serif);font-weight:600;font-size:clamp(21px,3.8vw,26px);
+  line-height:1.25;margin:0 0 10px;text-wrap:balance;
+}
+h3{font-family:var(--sans);font-weight:600;font-size:16px;margin:26px 0 8px;letter-spacing:.01em}
+p{margin:0 0 14px}
+a{color:var(--accent)}
+.section{padding-block:34px 4px}
+
+.kicker{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 8px;
+}
+
+/* ---------- entries ---------- */
+.entry{padding-block:34px 10px;border-top:1px solid var(--rule)}
+.entry-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.entry-num{
+  font-family:var(--mono);font-size:13px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.entry h2{margin:0;flex:1 1 auto;min-width:0}
+.mark{
+  font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  padding:3px 8px;border-radius:3px;white-space:nowrap;
+}
+.mark.exam{background:var(--accent-soft);color:var(--accent)}
+.mark.bg{background:var(--surface-2);color:var(--ink-3)}
+.defn{
+  background:var(--surface);border-left:3px solid var(--accent);
+  padding:14px 16px;border-radius:0 5px 5px 0;margin:14px 0 16px;box-shadow:var(--shadow);
+}
+.defn p{margin:0}
+.defn .lbl{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.reading{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin:-6px 0 16px}
+
+.watch{
+  background:var(--down-soft);border:1px solid color-mix(in srgb, var(--down) 28%, transparent);
+  border-radius:5px;padding:13px 16px;margin:18px 0;
+}
+.watch p{margin:0;font-size:15.3px}
+.watch b{color:var(--down)}
+
+.notinbook{
+  background:var(--flag-soft);border:1px dashed color-mix(in srgb, var(--flag) 48%, transparent);
+  border-radius:5px;padding:13px 16px;margin:16px 0;
+}
+.notinbook p{margin:0;font-size:15.3px}
+.notinbook b{color:var(--flag)}
+
+.examples{margin:18px 0;display:flex;flex-direction:column;gap:12px}
+.ex{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:start}
+.ex-n{
+  font-family:var(--mono);font-size:11px;font-weight:600;color:var(--ink-3);
+  border:1px solid var(--rule-strong);border-radius:3px;padding:1px 6px;margin-top:3px;white-space:nowrap;
+}
+.ex p{margin:0;font-size:15.3px}
+.ex .who{font-weight:600;color:var(--ink)}
+
+.connects{font-size:15.3px;color:var(--ink-2);border-top:1px solid var(--rule);padding-top:12px;margin-top:6px}
+.connects b{color:var(--ink)}
+
+/* ---------- check yourself ---------- */
+.check{margin:20px 0 6px;background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:14px 16px}
+.check > .lbl{
+  font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);display:block;margin-bottom:10px;
+}
+.q{margin-bottom:12px}
+.q:last-child{margin-bottom:0}
+.q > p{margin:0 0 7px;font-size:15.3px}
+.q .qn{font-family:var(--mono);font-weight:600;color:var(--accent);font-size:13.5px;margin-right:4px}
+details.reveal{border-top:1px dashed var(--rule)}
+details.reveal > summary{
+  list-style:none;cursor:pointer;font-family:var(--mono);font-size:11.5px;
+  letter-spacing:.07em;text-transform:uppercase;color:var(--accent);padding:7px 0 0;
+}
+details.reveal > summary::-webkit-details-marker{display:none}
+details.reveal > summary::before{content:"▸ ";display:inline-block;transition:transform .15s}
+details.reveal[open] > summary::before{content:"▾ "}
+details.reveal > summary:hover{text-decoration:underline}
+details.reveal .ans{font-size:15.3px;color:var(--ink-2);padding:6px 0 4px}
+details.reveal .ans p{margin:0 0 8px}
+details.reveal .ans p:last-child{margin:0}
+
+.got{
+  display:flex;align-items:center;gap:8px;margin-top:16px;
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);
+  cursor:pointer;user-select:none;
+}
+.got input{width:15px;height:15px;accent-color:var(--accent);cursor:pointer}
+
+/* ---------- tables ---------- */
+.tablewrap{overflow-x:auto;margin:18px 0;border:1px solid var(--rule);border-radius:6px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:420px}
+th,td{padding:10px 13px;text-align:left;border-bottom:1px solid var(--rule);vertical-align:top}
+thead th{
+  font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-3);background:var(--surface-2);font-weight:600;
+}
+tbody tr:last-child td{border-bottom:none}
+td.num,th.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
+.tight td,.tight th{padding:8px 12px;font-size:14.5px}
+
+/* ---------- widgets ---------- */
+.widget{
+  background:var(--surface);border:1px solid var(--rule-strong);border-radius:8px;
+  padding:18px;margin:26px 0;box-shadow:var(--shadow);
+}
+.widget-title{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--ink-3);margin:0 0 4px;
+}
+.widget h3{margin-top:0}
+.widget-note{font-size:14.5px;color:var(--ink-2);margin:12px 0 0}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.chip{
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer;transition:all .15s;
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1218}
+
+.cyclefig{width:100%;height:auto;display:block;overflow:visible}
+.figcap{font-size:14.5px;color:var(--ink-2);margin:10px 0 0;min-height:3em}
+.figcap b{color:var(--ink)}
+
+.svg-dim{opacity:.22;transition:opacity .2s}
+.svg-lit{opacity:1;transition:opacity .2s}
+
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin:14px 0}
+.field label{
+  display:block;font-family:var(--mono);font-size:11px;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--ink-3);margin-bottom:5px;
+}
+.field input[type=number]{
+  width:100%;font-family:var(--mono);font-size:16px;padding:8px 10px;
+  border:1px solid var(--rule-strong);border-radius:5px;background:var(--paper);color:var(--ink);
+}
+.field input[type=range]{width:100%;accent-color:var(--accent)}
+.field input:focus-visible,.chip:focus-visible,button:focus-visible,summary:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px;
+}
+.readouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:6px;overflow:hidden;margin-top:6px}
+.ro{background:var(--surface-2);padding:12px 14px}
+.ro .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);display:block;margin-bottom:3px}
+.ro .v{font-family:var(--mono);font-size:22px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--ink)}
+.ro .v.hl{color:var(--accent)}
+
+/* ---------- quiz ---------- */
+.mcq{border-top:1px solid var(--rule);padding-top:18px;margin-top:18px}
+.mcq:first-of-type{border-top:none;padding-top:0;margin-top:0}
+.mcq .stem{font-size:15.6px;margin:0 0 12px}
+.mcq .stem .qn{font-family:var(--mono);font-weight:600;color:var(--accent);margin-right:6px}
+.opts{display:flex;flex-direction:column;gap:7px}
+.opt{
+  display:flex;gap:11px;align-items:flex-start;text-align:left;width:100%;
+  font-family:var(--sans);font-size:15.2px;line-height:1.5;color:var(--ink);
+  background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:10px 13px;cursor:pointer;transition:border-color .15s,background .15s;
+}
+.opt:hover{border-color:var(--accent)}
+.opt .ltr{font-family:var(--mono);font-weight:600;color:var(--ink-3);flex:0 0 auto}
+.opt .why{display:block;font-size:14.3px;color:var(--ink-2);margin-top:6px}
+.opt[data-state="right"]{border-color:var(--up);background:var(--up-soft)}
+.opt[data-state="right"] .ltr{color:var(--up)}
+.opt[data-state="wrong"]{border-color:var(--down);background:var(--down-soft)}
+.opt[data-state="wrong"] .ltr{color:var(--down)}
+.opt[disabled]{cursor:default}
+.score{
+  font-family:var(--mono);font-size:13px;color:var(--ink-2);
+  border:1px solid var(--rule-strong);border-radius:6px;padding:11px 14px;margin-top:20px;
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center;
+}
+.score b{color:var(--ink);font-size:15px}
+
+.frq{background:var(--surface);border:1px solid var(--rule);border-radius:6px;padding:15px 17px;margin:16px 0}
+.frq .stem{margin:0 0 6px;font-size:15.6px}
+.frq .pts{font-family:var(--mono);font-size:11.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--ink-3)}
+.rubric{margin:8px 0 0;padding:0;list-style:none}
+.rubric li{display:grid;grid-template-columns:auto 1fr;gap:10px;padding:7px 0;border-top:1px dotted var(--rule);font-size:15.2px}
+.rubric li .pt{font-family:var(--mono);font-size:11.5px;color:var(--up);white-space:nowrap;padding-top:3px}
+
+.closing{background:var(--accent-soft);border-radius:8px;padding:20px 22px;margin-top:28px}
+.closing h2{margin-top:0}
+.closing ol{margin:0;padding-left:20px}
+.closing li{margin-bottom:10px;font-size:15.5px}
+.closing li:last-child{margin-bottom:0}
+
+.toc{columns:2 220px;column-gap:26px;margin:16px 0 0;padding:0;list-style:none}
+.toc li{break-inside:avoid;padding:3px 0;font-size:15px}
+.toc a{text-decoration:none;color:var(--ink)}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.toc .n{font-family:var(--mono);font-size:12.5px;color:var(--ink-3);margin-right:7px;font-variant-numeric:tabular-nums}
+.toc .m{font-size:11px;color:var(--ink-3);margin-left:5px}
+
+.footer{margin-top:44px;padding-top:18px;border-top:1px solid var(--rule);font-family:var(--mono);font-size:12px;color:var(--ink-3);line-height:1.8}
+
+@media (prefers-reduced-motion: reduce){*{transition:none!important;animation:none!important}}
+@media print{
+  .bar,.got,.chips{display:none}
+  body{background:#fff}
+  details.reveal > *{display:block!important}
+  .entry{break-inside:avoid-page}
+}
+@media (max-width:520px){
+  .toc{columns:1}
+  .ro .v{font-size:19px}
+}
+
+/* ---------- Module 3 supplement ---------- */
+.mark.flag{background:var(--flag-soft);color:var(--flag)}
+.ppc-wrap{display:grid;grid-template-columns:1fr;gap:14px}
+@media (min-width:720px){.ppc-wrap{grid-template-columns:1fr 210px}}
+.ppc-svg{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px;cursor:crosshair;touch-action:none}
+.ppc-side{display:flex;flex-direction:column;gap:10px}
+.status{font-family:var(--mono);font-size:12.5px;padding:9px 11px;border-radius:5px;
+  border:1px solid var(--rule-strong);background:var(--surface-2);line-height:1.45}
+.status[data-s="on"]{border-color:color-mix(in srgb,var(--up) 45%,transparent);background:var(--up-soft);color:var(--up)}
+.status[data-s="in"]{border-color:var(--rule-strong);color:var(--ink-2)}
+.status[data-s="out"]{border-color:color-mix(in srgb,var(--down) 45%,transparent);background:var(--down-soft);color:var(--down)}
+.ppc-legend{font-family:var(--mono);font-size:11.5px;color:var(--ink-3);line-height:1.6}
+.ppc-legend b{color:var(--ink-2);font-weight:600}
+.chips.tight{gap:6px}
+.tbl{overflow-x:auto;max-width:100%}
+.sumtable{width:100%;border-collapse:collapse;font-size:14.5px;margin:16px 0}
+.sumtable th,.sumtable td{border-bottom:1px solid var(--rule);padding:8px 10px;text-align:left;vertical-align:top}
+.sumtable th{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+.sumtable td.mk{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--accent)}
+.sumtable td.mk.bgm{color:var(--ink-3)}
+.sumtable td.mk.flagm{color:var(--flag)}
+.final{background:var(--surface);border:1px solid var(--rule);border-radius:6px;
+  padding:18px 20px;margin:22px 0;box-shadow:var(--shadow)}
+.final ol{margin:0;padding-left:20px}
+.final li{margin:0 0 9px}
+.final li:last-child{margin-bottom:0}
+
+/* ---------- PPC explorer svg ---------- */
+.ppc-svg .ax{stroke:var(--ink);stroke-width:1.6}
+.ppc-svg .tick{stroke:var(--ink-3);stroke-width:1.1}
+.ppc-svg .tl{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.ppc-svg .al{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.ppc-svg .curve{fill:none;stroke:var(--accent);stroke-width:2.6;stroke-linejoin:round;stroke-linecap:round}
+.ppc-svg .ghost{fill:none;stroke:var(--rule-strong);stroke-width:1.8;stroke-dasharray:6 5}
+.ppc-svg .cl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.ppc-svg .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.ppc-svg .pt{stroke:var(--surface);stroke-width:2}
+.ppc-svg .pt-on{fill:var(--up)}
+.ppc-svg .pt-in{fill:var(--ink-3)}
+.ppc-svg .pt-out{fill:var(--down)}
+
+
+/* ---------- Module 4 supplement ---------- */
+.two-panel{width:100%;height:auto;display:block;background:var(--surface);
+  border:1px solid var(--rule);border-radius:6px}
+.ca-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:0 0 14px}
+@media (min-width:640px){.ca-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.ca-grid .field{display:flex;flex-direction:column;gap:5px}
+.ca-grid .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.ca-grid .field b{color:var(--ink-2);font-weight:600;text-transform:none;letter-spacing:0}
+.ca-grid input{font-family:var(--mono);font-size:15px;padding:7px 9px;width:100%;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.ca-grid input:focus{outline:2px solid var(--accent);outline-offset:1px}
+.catab{width:100%;border-collapse:collapse;font-size:14px;margin:4px 0 14px}
+.catab th,.catab td{border-bottom:1px solid var(--rule);padding:7px 9px;text-align:left}
+.catab th{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-3);font-weight:600}
+.catab td.v{font-family:var(--mono);color:var(--ink)}
+.catab td.win{font-family:var(--mono);color:var(--up);font-weight:600}
+.dealrow{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-end;margin:0 0 12px}
+.dealrow .field{display:flex;flex-direction:column;gap:5px;min-width:190px;flex:1}
+.dealrow .field span{font-family:var(--mono);font-size:11px;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--ink-3)}
+.dealrow input{font-family:var(--mono);font-size:16px;padding:8px 10px;
+  color:var(--ink);background:var(--paper);border:1px solid var(--rule-strong);border-radius:5px}
+.line-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.line-svg g[hidden]{display:none}
+.line-svg .band{fill:var(--up-soft);stroke:none}
+.line-svg .axl{stroke:var(--ink);stroke-width:1.6}
+.line-svg .tk{stroke:var(--ink-3);stroke-width:1.1}
+.line-svg .tlb{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.line-svg .edge{stroke:var(--up);stroke-width:2}
+.line-svg .edgel{font-family:var(--mono);font-size:11.5px;font-weight:600;fill:var(--up)}
+.line-svg .prop{stroke:var(--accent);stroke-width:2.4}
+.line-svg .propbad{stroke:var(--down);stroke-width:2.4}
+.line-svg .propl{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--accent)}
+.line-svg .propl.bad{fill:var(--down)}
+.two-panel .ax{stroke:var(--ink);stroke-width:1.6}
+.two-panel .tick{stroke:var(--ink-3);stroke-width:1.1}
+.two-panel .tl{font-family:var(--mono);font-size:10.5px;fill:var(--ink-3)}
+.two-panel .al{font-family:var(--sans);font-size:11.5px;font-weight:600;fill:var(--ink-2)}
+.two-panel .ph{font-family:var(--mono);font-size:12px;font-weight:600;fill:var(--ink-2)}
+.two-panel .curve{fill:none;stroke:var(--accent);stroke-width:2.4;stroke-linecap:round}
+.two-panel .slope{font-family:var(--mono);font-size:11px;fill:var(--accent)}
+.two-panel .drop{stroke:var(--rule-strong);stroke-width:1;stroke-dasharray:3 3}
+.two-panel .pt{stroke:var(--surface);stroke-width:2}
+.two-panel .pt-on{fill:var(--ink-2)}
+.two-panel .pt-out{fill:var(--up)}
+.two-panel .ptl{font-family:var(--mono);font-size:11px;fill:var(--ink-2)}
+.two-panel .ptl.good{fill:var(--up);font-weight:600}
+
+</style>
+<style>
+/* Module 5 additions: the movement-or-shift sorter */
+.sortrow{border:1px solid var(--rule);border-radius:8px;padding:12px 14px;margin:0 0 10px;
+  background:var(--surface)}
+.sortrow .stem{margin:0 0 10px}
+.sortrow .opts{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.sortrow .opt{flex:1 1 220px;justify-content:center;text-align:center}
+.sortrow .why{display:block;margin:10px 0 0;font-size:14.5px;line-height:1.55;color:var(--ink-2)}
+.sortrow[data-done] .opt{cursor:default}
+#sorter-reset{font-family:var(--mono);font-size:12px;letter-spacing:.04em;
+  border:1px solid var(--rule-strong);background:var(--surface);color:var(--ink-2);
+  border-radius:16px;padding:5px 13px;cursor:pointer}
+#sorter-reset:hover{border-color:var(--accent);color:var(--accent)}
+</style>
+<style>
+/* Module 16 additions: the rounds chart, the consumption-function figure, the drill's three answers */
+.round-svg{width:100%;height:auto;display:block;margin:6px 0 2px}
+.round-svg g[hidden]{display:none}
+.round-svg .bar{fill:var(--accent)}
+.round-svg .ax{stroke:var(--rule-strong);stroke-width:1;fill:none}
+.round-svg .gl{stroke:var(--rule);stroke-width:1;stroke-dasharray:3 4;fill:none}
+.round-svg .tk{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.round-svg .rl{font-family:var(--sans);font-size:13px;font-weight:600;fill:var(--ink)}
+.round-svg .vl{font-family:var(--mono);font-size:11px;font-weight:600;fill:var(--ink)}
+.cf-svg{width:100%;max-width:520px;height:auto;display:block;margin:10px 0 4px}
+.cf-svg .ax{stroke:var(--ink);stroke-width:1.5;fill:none}
+.cf-svg .ln{stroke:var(--accent);stroke-width:2.5;fill:none}
+.cf-svg .ln2{stroke:var(--down);stroke-width:2.5;stroke-dasharray:7 5;fill:none}
+.cf-svg .tk{font-family:var(--mono);font-size:11px;fill:var(--ink-3)}
+.cf-svg .rl{font-family:var(--sans);font-size:12px;font-weight:600;fill:var(--ink)}
+.chips + .chips{margin-top:8px}
+.sortrow .opts .opt{flex:1 1 150px}
+</style>
+
+
+<div class="bar">
+  <div class="bar-in">
+    <span class="bar-title">Macro &middot; Module 16</span>
+    <span class="progress">
+      <span class="progress-track"><span class="progress-fill" id="pfill"></span></span>
+      <span class="progress-num" id="pnum">0 / 16</span>
+    </span>
+    <button type="button" id="resetBtn">Reset progress</button>
+  </div>
+</div>
+
+<div class="wrap">
+
+<p class="eyebrow">AP Macroeconomics &middot; Unit 3 &middot; Student guide</p>
+  <h1>Income, Spending and the Multiplier</h1>
+  <p class="standfirst">Sixteen terms from Module 16 of <i>Krugman&rsquo;s Economics for AP</i>: the marginal
+  propensities to consume and save, how one change in spending becomes several rounds of income, and what
+  moves consumer and investment spending &mdash; plus the tax multiplier and the other multiplier
+  calculations your exam asks for, which your textbook leaves out.</p>
+  <div class="source-line">
+    <span>Textbook pages 158&ndash;171</span><span>&middot;</span><span>16 terms</span><span>&middot;</span>
+    <span>Topic 3.2</span><span>&middot;</span><span>2 multipliers, 5 MPCs</span>
+  </div>
+<section class="section" id="howto">
+  <h2>How to use this guide</h2>
+  <p>Read Module 16 in your textbook first. Entries 1 to 5 are the multiplier as your textbook teaches it;
+  entries 6 to 11 are the multiplier calculations your exam asks for; entries 12 to 16 are what moves
+  consumer and investment spending.</p>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <tbody>
+        <tr><td><span class="mark exam">&#9733; Exam</span></td><td><b>Exam term.</b> Define it and calculate with it. Thirteen of these.</td></tr>
+        <tr><td><span class="mark bg">&#9675; Background</span></td><td><b>Background.</b> Worth knowing, not tested. Three of these.</td></tr>
+        <tr><td><span class="mark flag">&#9873; Not in the textbook</span></td><td><b>Learn it from here.</b> Your exam needs it and Module 16 does not have it. Six entries carry this flag.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <ul>
+    <li>Every entry ends with two <b>Check yourself</b> questions. Answer them before opening the
+      answer, then tick <b>Got it</b>.</li>
+    <li>Use the rounds diagram below with entries 5 to 10. Try every MPC with every button.</li>
+    <li>Do the drill after entry 11, and again at the end.</li>
+  </ul>
+  <div class="flag">
+    <p><b>Two formulas carry this module.</b> Expenditure multiplier = 1 &divide; (1 &minus; MPC). Tax
+    multiplier = &minus;MPC &divide; (1 &minus; MPC). Change in real GDP = multiplier &times; the change in
+    spending or taxes &mdash; at most, because rising prices can absorb part of it.</p>
+  </div>
+</section>
+
+<!-- ============ THE ROUNDS DIAGRAM ============ -->
+<section class="section" id="diagram">
+  <h2>The multiplier, round by round</h2>
+  <p>Your textbook&rsquo;s $100 billion, followed through ten rounds of spending. Choose an MPC, then choose
+  what the government does. Watch round 1, how fast the bars shrink, and the total.</p>
+
+  <div class="widget">
+    <div class="widget-title">Choose an MPC and a change</div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-mpc="50">MPC 0.5</button>
+      <button type="button" class="chip" aria-pressed="false" data-mpc="60">MPC 0.6</button>
+      <button type="button" class="chip" aria-pressed="false" data-mpc="75">MPC 0.75</button>
+      <button type="button" class="chip" aria-pressed="false" data-mpc="80">MPC 0.8</button>
+      <button type="button" class="chip" aria-pressed="false" data-mpc="90">MPC 0.9</button>
+    </div>
+    <div class="chips">
+      <button type="button" class="chip" aria-pressed="false" data-kind="g">Spend $100 billion more</button>
+      <button type="button" class="chip" aria-pressed="false" data-kind="t">Cut taxes by $100 billion</button>
+      <button type="button" class="chip" aria-pressed="false" data-kind="b">Spend and tax $100 billion more</button>
+    </div>
+<svg id="rfig" class="round-svg" viewBox="0 0 700 300" role="img" aria-label="The change in spending in each round of the multiplier process">
+<path class="gl" d="M80 250.0 H680"></path>
+<text class="tk" x="72" y="254.0" text-anchor="end">$0</text>
+<path class="gl" d="M80 200.0 H680"></path>
+<text class="tk" x="72" y="204.0" text-anchor="end">$25</text>
+<path class="gl" d="M80 150.0 H680"></path>
+<text class="tk" x="72" y="154.0" text-anchor="end">$50</text>
+<path class="gl" d="M80 100.0 H680"></path>
+<text class="tk" x="72" y="104.0" text-anchor="end">$75</text>
+<path class="gl" d="M80 50.0 H680"></path>
+<text class="tk" x="72" y="54.0" text-anchor="end">$100</text>
+<path class="ax" d="M80 30 V250 H680"></path>
+<text class="tk" x="110" y="266" text-anchor="middle">1</text>
+<text class="tk" x="170" y="266" text-anchor="middle">2</text>
+<text class="tk" x="230" y="266" text-anchor="middle">3</text>
+<text class="tk" x="290" y="266" text-anchor="middle">4</text>
+<text class="tk" x="350" y="266" text-anchor="middle">5</text>
+<text class="tk" x="410" y="266" text-anchor="middle">6</text>
+<text class="tk" x="470" y="266" text-anchor="middle">7</text>
+<text class="tk" x="530" y="266" text-anchor="middle">8</text>
+<text class="tk" x="590" y="266" text-anchor="middle">9</text>
+<text class="tk" x="650" y="266" text-anchor="middle">10</text>
+<text class="rl" x="380" y="288" text-anchor="middle">Round</text>
+<text class="rl" x="72" y="22">Spending in the round ($ billions)</text>
+<g id="r-50-g" hidden>
+<rect class="bar" x="91.0" y="50.0" width="38" height="200.0"></rect>
+<text class="vl" x="110.0" y="45.0" text-anchor="middle">100</text>
+<rect class="bar" x="151.0" y="150.0" width="38" height="100.0"></rect>
+<text class="vl" x="170.0" y="145.0" text-anchor="middle">50</text>
+<rect class="bar" x="211.0" y="200.0" width="38" height="50.0"></rect>
+<text class="vl" x="230.0" y="195.0" text-anchor="middle">25</text>
+<rect class="bar" x="271.0" y="225.0" width="38" height="25.0"></rect>
+<text class="vl" x="290.0" y="220.0" text-anchor="middle">12.5</text>
+<rect class="bar" x="331.0" y="237.5" width="38" height="12.5"></rect>
+<text class="vl" x="350.0" y="232.5" text-anchor="middle">6.2</text>
+<rect class="bar" x="391.0" y="243.8" width="38" height="6.2"></rect>
+<text class="vl" x="410.0" y="238.8" text-anchor="middle">3.1</text>
+<rect class="bar" x="451.0" y="246.9" width="38" height="3.1"></rect>
+<text class="vl" x="470.0" y="241.9" text-anchor="middle">1.6</text>
+<rect class="bar" x="511.0" y="248.4" width="38" height="1.6"></rect>
+<text class="vl" x="530.0" y="243.4" text-anchor="middle">0.8</text>
+<rect class="bar" x="571.0" y="249.2" width="38" height="0.8"></rect>
+<text class="vl" x="590.0" y="244.2" text-anchor="middle">0.4</text>
+<rect class="bar" x="631.0" y="249.6" width="38" height="0.4"></rect>
+<text class="vl" x="650.0" y="244.6" text-anchor="middle">0.2</text>
+</g>
+<g id="r-50-t" hidden>
+<rect class="bar" x="91.0" y="150.0" width="38" height="100.0"></rect>
+<text class="vl" x="110.0" y="145.0" text-anchor="middle">50</text>
+<rect class="bar" x="151.0" y="200.0" width="38" height="50.0"></rect>
+<text class="vl" x="170.0" y="195.0" text-anchor="middle">25</text>
+<rect class="bar" x="211.0" y="225.0" width="38" height="25.0"></rect>
+<text class="vl" x="230.0" y="220.0" text-anchor="middle">12.5</text>
+<rect class="bar" x="271.0" y="237.5" width="38" height="12.5"></rect>
+<text class="vl" x="290.0" y="232.5" text-anchor="middle">6.2</text>
+<rect class="bar" x="331.0" y="243.8" width="38" height="6.2"></rect>
+<text class="vl" x="350.0" y="238.8" text-anchor="middle">3.1</text>
+<rect class="bar" x="391.0" y="246.9" width="38" height="3.1"></rect>
+<text class="vl" x="410.0" y="241.9" text-anchor="middle">1.6</text>
+<rect class="bar" x="451.0" y="248.4" width="38" height="1.6"></rect>
+<text class="vl" x="470.0" y="243.4" text-anchor="middle">0.8</text>
+<rect class="bar" x="511.0" y="249.2" width="38" height="0.8"></rect>
+<text class="vl" x="530.0" y="244.2" text-anchor="middle">0.4</text>
+<rect class="bar" x="571.0" y="249.6" width="38" height="0.4"></rect>
+<text class="vl" x="590.0" y="244.6" text-anchor="middle">0.2</text>
+<rect class="bar" x="631.0" y="249.8" width="38" height="0.2"></rect>
+<text class="vl" x="650.0" y="244.8" text-anchor="middle">0.1</text>
+</g>
+<g id="r-50-b" hidden>
+<rect class="bar" x="91.0" y="150.0" width="38" height="100.0"></rect>
+<text class="vl" x="110.0" y="145.0" text-anchor="middle">50</text>
+<rect class="bar" x="151.0" y="200.0" width="38" height="50.0"></rect>
+<text class="vl" x="170.0" y="195.0" text-anchor="middle">25</text>
+<rect class="bar" x="211.0" y="225.0" width="38" height="25.0"></rect>
+<text class="vl" x="230.0" y="220.0" text-anchor="middle">12.5</text>
+<rect class="bar" x="271.0" y="237.5" width="38" height="12.5"></rect>
+<text class="vl" x="290.0" y="232.5" text-anchor="middle">6.2</text>
+<rect class="bar" x="331.0" y="243.8" width="38" height="6.2"></rect>
+<text class="vl" x="350.0" y="238.8" text-anchor="middle">3.1</text>
+<rect class="bar" x="391.0" y="246.9" width="38" height="3.1"></rect>
+<text class="vl" x="410.0" y="241.9" text-anchor="middle">1.6</text>
+<rect class="bar" x="451.0" y="248.4" width="38" height="1.6"></rect>
+<text class="vl" x="470.0" y="243.4" text-anchor="middle">0.8</text>
+<rect class="bar" x="511.0" y="249.2" width="38" height="0.8"></rect>
+<text class="vl" x="530.0" y="244.2" text-anchor="middle">0.4</text>
+<rect class="bar" x="571.0" y="249.6" width="38" height="0.4"></rect>
+<text class="vl" x="590.0" y="244.6" text-anchor="middle">0.2</text>
+<rect class="bar" x="631.0" y="249.8" width="38" height="0.2"></rect>
+<text class="vl" x="650.0" y="244.8" text-anchor="middle">0.1</text>
+</g>
+<g id="r-60-g" hidden>
+<rect class="bar" x="91.0" y="50.0" width="38" height="200.0"></rect>
+<text class="vl" x="110.0" y="45.0" text-anchor="middle">100</text>
+<rect class="bar" x="151.0" y="130.0" width="38" height="120.0"></rect>
+<text class="vl" x="170.0" y="125.0" text-anchor="middle">60</text>
+<rect class="bar" x="211.0" y="178.0" width="38" height="72.0"></rect>
+<text class="vl" x="230.0" y="173.0" text-anchor="middle">36</text>
+<rect class="bar" x="271.0" y="206.8" width="38" height="43.2"></rect>
+<text class="vl" x="290.0" y="201.8" text-anchor="middle">21.6</text>
+<rect class="bar" x="331.0" y="224.1" width="38" height="25.9"></rect>
+<text class="vl" x="350.0" y="219.1" text-anchor="middle">13</text>
+<rect class="bar" x="391.0" y="234.4" width="38" height="15.6"></rect>
+<text class="vl" x="410.0" y="229.4" text-anchor="middle">7.8</text>
+<rect class="bar" x="451.0" y="240.7" width="38" height="9.3"></rect>
+<text class="vl" x="470.0" y="235.7" text-anchor="middle">4.7</text>
+<rect class="bar" x="511.0" y="244.4" width="38" height="5.6"></rect>
+<text class="vl" x="530.0" y="239.4" text-anchor="middle">2.8</text>
+<rect class="bar" x="571.0" y="246.6" width="38" height="3.4"></rect>
+<text class="vl" x="590.0" y="241.6" text-anchor="middle">1.7</text>
+<rect class="bar" x="631.0" y="248.0" width="38" height="2.0"></rect>
+<text class="vl" x="650.0" y="243.0" text-anchor="middle">1</text>
+</g>
+<g id="r-60-t" hidden>
+<rect class="bar" x="91.0" y="130.0" width="38" height="120.0"></rect>
+<text class="vl" x="110.0" y="125.0" text-anchor="middle">60</text>
+<rect class="bar" x="151.0" y="178.0" width="38" height="72.0"></rect>
+<text class="vl" x="170.0" y="173.0" text-anchor="middle">36</text>
+<rect class="bar" x="211.0" y="206.8" width="38" height="43.2"></rect>
+<text class="vl" x="230.0" y="201.8" text-anchor="middle">21.6</text>
+<rect class="bar" x="271.0" y="224.1" width="38" height="25.9"></rect>
+<text class="vl" x="290.0" y="219.1" text-anchor="middle">13</text>
+<rect class="bar" x="331.0" y="234.4" width="38" height="15.6"></rect>
+<text class="vl" x="350.0" y="229.4" text-anchor="middle">7.8</text>
+<rect class="bar" x="391.0" y="240.7" width="38" height="9.3"></rect>
+<text class="vl" x="410.0" y="235.7" text-anchor="middle">4.7</text>
+<rect class="bar" x="451.0" y="244.4" width="38" height="5.6"></rect>
+<text class="vl" x="470.0" y="239.4" text-anchor="middle">2.8</text>
+<rect class="bar" x="511.0" y="246.6" width="38" height="3.4"></rect>
+<text class="vl" x="530.0" y="241.6" text-anchor="middle">1.7</text>
+<rect class="bar" x="571.0" y="248.0" width="38" height="2.0"></rect>
+<text class="vl" x="590.0" y="243.0" text-anchor="middle">1</text>
+<rect class="bar" x="631.0" y="248.8" width="38" height="1.2"></rect>
+<text class="vl" x="650.0" y="243.8" text-anchor="middle">0.6</text>
+</g>
+<g id="r-60-b" hidden>
+<rect class="bar" x="91.0" y="170.0" width="38" height="80.0"></rect>
+<text class="vl" x="110.0" y="165.0" text-anchor="middle">40</text>
+<rect class="bar" x="151.0" y="202.0" width="38" height="48.0"></rect>
+<text class="vl" x="170.0" y="197.0" text-anchor="middle">24</text>
+<rect class="bar" x="211.0" y="221.2" width="38" height="28.8"></rect>
+<text class="vl" x="230.0" y="216.2" text-anchor="middle">14.4</text>
+<rect class="bar" x="271.0" y="232.7" width="38" height="17.3"></rect>
+<text class="vl" x="290.0" y="227.7" text-anchor="middle">8.6</text>
+<rect class="bar" x="331.0" y="239.6" width="38" height="10.4"></rect>
+<text class="vl" x="350.0" y="234.6" text-anchor="middle">5.2</text>
+<rect class="bar" x="391.0" y="243.8" width="38" height="6.2"></rect>
+<text class="vl" x="410.0" y="238.8" text-anchor="middle">3.1</text>
+<rect class="bar" x="451.0" y="246.3" width="38" height="3.7"></rect>
+<text class="vl" x="470.0" y="241.3" text-anchor="middle">1.9</text>
+<rect class="bar" x="511.0" y="247.8" width="38" height="2.2"></rect>
+<text class="vl" x="530.0" y="242.8" text-anchor="middle">1.1</text>
+<rect class="bar" x="571.0" y="248.7" width="38" height="1.3"></rect>
+<text class="vl" x="590.0" y="243.7" text-anchor="middle">0.7</text>
+<rect class="bar" x="631.0" y="249.2" width="38" height="0.8"></rect>
+<text class="vl" x="650.0" y="244.2" text-anchor="middle">0.4</text>
+</g>
+<g id="r-75-g" hidden>
+<rect class="bar" x="91.0" y="50.0" width="38" height="200.0"></rect>
+<text class="vl" x="110.0" y="45.0" text-anchor="middle">100</text>
+<rect class="bar" x="151.0" y="100.0" width="38" height="150.0"></rect>
+<text class="vl" x="170.0" y="95.0" text-anchor="middle">75</text>
+<rect class="bar" x="211.0" y="137.5" width="38" height="112.5"></rect>
+<text class="vl" x="230.0" y="132.5" text-anchor="middle">56.2</text>
+<rect class="bar" x="271.0" y="165.6" width="38" height="84.4"></rect>
+<text class="vl" x="290.0" y="160.6" text-anchor="middle">42.2</text>
+<rect class="bar" x="331.0" y="186.7" width="38" height="63.3"></rect>
+<text class="vl" x="350.0" y="181.7" text-anchor="middle">31.6</text>
+<rect class="bar" x="391.0" y="202.5" width="38" height="47.5"></rect>
+<text class="vl" x="410.0" y="197.5" text-anchor="middle">23.7</text>
+<rect class="bar" x="451.0" y="214.4" width="38" height="35.6"></rect>
+<text class="vl" x="470.0" y="209.4" text-anchor="middle">17.8</text>
+<rect class="bar" x="511.0" y="223.3" width="38" height="26.7"></rect>
+<text class="vl" x="530.0" y="218.3" text-anchor="middle">13.3</text>
+<rect class="bar" x="571.0" y="230.0" width="38" height="20.0"></rect>
+<text class="vl" x="590.0" y="225.0" text-anchor="middle">10</text>
+<rect class="bar" x="631.0" y="235.0" width="38" height="15.0"></rect>
+<text class="vl" x="650.0" y="230.0" text-anchor="middle">7.5</text>
+</g>
+<g id="r-75-t" hidden>
+<rect class="bar" x="91.0" y="100.0" width="38" height="150.0"></rect>
+<text class="vl" x="110.0" y="95.0" text-anchor="middle">75</text>
+<rect class="bar" x="151.0" y="137.5" width="38" height="112.5"></rect>
+<text class="vl" x="170.0" y="132.5" text-anchor="middle">56.2</text>
+<rect class="bar" x="211.0" y="165.6" width="38" height="84.4"></rect>
+<text class="vl" x="230.0" y="160.6" text-anchor="middle">42.2</text>
+<rect class="bar" x="271.0" y="186.7" width="38" height="63.3"></rect>
+<text class="vl" x="290.0" y="181.7" text-anchor="middle">31.6</text>
+<rect class="bar" x="331.0" y="202.5" width="38" height="47.5"></rect>
+<text class="vl" x="350.0" y="197.5" text-anchor="middle">23.7</text>
+<rect class="bar" x="391.0" y="214.4" width="38" height="35.6"></rect>
+<text class="vl" x="410.0" y="209.4" text-anchor="middle">17.8</text>
+<rect class="bar" x="451.0" y="223.3" width="38" height="26.7"></rect>
+<text class="vl" x="470.0" y="218.3" text-anchor="middle">13.3</text>
+<rect class="bar" x="511.0" y="230.0" width="38" height="20.0"></rect>
+<text class="vl" x="530.0" y="225.0" text-anchor="middle">10</text>
+<rect class="bar" x="571.0" y="235.0" width="38" height="15.0"></rect>
+<text class="vl" x="590.0" y="230.0" text-anchor="middle">7.5</text>
+<rect class="bar" x="631.0" y="238.7" width="38" height="11.3"></rect>
+<text class="vl" x="650.0" y="233.7" text-anchor="middle">5.6</text>
+</g>
+<g id="r-75-b" hidden>
+<rect class="bar" x="91.0" y="200.0" width="38" height="50.0"></rect>
+<text class="vl" x="110.0" y="195.0" text-anchor="middle">25</text>
+<rect class="bar" x="151.0" y="212.5" width="38" height="37.5"></rect>
+<text class="vl" x="170.0" y="207.5" text-anchor="middle">18.8</text>
+<rect class="bar" x="211.0" y="221.9" width="38" height="28.1"></rect>
+<text class="vl" x="230.0" y="216.9" text-anchor="middle">14.1</text>
+<rect class="bar" x="271.0" y="228.9" width="38" height="21.1"></rect>
+<text class="vl" x="290.0" y="223.9" text-anchor="middle">10.5</text>
+<rect class="bar" x="331.0" y="234.2" width="38" height="15.8"></rect>
+<text class="vl" x="350.0" y="229.2" text-anchor="middle">7.9</text>
+<rect class="bar" x="391.0" y="238.1" width="38" height="11.9"></rect>
+<text class="vl" x="410.0" y="233.1" text-anchor="middle">5.9</text>
+<rect class="bar" x="451.0" y="241.1" width="38" height="8.9"></rect>
+<text class="vl" x="470.0" y="236.1" text-anchor="middle">4.4</text>
+<rect class="bar" x="511.0" y="243.3" width="38" height="6.7"></rect>
+<text class="vl" x="530.0" y="238.3" text-anchor="middle">3.3</text>
+<rect class="bar" x="571.0" y="245.0" width="38" height="5.0"></rect>
+<text class="vl" x="590.0" y="240.0" text-anchor="middle">2.5</text>
+<rect class="bar" x="631.0" y="246.2" width="38" height="3.8"></rect>
+<text class="vl" x="650.0" y="241.2" text-anchor="middle">1.9</text>
+</g>
+<g id="r-80-g" hidden>
+<rect class="bar" x="91.0" y="50.0" width="38" height="200.0"></rect>
+<text class="vl" x="110.0" y="45.0" text-anchor="middle">100</text>
+<rect class="bar" x="151.0" y="90.0" width="38" height="160.0"></rect>
+<text class="vl" x="170.0" y="85.0" text-anchor="middle">80</text>
+<rect class="bar" x="211.0" y="122.0" width="38" height="128.0"></rect>
+<text class="vl" x="230.0" y="117.0" text-anchor="middle">64</text>
+<rect class="bar" x="271.0" y="147.6" width="38" height="102.4"></rect>
+<text class="vl" x="290.0" y="142.6" text-anchor="middle">51.2</text>
+<rect class="bar" x="331.0" y="168.1" width="38" height="81.9"></rect>
+<text class="vl" x="350.0" y="163.1" text-anchor="middle">41</text>
+<rect class="bar" x="391.0" y="184.5" width="38" height="65.5"></rect>
+<text class="vl" x="410.0" y="179.5" text-anchor="middle">32.8</text>
+<rect class="bar" x="451.0" y="197.6" width="38" height="52.4"></rect>
+<text class="vl" x="470.0" y="192.6" text-anchor="middle">26.2</text>
+<rect class="bar" x="511.0" y="208.1" width="38" height="41.9"></rect>
+<text class="vl" x="530.0" y="203.1" text-anchor="middle">21</text>
+<rect class="bar" x="571.0" y="216.4" width="38" height="33.6"></rect>
+<text class="vl" x="590.0" y="211.4" text-anchor="middle">16.8</text>
+<rect class="bar" x="631.0" y="223.2" width="38" height="26.8"></rect>
+<text class="vl" x="650.0" y="218.2" text-anchor="middle">13.4</text>
+</g>
+<g id="r-80-t" hidden>
+<rect class="bar" x="91.0" y="90.0" width="38" height="160.0"></rect>
+<text class="vl" x="110.0" y="85.0" text-anchor="middle">80</text>
+<rect class="bar" x="151.0" y="122.0" width="38" height="128.0"></rect>
+<text class="vl" x="170.0" y="117.0" text-anchor="middle">64</text>
+<rect class="bar" x="211.0" y="147.6" width="38" height="102.4"></rect>
+<text class="vl" x="230.0" y="142.6" text-anchor="middle">51.2</text>
+<rect class="bar" x="271.0" y="168.1" width="38" height="81.9"></rect>
+<text class="vl" x="290.0" y="163.1" text-anchor="middle">41</text>
+<rect class="bar" x="331.0" y="184.5" width="38" height="65.5"></rect>
+<text class="vl" x="350.0" y="179.5" text-anchor="middle">32.8</text>
+<rect class="bar" x="391.0" y="197.6" width="38" height="52.4"></rect>
+<text class="vl" x="410.0" y="192.6" text-anchor="middle">26.2</text>
+<rect class="bar" x="451.0" y="208.1" width="38" height="41.9"></rect>
+<text class="vl" x="470.0" y="203.1" text-anchor="middle">21</text>
+<rect class="bar" x="511.0" y="216.4" width="38" height="33.6"></rect>
+<text class="vl" x="530.0" y="211.4" text-anchor="middle">16.8</text>
+<rect class="bar" x="571.0" y="223.2" width="38" height="26.8"></rect>
+<text class="vl" x="590.0" y="218.2" text-anchor="middle">13.4</text>
+<rect class="bar" x="631.0" y="228.5" width="38" height="21.5"></rect>
+<text class="vl" x="650.0" y="223.5" text-anchor="middle">10.7</text>
+</g>
+<g id="r-80-b" hidden>
+<rect class="bar" x="91.0" y="210.0" width="38" height="40.0"></rect>
+<text class="vl" x="110.0" y="205.0" text-anchor="middle">20</text>
+<rect class="bar" x="151.0" y="218.0" width="38" height="32.0"></rect>
+<text class="vl" x="170.0" y="213.0" text-anchor="middle">16</text>
+<rect class="bar" x="211.0" y="224.4" width="38" height="25.6"></rect>
+<text class="vl" x="230.0" y="219.4" text-anchor="middle">12.8</text>
+<rect class="bar" x="271.0" y="229.5" width="38" height="20.5"></rect>
+<text class="vl" x="290.0" y="224.5" text-anchor="middle">10.2</text>
+<rect class="bar" x="331.0" y="233.6" width="38" height="16.4"></rect>
+<text class="vl" x="350.0" y="228.6" text-anchor="middle">8.2</text>
+<rect class="bar" x="391.0" y="236.9" width="38" height="13.1"></rect>
+<text class="vl" x="410.0" y="231.9" text-anchor="middle">6.6</text>
+<rect class="bar" x="451.0" y="239.5" width="38" height="10.5"></rect>
+<text class="vl" x="470.0" y="234.5" text-anchor="middle">5.2</text>
+<rect class="bar" x="511.0" y="241.6" width="38" height="8.4"></rect>
+<text class="vl" x="530.0" y="236.6" text-anchor="middle">4.2</text>
+<rect class="bar" x="571.0" y="243.3" width="38" height="6.7"></rect>
+<text class="vl" x="590.0" y="238.3" text-anchor="middle">3.4</text>
+<rect class="bar" x="631.0" y="244.6" width="38" height="5.4"></rect>
+<text class="vl" x="650.0" y="239.6" text-anchor="middle">2.7</text>
+</g>
+<g id="r-90-g" hidden>
+<rect class="bar" x="91.0" y="50.0" width="38" height="200.0"></rect>
+<text class="vl" x="110.0" y="45.0" text-anchor="middle">100</text>
+<rect class="bar" x="151.0" y="70.0" width="38" height="180.0"></rect>
+<text class="vl" x="170.0" y="65.0" text-anchor="middle">90</text>
+<rect class="bar" x="211.0" y="88.0" width="38" height="162.0"></rect>
+<text class="vl" x="230.0" y="83.0" text-anchor="middle">81</text>
+<rect class="bar" x="271.0" y="104.2" width="38" height="145.8"></rect>
+<text class="vl" x="290.0" y="99.2" text-anchor="middle">72.9</text>
+<rect class="bar" x="331.0" y="118.8" width="38" height="131.2"></rect>
+<text class="vl" x="350.0" y="113.8" text-anchor="middle">65.6</text>
+<rect class="bar" x="391.0" y="131.9" width="38" height="118.1"></rect>
+<text class="vl" x="410.0" y="126.9" text-anchor="middle">59</text>
+<rect class="bar" x="451.0" y="143.7" width="38" height="106.3"></rect>
+<text class="vl" x="470.0" y="138.7" text-anchor="middle">53.1</text>
+<rect class="bar" x="511.0" y="154.3" width="38" height="95.7"></rect>
+<text class="vl" x="530.0" y="149.3" text-anchor="middle">47.8</text>
+<rect class="bar" x="571.0" y="163.9" width="38" height="86.1"></rect>
+<text class="vl" x="590.0" y="158.9" text-anchor="middle">43</text>
+<rect class="bar" x="631.0" y="172.5" width="38" height="77.5"></rect>
+<text class="vl" x="650.0" y="167.5" text-anchor="middle">38.7</text>
+</g>
+<g id="r-90-t" hidden>
+<rect class="bar" x="91.0" y="70.0" width="38" height="180.0"></rect>
+<text class="vl" x="110.0" y="65.0" text-anchor="middle">90</text>
+<rect class="bar" x="151.0" y="88.0" width="38" height="162.0"></rect>
+<text class="vl" x="170.0" y="83.0" text-anchor="middle">81</text>
+<rect class="bar" x="211.0" y="104.2" width="38" height="145.8"></rect>
+<text class="vl" x="230.0" y="99.2" text-anchor="middle">72.9</text>
+<rect class="bar" x="271.0" y="118.8" width="38" height="131.2"></rect>
+<text class="vl" x="290.0" y="113.8" text-anchor="middle">65.6</text>
+<rect class="bar" x="331.0" y="131.9" width="38" height="118.1"></rect>
+<text class="vl" x="350.0" y="126.9" text-anchor="middle">59</text>
+<rect class="bar" x="391.0" y="143.7" width="38" height="106.3"></rect>
+<text class="vl" x="410.0" y="138.7" text-anchor="middle">53.1</text>
+<rect class="bar" x="451.0" y="154.3" width="38" height="95.7"></rect>
+<text class="vl" x="470.0" y="149.3" text-anchor="middle">47.8</text>
+<rect class="bar" x="511.0" y="163.9" width="38" height="86.1"></rect>
+<text class="vl" x="530.0" y="158.9" text-anchor="middle">43</text>
+<rect class="bar" x="571.0" y="172.5" width="38" height="77.5"></rect>
+<text class="vl" x="590.0" y="167.5" text-anchor="middle">38.7</text>
+<rect class="bar" x="631.0" y="180.3" width="38" height="69.7"></rect>
+<text class="vl" x="650.0" y="175.3" text-anchor="middle">34.9</text>
+</g>
+<g id="r-90-b" hidden>
+<rect class="bar" x="91.0" y="230.0" width="38" height="20.0"></rect>
+<text class="vl" x="110.0" y="225.0" text-anchor="middle">10</text>
+<rect class="bar" x="151.0" y="232.0" width="38" height="18.0"></rect>
+<text class="vl" x="170.0" y="227.0" text-anchor="middle">9</text>
+<rect class="bar" x="211.0" y="233.8" width="38" height="16.2"></rect>
+<text class="vl" x="230.0" y="228.8" text-anchor="middle">8.1</text>
+<rect class="bar" x="271.0" y="235.4" width="38" height="14.6"></rect>
+<text class="vl" x="290.0" y="230.4" text-anchor="middle">7.3</text>
+<rect class="bar" x="331.0" y="236.9" width="38" height="13.1"></rect>
+<text class="vl" x="350.0" y="231.9" text-anchor="middle">6.6</text>
+<rect class="bar" x="391.0" y="238.2" width="38" height="11.8"></rect>
+<text class="vl" x="410.0" y="233.2" text-anchor="middle">5.9</text>
+<rect class="bar" x="451.0" y="239.4" width="38" height="10.6"></rect>
+<text class="vl" x="470.0" y="234.4" text-anchor="middle">5.3</text>
+<rect class="bar" x="511.0" y="240.4" width="38" height="9.6"></rect>
+<text class="vl" x="530.0" y="235.4" text-anchor="middle">4.8</text>
+<rect class="bar" x="571.0" y="241.4" width="38" height="8.6"></rect>
+<text class="vl" x="590.0" y="236.4" text-anchor="middle">4.3</text>
+<rect class="bar" x="631.0" y="242.3" width="38" height="7.7"></rect>
+<text class="vl" x="650.0" y="237.3" text-anchor="middle">3.9</text>
+</g>
+</svg>
+    <div class="readouts">
+      <div class="ro"><span class="k">Multiplier</span><span class="v" id="ro0">&ndash;</span></div>
+      <div class="ro"><span class="k">Round 1</span><span class="v" id="ro1">&ndash;</span></div>
+      <div class="ro"><span class="k">Rounds 1&ndash;10</span><span class="v" id="ro2">&ndash;</span></div>
+      <div class="ro"><span class="k">All rounds: real GDP</span><span class="v hl" id="ro3">&ndash;</span></div>
+    </div>
+    <p class="figcap" id="pcap"></p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>The 16 terms</h2>
+</section>
+<article class="entry" id="e1">
+  <div class="entry-head"><span class="entry-num">01</span><h2>Disposable income</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Income <b>after taxes are paid and government transfers are received</b>. It is what households can actually spend or save.</p></div>
+  <p class="reading">Textbook page 161.</p>
+
+  <p>Start from what people earn. Subtract the taxes they pay. Add the transfers they receive &mdash; unemployment benefits, Social Security checks. What is left is disposable income.</p>
+
+  <p>It matters here because it is what consumer spending depends on. Anything that changes it &mdash; more output and wages, a tax cut, a bigger benefit check &mdash; changes how much people spend.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Taxes and transfers move disposable income <b>before</b> anyone spends a cent. That is exactly how a tax cut reaches spending (entry 8).</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Figure 16.1, point A.</span> The middle fifth of American households in 2008 had average disposable income of $46,936 and spent $42,659 of it.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">One household.</span> Earnings $50,000, taxes $8,000, transfers $2,000: disposable income = 50,000 &minus; 8,000 + 2,000 = <b>$44,000</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A tax rebate.</span> The government sends you a $1,000 rebate. Your disposable income is $1,000 higher today, though you produced nothing more.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Spending out of it is measured by the <a href="#e2">MPC</a> (entry 2). Taxes change it directly, which is where the <a href="#e8">tax multiplier</a> (entry 8) starts.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">1.1</span> You earn $60,000, pay $12,000 in taxes and receive no transfers. What is your disposable income?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>60,000 &minus; 12,000 = <b>$48,000</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">1.2</span> The government raises a family&rsquo;s benefits by $500 a year. What happens to its disposable income?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It rises by <b>$500</b>, before the family spends any of it.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got1"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e2">
+  <div class="entry-head"><span class="entry-num">02</span><h2>Marginal propensity to consume (MPC)</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>change in consumer spending divided by the change in disposable income</b>: how much of an extra dollar of disposable income is spent.</p></div>
+  <p class="reading">Textbook page 159, margin and equation 16-1.</p>
+
+  <p>People usually spend part, but not all, of an extra dollar. So the MPC is a number between 0 and 1. An MPC of 0.6 means 60 cents of each extra dollar is spent.</p>
+
+  <p>It is a ratio of <b>changes</b>. Divide the extra spending by the extra income &mdash; never total spending by total income.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Total spending &divide; total income is a different number. At point A it is 42,659 &divide; 46,936 = 0.91, but the MPC the data give is about 0.53.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Page 159.</span> Spending rises by $6 billion when disposable income rises by $10 billion: 6 &divide; 10 = <b>0.6</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A raise.</span> Your take-home pay rises by $1,000 and you spend $750 more: MPC = 750 &divide; 1,000 = <b>0.75</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">American households, 2008.</span> The line fitted to the data in Figure 16.3 has an MPC of <b>267/500</b>, about 0.53.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is spending out of <a href="#e1">disposable income</a> (entry 1); what is not spent is the <a href="#e3">MPS</a> (entry 3). It sets the size of each round of the <a href="#e5">multiplier process</a> (entry 5), and it is the slope of the <a href="#e12">consumption function</a> (entry 12).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">2.1</span> Disposable income rises by $2,000 and consumer spending by $1,600. What is the MPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>1,600 &divide; 2,000 = <b>0.8</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">2.2</span> Why is the MPC normally between 0 and 1?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because people spend some of an extra dollar and save the rest.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got2"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e3">
+  <div class="entry-head"><span class="entry-num">03</span><h2>Marginal propensity to save (MPS)</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The fraction of an extra dollar of disposable income that is <b>saved</b>. <b>MPC + MPS = 1.</b></p></div>
+  <p class="reading">Textbook page 159, margin.</p>
+
+  <p>Every extra dollar is either spent or saved, so the two fractions add up to one. If you know one, you know the other: MPS = 1 &minus; MPC.</p>
+
+  <p>Saving is the <b>leak</b> in the multiplier. The money saved in each round is not spent, so it does not become anyone else&rsquo;s income.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The MPS is about the <b>extra</b> dollar. It is not the share of all income that is saved.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Page 164.</span> An MPC of about 0.53 means an MPS of about 1 &minus; 0.53 = <b>0.47</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">From the MPC.</span> MPC 0.75, so MPS = 1 &minus; 0.75 = <b>0.25</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A $1,000 raise.</span> You spend $800 and save $200: MPC 0.8, MPS 0.2, and together they make 1.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the other half of the <a href="#e2">MPC</a> (entry 2), and the <a href="#e6">expenditure multiplier</a> (entry 6) is one divided by it.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">3.1</span> The MPC is 0.9. What is the MPS?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>1 &minus; 0.9 = <b>0.1</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">3.2</span> Disposable income rises by $500 and saving by $100. What are the MPS and the MPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>MPS = 100 &divide; 500 = <b>0.2</b>, so MPC = <b>0.8</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got3"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e4">
+  <div class="entry-head"><span class="entry-num">04</span><h2>Autonomous change in spending</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>An initial rise or fall in spending <b>at a given level of real GDP</b>. It is the <b>cause</b> of the chain reaction, not its result.</p></div>
+  <p class="reading">Textbook page 160, margin.</p>
+
+  <p>Something has to start the multiplier: firms decide to build more, the government buys more, foreigners buy more exports, or households decide to spend more at every income. That first change is autonomous &mdash; &ldquo;self-governing&rdquo;.</p>
+
+  <p>The extra consumer spending in later rounds is different. It happens <b>because</b> incomes rose. It is induced spending, and the multiplier already counts it.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Do not count the later rounds as a second autonomous change. Only the first change goes into the formula.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Home builders.</span> Builders decide to spend an extra $100 billion on homes. That $100 billion is the autonomous change.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Feeling richer.</span> A housing boom makes households spend $20 billion more at every level of income. The autonomous change in consumer spending is <b>$20 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Four places to start.</span> Consumer spending, investment, government purchases or net exports &mdash; an autonomous change in any of them starts a multiplier.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It starts the <a href="#e5">multiplier process</a> (entry 5). It can come from a shift in <a href="#e13">consumer spending</a> (entry 13) or in <a href="#e14">planned investment</a> (entry 14).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">4.1</span> Consumer spending rises because incomes rose in the last round. Is that an autonomous change?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It is induced by the rise in income, and the multiplier already counts it.</p></div></details></div>
+    <div class="q"><p><span class="qn">4.2</span> Name the four kinds of spending whose autonomous change can start a multiplier.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Consumer spending, investment spending, government purchases and net exports.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got4"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e5">
+  <div class="entry-head"><span class="entry-num">05</span><h2>The multiplier process</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>One person&rsquo;s spending is another&rsquo;s income. An autonomous change in spending raises income, which raises spending, which raises income again &mdash; in <b>rounds that shrink</b> by the MPC each time.</p></div>
+  <p class="reading">Textbook pages 158&ndash;160.</p>
+
+  <p>Round 1 is the autonomous change itself. Round 2 is the MPC times that, because the people who earned it spend that share. Round 3 is the MPC times round 2, and so on.</p>
+
+  <p>The rounds get smaller because some income leaks into saving each time. So the total is finite: it adds up to a multiple of the first change. It works in reverse too &mdash; a fall in spending shrinks income round after round.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The rounds shrink by the <b>MPC</b>, not by the MPS. With an MPC of 0.6, each round is 60% of the last.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Page 160.</span> MPC 0.6 and $100 billion of new investment: rounds of $100 billion, $60 billion, $36 billion&hellip; adding up to <b>$250 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> MPC 0.8 and $10 billion: rounds of $10, $8 and $6.4 billion, and the total is <b>$50 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The Great Depression.</span> From 1929 to 1933 investment fell by $82.8 billion and real GDP by $260.6 billion &mdash; about <b>3.1</b> times as much (2005 dollars).</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Each round&rsquo;s size is set by the <a href="#e2">MPC</a> (entry 2); it starts with an <a href="#e4">autonomous change</a> (entry 4); its total is the <a href="#e6">expenditure multiplier</a> (entry 6).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">5.1</span> MPC 0.75 and $40 billion of new investment. What are the first three rounds?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>$40 billion, $30 billion, <b>$22.5 billion</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">5.2</span> Why does the total stop growing even though the rounds go on?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because part of each round is saved, so every round is smaller than the last.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got5"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e6">
+  <div class="entry-head"><span class="entry-num">06</span><h2>Expenditure multiplier</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; The name is not in your textbook &mdash; learn it from here.</b> Your textbook calls this just <i>the multiplier</i>. Your exam calls it the <b>expenditure multiplier</b> or the <b>spending multiplier</b>, to tell it apart from the tax multiplier.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Expenditure multiplier = 1 &divide; (1 &minus; MPC) = 1 &divide; MPS.</b> Change in real GDP = multiplier &times; the autonomous change in spending.</p></div>
+  <p class="reading">Textbook page 160, equation 16-4, called &ldquo;the multiplier&rdquo;.</p>
+
+  <p>The rounds 1 + MPC + MPC&sup2; + &hellip; add up to 1 &divide; (1 &minus; MPC). So you never need to add rounds: divide one by the MPS and multiply.</p>
+
+  <p>The bigger the MPC, the bigger the multiplier, because less leaks out at each round. It applies to an autonomous change in <b>any</b> kind of spending &mdash; consumer, investment, government or net exports.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Divide by 1 &minus; MPC, not by the MPC. With an MPC of 0.8 the multiplier is 5, not 1.25.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 2.</span> MPC 0.5 gives a multiplier of 1 &divide; 0.5 = <b>2</b>; MPC 0.8 gives 1 &divide; 0.2 = <b>5</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Page 160.</span> MPC 0.6: 1 &divide; 0.4 = 2.5, so $100 billion of investment raises real GDP by <b>$250 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">American households.</span> Your textbook&rsquo;s MPC of about 0.53 gives 1 &divide; 0.47, a multiplier of about <b>2.13</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is one divided by the <a href="#e3">MPS</a> (entry 3), and the total of the <a href="#e5">rounds</a> (entry 5). It sets the <a href="#e7">shift in aggregate demand</a> (entry 7); compare it with the <a href="#e9">tax multiplier</a> (entry 9); and run it backwards in <a href="#e11">entry 11</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">6.1</span> The MPC is 0.9. What is the expenditure multiplier?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>1 &divide; 0.1 = <b>10</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">6.2</span> The MPS is 0.25 and government purchases rise by $20 billion. By how much can real GDP rise?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Multiplier 1 &divide; 0.25 = 4, so 4 &times; 20 = <b>$80 billion</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got6"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e7">
+  <div class="entry-head"><span class="entry-num">07</span><h2>The multiplier shifts aggregate demand</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in this module &mdash; learn it from here.</b> Module 16 keeps all prices fixed and never mentions aggregate demand. Your exam describes the multiplier as the size of the shift in aggregate demand, and asks for the change in real GDP &ldquo;at most&rdquo;.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The multiplier gives how far <b>aggregate demand</b> shifts. Real GDP rises by that full amount only if the price level does not rise &mdash; so it is the <b>maximum</b> change in real GDP.</p></div>
+  <p class="reading">Textbook page 158, assumption 1: prices are fixed.</p>
+
+  <p>Your textbook assumes firms will produce any extra output at the same prices. Then every dollar of extra spending becomes a dollar of extra real GDP, and the multiplier gives the whole change.</p>
+
+  <p>In the aggregate demand and supply model you meet next, the multiplier tells you how far the AD curve shifts left or right. If prices rise as output grows, part of the shift becomes higher prices, not more output. That is why exam answers say real GDP rises &ldquo;by a maximum of&rdquo; the amount.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The multiplier is the size of the <b>shift</b>, measured along the real GDP axis. It is not a promise that output rises that much.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Assumption 1.</span> Producers supply extra output at a fixed price, so changes in spending become changes in real GDP. Your textbook says this needs changing for the long run.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A fall in investment.</span> Investment falls by $30 billion and the MPC is 0.8: aggregate demand shifts left by 5 &times; 30 = <b>$150 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Near full capacity.</span> An economy already producing flat out gets $100 billion of new spending. Aggregate demand shifts right by the full multiplier, but much of it shows up as higher prices.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Its size is the <a href="#e6">expenditure multiplier</a> (entry 6) times the change in spending.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">7.1</span> The MPC is 0.75 and government purchases rise by $10 billion. How far does aggregate demand shift?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>4 &times; 10 = <b>$40 billion</b> to the right.</p></div></details></div>
+    <div class="q"><p><span class="qn">7.2</span> Why do answers say real GDP rises &ldquo;by a maximum of&rdquo; the multiplier amount?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because if the price level rises, part of the shift in demand becomes higher prices instead of more output.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got7"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e8">
+  <div class="entry-head"><span class="entry-num">08</span><h2>Tax multiplier</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Module 21 shows a transfer working through the rounds in a table, but your textbook never names the <b>tax multiplier</b> or writes its formula. Your exam does both.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Tax multiplier = &minus;MPC &divide; (1 &minus; MPC) = &minus;MPC &divide; MPS.</b> A tax cut raises real GDP; a tax increase lowers it.</p></div>
+  <p class="reading">Not in your textbook. Module 21 (pages 210&ndash;211) works a transfer through the rounds.</p>
+
+  <p>A tax cut is not spending. It raises disposable income, and households spend only the MPC share of it. So round 1 is MPC &times; the tax cut, not the whole amount &mdash; and every round after is one step behind the spending case.</p>
+
+  <p>The sign is negative because taxes and output move in opposite directions. A transfer payment works like a tax cut: the same size of multiplier, with a plus sign.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Round 1 of a tax cut is MPC &times; the cut. Households save part of it straight away.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Module 21, Table 21.1.</span> A $50 billion transfer with an MPC of 0.5: households spend $25 billion in round 1, and real GDP rises by <b>$50 billion</b> in the end.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A tax cut.</span> MPC 0.8 and a $10 billion tax cut: tax multiplier &minus;0.8 &divide; 0.2 = &minus;4, so real GDP can rise by <b>$40 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A tax increase.</span> MPC 0.75 and a $20 billion tax increase: &minus;3 &times; 20 = <b>&minus;$60 billion</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It works through <a href="#e1">disposable income</a> (entry 1). Compare it with the spending multiplier in <a href="#e9">entry 9</a>; combine the two in <a href="#e10">entry 10</a>; run it backwards in <a href="#e11">entry 11</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">8.1</span> The MPC is 0.9. What is the tax multiplier?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>&minus;0.9 &divide; 0.1 = <b>&minus;9</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">8.2</span> The MPC is 0.6 and taxes rise by $10 billion. What is the largest effect on real GDP?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Tax multiplier &minus;0.6 &divide; 0.4 = &minus;1.5, so <b>&minus;$15 billion</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got8"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e9">
+  <div class="entry-head"><span class="entry-num">09</span><h2>The spending multiplier is bigger than the tax multiplier</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in this module &mdash; learn it from here.</b> Module 21 compares the two in a table. Your exam states it as a rule and expects you to explain it.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>For the same MPC, a change in government purchases moves real GDP <b>more</b> than an equal change in taxes. In size, the spending multiplier is exactly <b>1 bigger</b>.</p></div>
+  <p class="reading">Module 21, page 210, Table 21.1.</p>
+
+  <p>Government purchases are spending in round 1, all of it. A tax cut reaches spending only after households save part of it. So the tax cut&rsquo;s chain starts smaller and stays smaller.</p>
+
+  <p>The difference is the first round. 1 &divide; (1 &minus; MPC) minus MPC &divide; (1 &minus; MPC) is (1 &minus; MPC) &divide; (1 &minus; MPC) = 1.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Compare the <b>sizes</b>. The tax multiplier is negative, so &ldquo;&minus;4 is smaller than 5&rdquo; is true but not the point: 4 is smaller than 5.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Module 21, Table 21.1.</span> MPC 0.5: $50 billion of purchases raises real GDP by <b>$100 billion</b>; $50 billion of transfers raises it by <b>$50 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">The diagram above.</span> MPC 0.8: spending multiplier <b>5</b>, tax multiplier <b>&minus;4</b>. Switch between the first two buttons and watch round 1.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Building a bridge or sending checks.</span> Spending $10 billion on a bridge pays $10 billion of wages at once. Sending $10 billion in checks does not, if some of it is saved.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It compares the <a href="#e6">expenditure multiplier</a> (entry 6) with the <a href="#e8">tax multiplier</a> (entry 8). The gap of exactly 1 is why <a href="#e10">entry 10</a> works.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">9.1</span> The MPC is 0.75. Give both multipliers and the gap between their sizes.</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Spending <b>4</b>, tax <b>&minus;3</b>; in size they differ by <b>1</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">9.2</span> Why does a tax cut raise real GDP by less than the same increase in government purchases?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because households save part of the tax cut before anything is spent, so the first round is smaller.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got9"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e10">
+  <div class="entry-head"><span class="entry-num">10</span><h2>Changing spending and taxes together</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Raising spending and taxes by the same amount is a classic exam question. Your textbook never works it.</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>Raise government purchases and taxes by the <b>same amount</b> and real GDP rises by <b>that amount</b>, at most. The combined multiplier is 1, whatever the MPC.</p></div>
+  <p class="reading">Not in your textbook.</p>
+
+  <p>Do the two parts separately and add. The spending raises real GDP by the spending multiplier times the amount. The tax lowers it by the tax multiplier times the amount. Because the two multipliers differ by exactly 1 in size, what is left is the amount itself.</p>
+
+  <p>So a budget that stays balanced is not neutral. More spending paid for by equal taxes still expands the economy.</p>
+
+  <div class="watch"><p><b>Watch out.</b> The answer is not zero. The two changes do not cancel, because the tax&rsquo;s first round is smaller.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Not worked in your textbook.</span> Module 21&rsquo;s table has both halves: with an MPC of 0.5, $50 billion of purchases adds $100 billion and $50 billion of transfers adds $50 billion. A $50 billion tax <i>rise</i> would take away $50 billion, leaving <b>$50 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">MPC 0.9.</span> Purchases and taxes both rise by $50 million: 10 &times; 50 &minus; 9 &times; 50 = 500 &minus; 450 = <b>$50 million</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The diagram above.</span> Press the third button at every MPC. The rounds change shape, but the total is always <b>$100 billion</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It adds the <a href="#e8">tax multiplier</a> (entry 8) to the spending multiplier, using the gap of 1 from <a href="#e9">entry 9</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">10.1</span> The MPC is 0.75. Government purchases and taxes both fall by $20 billion. What happens to real GDP?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>&minus;4 &times; 20 + 3 &times; 20 = &minus;80 + 60 = <b>&minus;$20 billion</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">10.2</span> Does the answer to a balanced change depend on the MPC?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It always equals the change in spending.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got10"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e11">
+  <div class="entry-head"><span class="entry-num">11</span><h2>Working backwards: how big a change is needed?</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="notinbook"><p><b>&#9873; Not in your textbook &mdash; learn it from here.</b> Your textbook always goes from a change in spending to a change in real GDP. Your exam also asks the other way round: how big a change is needed?</p></div>
+  <div class="defn"><span class="lbl">Definition</span><p>To move real GDP by a target amount, <b>divide the target by the multiplier</b>: change in purchases = target &divide; spending multiplier; change in taxes = target &divide; tax multiplier.</p></div>
+  <p class="reading">Not in your textbook.</p>
+
+  <p>Policymakers start from the gap they want to close and ask how much to spend or how much to cut taxes. Divide the target by the right multiplier.</p>
+
+  <p>A tax cut has to be bigger than the equivalent spending increase, because its multiplier is smaller. Its sign comes out negative: taxes must be <b>cut</b> to raise output.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Divide; do not multiply. A $100 billion target with a multiplier of 4 needs $25 billion, not $400 billion.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">American households.</span> With your textbook&rsquo;s estimated multiplier of about 2.13, raising real GDP by $100 billion takes about 100 &divide; 2.13 = <b>$46.9 billion</b> of new spending.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">MPC 0.75.</span> To raise real GDP by $100 billion: purchases up by 100 &divide; 4 = <b>$25 billion</b>, or taxes cut by 100 &divide; 3 = <b>$33.3 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Cooling an economy.</span> Real GDP is $50 billion above where policymakers want it and the MPC is 0.8. Cut purchases by 50 &divide; 5 = $10 billion, or raise taxes by 50 &divide; 4 = $12.5 billion.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It runs the <a href="#e6">expenditure multiplier</a> (entry 6) and the <a href="#e8">tax multiplier</a> (entry 8) backwards.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">11.1</span> The MPC is 0.9. How much must government purchases rise to raise real GDP by $50 billion?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>50 &divide; 10 = <b>$5 billion</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">11.2</span> The MPC is 0.8. How big a tax cut raises real GDP by $40 billion?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>40 &divide; 4 = <b>$10 billion</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got11"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ THE DRILL ============ -->
+<section class="section" id="sorter">
+  <h2>Drill: which multiplier?</h2>
+  <p>Twelve events. Does each start a chain with the expenditure multiplier (all of it spent in round 1), with
+  the tax multiplier (only part of it spent), or is it a later round of a chain already counted?</p>
+  <div class="widget">
+    <div id="sorter-list"></div>
+    <p class="score" id="sorter-score">0 of 12 answered</p>
+    <button type="button" id="sorter-reset">Start again</button>
+  </div>
+</section>
+<article class="entry" id="e12">
+  <div class="entry-head"><span class="entry-num">12</span><h2>The consumption function</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>c = a + MPC &times; yd</b>: a household&rsquo;s spending equals <b>autonomous consumer spending</b> a, plus the MPC times its disposable income.</p></div>
+  <p class="reading">Textbook pages 162&ndash;164, equations 16-5 and 16-9, Figures 16.2 and 16.3.</p>
+
+  <p>Drawn with disposable income across and spending up, it is a straight line. Its vertical intercept is autonomous consumer spending &mdash; what the household would spend with no income, by borrowing or using savings. Its slope is the MPC.</p>
+
+  <p>Your exam does not use the equation by name. It is a good way to see the MPC as a slope, and your textbook&rsquo;s review uses it.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A change in current disposable income is a <b>movement along</b> the line. Only other things &mdash; entry 13 &mdash; shift it.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Your AP Review, question 3.</span> c = $16,000 + 0.5 &times; $20,000 = <b>$26,000</b>.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Your AP Review, free response 1.</span> c = $15,000 + 0.8 &times; $40,000 = <b>$47,000</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">The fitted line, Figure 16.3.</span> c = $17,484 + 0.534 &times; yd. A household with $50,000 of disposable income is predicted to spend about <b>$44,184</b>.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Its slope is the <a href="#e2">MPC</a> (entry 2); <a href="#e13">entry 13</a> shifts it; <a href="#e16">entry 16</a> explains why current income is not the whole story.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">12.1</span> A household&rsquo;s consumption function is c = $10,000 + 0.6 yd. What does it spend at a disposable income of $30,000?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>10,000 + 18,000 = <b>$28,000</b>.</p></div></details></div>
+    <div class="q"><p><span class="qn">12.2</span> What does the vertical intercept of the consumption function show?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Autonomous consumer spending: what the household would spend with no disposable income.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got12"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e13">
+  <div class="entry-head"><span class="entry-num">13</span><h2>What shifts consumer spending</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Expected future disposable income</b> and <b>wealth</b>. A rise in either makes households spend more at every level of current income &mdash; an autonomous rise in consumer spending.</p></div>
+  <p class="reading">Textbook pages 165&ndash;166, Figure 16.4.</p>
+
+  <p>A student with a well-paid job starting in six months spends more now. A worker who fears a layoff spends less now. Neither one&rsquo;s current income has changed: their expectations have.</p>
+
+  <p>Wealth works the same way. Two people with the same income spend differently if one owns a house and savings. A stock market boom raises wealth across the economy; a fall in house prices lowers it. Each is an autonomous change in spending, so each starts a multiplier.</p>
+
+  <div class="watch"><p><b>Watch out.</b> A change in wealth from booming stocks or houses <b>shifts</b> spending. A fall in the <b>price level</b> that raises the real value of money is a different idea &mdash; the real wealth effect &mdash; and it is a movement along aggregate demand, not a shift.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Maria and Mark.</span> Both expect to earn $30,000. Maria owns a home and has $200,000 in the bank; Mark has little. Other things equal, Maria spends more.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A stock boom.</span> Households spend $10 billion more at every income and the MPC is 0.75: real GDP can rise by 4 &times; 10 = <b>$40 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">2008.</span> House prices fell, household wealth fell, and consumer spending fell at every level of income.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> Each is an <a href="#e4">autonomous change</a> (entry 4); it shifts the <a href="#e12">consumption function</a> (entry 12); <a href="#e16">entry 16</a> explains why expectations matter.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">13.1</span> Workers learn that big layoffs are coming next year. What happens to consumer spending now?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It falls at every level of current income &mdash; an autonomous fall that starts a multiplier downward.</p></div></details></div>
+    <div class="q"><p><span class="qn">13.2</span> Your current income rises. Is that a shift in your consumer spending?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>No. It is a movement along your consumption function.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got13"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e14">
+  <div class="entry-head"><span class="entry-num">14</span><h2>Planned investment spending and what moves it</h2><span class="mark exam">&#9733; Exam</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The investment firms <b>intend</b> to undertake. It <b>falls</b> when the <b>interest rate</b> rises, <b>rises</b> when firms expect <b>faster growth in real GDP</b>, and <b>falls</b> when they already have <b>spare production capacity</b>.</p></div>
+  <p class="reading">Textbook pages 166&ndash;168, margin.</p>
+
+  <p>Interest rate: a firm goes ahead with a project only if its expected return beats the cost of the funds. A higher rate means fewer projects pass. That holds even if the firm uses its own past profits, because it could have lent them out and earned interest &mdash; an opportunity cost.</p>
+
+  <p>Expected sales and capacity: firms invest to meet future sales. Expecting fast growth means more investment; idle machines mean less. Swings in investment are far bigger than swings in consumer spending, and most recessions start with a fall in investment &mdash; which is why investment is watched as a <b>leading indicator</b> of where the economy is heading.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Using retained earnings does not make a project free. The interest the firm gives up is the cost.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">A $150,000 mortgage.</span> Monthly payments are $1,048 at 7.5% interest and $851 at 5.5% &mdash; $197 less, which helped set off the housing boom of 2003.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">A new machine.</span> It is expected to return 6% a year. At an interest rate of 5% the firm buys it; at <b>7%</b> it does not &mdash; even if it has the cash.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A car maker with idle lines.</span> Sales are expected to grow, but a third of its factories stand idle. It will not build new ones until the spare capacity is used up.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> A change in it is an <a href="#e4">autonomous change</a> (entry 4). The difference between planned and actual investment is <a href="#e15">entry 15</a>.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">14.1</span> The interest rate rises from 4% to 8%. What happens to planned investment, and why?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It <b>falls</b>: fewer projects earn more than the cost of funds.</p></div></details></div>
+    <div class="q"><p><span class="qn">14.2</span> Firms expect real GDP to grow much faster next year. What happens to planned investment?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>It <b>rises</b>, to build capacity for higher sales.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got14"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e15">
+  <div class="entry-head"><span class="entry-num">15</span><h2>Inventories and unplanned investment</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p><b>Actual investment = planned investment + unplanned inventory investment.</b> Goods made but not sold go into inventories, and that counts as investment.</p></div>
+  <p class="reading">Textbook pages 168&ndash;170, margin and equation 16-10.</p>
+
+  <p>Firms decide output before they know sales. If sales fall short, unsold goods pile up: positive unplanned inventory investment. If sales beat expectations, shelves empty: negative unplanned inventory investment.</p>
+
+  <p>Rising inventories usually signal a slowing economy, and firms respond by cutting output. Falling inventories signal growth.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background here. Unplanned inventory investment happens <b>to</b> firms; planned investment is what they choose.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Cars.</span> The industry makes 800,000 cars a month expecting to sell them all, but sells 700,000: <b>100,000</b> cars of unplanned inventory investment.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Strong sales.</span> Planned investment $50 billion; sales beat forecasts and inventories fall by $5 billion. Actual investment = 50 &minus; 5 = <b>$45 billion</b>.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">A supermarket.</span> The manager stocks for normal sales. A heatwave empties the drinks aisle: negative unplanned inventory investment.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It is the gap between what firms <a href="#e14">plan</a> (entry 14) and what they end up investing.</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">15.1</span> Sales are lower than firms expected. Is unplanned inventory investment positive or negative?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Positive: unsold goods pile up.</p></div></details></div>
+    <div class="q"><p><span class="qn">15.2</span> Planned investment is $80 billion and unplanned inventory investment is $6 billion. What is actual investment?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>80 + 6 = <b>$86 billion</b>.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got15"> Got it</label>
+  </div>
+</article>
+<article class="entry" id="e16">
+  <div class="entry-head"><span class="entry-num">16</span><h2>Why current income is not the whole story</h2><span class="mark bg">&#9675; Background</span></div>
+  <div class="defn"><span class="lbl">Definition</span><p>The <b>permanent income hypothesis</b>: spending depends mainly on the income people expect over the long term. The <b>life-cycle hypothesis</b>: people plan spending over their lifetime, saving in peak years and living off wealth later.</p></div>
+  <p class="reading">Textbook pages 165&ndash;166.</p>
+
+  <p>Both explain why expected future income and wealth shift spending. People smooth their spending: they do not raise it one-for-one with a good year or cut it with a bad one.</p>
+
+  <p>You will not be asked to name either hypothesis. Use them to understand entry 13.</p>
+
+  <div class="watch"><p><b>Watch out.</b> Background only. Your exam asks what shifts spending, not which theory explains it.</p></div>
+
+  <div class="examples">
+    <div class="ex"><span class="ex-n">Textbook</span><p><span class="who">Milton Friedman, 1956.</span> People with an unusually good year save most of the windfall; people with an unusually bad year save little or borrow.</p></div>
+    <div class="ex"><span class="ex-n">Numeric</span><p><span class="who">Two workers.</span> Both earn $40,000 this year. One expects $40,000 next year, the other $60,000. The second spends more today.</p></div>
+    <div class="ex"><span class="ex-n">Illustrative</span><p><span class="who">Retirement.</span> A couple in their fifties saves hard; in their seventies they spend more than their income, drawing on what they saved.</p></div>
+  </div>
+
+  <p class="connects"><b>How it connects.</b> It explains why <a href="#e13">expectations and wealth</a> (entry 13) shift the <a href="#e12">consumption function</a> (entry 12).</p>
+
+  <div class="check">
+    <span class="lbl">Check yourself</span>
+    <div class="q"><p><span class="qn">16.1</span> A worker gets a one-time $5,000 bonus. Why might spending rise only a little?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>Because spending depends mainly on long-term income, so most of a one-time windfall is saved.</p></div></details></div>
+    <div class="q"><p><span class="qn">16.2</span> When in life does the life-cycle hypothesis say people save most?</p>
+      <details class="reveal"><summary>Show answer</summary><div class="ans"><p>In their peak earning years, typically their 40s and 50s.</p></div></details></div>
+    <label class="got"><input type="checkbox" class="gotbox" id="got16"> Got it</label>
+  </div>
+</article>
+
+<!-- ============ MCQ ============ -->
+<section class="section" id="mcq">
+  <h2>Tackle the test &mdash; multiple choice</h2>
+  <p>The five questions from your textbook&rsquo;s AP Review, with <b>every option explained</b>.</p>
+
+  <div class="mcq" data-key="D">
+    <p class="stem"><span class="qn">1</span> Changes in which of the following lead to a shift of the aggregate consumption function? I. expected future disposable income II. aggregate wealth III. current disposable income</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>I only<span class="why" hidden>&#10007; True, but wealth shifts it too.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>II only<span class="why" hidden>&#10007; True, but expected future income shifts it too.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>III only<span class="why" hidden>&#10007; A change in current income is a movement along the function.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>I and II only<span class="why" hidden>&#10003; <b>Correct.</b> The two causes of shifts on page 165.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>I, II, and III<span class="why" hidden>&#10007; Current income moves you along the function, not the function itself.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="C">
+    <p class="stem"><span class="qn">2</span> The slope of a family&rsquo;s consumption function is equal to&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>the real interest rate.<span class="why" hidden>&#10007; Not on this graph at all.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>the inflation rate.<span class="why" hidden>&#10007; Not on this graph at all.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>the marginal propensity to consume.<span class="why" hidden>&#10003; <b>Correct.</b> Rise over run is &Delta;c &divide; &Delta;yd.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>the rate of increase in household current disposable income.<span class="why" hidden>&#10007; That is a growth rate, not a slope.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>the tax rate.<span class="why" hidden>&#10007; Taxes are already taken out of disposable income.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="B">
+    <p class="stem"><span class="qn">3</span> Given the consumption function c = $16,000 + 0.5 yd, if individual household current disposable income is $20,000, individual household consumer spending will equal&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>$36,000.<span class="why" hidden>&#10007; Adds the whole income, as if the MPC were 1.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>$26,000.<span class="why" hidden>&#10003; <b>Correct.</b> 16,000 + 0.5 &times; 20,000.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>$20,000.<span class="why" hidden>&#10007; That is the income, not the spending.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>$16,000.<span class="why" hidden>&#10007; That is autonomous spending only.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>$6,000.<span class="why" hidden>&#10007; That is how much spending exceeds income, 26,000 &minus; 20,000.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="D">
+    <p class="stem"><span class="qn">4</span> The level of planned investment spending is negatively related to the&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>rate of return on investment.<span class="why" hidden>&#10007; A higher return means more investment, not less.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>level of consumer spending.<span class="why" hidden>&#10007; More sales encourage investment.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>level of actual investment spending.<span class="why" hidden>&#10007; Actual includes planned; they do not move oppositely.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>interest rate.<span class="why" hidden>&#10003; <b>Correct.</b> A higher rate makes fewer projects worth doing.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>all of the above.<span class="why" hidden>&#10007; Only the interest rate.</span></span></button>
+    </div>
+  </div>
+
+  <div class="mcq" data-key="A">
+    <p class="stem"><span class="qn">5</span> Actual investment spending in any period is equal to&hellip;</p>
+    <div class="opts">
+      <button type="button" class="opt" data-l="A"><span class="ltr">A</span><span>planned investment spending + unplanned inventory investment.<span class="why" hidden>&#10003; <b>Correct.</b> Equation 16-10.</span></span></button>
+      <button type="button" class="opt" data-l="B"><span class="ltr">B</span><span>planned investment spending &minus; unplanned inventory investment.<span class="why" hidden>&#10007; Unsold goods add to investment.</span></span></button>
+      <button type="button" class="opt" data-l="C"><span class="ltr">C</span><span>planned investment spending + inventory decreases.<span class="why" hidden>&#10007; A fall in inventories is negative investment.</span></span></button>
+      <button type="button" class="opt" data-l="D"><span class="ltr">D</span><span>unplanned inventory investment + inventory increases.<span class="why" hidden>&#10007; Leaves out planned investment.</span></span></button>
+      <button type="button" class="opt" data-l="E"><span class="ltr">E</span><span>unplanned inventory investment &minus; inventory increases.<span class="why" hidden>&#10007; Leaves out planned investment.</span></span></button>
+    </div>
+  </div>
+
+  <p class="score" id="mcqScore">0 of 5 answered</p>
+</section>
+
+<!-- ============ FRQ ============ -->
+<section class="section" id="frq">
+  <h2>Tackle the test &mdash; free response</h2>
+
+  <div class="frq">
+    <p><b>Question 1 (7 points).</b> Use the consumption function c = $15,000 + 0.8 &times; yd. (a) What is the
+    marginal propensity to consume? (b) If household disposable income is $40,000, how much will the household
+    spend? (c) Draw a correctly labeled graph of this consumption function. (d) What is its slope? (e) On your
+    graph, show what happens if expected future income decreases.</p>
+    <details class="reveal"><summary>Show the answer and the rubric</summary><div class="ans">
+      <ol class="rubric">
+        <li>(a) <b>0.8</b> &mdash; one point</li>
+        <li>(b) 15,000 + 0.8 &times; 40,000 = <b>$47,000</b> &mdash; one point</li>
+        <li>(c) Vertical axis &ldquo;Consumer spending&rdquo;, horizontal axis &ldquo;Current disposable
+          income&rdquo; &mdash; one point</li>
+        <li>(c) Vertical intercept at $15,000 &mdash; one point</li>
+        <li>(c) An upward-sloping line &mdash; one point</li>
+        <li>(d) <b>0.8</b> &mdash; one point</li>
+        <li>(e) The function shifts <b>down</b>, from cf1 to cf2 &mdash; one point</li>
+      </ol>
+<svg class="cf-svg" viewBox="0 0 520 320" role="img" aria-label="A consumption function and a downward shift">
+<path class="ax" d="M70 30 V270 H480"></path>
+<path class="ln" d="M70.0 220.7 L470.0 63.0"></path>
+<path class="ln2" d="M70.0 237.1 L470.0 79.4"></path>
+<text class="rl" x="476.0" y="67.0">cf1</text>
+<text class="rl" x="476.0" y="91.4">cf2</text>
+<text class="tk" x="64" y="224.7" text-anchor="end">$15,000</text>
+<text class="tk" x="64" y="274" text-anchor="end">0</text>
+<text class="rl" x="20" y="22">Consumer spending</text>
+<text class="rl" x="480" y="300" text-anchor="end">Current disposable income</text>
+</svg>
+    </div></details>
+  </div>
+
+  <div class="frq">
+    <p><b>Question 2.</b> List the three most important factors affecting planned investment spending, and
+    explain how each one affects it.</p>
+    <details class="reveal"><summary>Show the answer</summary><div class="ans">
+      <p><b>The interest rate</b> &mdash; a higher rate means fewer projects earn more than the cost of funds, so
+      planned investment falls. <b>Expected future real GDP</b> &mdash; faster expected growth in sales means
+      firms need more capacity, so planned investment rises. <b>Current production capacity</b> &mdash; spare
+      capacity means firms can meet sales without new investment, so planned investment falls.</p>
+    </div></details>
+  </div>
+</section>
+
+<!-- ============ SUMMARY ============ -->
+<section class="section" id="summary">
+  <h2>One-page summary</h2>
+  <div class="tablewrap">
+    <table class="sumtable">
+      <thead><tr><th>MPC</th><th>MPS</th><th>Expenditure multiplier</th><th>Tax multiplier</th><th>$100 billion more spending</th><th>$100 billion tax cut</th><th>$100 billion more of both</th></tr></thead>
+      <tbody>
+        <tr><td>0.5</td><td>0.5</td><td><b>2</b></td><td><b>&minus;1</b></td><td>$200 billion</td><td>$100 billion</td><td>$100 billion</td></tr>
+        <tr><td>0.6</td><td>0.4</td><td><b>2.5</b></td><td><b>&minus;1.5</b></td><td>$250 billion</td><td>$150 billion</td><td>$100 billion</td></tr>
+        <tr><td>0.75</td><td>0.25</td><td><b>4</b></td><td><b>&minus;3</b></td><td>$400 billion</td><td>$300 billion</td><td>$100 billion</td></tr>
+        <tr><td>0.8</td><td>0.2</td><td><b>5</b></td><td><b>&minus;4</b></td><td>$500 billion</td><td>$400 billion</td><td>$100 billion</td></tr>
+        <tr><td>0.9</td><td>0.1</td><td><b>10</b></td><td><b>&minus;9</b></td><td>$1000 billion</td><td>$900 billion</td><td>$100 billion</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="figcap"><b>MPC</b> = change in consumer spending &divide; change in disposable income. <b>MPC + MPS
+  = 1.</b> <b>Expenditure multiplier</b> = 1 &divide; (1 &minus; MPC) = 1 &divide; MPS. <b>Tax multiplier</b>
+  = &minus;MPC &divide; (1 &minus; MPC). <b>Change in real GDP</b> = multiplier &times; the change, at most.
+  <b>Working backwards</b>: needed change = target &divide; multiplier. The last three columns are the
+  largest possible changes in real GDP.</p>
+</section>
+
+<section class="section closing" id="final">
+  <h2>The five things to get right from Module 16</h2>
+  <ol>
+    <li><b>MPC + MPS = 1</b>, and both are about the <i>extra</i> dollar of disposable income.</li>
+    <li><b>Expenditure multiplier = 1 &divide; (1 &minus; MPC).</b> Divide by the MPS, not by the MPC.</li>
+    <li><b>Tax multiplier = &minus;MPC &divide; (1 &minus; MPC)</b> &mdash; one smaller in size, because part of
+      a tax change is saved before it is spent.</li>
+    <li><b>Equal changes in spending and taxes move real GDP by that amount</b>, whatever the MPC.</li>
+    <li><b>The multiplier gives the shift in aggregate demand</b> &mdash; the most real GDP can change. To size
+      a policy, divide the target by the multiplier.</li>
+  </ol>
+  <p>Next, in Module 17, the change in spending becomes a shift of the aggregate demand curve, and the
+  determinants of consumer and investment spending from entries 13 and 14 become the things that shift it.</p>
+</section>
+
+<p class="footer">
+  Student guide &middot; Module 16, <i>Krugman&rsquo;s Economics for AP</i>, pages 158&ndash;171 &middot;
+  definitions quoted from the textbook &middot; tiers assigned against the AP Macroeconomics Course
+  and Exam Description, Course Framework V.1, &copy; 2020 &middot; every number on this page is computed
+  by the script that writes it, and checked again before it is written.
+</p>
+
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- progress ---------- */
+  var KEY = "macro-mod16-progress";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".gotbox"));
+  var fill = document.getElementById("pfill");
+  var num  = document.getElementById("pnum");
+  function load(){ try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch(e){ return {}; } }
+  function save(s){ try { localStorage.setItem(KEY, JSON.stringify(s)); } catch(e){} }
+  function paint(){
+    var done = boxes.filter(function(b){ return b.checked; }).length;
+    fill.style.width = (done / boxes.length * 100) + "%";
+    num.textContent = done + " / " + boxes.length;
+  }
+  var state = load();
+  boxes.forEach(function(b){
+    if (state[b.id]) b.checked = true;
+    b.addEventListener("change", function(){ var s = load(); s[b.id] = b.checked; save(s); paint(); });
+  });
+  paint();
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    boxes.forEach(function(b){ b.checked = false; });
+    save({}); paint();
+  });
+
+  /* ---------- the rounds diagram ---------- */
+  /* Every value below is written by build/make_m16_student.py from the rounds it computes. */
+  var READ = {
+    "50_g": ["2", "$100 billion", "$199.8 billion", "$200 billion"],
+    "50_t": ["&minus;1", "$50 billion", "$99.9 billion", "$100 billion"],
+    "50_b": ["1", "$50 billion", "$99.9 billion", "$100 billion"],
+    "60_g": ["2.5", "$100 billion", "$248.5 billion", "$250 billion"],
+    "60_t": ["&minus;1.5", "$60 billion", "$149.1 billion", "$150 billion"],
+    "60_b": ["1", "$40 billion", "$99.4 billion", "$100 billion"],
+    "75_g": ["4", "$100 billion", "$377.5 billion", "$400 billion"],
+    "75_t": ["&minus;3", "$75 billion", "$283.1 billion", "$300 billion"],
+    "75_b": ["1", "$25 billion", "$94.4 billion", "$100 billion"],
+    "80_g": ["5", "$100 billion", "$446.3 billion", "$500 billion"],
+    "80_t": ["&minus;4", "$80 billion", "$357.1 billion", "$400 billion"],
+    "80_b": ["1", "$20 billion", "$89.3 billion", "$100 billion"],
+    "90_g": ["10", "$100 billion", "$651.3 billion", "$1000 billion"],
+    "90_t": ["&minus;9", "$90 billion", "$586.2 billion", "$900 billion"],
+    "90_b": ["1", "$10 billion", "$65.1 billion", "$100 billion"]
+  };
+  var CAP = {
+    "50_g": "New spending of $100 billion is all spent in round 1. Each later round is 0.5 times the one before, because households spend 0.5 of each extra dollar and save the rest. Total: 100 x 1/(1 - 0.5) = $200 billion.",
+    "50_t": "A $100 billion tax cut puts $100 billion in households' pockets, but they spend only $50 billion of it in round 1 and save the rest. Every round is one step behind the spending case. Total: 100 x 0.5/(1 - 0.5) = $100 billion.",
+    "50_b": "Spending of $100 billion pushes up; taxes of $100 billion pull down by $50 billion in round 1, and the two chains cancel round after round. What is left adds up to exactly $100 billion, whatever the MPC: $200 billion - $100 billion.",
+    "60_g": "New spending of $100 billion is all spent in round 1. Each later round is 0.6 times the one before, because households spend 0.6 of each extra dollar and save the rest. Total: 100 x 1/(1 - 0.6) = $250 billion.",
+    "60_t": "A $100 billion tax cut puts $100 billion in households' pockets, but they spend only $60 billion of it in round 1 and save the rest. Every round is one step behind the spending case. Total: 100 x 0.6/(1 - 0.6) = $150 billion.",
+    "60_b": "Spending of $100 billion pushes up; taxes of $100 billion pull down by $60 billion in round 1, and the two chains cancel round after round. What is left adds up to exactly $100 billion, whatever the MPC: $250 billion - $150 billion.",
+    "75_g": "New spending of $100 billion is all spent in round 1. Each later round is 0.75 times the one before, because households spend 0.75 of each extra dollar and save the rest. Total: 100 x 1/(1 - 0.75) = $400 billion.",
+    "75_t": "A $100 billion tax cut puts $100 billion in households' pockets, but they spend only $75 billion of it in round 1 and save the rest. Every round is one step behind the spending case. Total: 100 x 0.75/(1 - 0.75) = $300 billion.",
+    "75_b": "Spending of $100 billion pushes up; taxes of $100 billion pull down by $75 billion in round 1, and the two chains cancel round after round. What is left adds up to exactly $100 billion, whatever the MPC: $400 billion - $300 billion.",
+    "80_g": "New spending of $100 billion is all spent in round 1. Each later round is 0.8 times the one before, because households spend 0.8 of each extra dollar and save the rest. Total: 100 x 1/(1 - 0.8) = $500 billion.",
+    "80_t": "A $100 billion tax cut puts $100 billion in households' pockets, but they spend only $80 billion of it in round 1 and save the rest. Every round is one step behind the spending case. Total: 100 x 0.8/(1 - 0.8) = $400 billion.",
+    "80_b": "Spending of $100 billion pushes up; taxes of $100 billion pull down by $80 billion in round 1, and the two chains cancel round after round. What is left adds up to exactly $100 billion, whatever the MPC: $500 billion - $400 billion.",
+    "90_g": "New spending of $100 billion is all spent in round 1. Each later round is 0.9 times the one before, because households spend 0.9 of each extra dollar and save the rest. Total: 100 x 1/(1 - 0.9) = $1000 billion.",
+    "90_t": "A $100 billion tax cut puts $100 billion in households' pockets, but they spend only $90 billion of it in round 1 and save the rest. Every round is one step behind the spending case. Total: 100 x 0.9/(1 - 0.9) = $900 billion.",
+    "90_b": "Spending of $100 billion pushes up; taxes of $100 billion pull down by $90 billion in round 1, and the two chains cancel round after round. What is left adds up to exactly $100 billion, whatever the MPC: $1000 billion - $900 billion."
+  };
+  var mchips = Array.prototype.slice.call(document.querySelectorAll("#diagram .chip[data-mpc]"));
+  var kchips = Array.prototype.slice.call(document.querySelectorAll("#diagram .chip[data-kind]"));
+  var cap = document.getElementById("pcap");
+  var cur = { m: "60", k: "g" };
+  function show(){
+    var which = cur.m + "_" + cur.k;
+    Object.keys(READ).forEach(function(k){
+      var g = document.getElementById("r-" + k.replace("_", "-"));
+      /* SVG elements have no .hidden property; toggle the attribute, which the CSS hides */
+      if (g) { if (k === which) g.removeAttribute("hidden"); else g.setAttribute("hidden", ""); }
+    });
+    READ[which].forEach(function(v, i){ document.getElementById("ro" + i).innerHTML = v; });
+    cap.textContent = CAP[which];
+    mchips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-mpc") === cur.m)); });
+    kchips.forEach(function(c){ c.setAttribute("aria-pressed", String(c.getAttribute("data-kind") === cur.k)); });
+  }
+  mchips.forEach(function(c){ c.addEventListener("click", function(){ cur.m = c.getAttribute("data-mpc"); show(); }); });
+  kchips.forEach(function(c){ c.addEventListener("click", function(){ cur.k = c.getAttribute("data-kind"); show(); }); });
+  show();
+
+  /* ---------- the drill ---------- */
+  var SCEN = [
+    { t: "The government buys $20 billion of new military equipment.", a: "g",
+      w: "SPENDING. Government purchases are spending in round 1, all of it." },
+    { t: "The government cuts income tax rates.", a: "t",
+      w: "TAX. Disposable income rises; only the MPC share is spent in round 1." },
+    { t: "A stock market boom makes households spend more at every level of income.", a: "g",
+      w: "SPENDING. An autonomous rise in consumer spending: all of it is spent in round 1." },
+    { t: "Households spend more because their incomes rose in the previous round.", a: "i",
+      w: "INDUCED. This is a later round of a multiplier already under way." },
+    { t: "The government raises unemployment benefits.", a: "t",
+      w: "TAX. A transfer works like a tax cut: households save part of it." },
+    { t: "Firms expecting faster growth decide to build new factories.", a: "g",
+      w: "SPENDING. An autonomous rise in planned investment." },
+    { t: "Restaurants sell more meals because the workers on a new bridge have been paid.", a: "i",
+      w: "INDUCED. Spending that comes from income created earlier in the chain." },
+    { t: "Payroll taxes rise by $30 billion.", a: "t",
+      w: "TAX. Disposable income falls; spending falls by the MPC share in round 1." },
+    { t: "Foreign buyers order more of the country's exports.", a: "g",
+      w: "SPENDING. An autonomous rise in net exports." },
+    { t: "The government mails every family a $1,000 check.", a: "t",
+      w: "TAX. A transfer: it raises disposable income, not spending directly." },
+    { t: "A shop orders more stock after its customers' wages rose.", a: "i",
+      w: "INDUCED. It follows from a rise in income, not the start of a new chain." },
+    { t: "Consumer spending falls in the third round after a slump in investment.", a: "i",
+      w: "INDUCED. Part of the downward multiplier, not a new cause." }
+  ];
+  var LABELS = {
+    "g": "Expenditure multiplier",
+    "t": "Tax multiplier",
+    "i": "Induced &mdash; already counted"
+  };
+  var list = document.getElementById("sorter-list");
+  var scoreEl = document.getElementById("sorter-score");
+  var answered = 0, right = 0;
+  function build(){
+    list.innerHTML = "";
+    answered = 0; right = 0;
+    SCEN.forEach(function(s, i){
+      var row = document.createElement("div");
+      row.className = "sortrow";
+      var opts = Object.keys(LABELS).map(function(k){
+        return '<button type="button" class="opt" data-a="' + k + '"><span>' + LABELS[k] + '</span></button>';
+      }).join("");
+      row.innerHTML =
+        '<p class="stem"><span class="qn">' + (i + 1) + '</span> ' + s.t + '</p>' +
+        '<div class="opts">' + opts + '</div>' +
+        '<p class="why" hidden></p>';
+      var btns = Array.prototype.slice.call(row.querySelectorAll(".opt"));
+      var why = row.querySelector(".why");
+      btns.forEach(function(b){
+        b.addEventListener("click", function(){
+          if (row.getAttribute("data-done")) return;
+          row.setAttribute("data-done", "1");
+          var ok = b.getAttribute("data-a") === s.a;
+          btns.forEach(function(x){
+            x.disabled = true;
+            if (x.getAttribute("data-a") === s.a) x.setAttribute("data-state", "right");
+            else if (x === b) x.setAttribute("data-state", "wrong");
+          });
+          why.hidden = false;
+          why.textContent = (ok ? "\u2713 " : "\u2717 ") + s.w;
+          answered++; if (ok) right++;
+          scoreEl.textContent = right + " correct out of " + answered + " answered";
+        });
+      });
+      list.appendChild(row);
+    });
+    scoreEl.textContent = "0 of " + SCEN.length + " answered";
+  }
+  build();
+  document.getElementById("sorter-reset").addEventListener("click", build);
+
+  /* ---------- multiple choice ---------- */
+  var mcqs = Array.prototype.slice.call(document.querySelectorAll(".mcq[data-key]"));
+  var mcqScore = document.getElementById("mcqScore");
+  var mDone = 0, mRight = 0;
+  mcqs.forEach(function(q){
+    var key = q.getAttribute("data-key");
+    var opts = Array.prototype.slice.call(q.querySelectorAll(".opt"));
+    opts.forEach(function(o){
+      o.addEventListener("click", function(){
+        if (q.getAttribute("data-done")) return;
+        q.setAttribute("data-done", "1");
+        var ok = o.getAttribute("data-l") === key;
+        opts.forEach(function(x){
+          x.disabled = true;
+          x.querySelector(".why").hidden = false;
+          if (x.getAttribute("data-l") === key) x.setAttribute("data-state", "right");
+          else if (x === o) x.setAttribute("data-state", "wrong");
+        });
+        mDone++; if (ok) mRight++;
+        mcqScore.textContent = mRight + " correct out of " + mDone + " answered";
+      });
+    });
+  });
+})();
+</script>
+</main>
+<script>window.COURSE_NAV={"kicker": "3.2 Multipliers · MPC and MPS", "title": "Module 16 · Income, Spending and the Multiplier", "map": [{"label": "Course", "items": [{"href": "index.html", "label": "Home", "current": false}, {"href": "spec.html", "label": "Course specification", "current": false}]}, {"label": "Unit 1 · Basic Economic Concepts", "items": [{"href": "m01-student.html", "label": "Module 1 · Student guide", "current": false}, {"href": "m01-notes.html", "label": "Module 1 · Teaching notes", "current": false}, {"href": "m01-test.html", "label": "Module 1 · Test", "current": false}, {"href": "m02-student.html", "label": "Module 2 · Student guide", "current": false}, {"href": "m02-notes.html", "label": "Module 2 · Teaching notes", "current": false}, {"href": "m02-test.html", "label": "Module 2 · Test", "current": false}, {"href": "m03-student.html", "label": "Module 3 · Student guide", "current": false}, {"href": "m03-notes.html", "label": "Module 3 · Teaching notes", "current": false}, {"href": "m03-test.html", "label": "Module 3 · Test", "current": false}, {"href": "m04-student.html", "label": "Module 4 · Student guide", "current": false}, {"href": "m04-notes.html", "label": "Module 4 · Teaching notes", "current": false}, {"href": "m04-test.html", "label": "Module 4 · Test", "current": false}, {"href": "m05-student.html", "label": "Module 5 · Student guide", "current": false}, {"href": "m05-notes.html", "label": "Module 5 · Teaching notes", "current": false}, {"href": "m05-test.html", "label": "Module 5 · Test", "current": false}, {"href": "m06-student.html", "label": "Module 6 · Student guide", "current": false}, {"href": "m06-notes.html", "label": "Module 6 · Teaching notes", "current": false}, {"href": "m06-test.html", "label": "Module 6 · Test", "current": false}, {"href": "m07-student.html", "label": "Module 7 · Student guide", "current": false}, {"href": "m07-notes.html", "label": "Module 7 · Teaching notes", "current": false}, {"href": "m07-test.html", "label": "Module 7 · Test", "current": false}]}, {"label": "Unit 2 · Economic Indicators and the Business Cycle", "items": [{"href": "m10-student.html", "label": "Module 10 · Student guide", "current": false}, {"href": "m10-notes.html", "label": "Module 10 · Teaching notes", "current": false}, {"href": "m10-test.html", "label": "Module 10 · Test", "current": false}, {"href": "m11-student.html", "label": "Module 11 · Student guide", "current": false}, {"href": "m11-notes.html", "label": "Module 11 · Teaching notes", "current": false}, {"href": "m11-test.html", "label": "Module 11 · Test", "current": false}, {"href": "m12-student.html", "label": "Module 12 · Student guide", "current": false}, {"href": "m12-notes.html", "label": "Module 12 · Teaching notes", "current": false}, {"href": "m12-test.html", "label": "Module 12 · Test", "current": false}, {"href": "m13-student.html", "label": "Module 13 · Student guide", "current": false}, {"href": "m13-notes.html", "label": "Module 13 · Teaching notes", "current": false}, {"href": "m13-test.html", "label": "Module 13 · Test", "current": false}, {"href": "m14-student.html", "label": "Module 14 · Student guide", "current": false}, {"href": "m14-notes.html", "label": "Module 14 · Teaching notes", "current": false}, {"href": "m14-test.html", "label": "Module 14 · Test", "current": false}, {"href": "m15-student.html", "label": "Module 15 · Student guide", "current": false}, {"href": "m15-notes.html", "label": "Module 15 · Teaching notes", "current": false}, {"href": "m15-test.html", "label": "Module 15 · Test", "current": false}, {"href": "u02-gap.html", "label": "Unit 2 · Gap analysis", "current": false}]}, {"label": "Unit 3 · National Income and Price Determination", "items": [{"href": "m16-student.html", "label": "Module 16 · Student guide", "current": true}, {"href": "m16-notes.html", "label": "Module 16 · Teaching notes", "current": false}, {"href": "m16-test.html", "label": "Module 16 · Test", "current": false}, {"label": "Module 17 · Aggregate Demand", "planned": true}, {"label": "Module 18 · Aggregate Supply", "planned": true}, {"label": "Module 19 · Equilibrium in the AD–AS Model", "planned": true}, {"label": "Module 20 · Economic Policy and the AD–AS Model", "planned": true}, {"label": "Module 21 · Fiscal Policy and the Multiplier", "planned": true}, {"label": "Unit 3 · Gap analysis", "planned": true}]}, {"label": "Unit 4 · Financial Sector", "items": [{"label": "Module 22 · Saving, Investment and the Financial System", "planned": true}, {"label": "Module 23 · Definition and Measurement of Money", "planned": true}, {"label": "Module 24 · The Time Value of Money", "planned": true}, {"label": "Module 25 · Banking and Money Creation", "planned": true}, {"label": "Module 26 · The Federal Reserve System", "planned": true}, {"label": "Module 27 · The Federal Reserve: Monetary Policy", "planned": true}, {"label": "Module 28 · The Money Market", "planned": true}, {"label": "Module 29 · The Market for Loanable Funds", "planned": true}, {"label": "Unit 4 · Gap analysis", "planned": true}]}, {"label": "Unit 5 · Long-Run Consequences of Stabilization Policies", "items": [{"label": "Module 30 · Deficits and the Public Debt", "planned": true}, {"label": "Module 31 · Monetary Policy and the Interest Rate", "planned": true}, {"label": "Module 32 · Money, Output and Prices in the Long Run", "planned": true}, {"label": "Module 33 · Types of Inflation, Disinflation and Deflation", "planned": true}, {"href": "m34-student.html", "label": "Module 34 · Student guide", "current": false}, {"href": "m34-notes.html", "label": "Module 34 · Teaching notes", "current": false}, {"href": "m34-test.html", "label": "Module 34 · Test", "current": false}, {"label": "Modules 35–36 · Macroeconomic Schools of Thought", "planned": true}, {"label": "Modules 37–40 · Economic Growth", "planned": true}, {"label": "Unit 5 · Gap analysis", "planned": true}]}, {"label": "Unit 6 · Open Economy: International Trade and Finance", "items": [{"label": "Module 41 · Capital Flows and the Balance of Payments", "planned": true}, {"label": "Module 42 · The Foreign Exchange Market", "planned": true}, {"label": "Module 43 · Exchange Rate Policy", "planned": true}, {"label": "Modules 44–45 · Exchange Rates and Macroeconomic Policy", "planned": true}, {"label": "Unit 6 · Gap analysis", "planned": true}]}, {"label": "Practice exams", "items": [{"href": "practice-exam-units-1-2.html", "label": "Units 1–2 · Practice exam", "current": false}, {"label": "Units 3–4 · Practice exam", "planned": true}, {"label": "Units 5–6 · Practice exam", "planned": true}, {"label": "Full course · Practice exam", "planned": true}]}, {"label": "Interactive", "items": [{"label": "AD–AS explorer", "planned": true}, {"label": "Labour market rates", "planned": true}, {"label": "Money market and money creation", "planned": true}]}], "prev": {"href": "u02-gap.html", "label": "Unit 2 · Gap analysis"}, "next": {"href": "m16-notes.html", "label": "Module 16 · Teaching notes"}, "variants": [{"href": "m16-student.html", "label": "Student", "current": true}, {"href": "m16-notes.html", "label": "Notes", "current": false}, {"href": "m16-test.html", "label": "Test", "current": false}]};</script>
+<script src="assets/course.js"></script>
+</body>
+</html>
